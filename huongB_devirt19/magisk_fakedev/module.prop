@@ -1,0 +1,6 @@
+id=fakedev
+name=FakeDev Fingerprint Spoof
+version=v1.0
+versionCode=1
+author=re
+description=Spoof device fingerprint (CPU/model/build) that metasec reads at init. Profile-driven, hot-swappable via fakedev_apply.sh.

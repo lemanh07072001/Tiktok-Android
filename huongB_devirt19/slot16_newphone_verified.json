@@ -1,0 +1,193 @@
+{
+ "meta": {
+  "device_id": "7666223875861513749",
+  "app": "com.zhiliaoapp.musically 45.5.4",
+  "so_md5": "02f47578",
+  "k18_pskHash": "902a576684ffa6c918ace9537488afb5",
+  "obs_total": 30,
+  "nonzero": 15,
+  "verified": "sm3(query||slot16||chr(0x30))==report#19, 2/2 live matches"
+ },
+ "obs": [
+  {
+   "t": "obs",
+   "ts_wall": 1787407111792,
+   "slot16": "00000000000000000000000000000000",
+   "query": "aigc_version=0&device_platform=android&os=android&ssmix=a&_rticket=1787407111575&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407108&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407111918,
+   "slot16": "78fab46e3cf11436deb3a39e89fcbdcd",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407111766&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407108&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407127585,
+   "slot16": "00000000000000000000000000000000",
+   "query": "scene=1&device_platform=android&os=android&ssmix=a&_rticket=1787407127473&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407124&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407129575,
+   "slot16": "00000000000000000000000000000000",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407129485&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407126&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407131593,
+   "slot16": "5e913b42e8566406f2e9697ac8569e54",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407131482&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407128&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407135854,
+   "slot16": "8eae9d48c584a198a3bda02f0a14a892",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407135771&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407132&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407136865,
+   "slot16": "00000000000000000000000000000000",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407136745&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407133&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407377448,
+   "slot16": "00000000000000000000000000000000",
+   "query": "item_ids=%5B%227658649928452951329%22%5D&upvote_reasons=%5B%7B%22friend_type_str%22%3A%22%22%2C%22item_id%22%3A%227658649928452951329%22%2C%22middle_count%22%3A0%2C%22middle_info%22%3A%5B%5D%2C%22reason_type%22%3A-1%2C%22sub_type%22%3A0%2C%22user_id%22%3A%220%22%7D%5D&upvote_scene=100&is_non_personalized=false&experiment_map=%7B%22batch_list_opt%22%3A%221%22%2C%22tt_repost_add_text%22%3A%221%22%2C%22repost_dm_ai_emoji%22%3A%220%22%2C%22repost_panel_show_count%22%3A%221%22%2C%22repost_add_recommend_maf%22%3A%220%22%2C%22repost_tab_data_merge%22%3A%22true%22%2C%22repost_support_reply%22%3A%221%22%2C%22repost_support_digg%22%3A%221%22%7D&friends_recall_info_map=%7B%227658649928452951329%22%3A%22%7B%7D%22%7D&reply_insert_map=null&device_platform=android&os=android&ssmix=a&_rticket=1787407377187&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407367&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407377595,
+   "slot16": "00000000000000000000000000000000",
+   "query": "is_after_login=0&scene_id=3&device_platform=android&os=android&ssmix=a&_rticket=1787407377226&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407367&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407378255,
+   "slot16": "55bac0115d109b92470242095d5fb467",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407378071&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407368&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407380975,
+   "slot16": "00000000000000000000000000000000",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407380923&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407371&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407383513,
+   "slot16": "a5fab18c4d1a99bc931cdbcc0b88e58f",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407383456&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407382&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407384399,
+   "slot16": "00000000000000000000000000000000",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407384313&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407383&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407384710,
+   "slot16": "da947ab345ee4a5b2a4f805de6fbe601",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407384464&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407384&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407384957,
+   "slot16": "00000000000000000000000000000000",
+   "query": "user_type=1&index=0&count=99&user_type_cursor=0&source=im_default&device_platform=android&os=android&ssmix=a&_rticket=1787407384833&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407384&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407385026,
+   "slot16": "00000000000000000000000000000000",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407384826&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407384&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407385047,
+   "slot16": "00000000000000000000000000000000",
+   "query": "im_user_feature_names=5&im_user_feature_names=6&im_user_feature_names=8&im_user_feature_names=9&im_user_feature_names=10&other_user_id=7548805506769470465&device_platform=android&os=android&ssmix=a&_rticket=1787407384841&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407384&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407385180,
+   "slot16": "00000000000000000000000000000000",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407385128&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407385&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407386754,
+   "slot16": "eb5a60735cb487c2789b53671225b3a9",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407386730&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407386&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407388773,
+   "slot16": "00000000000000000000000000000000",
+   "query": "aweme_id=7667918930878467336&cursor=0&count=20&insert_ids=&forward_page_type=1&ad_creative_id=0&channel_id=0&user_avatar_shrink=96_96&ad_pricing_type=0&load_type=0&offline_pin_comment=1&author_relation_type=0&scenario=0&enter_from=homepage_hot&is_non_personalized=false&suggest_words=&shown_cnt=0&comment_preload=1&enable_muf_maf=1&author_id=7187680662119072795&preload=1&net_level=2&perf_score=6.8551&channel_name=&zero_count_expire_time=-1&source=0&session_id=766622387586151374920260822210308&surprise_type=0&device_platform=android&os=android&ssmix=a&_rticket=1787407388734&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407388&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407395159,
+   "slot16": "3b4fa8c4a2237be4399c294a2961825d",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407395138&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407389&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407400990,
+   "slot16": "2c2b01ddd8ca90617bbebf5397c831cf",
+   "query": "ssp_sdk_version=1&device_platform=android&os=android&ssmix=a&_rticket=1787407400912&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407395&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407403779,
+   "slot16": "5c428d8a9ad6062fe4678ab8d8495caf",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407403733&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407402&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407405457,
+   "slot16": "5b565d5af1c84bdd018751fa19a4aa62",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407405425&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407403&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407408771,
+   "slot16": "3a0851549c2b1be6d136a333e72774d1",
+   "query": "ssp_sdk_version=1&device_platform=android&os=android&ssmix=a&_rticket=1787407408694&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407407&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407413996,
+   "slot16": "eb2930fe5ded91adb55e40a0d5e92151",
+   "query": "ssp_sdk_version=1&device_platform=android&os=android&ssmix=a&_rticket=1787407413938&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407412&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407419273,
+   "slot16": "5abfb7166490bf00a32d12f313871736",
+   "query": "ssp_sdk_version=1&device_platform=android&os=android&ssmix=a&_rticket=1787407419218&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407417&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407423009,
+   "slot16": "12cdba65b44cc140b1f0a68242206427",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407422954&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407421&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407424565,
+   "slot16": "00000000000000000000000000000000",
+   "query": "subtitle_id=7676462865134193428&target_language=vi&item_id=7675548839238962453&enter_from=homepage_hot&device_platform=android&os=android&ssmix=a&_rticket=1787407424505&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407422&iid=7666226548189447956&device_id=7666223875861513749"
+  },
+  {
+   "t": "obs",
+   "ts_wall": 1787407426291,
+   "slot16": "00000000000000000000000000000000",
+   "query": "device_platform=android&os=android&ssmix=a&_rticket=1787407426269&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1440*2392&dpi=560&device_type=SM-G930S&device_brand=samsung&language=vi&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=VN&app_type=normal&sys_region=VN&last_install_time=1784932465&timezone_name=Asia%2FHo_Chi_Minh&residence=VN&app_language=vi&timezone_offset=25200&host_abi=arm64-v8a&locale=vi-VN&ac2=wifi&uoo=0&op_region=VN&build_number=45.5.4&region=VN&ts=1787407426&iid=7666226548189447956&device_id=7666223875861513749"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "device_id": "7666223875861513749",
+  "iid": "7666226548189447956",
+  "namespace": "d8b674543fc0b023b69f6a3f5a0f287d458ea204",
+  "source": "/data/data/com.zhiliaoapp.musically/files/keva/repo/<ns>/<ns>.blk (root pull, NO frida)",
+  "triplet": {
+    "ecneuq": "94199bca6d60ed2e",
+    "semithc": "06c89feae2d013cceab9ad17",
+    "sdi": "(empty at 0x34 in this dump)"
+  },
+  "ms_way_count_key": ["1035d1b5c49a1700", "2c8a4df765d2dd85", "4c617a6c1c7550953ef5bd09"],
+  "ms_way_value_key": ["d8b4d76cf5fabed1a711b5de", "08a39e6765657586"],
+  "psk_material_32B": "c02f250f86cc4f198d5706398d292a8b74169aba61affe7cba02e4a3b5198163",
+  "note": "Real device keva pulled from disk (MMKV .blk) WITHOUT hooking metasec = no anti-frida. Feed via MSB_PSK."
+}

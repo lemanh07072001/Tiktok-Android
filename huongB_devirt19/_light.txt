@@ -1,0 +1,27 @@
+     ____
+    / _  |   Frida 17.14.0 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to 127.0.0.1:47119 (id=socket@127.0.0.1:47119)
+Attaching...
+message: [Remote::PID::7957 ]-> {'type': 'send', 'payload': {'t': 'info', 'msg': 'light installed'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/stat'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/self/stat'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu1/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu2/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu3/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu4/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu5/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu6/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu7/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/7957/stat'}} data: None
+Process terminated
+
+Thank you for using Frida!

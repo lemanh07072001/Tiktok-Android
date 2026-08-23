@@ -1,0 +1,90 @@
+     ____
+    / _  |   Frida 17.14.0 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to 127.0.0.1:47119 (id=socket@127.0.0.1:47119)
+Spawning `com.zhiliaoapp.musically`...
+Spawned `com.zhiliaoapp.musically`. Resuming main thread!
+message:[Remote::com.zhiliaoapp.musically ]->  {'type': 'send', 'payload': {'t': 'info', 'msg': 'light installed'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/self/cmdline'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/oat/arm64/android.test.mock.vdex'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/android.test.mock.jar'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/oat/arm64/android.test.mock.art'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/oat/arm64/org.apache.http.legacy.vdex'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/org.apache.http.legacy.jar'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/oat/arm64/org.apache.http.legacy.art'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/oat/arm64/android.test.runner.vdex'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/android.test.runner.jar'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/oat/arm64/android.test.runner.art'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/possible'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/15995/cmdline'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/self/stat'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/meminfo'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/cpuinfo'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu1/cpufreq/scaling_available_frequencies'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu2/cpufreq/scaling_available_frequencies'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu3/cpufreq/scaling_available_frequencies'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu4/cpufreq/scaling_available_frequencies'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu5/cpufreq/scaling_available_frequencies'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/self/task/16001/status'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/product/app/webview/webview.apk'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/product/app/webview/oat/arm64/webview.vdex'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/product/app/webview/oat/arm64/webview.art'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/stat'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/etc/hosts'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/lib64/libwebviewchromium_plat_support.so'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/self/maps'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/online'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/self/task/15995/comm'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/fonts/NotoSansEgyptianHieroglyphs-Regular.ttf'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/fonts/NotoColorEmoji.ttf'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/fonts/NotoNaskhArabicUI-Regular.ttf'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/fonts/NotoSansSymbols-Regular-Subsetted.ttf'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu1/cpufreq/cpuinfo_max_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu2/cpufreq/cpuinfo_max_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu3/cpufreq/cpuinfo_max_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/framework-res.apk'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_max_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu5/cpufreq/cpuinfo_max_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/15995/status'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu1/cpufreq/scaling_cur_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu2/cpufreq/scaling_cur_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu3/cpufreq/scaling_cur_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu4/cpufreq/scaling_cur_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu5/cpufreq/scaling_cur_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_min_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu1/cpufreq/cpuinfo_min_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu2/cpufreq/cpuinfo_min_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu3/cpufreq/cpuinfo_min_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_min_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu5/cpufreq/cpuinfo_min_freq'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu4/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/15995/task/15995/stat'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/15995/smaps'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/kernel_max'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/present'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/proc/15995/stat'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/class/kgsl/kgsl-3d0/gpubusy'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/kernel/debug/ged/hal/gpu_utilization'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu1/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu2/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu3/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu5/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu6/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/sys/devices/system/cpu/cpu7/cpufreq/stats/time_in_state'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/lib64/libttquic.so'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/system_ext/lib64/libttquic.so'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/product/lib64/libttquic.so'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/vendor/lib64/libttquic.so'}} data: None
+message: {'type': 'send', 'payload': {'t': 'F', 'path': '/system/framework/android.test.base.jar'}} data: None

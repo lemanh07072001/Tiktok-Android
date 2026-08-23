@@ -1,0 +1,22 @@
+# Cấu hình launcher (KEY=VALUE). Dòng # bị bỏ qua.
+
+# METASEC_ORACLE = URL signer GENUINE (phone-oracle) ký X-Argus app-grade.
+#   Bỏ trống = dùng unidbg offline (mobile/sign.mjs). LƯU Ý: login account CŨ thường
+#   cần X-Argus GENUINE mới qua /passport/user/login/ (note 26) -> nên trỏ oracle ở đây.
+# METASEC_ORACLE=http://127.0.0.1:8795
+
+# Giãn cách mở cửa sổ (ms) -> tránh dội signer/unidbg khi nhiều account.
+STAGGER_MS=1500
+
+# Số cửa sổ CMD mỗi hàng khi xếp lưới (mặc định 5).
+PER_ROW=5
+
+# Kích thước console mỗi cửa sổ (ký tự) cho gọn — dài quá thì wrap, không cần kéo ngang.
+# COLS=50
+# LINES=52
+
+# Tắt xếp lưới (để cửa sổ mọc tự do): TILE=0  (hoặc chạy: node batch.mjs --no-tile)
+# TILE=1
+
+# Ép version app spoof (mặc định 45.7.3).
+# RE_VER=45.7.3

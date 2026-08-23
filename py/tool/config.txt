@@ -1,0 +1,13 @@
+# re/py/tool/config.txt — cấu hình cho batch.py (KEY=VALUE)
+# Cầu ký metasec (BASE url, KHÔNG kèm /sign — code tự thêm).
+#   offline unidbg (mobile/server/server.mjs) = http://127.0.0.1:8799
+#   phone-oracle                               = http://127.0.0.1:8790
+SIGNER_URL=http://127.0.0.1:8799
+# version spoof: 45.7.3 (khớp genuine) | 45.0.3 (khớp signer offline)
+RE_VER=45.7.3
+# giãn cách mở mỗi account (ms)
+STAGGER_MS=1500
+# so cua so moi hang khi xep luoi
+PER_ROW=5
+# OMO_API_KEY: key omocaptcha de tu giai SLIDE captcha (ec1105/1108). Bo trong = chi giai hashcash.
+# OMO_API_KEY=OMO_xxxxx

@@ -1,0 +1,18 @@
+{
+  "note": "MATCHED tuple: slot16 + concurrent keva state, same moment (2026-08-23 20:xx)",
+  "device_id": "7666223875861513749",
+  "slot16_PSK_state": "0368525bbc8948577a33284cac9c660d",
+  "_rticket": "1787491636229",
+  "ecneuq": "94199bca6d60ed2e",
+  "semithc": "06c89feae2d013cceab9ad17",
+  "sdi": "empty",
+  "psk_material_32B": "c02f250f86cc4f198d5706398d292a8b74169aba61affe7cba02e4a3b5198163",
+  "ms_way_value_key": ["d8b4d76cf5fabed1a711b5de", "08a39e6765657586"],
+  "ms_way_count_key": ["1035d1b5c49a1700", "2c8a4df765d2dd85", "4c617a6c1c7550953ef5bd09"],
+  "key_facts": [
+    "0368525b... is the SAME PSK_state seen in follow5.txt (cross-session STABLE, deterministic)",
+    "ecneuq/semithc are session-stable (unchanged across many requests), NOT per-request counters",
+    "0368525b... NOT stored raw anywhere on disk -> computed at runtime from stable inputs",
+    "slot16 != any simple hash/HMAC/XOR of (mat, ecneuq, semithc, wayval) -> deeper VM AES derivation"
+  ]
+}

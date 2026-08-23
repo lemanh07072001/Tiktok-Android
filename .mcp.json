@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "loopx": {
+      "type": "stdio",
+      "command": "C:\\Users\\Admin\\.local\\share\\loopx\\mcp-venv\\Scripts\\python.exe",
+      "args": [
+        "C:/Users/Admin/AppData/Roaming/Python/Python311/site-packages/loopx/claude_goal_mode/mcp/loopx_mcp.py"
+      ],
+      "env": {}
+    }
+  }
+}

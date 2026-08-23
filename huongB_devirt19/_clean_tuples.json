@@ -1,0 +1,12 @@
+{
+  "note": "3 clean matched tuples, same keva state, device_platform heartbeats. slot16 varies with _rticket/ts.",
+  "device_id": "7666223875861513749",
+  "keva": {"ecneuq": "94199bca6d60ed2e", "semithc": "06c89feae2d013cceab9ad17", "sdi": "empty"},
+  "psk_material_32B": "c02f250f86cc4f198d5706398d292a8b74169aba61affe7cba02e4a3b5198163",
+  "tuples": [
+    {"_rticket": "1787492671771", "ts": "1787492671", "slot16": "dbc927b5d95a976dd536fd319a609e77"},
+    {"_rticket": "1787492672070", "ts": "1787492672", "slot16": "528c1749aaaa6bb985cf445ee1a1ad3f"},
+    {"_rticket": "1787492716235", "ts": "1787492716", "slot16": "0368525bbc8948577a33284cac9c660d"}
+  ],
+  "tikcast_stable": {"query_class": "hot_reload/tikcast qlen1357", "slot16": "8ca462427dbfb3f3d431621b14f496ff", "note": "stable for this endpoint class"}
+}

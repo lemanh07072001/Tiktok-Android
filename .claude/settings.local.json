@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": [
+    "loopx"
+  ],
+  "enableAllProjectMcpServers": true
+}

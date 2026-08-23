@@ -1,0 +1,17 @@
+{
+  "device_id": "7666223875861513749",
+  "iid": "7666226548189447956",
+  "lc_id": "2142840551",
+  "app": "com.zhiliaoapp.musically 45.5.4",
+  "so_md5": "02f47578",
+  "captured": "2026-08-23 session 6 (live phone SM-G930S)",
+  "nonzero_slot16": {
+    "slot16": "f24c0d28b8e35c6fd8dc98c13c5eaadf",
+    "_rticket": "1787489460296",
+    "ts": "1787489460"
+  },
+  "psk_material_32B": "c02f250f86cc4f198d5706398d292a8b74169aba61affe7cba02e4a3b5198163",
+  "psk_material_MATCHES_offline_unidbg": true,
+  "per_request_seed_examples": ["1a62b24e", "b6a0012b"],
+  "note": "PSK material identical live vs offline harness -> offline pipeline reproduces the session key bit-exact. Remaining: the ecneuq/semithc counter that drives per-request seed -> slot16."
+}
