@@ -1,8 +1,1 @@
-devices/
-out/
-account.txt
-proxy.txt
-accounts.txt
-proxies.txt
-*.session.json
 __pycache__/

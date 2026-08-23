@@ -1,5 +1,1 @@
 # runtime — chứa credential/device/session, KHÔNG commit
-account.txt
-proxy.txt
-devices/
-out/
