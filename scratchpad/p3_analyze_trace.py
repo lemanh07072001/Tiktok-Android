@@ -117,8 +117,12 @@ if __name__ == '__main__':
     try:
         main('huongB_devirt19/execution_trace.json')
     except FileNotFoundError:
-        print("[!] execution_trace.json not found (needs phone capture)")
-        print("[*] To generate:")
-        print("    1. adb push p1_full_trace_hook.js /data/local/tmp/")
-        print("    2. frida -f com.zhiliaoapp.musically -l /data/local/tmp/p1_full_trace_hook.js")
-        print("    3. adb pull /data/local/tmp/execution_trace.json ./huongB_devirt19/")
+        try:
+            print("[*] Real trace not found, using synthetic trace for testing...")
+            main('huongB_devirt19/execution_trace_synthetic.json')
+        except FileNotFoundError:
+            print("[!] Neither real nor synthetic trace found")
+            print("[*] To capture real trace:")
+            print("    1. adb push p1_full_trace_hook.js /data/local/tmp/")
+            print("    2. frida -f com.zhiliaoapp.musically -l /data/local/tmp/p1_full_trace_hook.js")
+            print("    3. adb pull /data/local/tmp/execution_trace.json ./huongB_devirt19/")
