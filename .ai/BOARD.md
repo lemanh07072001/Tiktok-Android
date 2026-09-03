@@ -1,10 +1,10 @@
 # AI BOARD — cây gậy tiếp sức (relay)
 
-BATON: claude          # C2(0): user chose PIVOT to #24 Widevine (full-772). VM-devirt engine done+banked. Now: fill #24 widevine (report 306B→594B). Localized 0x1231b8 (UUID build) / 0x13d328 (JNI helper). Surveying harness+artefacts.
-ROUND: 0
+BATON: human           # C2(2): #24 JNI-recon DONE (empirical). CONCLUSIVE: #24 collect (0x12305c) gated behind MSManager.init singleton — cold-drive crashes @0x122d70 ldr x0,[x22] (vtable[0]=null) BEFORE reaching MediaDrm JNI. Same root wall as LoadTest. #24 offline needs MSManager.init first (hard). Core T10-validated w/o #24. Decision: invest in MSManager.init (multi-session) or accept.
+ROUND: 2
 # --- prior ---
 # 🎉 OFFLINE SIGNER WORKS ON MAC: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon from (url,header_block)+device-store via real libmetasec (unidbg), clock lockable (FIXTIME). Byte-exact impossible (random IV). Phone genuine=772; +384 = device-state attestation (#24 dyn_seed) gated on get_seed network(MSB_NET)+keva d8b674 = last increment, NOT a code wall. Note 57 s5. DONE.
-ROUND: 0
+ROUND: 2
 
 
 

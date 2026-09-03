@@ -40,3 +40,19 @@
 - Dump.java: added MSB_WIDEVINE=1 diagnostic (calls collect getter 0x122b00) — confirms 0-MediaDrm path.
 
 ## Progress: full-772 pure-offline = multi-week (collect-thread frontier for #24, provisioning for #18/#19). Recommend: (a) verify need via login test, OR (b) mint-once, OR (c) commit to multi-week collect-thread emulation fix.
+
+## ★★★★ #24 WIDEVINE COLLECT RUNS IN tt.Dump — PAST note-46 WALL (2026-09-04)
+> note 46 (Windows Harness): collect-thread CRASHED before MediaDrm. NOW: collect runs to completion + retrieves deviceUniqueId in tt.Dump (Mac). Breakthrough.
+
+### How (Dump.java MSB_WIDEVINE=1 -DWV_COLLECT=1 -DWV_ARG=1):
+1. **Call collect body 0x12305c directly with x0=JNIEnv** (envP=vm.getJNIEnv()). KEY: collect's first arg = JNIEnv (x19=x0 used as env for all JNI). Passing the manager (0x122b00 result) was WRONG → env-null crashes.
+2. **Seed TLS[tpidr+0x28]=envP** (some helpers read env from TLS).
+3. **Serve MediaDrm JNI in AbstractJni**: newObjectV(java/util/UUID(JJ)) + newObjectV(android/media/MediaDrm(UUID)); getStaticObjectField(MediaDrm.PROPERTY_DEVICE_UNIQUE_ID)="deviceUniqueId"; callObjectMethodV(getPropertyByteArray)→MSB_DUID (default "sZLyIifaxWeiNVYmORvBTisngBeWLDE"=735a4c79..., captured genuine).
+4. Result: collect 3471 instrs, NO crash, **getPropertyByteArray returns DUID to SDK** (log: `CallObjectMethodV(MediaDrm, getPropertyByteArray("deviceUniqueId") => [B@0x735a4c79...)`).
+
+### REMAINING for #24 (well-defined, smaller):
+- collect(x0=env, **x8=out-buffer sret**) writes #24 to out-buffer; the CALLER path in 0x122b00 (after 0x122d78: `bl 0x15009c` @0x122d8c) stores it into device-state global **[0x1fbe00]** (adrp x20,#0x1fb000; add #0xe00). Calling collect in isolation retrieves DUID but doesn't store → #24 absent in report.
+- NEXT: either (a) set x8=scratch before collect, read #24 out, manually store into [0x1fbe00] (need 0x15009c std::string format); OR (b) drive 0x122b00's full collect+store path (gates: flag [0x1fc210], check 0x172580, counter [0x1fbe04]<=3) so it stores #24 itself; then verify #24 in sign report.
+- Env-helper cluster patched (29 fns 0x13b000-0x13e000, x0=envP) as backup — but env-as-x0 (WV_ARG=1) is the clean fix (no crash).
+
+## STATUS: #24 collect-thread wall (note 46) BROKEN — DUID retrieved in tt.Dump. Remaining = store #24 into [0x1fbe00] device-state. Then #18/#19/slot16/identity (3 fronts). (C) progressing.

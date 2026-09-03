@@ -254,3 +254,37 @@
 - **9 chunk (zero-state)**: len = 13,16,9,29,5,20,16,13,**336**. `x1` trỏ .bss `0x1f7f78f..0x1f7f7fb` (VM tự ghi lúc setup-phase op42/op18), bytes **cao-entropy** (vd step270 len20=SHA1-size `677a0f98e2eba7d05c732b9efdfa928b153a1bf7`; step243 len29; step339 len336 = mảng lặp).
 - ⇒ **CHỨNG MINH cụ thể ranh giới offline**: VM *tính được* field trên zero-input, nhưng giá trị dẫn xuất từ **device-state rỗng** → là path zero-state, KHÔNG phải giá trị device thật. Field-SET/lengths là thật; field-VALUES cần state thật. Không có decoder toolchain trên Mac này để map chunk→field-number (protobuf) tại chỗ.
 - **KẾT LUẬN hướng**: offline-pure đã tới trần chứng minh được. pskVersion="0" thực ra ĐÃ đạt qua **fresh-state tt.Dump** (note session-6 breakthrough) ⇒ VM-devirt pskVersion phần lớn moot. Gap full-772 thật = **#24 widevine** (note Phase C). Core signer đã **T10-validated server-side** (HTTP 200). ⇒ điểm quyết định của user: (A) capture entry-state thật cho differential, (B) pivot #24 widevine, (C) dừng extra-credit.
+
+## Phase C (#24 Widevine) — CHARACTERIZED trên c06892e3 (2026-09-03, claude, session-7, user chose pivot)
+### Report structure (state phone_sync, tt.Dump `gradle dump -DFIXTIME=...` → /tmp/rpt1.bin, 700B parsed):
+- **present**: #1,2,3,4,6,7,9,10,12,13,14,15,**#20="none"**,21,23,25,28,29,30,31,32,33,34,35,36.
+- **#20="none"** (state cũ chưa provision) ⇒ #18/#19 VẮNG. `fresh_sync` state → #20="0"+#18/#19 (breakthrough session-6, cần STORE_DIR=state/fresh_sync).
+- **missing vs full-772**: #5, #8, #16, #17, #18, #19, **#24**, #26. #24 widevine = chunk lớn nhất (~132B).
+- X-Argus hiện = **388B** thin+attestation (không #24). Report field #1=magic, #34/35/36=sig varint (fixed64-ish).
+
+### Widevine collect LOCALIZED (static, .so c06892e3):
+- **collect func = `0x12305c`** (prologue `sub sp,#0xa0` + 6×stp; VM-obfuscated: f(x30) chain @0x12307c + trampoline `adr x3;mov x30,x3;ret` @0x123100). Đọc UUID const + build MediaDrm.
+- **2 JNI-invoke site**: `bl 0x13d328` @ **0x1231e4** và **0x1232cc** (helper 0x13d328 = JNIEnv method-invoke: +0x30 FindClass, +0x108 GetMethodID, +0xe8 NewObject/CallObj...). = new MediaDrm(UUID) + getPropertyByteArray("deviceUniqueId").
+- **caller = `0x122d78`** (trong func **`0x122b90`**). **`0x122b90` KHÔNG có BL-caller trực tiếp** ⇒ gọi GIÁN TIẾP = **thread-entry (pthread_create) hoặc callback table**. ⇒ KHỚP note 46: #24 collect chạy trên collect-thread unidbg KHÔNG schedule ⇒ **KHÔNG nằm trong linear sign 0x9ecc0** (verified: run tt.Dump full-sign → 0 JNI MediaDrm/UUID/getProperty requested).
+
+### ⇒ Đường #24 (multi-session, full-port là con đường DUY NHẤT):
+- Fast-inject (splice #24 vào report plaintext trước Simon-encrypt) = **DEAD END**: không có #24 value thật (chỉ có input deviceUniqueId 32B, cần native transform của collect để ra 132B); inject giả → server reject widevine token.
+- **Full-port plan**: (1) drive func `0x12305c`/`0x122b90` thủ công trong tt.Dump SAU init (thread không tự chạy) — args: x8=incoming ctx (0x1230bc `mov x21,x8`); (2) serve MediaDrm JNI trong AbstractJni: FindClass android/media/MediaDrm + java/util/UUID, GetMethodID, NewObject MediaDrm, getPropertyByteArray("deviceUniqueId")→ByteArray(captured deviceUniqueId 32B "sZLyIifaxWeiNVYmORvBTisngBeWLDE"=735a4c79...). **Method-name OBFUSCATED** (decode runtime FUN_0027986c) ⇒ serve theo sig quan sát được.
+- **NEXT concrete step (reconnaissance)**: hook 0x13d328 + 2 site trong tt.Dump, invoke collect func → LOG mọi JNI method-name helper decode → biết chính xác method cần serve. Rồi implement serve + verify #24 mọc + store nơi report-builder đọc.
+
+### Harness facts: `gradle -q run` chạy tt.LoadTest (stall config); **sign đầy đủ = `gradle -q dump -DFIXTIME=1717600000`** (task 'dump' → tt.Dump). native/.so = c06892e3 khớp. Inputs url.bin=device_register, cookie.bin=header block.
+
+## Phase C (#24) — JNI-recon EMPIRICAL result: blocked by MSManager.init singleton (session-7)
+> User chose (a) JNI-name reconnaissance: added `-Dwv=1` drive to tt.Dump (Dump.java) → drive collect func post-sign, log crash/JNI.
+
+### Kết quả (empirical, `gradle dump -DFIXTIME=... -Dwv=true`):
+- **`0x12305c` cold**: 52 instr, RET=-1, rẽ vào string/alloc helper 0x14fc88, **KHÔNG chạm JNI MediaDrm**.
+- **`0x122b90` cold (self=fake singleton, vtable zeroed)**: 179 instr → **crash `UC_ERR_READ_UNMAPPED` @0x122d70 `ldr x0,[x22]`** với x22=0. Chain: head 0x122bc0 `ldr x8,[x0]; ldr x22,[x8]` ⇒ x22 = **vtable[0]** = 0 (fake) → crash NGAY TRƯỚC `bl 0x12305c` @0x122d78.
+- q-registers lộ ASCII `ro.build.version.release`, `release.=utf-8` + store key `2.disable_clear_ms` ⇒ **0x122b90/0x12305c = device-fingerprint/attestation collector** (build props + widevine).
+
+### ⇒ KẾT LUẬN (conclusive): #24 collect gated sau **MSManager.init singleton**
+- Collect cần `this` singleton với **vtable populated** (x22=vtable[0] non-null). Cold-drive KHÔNG thể tới MediaDrm JNI (0x1231e4/0x1232cc) ⇒ **JNI-name recon bất khả nếu chưa có singleton**.
+- **Đây = ROOT WALL chung với LoadTest** ("config globals empty — need MSManager.init"; config-setter 0x4f3b0 loop nếu gọi cô lập, notes/57 §10-11). ⇒ #24 offline = **phải giải MSManager.init trước** (build singleton context + populate vtable/globals). Substantial known wall.
+- Fast-inject vẫn dead-end (không có #24 value thật). ⇒ **#24 offline = blocked sau MSManager.init**, deep extra-credit. Core signer đã T10-validated (server HTTP 200 KHÔNG cần #24).
+
+### Artefact: Dump.java có `-Dwv=1` recon block (drive collect + crash log); build.gradle dump task forward -Dwv. Reusable khi MSManager.init xong.

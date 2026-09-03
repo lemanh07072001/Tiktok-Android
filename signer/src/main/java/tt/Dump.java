@@ -57,8 +57,29 @@ public class Dump {
         VM vm = emu.createDalvikVM(); theVM = vm;
         vm.setVerbose(false);
         vm.setJni(new AbstractJni() {
+            public DvmObject<?> getStaticObjectField(BaseVM v, DvmClass c, String sig){
+                if (sig.contains("PROPERTY_DEVICE_UNIQUE_ID")) { System.out.println("   [MediaDrm.PROPERTY_DEVICE_UNIQUE_ID]"); return new StringObject(theVM,"deviceUniqueId"); }
+                System.out.println("   [getStaticObjectField unhandled] "+sig);
+                return super.getStaticObjectField(v,c,sig); }
+            public DvmObject<?> newObjectV(BaseVM v, DvmClass c, String sig, VaList va){
+                if (sig.contains("java/util/UUID") && sig.contains("(JJ)V")) {
+                    long hi=0,lo=0; try{ hi=va.getLongArg(0); lo=va.getLongArg(1);}catch(Throwable t){}
+                    System.out.println("   [UUID new] "+Long.toHexString(hi)+"-"+Long.toHexString(lo));
+                    return c.newObject(new long[]{hi,lo});
+                }
+                if (sig.contains("android/media/MediaDrm")) {
+                    System.out.println("   [MediaDrm new] "+sig);
+                    return c.newObject("MediaDrm");
+                }
+                System.out.println("   [newObject unhandled] "+sig);
+                return c.newObject(null); }
             public DvmObject<?> callObjectMethodV(BaseVM v, DvmObject<?> o, String sig, VaList va){
                 if (sig.startsWith("b(")) { return null; }
+                if (sig.contains("getPropertyByteArray")) {
+                    String duid = System.getenv("MSB_DUID"); if(duid==null||duid.isEmpty()) duid="sZLyIifaxWeiNVYmORvBTisngBeWLDE ";
+                    System.out.println("   [MediaDrm.getPropertyByteArray] -> "+duid+" ("+duid.length()+"B)");
+                    return new ByteArray(theVM, duid.getBytes(StandardCharsets.UTF_8));
+                }
                 if (sig.contains("getBytes")) {
                     Object val = (o==null?null:o.getValue()); String str = val==null?"":val.toString();
                     System.out.println("   [getBytes impl] sig="+sig+" str="+str.substring(0,Math.min(30,str.length())));
@@ -207,12 +228,49 @@ public class Dump {
             System.out.println("[INIT 0x4000001] "+cnt[0]+" instrs RET="+(ri==null?"null":readObj(vm,ri.longValue())));
             // ★ #24 Widevine collect: 0x122b00 = lazy-singleton getter (guard 0x1fc210, cache 0x1fc208) → triggers MediaDrm collect
             if ("1".equals(System.getenv("MSB_WIDEVINE"))) {
-                System.out.println("[WIDEVINE] calling collect thread-entry 0x122b00 (JNI verbose ON)...");
-                vm.setVerbose(true);
+                long wtgt = Long.decode(System.getProperty("WV_FN","0x122b00"));
+                System.out.println("[WIDEVINE] calling 0x"+Long.toHexString(wtgt)+" — trace BL targets...");
+                final java.util.List<Long> wcalls = new java.util.ArrayList<>();
+                final long wbase = base;
+                CodeHook wh = new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                    try { byte[] ib=b.mem_read(a,4); int insn=(ib[0]&0xff)|((ib[1]&0xff)<<8)|((ib[2]&0xff)<<16)|((ib[3]&0xff)<<24);
+                        if ((insn&0xfc000000)==0x94000000){ int imm=insn&0x03ffffff; if((imm&0x02000000)!=0) imm-=0x04000000; wcalls.add(a+((long)imm*4)-wbase); }
+                    } catch(Throwable t){} }
+                    public void onAttach(UnHook un){} public void detach(){} };
+                emu.getBackend().hook_add_new(wh, base+0x30000, base+0x180000, null);
                 cnt[0]=0;
-                try { Number cr = mod.callFunction(emu, 0x122b00L); System.out.println("[WIDEVINE 0x122b00] "+cnt[0]+" instrs ret=0x"+Long.toHexString(cr==null?0:cr.longValue())); }
-                catch(Throwable t){ System.out.println("[WIDEVINE] threw "+t); }
-                vm.setVerbose(false);
+                boolean reachedMediaDrm[]={false};
+                final long ENVPEER = envP.peer;
+                final java.util.Set<Long> ENVFN = new java.util.HashSet<>(java.util.Arrays.asList(
+                    0x13b084L,0x13b098L,0x13b128L,0x13b150L,0x13b208L,0x13b2d8L,0x13bb70L,0x13be48L,0x13c054L,0x13c2c4L,
+                    0x13c3acL,0x13c3d0L,0x13c3f0L,0x13c4d8L,0x13c76cL,0x13c8c0L,0x13cae8L,0x13cd10L,0x13cf30L,0x13d12cL,
+                    0x13d328L,0x13d538L,0x13d864L,0x13db38L,0x13dbfcL,0x13dd7cL,0x13de2cL,0x13de9cL,0x13dfe8L,0x13b6f0L,0x13b80cL));
+                CodeHook mdh = new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                    long off=a-base;
+                    if(ENVFN.contains(off)){ if(off==0x13d328L) reachedMediaDrm[0]=true; b.reg_write(Arm64Const.UC_ARM64_REG_X0, ENVPEER); } }
+                    public void onAttach(UnHook un){} public void detach(){} };
+                emu.getBackend().hook_add_new(mdh, base+0x13b000, base+0x13e000, null);
+                vm.setVerbose(true);
+                try {
+                    Number mgr = mod.callFunction(emu, 0x122b00L);
+                    long m = mgr==null?0:mgr.longValue();
+                    System.out.println("[WIDEVINE] manager 0x122b00 -> 0x"+Long.toHexString(m));
+                    if ("1".equals(System.getProperty("WV_COLLECT"))) {
+                        // ROOT FIX: collect-thread reads JNIEnv from TLS[tpidr+0x28] (set by AttachCurrentThread).
+                        // Cold-call has TLS[0x28]=0 → all env derefs null. Seed it with unidbg's real JNIEnv.
+                        long tls = emu.getBackend().reg_read(Arm64Const.UC_ARM64_REG_TPIDR_EL0).longValue();
+                        writeLong(emu, tls+0x28, ENVPEER);
+                        System.out.println("   [WV] seeded TLS[0x28]=JNIEnv 0x"+Long.toHexString(ENVPEER)+" (tls=0x"+Long.toHexString(tls)+")");
+                        wcalls.clear(); cnt[0]=0;
+                        long WVARG = Long.decode(System.getProperty("WV_ARG","0"))==1 ? ENVPEER : m;
+                        Number cr = mod.callFunction(emu, 0x12305cL, WVARG);
+                        System.out.println("[WIDEVINE collect 0x12305c(mgr)] "+cnt[0]+" instrs ret=0x"+Long.toHexString(cr==null?0:cr.longValue())+" reachedMediaDrm="+reachedMediaDrm[0]);
+                    }
+                }
+                catch(Throwable t){ System.out.println("[WIDEVINE] threw "+t+" reachedMediaDrm="+reachedMediaDrm[0]); }
+                System.out.print("[WIDEVINE BL-trace] ");
+                for (Long c : wcalls) System.out.print("0x"+Long.toHexString(c)+" ");
+                System.out.println();
             }
             // ★ REAL SIGN = 0x9ecc0(char* url, char* cookie) -> char* header ("X-Argus\r\n...")
             String url = new String(java.nio.file.Files.readAllBytes(new File("url.bin").toPath()), StandardCharsets.UTF_8);
@@ -249,6 +307,23 @@ public class Dump {
                 }
             }
             System.out.println("  [report-magic scan: found="+found+"]");
+            // ---- #24 WIDEVINE COLLECT recon (-Dwv=1): drive collect func, capture JNI names / crash PC ----
+            if (Boolean.getBoolean("wv")) {
+                final long[] wvpc={0}; final int[] wvn={0};
+                emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){ wvpc[0]=a; wvn[0]++; }
+                    public void onAttach(UnHook un){} public void detach(){} }, mod.base+0x122000, mod.base+0x124000, null);
+                // fake C++ singleton: this -> vtable(zeroed). Lets us pass ldr x8,[x0];ldr x22,[x8] and see how far.
+                UnidbgPointer vtbl = emu.getMemory().malloc(0x400,true).getPointer();
+                UnidbgPointer self = emu.getMemory().malloc(0x400,true).getPointer(); self.setLong(0, vtbl.peer);
+                for (long tgt : new long[]{0x12305cL, 0x122b90L}) {
+                    wvpc[0]=0; wvn[0]=0;
+                    System.out.println("[WV] driving 0x"+Long.toHexString(tgt)+" with x0=self(0x"+Long.toHexString(self.peer)+")");
+                    try { Number wr=mod.callFunction(emu, tgt, self.peer);
+                        System.out.println("[WV] 0x"+Long.toHexString(tgt)+" RET="+wr+" instrs="+wvn[0]); }
+                    catch(Throwable t){ System.out.println("[WV] 0x"+Long.toHexString(tgt)+" stopped @0x"
+                        +Long.toHexString(wvpc[0]-mod.base)+" instrs="+wvn[0]+" : "+t.getClass().getSimpleName()+" "+t.getMessage()); }
+                }
+            }
         } catch (Throwable t){ System.out.println("[SIGN-STOP] "+t); }
         emu.close();
     }

@@ -27,5 +27,6 @@ tasks.register('dump', JavaExec) {
     systemProperty 'FIXTIME', System.getProperty('FIXTIME','0')
     systemProperty 'STORE_DIR', System.getProperty('STORE_DIR','state/phone_sync/.msdata/mssdk/ov')
     systemProperty 'FILES_MIRROR', System.getProperty('FILES_MIRROR','state/phone_files/files')
+    systemProperty 'wv', System.getProperty('wv','false')
     environment System.getenv()
 }
