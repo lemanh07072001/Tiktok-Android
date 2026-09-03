@@ -1,10 +1,10 @@
 # AI BOARD — cây gậy tiếp sức (relay)
 
-BATON: human           # C2(2): #24 JNI-recon DONE (empirical). CONCLUSIVE: #24 collect (0x12305c) gated behind MSManager.init singleton — cold-drive crashes @0x122d70 ldr x0,[x22] (vtable[0]=null) BEFORE reaching MediaDrm JNI. Same root wall as LoadTest. #24 offline needs MSManager.init first (hard). Core T10-validated w/o #24. Decision: invest in MSManager.init (multi-session) or accept.
-ROUND: 2
+BATON: human           # C3(1): #24/MSManager.init re-confirmed WALL. Collector `this` not a global (real ctx [0x1f4a60]=0x12517558, [ctx]=0x7377 not vtable→crash); once-guard [0x1fc220]=0 (collector never ran). Note 57 §10-11: config only via full app-sequence, piecemeal loop/fail, emulation-probing won't yield. Real paths: (A) Windows tt.Harness config-seq, or (B) multi-week CFF-devirt. Core T10-validated w/o #24. HUMAN: pick A/B or accept.
+ROUND: 1
 # --- prior ---
 # 🎉 OFFLINE SIGNER WORKS ON MAC: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon from (url,header_block)+device-store via real libmetasec (unidbg), clock lockable (FIXTIME). Byte-exact impossible (random IV). Phone genuine=772; +384 = device-state attestation (#24 dyn_seed) gated on get_seed network(MSB_NET)+keva d8b674 = last increment, NOT a code wall. Note 57 s5. DONE.
-ROUND: 2
+ROUND: 1
 
 
 

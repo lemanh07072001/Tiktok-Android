@@ -1,4 +1,5 @@
 # Note 59 — Devirt pskVersion gate: tiến độ (2026-09-03, session-6)
+> 📌 SUMMARY SẠCH + HANDOFF: [note 60](60-state-handoff-vm-and-widevine.md). File này là append-log chi tiết.
 
 > Mục tiêu (user chốt): full-772 register, OFFLINE-KHÔNG-PHONE. Đường duy nhất = devirt VM để ép `pskVersion="0"` → #16/#18/#19 mọc.
 > Chấp nhận đây là dự án nhiều-tuần/nhiều-session. Note này track tiến độ để session sau tiếp.
@@ -288,3 +289,23 @@
 - Fast-inject vẫn dead-end (không có #24 value thật). ⇒ **#24 offline = blocked sau MSManager.init**, deep extra-credit. Core signer đã T10-validated (server HTTP 200 KHÔNG cần #24).
 
 ### Artefact: Dump.java có `-Dwv=1` recon block (drive collect + crash log); build.gradle dump task forward -Dwv. Reusable khi MSManager.init xong.
+
+## Phase C (#24) — MSManager.init drive w/ REAL ctx: re-confirms note-57 §10-11 wall (2026-09-04, claude, user "tiếp")
+- Extended tt.Dump `-Dwv` to read init-populated globals + drive collector với ctx THẬT.
+- **Globals sau init** (tt.Dump): [0x1f4a08]=1 [0x1f4a48]=1 [0x1f4a68]=1 [0x1f3f58]=1 (init-flags SET) | [0x1f4a60]=0x12517558 (config-ctx) [0x1f4a40]=0x121f3e28 [0x1f3ce0]=0x1209ed04 [0x1f3c80]=0x12513570 | **[0x1fc220]=0x0** (collector once-guard UNSET ⇒ widevine collector CHƯA chạy trong sign).
+- **Drive 0x122b90 với x0=real ctx 0x12517558**: `ldr x8,[x0]`→x8=[ctx]=**0x7377** (không phải vtable ptr) → `ldr x22,[x8]`=[0x7377] unmapped → **crash @0x122bc4, 14 instr, hitJNI=false**. ⇒ config-ctx [0x1f4a60] **KHÔNG phải** collector `this`.
+- Drive 0x12305c real-ctx: 52 instr no-JNI. Drive 0x122b90 fake: 179 instr crash @0x122d70 no-JNI.
+- ⇒ **CONCLUSIVE**: collector `this` là object RIÊNG trong object-graph MSManager.init, KHÔNG phải global truy cập được. Không cold-drive/real-ctx-drive nào chạm được MediaDrm JNI (0x1231e4/0x1232cc). = **re-confirm note 57 §10-11** ("config populate CHỈ qua full MSManager.init context; piecemeal loop/fail; emulation-probing KHÔNG yield thêm").
+
+### ⇒ BATON: human. Offline emulation-probing trên #24/MSManager.init = documented dead-end (note 57). Đường thật:
+- (A) **Windows tt.Harness** — lấy config/init-sequence thật (cách app gọi MSManager.init native từ MSB_* + bundle device_id/seed/license) → replay trên Mac. Transfer nhỏ, well-defined.
+- (B) **Multi-week CFF-devirt** init 0x5ed34 + config path 0x4f3b0 + object-graph → dựng collector `this`. Rất tốn.
+- Core signer đã T10-validated (HTTP 200 KHÔNG cần #24). #24/full-772 = deep extra-credit sau MSManager.init.
+- Artefacts: Dump.java `-Dwv=1` (globals dump + ctx-drive + JNI-site markers), reusable khi có config-sequence.
+
+## Phase C (#24) — ★ SOURCE CORRECTION + 3-angle convergence (2026-09-04, claude, path A)
+- **#24 SOURCE = dyn_seed, KHÔNG phải widevine/MediaDrm** (RUN_ENDTOEND.md Step 4, verify thật): device-state block = #16 device_token←rtk2_ms, #18 uuid16←kiid, **#24←dyn_seed** (98B `MDGkEprS...`). dyn_seed ĐÃ có trong device_profile.json + store `.msp_589`. ⇒ widevine-collect (0x12305c) = **RED-HERRING cho #24** (phục vụ field/get_seed khác).
+- **Root-cause report rỗng**: `state/phone_sync/.msdata/mssdk/ov/` **RỖNG** → run cũ serve 0 device-secret. Genuine bundle = `state/msstate_7678616678053643790/.msdata/mssdk/ov` (đủ .msp_589/.mss/.msf3/.dy).
+- **Experiment**: `gradle dump -DSTORE_DIR=state/msstate_7678616678053643790/.msdata/mssdk/ov -DFIXTIME=...` → store ĐƯỢC đọc (GET kiid/rdk2_ms/rtk2_ms + SIGN GET 1.lgi.gli1/2) NHƯNG **X-Argus vẫn 324chars/388B thin, device-state block #16/#18/#24 = NONE**. (Dump.java giờ có MediaDrm JNI serving — thay đổi trên đĩa — nhưng collect không trigger nên vô hại.)
+- ⇒ **3-ANGLE CONVERGENCE**: widevine-collect / MSManager.init / device-state-load — ĐỀU gated sau **FULLINIT device-state-provisioning** (+ get_seed network POST). tt.Dump đọc store nhưng thiếu provisioning-trigger ⇒ report thin. = cùng root note 57.
+- **Đường (A) THẬT**: cần Windows tt.Harness FULLINIT/MSB_KV/MSB_THREADS glue (chạy provisioning + get_seed) — `e:/tiktok_signer/mobile/unidbg/`, KHÔNG có trên Mac (signer/vendor/ trống). Copy theo COPY-FROM-WINDOWS.md Path A, HOẶC reconstruct provisioning+get_seed sequence (substantial).

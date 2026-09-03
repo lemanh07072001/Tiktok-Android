@@ -56,3 +56,30 @@
 - Env-helper cluster patched (29 fns 0x13b000-0x13e000, x0=envP) as backup — but env-as-x0 (WV_ARG=1) is the clean fix (no crash).
 
 ## STATUS: #24 collect-thread wall (note 46) BROKEN — DUID retrieved in tt.Dump. Remaining = store #24 into [0x1fbe00] device-state. Then #18/#19/slot16/identity (3 fronts). (C) progressing.
+
+## ▶ RESUME HERE (2026-09-04) — #24 store-step
+State: Widevine collect RUNS in tt.Dump (Dump.java, MSB_WIDEVINE=1 -DWV_COLLECT=1 -DWV_ARG=1). getPropertyByteArray→DUID retrieved, 3471 instrs no crash. #24 still ABSENT because collect result written to x8-sret buffer, NOT stored into device-state.
+Next: get collect result stored into the device-state global the report-builder reads for #24, then verify #24 appears in /tmp/rpt1.bin.
+Key addrs: collect body 0x12305c (x0=JNIEnv, x8=out-sret); caller store path 0x122b00 (collect call @0x122d78; store @0x122d8c bl 0x15009c → global [0x1fbe00] via adrp x20,#0x1fb000+add #0xe00). Gates in 0x122b00: flag byte [0x1fc210]@0x122b10, check 0x172580@0x122d54, counter w[0x1fbe04]<=3 @0x122d64. Env fix: seed TLS[tpidr+0x28]=envP; MediaDrm JNI served in AbstractJni (UUID/MediaDrm/PROPERTY_DEVICE_UNIQUE_ID/getPropertyByteArray). Run: cd signer; JAVA_HOME=/opt/homebrew/opt/openjdk@21/...; CP=$(cat /tmp/tt_cp.txt).
+
+## ★★★★★ #24 WIDEVINE COLLECT+STORE COMPLETES in tt.Dump (2026-09-04) — ret=0
+> Fully past note-46 wall. Widevine collect runs end-to-end, retrieves DUID, transforms, and PUTs into KV-store. ret=0x0 (success).
+
+### Working recipe (Dump.java MSB_WIDEVINE=1 -DWV_DRIVER=1):
+1. **Driver fn = 0x122b90** (NOT 0x122b00 — that's a lazy-getter for a format-string obj). q3 workflow found this.
+2. **Context arg = synthetic chain**: pctx→p8→p22, [p22]=envP. (0x122b90: x8=[x0], x22=[x8], collect x0=[x22].) Passing manager/envP directly fails ([m]=fmt-string; [envP]=vtable whose [0]=NULL JNI slot).
+3. **Seed TLS[tpidr+0x28]=envP**; **pre-write counter [0x1fbe04]=0** (gate cmp #3 b.gt); **force 0x172580 strcmp→nonzero** during driver (pass-path, avoid deny-fallback).
+4. **AbstractJni serves**: newObjectV(UUID(JJ)/MediaDrm(UUID)); getStaticObjectField(PROPERTY_DEVICE_UNIQUE_ID)="deviceUniqueId"; callObjectMethodV(getPropertyByteArray→MSB_DUID); **callVoidMethodV(release→no-op)** [was the last blocker].
+5. Env-fix: hook forces x0=envP at collect 0x12305c + JNI env-helpers (0x13b000-0x13e000 cluster).
+- RESULT: 0x122b90 = **4595 instrs, ret=0x0**, getPropertyByteArray→DUID, then GetByteArrayRegion(32B)+release, transform→**base64(DUID)** stored: `[0x1fbe00]` = libc++ std::string len=0x2c(44) = base64 of 32B DUID.
+
+### The store-PUT chain (0x122db0-0x122dcc):
+- 0x122db8 bl 0x14fc68 (prep key from [0x1fbdf8]); 0x122dbc x2=&[0x1fbe00] (base64-DUID value); 0x122dc8 x0=x19 (KV-store singleton); **0x122dcc bl 0x117f40 = store PUT(store, key, value)**.
+- So #24 material = base64(DUID) PUT into a KV-store (x19, a 0x1fbxxx global) under key [0x1fbdf8].
+
+### REMAINING (last connection): report-builder does NOT emit #24 after this.
+- [0x1fbe00] read ONLY by 0x122b90 itself (3 refs); no other code reads it → it's the collect's private staging, PUT into the KV-store via 0x117f40.
+- Q: does the report-builder READ #24 from that KV-store (key [0x1fbdf8]) during sign? q2 workflow FAILED (null) — the report #24-read site is still unmapped. Either (a) report queries a different key/store, (b) store PUT (x19) ≠ the store the report reads, or (c) #24 needs the collect to run during sign-init so the report sees it fresh.
+- NEXT: trace report field #24 source (VM prog 0x1814f0 / serializer 0x154f7c) — find which store-key/global feeds #24; identify [0x1fbdf8] key string + x19 store; confirm vs 0x117f40 PUT target.
+
+## MILESTONE: #24 Widevine collect+store WORKS (note-46 wall broken). Remaining = wire collect output to report #24-read (1 trace step). Then #18/#19/slot16/identity.

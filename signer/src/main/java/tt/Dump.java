@@ -57,6 +57,9 @@ public class Dump {
         VM vm = emu.createDalvikVM(); theVM = vm;
         vm.setVerbose(false);
         vm.setJni(new AbstractJni() {
+            public void callVoidMethodV(BaseVM v, DvmObject<?> o, String sig, VaList va){
+                if (sig.contains("release")||sig.contains("close")) { System.out.println("   [MediaDrm.release no-op]"); return; }
+                System.out.println("   [callVoid unhandled] "+sig); }
             public DvmObject<?> getStaticObjectField(BaseVM v, DvmClass c, String sig){
                 if (sig.contains("PROPERTY_DEVICE_UNIQUE_ID")) { System.out.println("   [MediaDrm.PROPERTY_DEVICE_UNIQUE_ID]"); return new StringObject(theVM,"deviceUniqueId"); }
                 System.out.println("   [getStaticObjectField unhandled] "+sig);
@@ -245,26 +248,44 @@ public class Dump {
                     0x13b084L,0x13b098L,0x13b128L,0x13b150L,0x13b208L,0x13b2d8L,0x13bb70L,0x13be48L,0x13c054L,0x13c2c4L,
                     0x13c3acL,0x13c3d0L,0x13c3f0L,0x13c4d8L,0x13c76cL,0x13c8c0L,0x13cae8L,0x13cd10L,0x13cf30L,0x13d12cL,
                     0x13d328L,0x13d538L,0x13d864L,0x13db38L,0x13dbfcL,0x13dd7cL,0x13de2cL,0x13de9cL,0x13dfe8L,0x13b6f0L,0x13b80cL));
+                final boolean[] inDrv = {false};
+                final long BASE = base;
                 CodeHook mdh = new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
-                    long off=a-base;
-                    if(ENVFN.contains(off)){ if(off==0x13d328L) reachedMediaDrm[0]=true; b.reg_write(Arm64Const.UC_ARM64_REG_X0, ENVPEER); } }
+                    long off=a-BASE;
+                    if(off==0x12305cL){ reachedMediaDrm[0]=true; b.reg_write(Arm64Const.UC_ARM64_REG_X0, ENVPEER); }   // collect entry: force x0=JNIEnv
+                    else if(ENVFN.contains(off)){ b.reg_write(Arm64Const.UC_ARM64_REG_X0, ENVPEER); }                  // JNI env-helpers
+                    else if(off==0x172580L && inDrv[0]){ b.reg_write(Arm64Const.UC_ARM64_REG_X0, 1L);                  // strcmp -> "differ" (force pass-path)
+                        long lr=b.reg_read(Arm64Const.UC_ARM64_REG_LR).longValue(); b.reg_write(Arm64Const.UC_ARM64_REG_PC, lr); } }
                     public void onAttach(UnHook un){} public void detach(){} };
-                emu.getBackend().hook_add_new(mdh, base+0x13b000, base+0x13e000, null);
+                emu.getBackend().hook_add_new(mdh, base+0x120000, base+0x180000, null);
                 vm.setVerbose(true);
                 try {
                     Number mgr = mod.callFunction(emu, 0x122b00L);
                     long m = mgr==null?0:mgr.longValue();
                     System.out.println("[WIDEVINE] manager 0x122b00 -> 0x"+Long.toHexString(m));
-                    if ("1".equals(System.getProperty("WV_COLLECT"))) {
-                        // ROOT FIX: collect-thread reads JNIEnv from TLS[tpidr+0x28] (set by AttachCurrentThread).
-                        // Cold-call has TLS[0x28]=0 → all env derefs null. Seed it with unidbg's real JNIEnv.
-                        long tls = emu.getBackend().reg_read(Arm64Const.UC_ARM64_REG_TPIDR_EL0).longValue();
-                        writeLong(emu, tls+0x28, ENVPEER);
-                        System.out.println("   [WV] seeded TLS[0x28]=JNIEnv 0x"+Long.toHexString(ENVPEER)+" (tls=0x"+Long.toHexString(tls)+")");
+                    long tls = emu.getBackend().reg_read(Arm64Const.UC_ARM64_REG_TPIDR_EL0).longValue();
+                    writeLong(emu, tls+0x28, ENVPEER);   // seed JNIEnv into TLS[0x28]
+                    if ("1".equals(System.getProperty("WV_DRIVER"))) {
+                        // recipe (q3): drive collect+STORE fn 0x122b90 → collect runs + stores #24 into [0x1fbe00].
+                        emu.getBackend().mem_write(base+0x1fbe04, new byte[4]);  // counter gate: [0x1fbe04]=0 (<=3)
+                        System.out.println("   [WV] pre-write counter [0x1fbe04]=0; driving 0x122b90(m=0x"+Long.toHexString(m)+")");
+                        // build ctx chain: [ctx]->p8; [p8]->p22; [p22]=envP  (0x122b90: x8=[x0], x22=[x8], collect x0=[x22])
+                        UnidbgPointer p22 = emu.getMemory().malloc(8,false).getPointer(); p22.setLong(0, ENVPEER);
+                        UnidbgPointer p8  = emu.getMemory().malloc(8,false).getPointer(); p8.setLong(0, p22.peer);
+                        UnidbgPointer pctx= emu.getMemory().malloc(8,false).getPointer(); pctx.setLong(0, p8.peer);
+                        long DARG = "m".equals(System.getProperty("WV_DARG")) ? m : ("env".equals(System.getProperty("WV_DARG")) ? ENVPEER : pctx.peer);
+                        wcalls.clear(); cnt[0]=0; inDrv[0]=true;
+                        Number cr=null; try { cr = mod.callFunction(emu, 0x122b90L, DARG); } finally { inDrv[0]=false; }
+                        System.out.println("[WIDEVINE driver 0x122b90] "+cnt[0]+" instrs ret=0x"+Long.toHexString(cr==null?0:cr.longValue())+" reachedMediaDrm="+reachedMediaDrm[0]);
+                        // read the [0x1fbe00] container (libc++ std::string {cap|1,len,ptr} or {shortlen,inline})
+                        System.out.println("   [WV] [0x1fbe00] after = "+readCpp(emu, base+0x1fbe00));
+                        byte[] c=emu.getBackend().mem_read(base+0x1fbe00,32); StringBuilder h=new StringBuilder(); for(byte bb:c) h.append(String.format("%02x",bb&0xff));
+                        System.out.println("   [WV] [0x1fbe00] raw32="+h);
+                    } else if ("1".equals(System.getProperty("WV_COLLECT"))) {
                         wcalls.clear(); cnt[0]=0;
                         long WVARG = Long.decode(System.getProperty("WV_ARG","0"))==1 ? ENVPEER : m;
                         Number cr = mod.callFunction(emu, 0x12305cL, WVARG);
-                        System.out.println("[WIDEVINE collect 0x12305c(mgr)] "+cnt[0]+" instrs ret=0x"+Long.toHexString(cr==null?0:cr.longValue())+" reachedMediaDrm="+reachedMediaDrm[0]);
+                        System.out.println("[WIDEVINE collect 0x12305c] "+cnt[0]+" instrs ret=0x"+Long.toHexString(cr==null?0:cr.longValue())+" reachedMediaDrm="+reachedMediaDrm[0]);
                     }
                 }
                 catch(Throwable t){ System.out.println("[WIDEVINE] threw "+t+" reachedMediaDrm="+reachedMediaDrm[0]); }
@@ -309,19 +330,35 @@ public class Dump {
             System.out.println("  [report-magic scan: found="+found+"]");
             // ---- #24 WIDEVINE COLLECT recon (-Dwv=1): drive collect func, capture JNI names / crash PC ----
             if (Boolean.getBoolean("wv")) {
-                final long[] wvpc={0}; final int[] wvn={0};
+                final long[] wvpc={0}; final int[] wvn={0}; final boolean[] hitJni={false};
                 emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){ wvpc[0]=a; wvn[0]++; }
                     public void onAttach(UnHook un){} public void detach(){} }, mod.base+0x122000, mod.base+0x124000, null);
-                // fake C++ singleton: this -> vtable(zeroed). Lets us pass ldr x8,[x0];ldr x22,[x8] and see how far.
+                // definitive marker: did we reach the MediaDrm/UUID JNI sites 0x1231e4 / 0x1232cc?
+                emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                    hitJni[0]=true; System.out.println("[WV] *** REACHED JNI site 0x"+Long.toHexString(a-mod.base)+" ***"); }
+                    public void onAttach(UnHook un){} public void detach(){} }, mod.base+0x1231e4, mod.base+0x1231e5, null);
+                emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                    hitJni[0]=true; System.out.println("[WV] *** REACHED JNI site 0x"+Long.toHexString(a-mod.base)+" ***"); }
+                    public void onAttach(UnHook un){} public void detach(){} }, mod.base+0x1232cc, mod.base+0x1232cd, null);
+                // dump context/config globals populated by init (notes/57 §9-11)
+                long[] G={0x1f4a60,0x1f4a08,0x1f4a48,0x1f4a68,0x1f4a40,0x1f3ce0,0x1f3f58,0x1fc220,0x1f3c80};
+                System.out.println("[WV] context globals after init/sign:");
+                long ctx=0;
+                for(long g:G){ long v=readLong(emu, mod.base+g); if(g==0x1f4a60) ctx=v;
+                    System.out.printf("     [0x%x] = 0x%x%n", g, v); }
+                // candidate `this` for collector: real ctx object [0x1f4a60]; fallback fake vtable.
                 UnidbgPointer vtbl = emu.getMemory().malloc(0x400,true).getPointer();
-                UnidbgPointer self = emu.getMemory().malloc(0x400,true).getPointer(); self.setLong(0, vtbl.peer);
-                for (long tgt : new long[]{0x12305cL, 0x122b90L}) {
-                    wvpc[0]=0; wvn[0]=0;
-                    System.out.println("[WV] driving 0x"+Long.toHexString(tgt)+" with x0=self(0x"+Long.toHexString(self.peer)+")");
-                    try { Number wr=mod.callFunction(emu, tgt, self.peer);
-                        System.out.println("[WV] 0x"+Long.toHexString(tgt)+" RET="+wr+" instrs="+wvn[0]); }
-                    catch(Throwable t){ System.out.println("[WV] 0x"+Long.toHexString(tgt)+" stopped @0x"
-                        +Long.toHexString(wvpc[0]-mod.base)+" instrs="+wvn[0]+" : "+t.getClass().getSimpleName()+" "+t.getMessage()); }
+                UnidbgPointer fake = emu.getMemory().malloc(0x400,true).getPointer(); fake.setLong(0, vtbl.peer);
+                java.util.List<long[]> tries = new java.util.ArrayList<>();
+                if(ctx!=0){ tries.add(new long[]{0x122b90L, ctx}); tries.add(new long[]{0x12305cL, ctx}); }
+                tries.add(new long[]{0x122b90L, fake.peer});
+                for(long[] tc : tries){
+                    long tgt=tc[0], self=tc[1]; wvpc[0]=0; wvn[0]=0; hitJni[0]=false;
+                    System.out.printf("[WV] drive 0x%x with x0=0x%x %s%n", tgt, self, (self==ctx?"(REAL ctx)":"(fake)"));
+                    try { Number wr=mod.callFunction(emu, tgt, self);
+                        System.out.printf("[WV] 0x%x RET=%s instrs=%d hitJNI=%b%n", tgt, wr, wvn[0], hitJni[0]); }
+                    catch(Throwable t){ System.out.printf("[WV] 0x%x stopped @0x%x instrs=%d hitJNI=%b : %s %s%n",
+                        tgt, wvpc[0]-mod.base, wvn[0], hitJni[0], t.getClass().getSimpleName(), t.getMessage()); }
                 }
             }
         } catch (Throwable t){ System.out.println("[SIGN-STOP] "+t); }
