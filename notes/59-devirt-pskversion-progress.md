@@ -189,3 +189,32 @@
 - PLT thật (giải qua .rela.plt+.dynsym, .plt base 0x30390): **0x30610=malloc, 0x30b40=std::this_thread::sleep_for**. Path 0xedf20+ = sleep **10M→20M→40M→80M ns (10→20→40→80ms) exponential backoff + malloc** = **anti-emulation timing defense** NGAY trong handler branch.
 - ⇒ CHỐT (bằng chứng mức-handler, không phải phỏng đoán): devirt tĩnh đầy đủ = symbolic-exec over data-dependent threaded-VM + anti-emu; devirt động = fragile (backoff-sleep/malloc chống emulate). Cả hai = **multi-week thật**. Trần vẫn (A) synthetic-772.
 - Tiến bộ session này (bankable, lưu note+tool+BOARD): bytecode PLAINTEXT ✓ | deobf transform addend−0xa00000 (multi-bias) ✓ | 2 bảng=threaded continuation/handler ✓ | op44=data-dependent jumptable+anti-emu ✓. Next nếu tiếp: symbolic-exec engine cho VM (dựng trên _vm_unicorn_replay.py) HOẶC dynamic-trace prog 0x1814f0 qua tt.Dump entry-state capture.
+
+## Phase C (port #24 widevine) — localized collect + JNI helper (session-6)
+- **Widevine UUID build @0x1231b8-d8**: x3=0xedef8ba979d64ace, x4=0xa3c827dcd51d21ed → `bl 0x13d328`.
+- **`0x13d328` = JNI method-invoke helper**: JNIEnv offsets +0x30=FindClass, +0x108=GetMethodID, +0xe8=NewObject/CallObj, +0xd0=PushLocalFrame, +0x720=ExceptionCheck, +0x88=ExceptionClear, +0xb8=DeleteLocalRef. Decode method-name qua FUN_0027986c(bytes,len) (obfuscated strings).
+- Collect func chứa UUID = quanh 0x1231b8 (start ~0x123xxx). Nó: new UUID(hi,lo) → new MediaDrm(UUID) → getPropertyByteArray("deviceUniqueId") → transform → #24.
+- **Port plan (multi-session)**: (1) tìm entry collect-func + trigger (thread/dispatcher, hoặc gọi trực tiếp trong tt.Dump sau init); (2) serve MediaDrm JNI trong AbstractJni: resolveClass android/media/MediaDrm + java/util/UUID, GetMethodID (decoded names), NewObject MediaDrm, getPropertyByteArray("deviceUniqueId")→ByteArray(captured deviceUniqueId 32B "sZLyIifaxWeiNVYmORvBTisngBeWLDE"=735a4c79...); (3) verify #24 mọc trong report (parse RAM). Strings obfuscated → cần decode name qua trace hoặc serve theo sig.
+- Alternative NHANH (nếu đổi ý): B = patch-inject captured #24 vào report plaintext (RAM) TRƯỚC Simon-encrypt (hook trước 0x159d70). Không cần run collect.
+
+## KẾT session-6: attestation SOLVED offline (breakthrough). #24 widevine collect LOCALIZED (0x1231b8/0x13d328). Port = multi-session (serve MediaDrm JNI + trigger collect). note 59 đầy đủ.
+
+## ★ COURSE-CORRECTION (2026-09-03, session tiếp): C1-devirt CONFIRMED UNNECESSARY
+> Bản compaction phiên trước chụp TRƯỚC breakthrough §146 → tôi resume nhầm C1-devirt. Xác minh lại từ /tmp/rpt1.bin (tt.Dump dump hôm nay 18:59):
+- **rpt1.bin field parse**: PRESENT {1,2,3,4,6,7,9,10,12,13,14,15,**18(16B),19(32B)**,20,21,23,25,28,29,30,31,**32(26B),33,34,35,36**}. ⇒ **attestation #18/#19 + sig #34-36 ĐÃ CÓ offline** — pskVersion-gate KHÔNG chặn (C1 thừa, đúng §146).
+- **MISSING (gap→772)**: {5,8,11,16,17,22,24,26,27} = identity/device-state. Lớn nhất = **#24 Widevine (+132B)**.
+### #24 Widevine — call-chain đã map (Path A):
+- **Collect-func entry ~0x12303c** (prologue stp). UUID Widevine build @0x1231b8: hi=`0xedef8ba979d64ace`, lo=`0xa3c827dcd51d21ed` → `mov x2,x0(uuid-str-buf); bl 0x13d328`. `cbz x0,0x1235a4` = nếu helper trả null → skip #24.
+- **0x13d328 = MediaDrm JNI helper**: JNIEnv qua x19; offsets thấy = FindClass region + ExceptionCheck `[x8,#0x720]`, ExceptionClear `[x8,#0x88]`, DeleteLocalRef `[x8,#0xb8]`, `[x8,#0xd0]`. Full exception-handling; FindClass(android/media/MediaDrm)+NewObject+getPropertyByteArray("deviceUniqueId") ở nhánh sâu. deviceUniqueId đã capture = "sZLyIifaxWeiNVYmORvBTisngBeWLDE" (735a4c79...).
+### PATH A (server-valid, SUBSTANTIAL): tt.Dump — sau init, gọi collect-func 0x12303c (đúng ctx) + serve MediaDrm/UUID JNI trong AbstractJni trả captured deviceUniqueId → SDK dựng #24 → sign gồm #24 → ~772. Multi-session harness.
+### PATH B (nhanh, structural-only): hook trước Simon-encrypt 0x159d70, inject #24 vào report plaintext. RỦI RO: #34-36 (sig) tính TRƯỚC inject → chữ ký stale → server có thể từ chối (chỉ dùng để test size/format, KHÔNG server-valid).
+### ★ RẺ NHẤT & QUYẾT ĐỊNH (note 58 §T10, CHƯA CHẠY): tt.Dump ĐÃ ra x-argus có #18/#19/#34-36 (~700 report). Trước khi tốn công #24, POST 1 request ký bằng output HIỆN TẠI lên TikTok → xem server nhận với "thin+attestation" không. Nếu nhận → #24 thừa luôn. Nếu cần → làm Path A.
+
+## ★★★★★ T10 EXECUTED & PASSED (2026-09-03) — offline signature SERVER-ACCEPTED
+- **Setup**: tt.Dump runs on Mac (JDK21=/opt/homebrew/opt/openjdk@21, cp=all ~/.gradle unidbg jars + build/resources/main for got_symbols.properties). Runner scratchpad/t10_mac.mjs: update url.bin _rticket/ts→now → run tt.Dump → parse HEADER (X-Argus|X-Gorgon|X-Khronos|X-Ladon) → POST device-7677 request with real session cookie.
+- **Request**: consent/api/combine/list/v3 (device 7677798657664026132, real session cookies, STORE_DIR=phone_sync).
+- **X-Argus = 290B** (thin+attestation: report has #18/#19/#32/#34-36; MISSING #24 widevine/#16/full-772).
+- **RESULT: POST → HTTP 200, status_code=0, REAL DATA returned** (consent policy list). Signature ACCEPTED by TikTok edge.
+- ⇒ **VERDICT: full-772 / #24 Widevine / slot16≠0 / pskVersion VM-devirt are ALL UNNECESSARY** for server-accepted API calls. The 290B offline signature is sufficient. Note 58 §T10 (marked "cheapest, do first" but never run) = now DONE, PASS. Answers the whole project's open question.
+- **Caveat**: tested with a valid SESSION (authenticated consent endpoint). The no-session user/login path (01-PLAN Task5 → 2135/ec7) is a separate, stricter test — may or may not need more. But signature-validity itself = PROVEN accepted.
+- **Implication**: the offline signer (tt.Dump Mac) is the delivered core. Remaining project work = wire it into the login/session flows (re/src/*.mjs), NOT more metasec RE.

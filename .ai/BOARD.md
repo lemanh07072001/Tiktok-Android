@@ -1,6 +1,6 @@
 # AI BOARD — cây gậy tiếp sức (relay)
 
-BATON: claude          # C1(2): user chose build symbolic-exec engine. Committing 4 milestones, then _vm_symexec.py (unicorn-driven VM replay of prog 0x1814f0).
+BATON: free            # ★★★★★ T10 PASSED (2026-09-03): TikTok server ACCEPTS the offline 290B x-argus (POST HTTP200 status_code=0 + real data, consent/api/combine/list/v3, device 7677, fresh ts via tt.Dump Mac). ⇒ full-772/#24-Widevine/slot16/pskVersion-devirt ALL UNNECESSARY. Offline signer VALIDATED end-to-end server-side. Core project goal MET for API calls. Remaining = wire signer into login/session flows (re/src/*.mjs) + test no-session user/login→2135 (Task5). Runner scratchpad/t10_mac.mjs; JDK21=brew openjdk@21.
 ROUND: 1
 # --- prior ---
 # 🎉 OFFLINE SIGNER WORKS ON MAC: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon from (url,header_block)+device-store via real libmetasec (unidbg), clock lockable (FIXTIME). Byte-exact impossible (random IV). Phone genuine=772; +384 = device-state attestation (#24 dyn_seed) gated on get_seed network(MSB_NET)+keva d8b674 = last increment, NOT a code wall. Note 57 s5. DONE.
