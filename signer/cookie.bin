@@ -1,62 +1,14 @@
-cookie
-store-idc=alisg; tt-target-idc=alisg; d_ticket=11a0c1b99a699482ca07d8103885cbf8a8cf0; multi_sids=7539222102785360914%3Aca4cbf7a72f8703c03c94852f9d64c20; cmpl_token=AgQYAPOF_hfkT7C4nlwpX3ldK_DsnADglj-WDmClBmM; sid_guard=ca4cbf7a72f8703c03c94852f9d64c20%7C1787636609%7C15551999%7CSun%2C+21-Feb-2027+05%3A43%3A28+GMT; uid_tt=a5f4a4843f0cd4e52b3a013ad4a748179da4de1f787b648c54e2924d671cdbfa; uid_tt_ss=a5f4a4843f0cd4e52b3a013ad4a748179da4de1f787b648c54e2924d671cdbfa; sid_tt=ca4cbf7a72f8703c03c94852f9d64c20; sessionid=ca4cbf7a72f8703c03c94852f9d64c20; sessionid_ss=ca4cbf7a72f8703c03c94852f9d64c20; tt_session_tlb_tag=sttt%7C4%7Cyky_enL4cDwDyUhS-dZMIP________-lb2sACQtjtjMo7ZAEJOU0n45-ddJya-qEiQhG1ntlAnI%3D; store-country-code=vn; store-country-code-src=uid; passport_csrf_token=9707c126c41813f85eae800e91f5f29c; passport_csrf_token_default=9707c126c41813f85eae800e91f5f29c; install_id=7677801324881348372; ttreq=1$1bd885bfcbfdd8dd1ab7f7d676533dba08692fdd; odin_tt=e4fa191690ff82e98ef24efd7922bab76dd8e5bd1274dd4cac7f25db49e010e5de8eddf2b3a708eed0c8ca37dbc3a8e11d2b8029efca4d0a2b756561f9403315dcef877172615311895f6272c881eec7; store-country-sign=MEIEDITrUyQY41KQWLn_FQQgz9gzNS617AIfob8wcoxaS-b73u3zfWyPnnAxF3Z6qCMEEHfvTdSA3brVdUSJV2lk0uc; msToken=1NA4HwUhJleukLECp-bd4pt0DY04XMU0gn52OC6_bOJCUtrmH-tL-DlpXwvfBQ9cnGkSLG-J6fAVbrcXbCsRO-VqLZVfA193KEy77HVr95dl
-x-metasec-content-type
-application
-x-metasec-event-source
-native
-x-bd-kmsv
-0
+x-ss-stub
+36DDE11555793DF69CA8628109D635A0
+content-type
+application/json; charset=utf-8
 x-ss-req-ticket
-1788421980145
-x-bd-client-key
-#pwbKamAvDOMrALX2/MVRjMLHn/oUfMsidJkpe4i6aT/mxu64GmWjSOrWzxR5sOR5sC5n4C+bnCsjDvex
-x-metasec-pns-event-id
-bc5579d5-f39d-4734-9eea-ed69a9a25f74
-x-tt-pba-encode
-4020
+1788451827996
+x-tt-dm-status
+login=0;ct=0;rt=7
 sdk-version
 2
-x-tt-token
-03ca4cbf7a72f8703c03c94852f9d64c20017cf6c3783c6e20172fd38d03f539d4067ae4076b1df68e0ceddffc810277506e98bf1e3c0e4fa0b00f02924f10ac5b857b4a9e81564be805aedc30f0b55e8328283c16eb2006762d0c497086326a5e77d--0a4e0a20119751b39f1a5060aa7e800a31b0a7fb05be7c628d529abc06bacbef6dac4730122009a0b1d049186b8b030af1e5ec664ef1d59064be7e0b5690dc1a8f05f5db29e21801220674696b746f6b-3.0.1
 passport-sdk-version
 1
-oec-cs-si-a
-2
-oec-cs-sdk-version
-v10.02.08-ov-android_V34
-rpc-persist-pns-region-1
-VN|1562822|1581129
-rpc-persist-pns-region-2
-VN|1562822|1581129
-rpc-persist-pns-region-3
-VN|1562822|1581129
-x-vc-bdturing-sdk-version
-2.4.2.i18n
-oec-vc-sdk-version
-3.2.2.i18n
-x-tt-request-tag
-n=0;nr=111;bg=0;rs=112;s=-1;p=0
-content-type
-application/x-www-form-urlencoded; charset=UTF-8
-x-ss-stub
-46C03B52742B3F2615A3ABDF1636B754
-content-length
-9
-x-tt-store-region
-vn
-x-tt-store-region-src
-uid
-rpc-persist-pyxis-policy-v-tnc
-1
-x-ttnet-race-backup-host
-api16-normal.tiktokv.com
-x-ttnet-race-backup-final-host
-api16-normal-c-alisg.tiktokv.com
-x-ss-dp
-1233
-x-tt-trace-id
-00-6641c351106a8d05334f090614c804d1-6641c351106a8d05-01
 user-agent
-com.zhiliaoapp.musically/2024505040 (Linux; U; Android 14; en; SM-G930S; Build/AP1A.240505.005; Cronet/TTNetVersion:c56a375e 2026-05-19 QuicVersion:f9fda2ef 2026-03-10)
-accept-encoding
-gzip, deflate, br
+com.zhiliaoapp.musically/2024500030 (Linux; U; Android 9; en; SM-G930F; Build/PPR1.180610.011; Cronet/TTNetVersion:41c3dc2f 2026-04-08 QuicVersion:f9fda2ef 2026-03-10)

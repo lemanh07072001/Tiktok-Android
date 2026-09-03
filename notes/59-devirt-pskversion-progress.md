@@ -218,3 +218,33 @@
 - ⇒ **VERDICT: full-772 / #24 Widevine / slot16≠0 / pskVersion VM-devirt are ALL UNNECESSARY** for server-accepted API calls. The 290B offline signature is sufficient. Note 58 §T10 (marked "cheapest, do first" but never run) = now DONE, PASS. Answers the whole project's open question.
 - **Caveat**: tested with a valid SESSION (authenticated consent endpoint). The no-session user/login path (01-PLAN Task5 → 2135/ec7) is a separate, stricter test — may or may not need more. But signature-validity itself = PROVEN accepted.
 - **Implication**: the offline signer (tt.Dump Mac) is the delivered core. Remaining project work = wire it into the login/session flows (re/src/*.mjs), NOT more metasec RE.
+
+## Phase 3 — SYMBOLIC-EXEC ENGINE BUILT + BIAS CORRECTION (2026-09-03, claude, session-7) ★★★
+> User chọn hướng build symbolic-exec engine. Deliverable = `_vm_symexec.py` (unicorn-driven VM replay của prog 0x1814f0). DONE + verified.
+
+### DELIVERABLE: `_vm_symexec.py` (chạy `~/.re-venv/bin/python _vm_symexec.py --steps 40000 [--verbose]`)
+- Map .so @LOAD_BASE 0x6f5fe00000 (+vaddr mirror) + APPLY toàn bộ 6765 R_AARCH64_RELATIVE (`LOAD_BASE+addend`) — **bắt buộc** (interp đọc `*(0x1f00e0)` = handler-table ptr = reloc addend 0x6b5fe0).
+- Vào tại caller `0x95a3c` (dựng đúng frame 5-arg: `0x52924(prog=0x1814f0, x1=&argblk{ctx,0x9b414}, x2=0x1db360, x3=0x1db430, x4=&state)`) + synthetic zeroed report-ctx + TPIDR/canary.
+- Derive handler-set từ RAM emulator (post-reloc), hook mỗi handler → log opcode-stream; instrument op44 inner `br 0x52bd0`; PLT resolve theo tên (malloc=bump-alloc); guard callout-invoker `0x9b5d8` (null callout → return 0).
+- **VERIFIED**: trace trọn prog `0x1814f0` → **605 handler-step, span bcp 0x1814f0→0x186690, 121 op44-nested, 9 native callout, dừng `trap_repeated`** (chương trình về đích). Output: `ground-truth/vm_symexec_1814f0_trace.txt`.
+
+### ★ CORRECTION QUAN TRỌNG (chỉ replay động mới lộ) — SỬA note Phase-3 trước:
+- **Runtime dispatch: `handler(op) = table_base[op] − 0x9b374`** (bias = [x29−0x58], set @0x52980). `_vm_static_decode.py` dùng bias=0 ⇒ mọi handler VMA của nó bị **+0x9b374 PHANTOM**.
+- ⇒ **"op44 = 0xedec0 = computed-branch (N−2·idx)·8 + sleep_for anti-emu"** của note trước = **PHÂN TÍCH SAI ĐỊA CHỈ** (0x52b4c+0x9b374=0xedec0 là hàm khác, trùng hợp trông giống). **KHÔNG có anti-emu sleep trong op44.**
+- **op44 THẬT = `0x52b4c`** = **two-level dispatch escape**: đọc lại opcode word, lấy `(word>>6)&0x3f` làm sub-opcode, dispatch qua bảng-2 tại `*(0x1f00e8)`. IR word = **4 byte** (bcp += 4), không phải 8/0x20.
+- op44 extended-opcode map (đo được): `hi16→0x554f4 (×53)`, `hi34→0x53de8 (×29)`, `hi21→0x55834 (×20)`, `hi18→0x52c50 (×16)`, `hi46→0x5585c (×3)`.
+
+### ★ pskVersion emit = LỚP NATIVE CALLOUT, không phải nhánh VM
+- Report-builder gọi **9 native callout** qua invoker `0x9b5cc` (`ldp x3,x8,[x0]; ldp x1,x2,[x0,#0x10]; mov x0,x8; br x3`) = `emit(self, data_ptr, len)`. Args đo được: `x1` trỏ cụm `0x1f7f78f..0x1f7f7fb` (bảng field/chuỗi liền kề), `x2`=13/16/9/29/5/20/16/13 + 1 blob 0x150(336B). = **report serialization**.
+- ⇒ **field nào emit (kể cả #18/#19/#20 pskVersion) do callout quyết, không phải op44 branch.** Offline (state rỗng) cả 9 callout fire vô điều kiện.
+
+### RANH GIỚI OFFLINE (tự nhiên, khớp mô hình user):
+- fn-pointer của callout load từ ctx object-graph THẬT (x3 = *[x0]); state tổng hợp rỗng ⇒ x3=0 ⇒ callout null. **Trace deterministic tới bước ~206 (callout đầu), rồi guard-return-0 để lộ shape tới 605.**
+- ⇒ Muốn thấy nhánh pskVersion "0" vs "none": **differential** — chạy interp với entry-state THẬT (capture 1-lần phone) ↔ state rỗng, so callout nào fire / (x1,x2) khác. HOẶC hook interp trên phone tại prog 0x1814f0.
+
+### NEXT (đã tooled, không còn tường mù):
+1. Capture interp entry-state (x0 report-ctx + object graph) từ tt.Dump/phone tại `bl 0x52924` @0x95a98 → feed `_vm_symexec.py` thay synthetic ctx → callout resolve thật → trace path THẬT.
+2. Differential zero-state ↔ captured-state → điểm callout/op44 rẽ khác nhau = pskVersion gate.
+3. (Nếu chỉ cần synthetic-772) patch callout selection ép emit #18/#19/#20="0".
+
+### Kill-criteria (note 36-2A): session-7 = milestone THẬT (engine chạy + corrected target + localized emit→native-callout), KHÔNG chỉ "tầng sâu hơn". Nhưng full-offline-pskVersion vẫn chạm ranh giới state-gated (cần 1-lần capture) = đúng như mô hình user đã chấp nhận. Checkpoint sạch để phiên sau tiếp (feed captured entry-state).

@@ -1,37 +1,43 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# _vm_symexec.py — Unicorn-driven VM replay / concrete symbolic tracer for the
-# libmetasec report-builder program 0x1814f0 (interp FUN_00152924 @0x52924).
+# _vm_symexec.py — Unicorn-driven VM replay / disassemble-by-execution tracer for
+# the libmetasec report-builder program 0x1814f0 (interp FUN_00152924 @0x52924).
 #
-# WHY (note 59, Phase 3): op44 (handler 0xedec0) is a *data-dependent computed
-# jump-table branch*:  new_bcp = table_base + (N - 2*idx)*8, with idx=[sp+0x18].
-# A static CFG cannot resolve idx, so we run the REAL interpreter under Unicorn
-# and observe the handler-dispatch stream + resolve each op44 branch concretely.
+# WHY: the pskVersion emit-decision (772 vs 408) lives inside this VM program, whose
+# control flow is CFF-flattened via op44 (a computed dispatch). Static CFG cannot
+# resolve it, so we run the REAL interpreter under Unicorn and observe the dispatch.
 #
-# WHAT this build does (bankable increment — NOT the full pskVersion solve):
+# KEY CORRECTION this tool established (vs prior notes): the runtime dispatch table
+# uses handler(op) = table_base[op] - 0x9b374. _vm_static_decode.py used bias 0, so
+# its handler VMAs were uniformly +0x9b374 PHANTOM addresses — the earlier
+# "op44 = 0xedec0 computed-branch + sleep_for anti-emu" analysis was on the wrong
+# function. REAL op44 handler = 0x52b4c, and it is a TWO-LEVEL dispatch escape:
+# it re-reads the opcode word, extracts bits[11:6]=(word>>6)&0x3f, and dispatches
+# through a 2nd table at *(0x1f00e8). There is no anti-emu sleep in op44.
+#
+# WHAT this build does:
 #   * maps the .so at LOAD_BASE (+ vaddr mirror), like _vm_unicorn_replay.py;
-#   * APPLIES R_AARCH64_RELATIVE relocations (mandatory: interp reads *(0x1f00e0)
-#     for its handler-table pointer). Out-of-module (obfuscated) addends get the
-#     -0xa00000 VM-cluster bias heuristic (note _vm_reloc_resolve.py);
-#   * resolves PLT stubs BY NAME (.rela.plt+.dynsym) → malloc = bump allocator
-#     (always nonzero ⇒ the op44 anti-emu sleep_for backoff branch is never
-#     entered), everything else = benign no-op;
+#   * APPLIES all R_AARCH64_RELATIVE relocations as LOAD_BASE+addend (mandatory:
+#     interp reads *(0x1f00e0) for its handler-table pointer);
+#   * derives the real handler set from EMULATOR MEMORY (post-reloc), self-
+#     correcting the bias, then hooks each handler VMA → logs the opcode stream;
+#   * instruments op44's inner `br` (0x52bd0) → logs each nested opcode + target;
+#   * resolves PLT stubs BY NAME (.rela.plt+.dynsym) → malloc = bump allocator,
+#     rest = benign no-op;
 #   * enters at the caller 0x95a3c (builds the exact 5-arg interp frame) with a
 #     synthetic zeroed report-ctx + TPIDR/canary;
-#   * hooks every handler VMA from vm_handler_table_52924.txt → logs the executed
-#     opcode stream (step, op, handler, bcp=x23);
-#   * instruments op44 @0xedf00 → logs {idx, table_base, N, taken target} AND
-#     enumerates the alternative jump-table targets (CFG edges) for idx=0..N-1;
-#   * maps unmapped reads on demand (zero-fill) so it makes progress on synthetic
-#     state; bounded by MAX_STEPS.
+#   * guards the native-callout invoker (0x9b5d8): an unmodeled callout on
+#     synthetic state returns 0 instead of branching through a null fn ptr, so the
+#     trace runs the whole program shape (to trap/end).
 #
-# HONEST LIMIT: with a synthetic (zeroed) report-ctx the op44 selectors follow the
-# default/zero path, so the trace is the zero-state control flow — real material
-# to locate the pskVersion gate, but pinning the true "0" path needs either a
-# captured interp entry-state or a phone differential (note 59 Phase 3 next).
+# HONEST LIMIT: report emit happens through ~9 native callouts fn(self,data,len);
+# their fn pointers only exist with a real ctx object graph. On synthetic state all
+# callouts return 0, so the trace is the zero-state control flow — real material to
+# map the program, but pinning the true pskVersion="0" path needs a captured interp
+# entry-state or a phone differential (note 59 Phase 3 next).
 #
-# Run:  ~/.re-venv/bin/python _vm_symexec.py            # trace prog 0x1814f0
-#       ~/.re-venv/bin/python _vm_symexec.py --steps 4000 --verbose
+# Run:  ~/.re-venv/bin/python _vm_symexec.py                    # trace prog 0x1814f0
+#       ~/.re-venv/bin/python _vm_symexec.py --steps 40000 --verbose
 import os, sys, struct, argparse
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -53,7 +59,6 @@ PROG      = 0x1814f0                           # report-builder program (what we
 # which is why the prior "op44=0xedec0 computed-branch+anti-emu" analysis was wrong.
 RUNTIME_TABLE_VMA = 0x1d9488
 DISPATCH_BIAS     = 0x9b374
-TRAP_GUESS        = None                        # derived at runtime (most-common entry)
 # op44 (real handler 0x52b4c) is a TWO-LEVEL dispatch escape: it re-reads the
 # opcode word, extracts bits[11:6] = (word>>6)&0x3f, and dispatches through a
 # 2nd table at *(0x1f00e8). We log that nested op + resolved target at its `br`.
@@ -66,7 +71,6 @@ OP44_BR      = 0x52bd0                           # `br x15` — x15 = resolved 2
 CALLOUT_BR = 0x9b5d8
 OUT_TRACE = "../ground-truth/vm_symexec_1814f0_trace.txt"
 
-VM_CLUSTER_BIAS = 0xa00000                     # obfuscated-addend bias for VM dispatch cluster
 MODULE_MAX      = 0x1fe1e0
 
 # ---------------------------------------------------------------------------
@@ -146,29 +150,6 @@ def resolve_plt(so, secs):
         stub = PLT_BASE + 0x20 + k * 0x10   # AArch64: PLT0 header 0x20, entries 0x10
         names[stub] = symname(sym_idx)
     return names, PLT_BASE
-
-# ---------------------------------------------------------------------------
-# Handler table
-# ---------------------------------------------------------------------------
-def load_handler_table(path):
-    op_by_handler = {}
-    handler_by_op = {}
-    with open(path) as f:
-        for line in f:
-            line = line.strip()
-            if not line.startswith("op") or "->" not in line:
-                continue
-            # "op44 0x2c -> 0x0edec0"  or  "op 1 0x01 -> 0x0f488c" (spaced single digit)
-            try:
-                left, right = line.split("->")
-                toks = left.split()               # last token before "->" is the 0xNN opcode
-                op = int(toks[-1], 16)            # unambiguous decimal-via-hex opcode
-                h = int(right.strip(), 16)
-            except Exception:
-                continue
-            op_by_handler[h] = op
-            handler_by_op[op] = h
-    return op_by_handler, handler_by_op
 
 # ---------------------------------------------------------------------------
 # Engine
@@ -369,18 +350,30 @@ class VMSymExec:
         # code target (unmodeled callout on synthetic state) → return 0 to x30.
         self.callouts = 0
         self.null_callouts = 0
+        self.callout_log = []
         def on_callout(uc, address, size, ud):
             self.callouts += 1
-            x3 = uc.reg_read(UC_ARM64_REG_X3)
+            x3 = uc.reg_read(UC_ARM64_REG_X3)   # native fn ptr (loaded from [x0])
+            x0 = uc.reg_read(UC_ARM64_REG_X0)   # already = x8 (self/arg)
+            x1 = uc.reg_read(UC_ARM64_REG_X1)
+            x2 = uc.reg_read(UC_ARM64_REG_X2)
             v3 = x3 - LOAD_BASE if x3 >= LOAD_BASE else x3
             valid = (LOAD_BASE + 0x1000) <= x3 < self.so_end   # inside .so code image
+            bcp = -1
+            try:
+                p = struct.unpack_from("<Q", uc.mem_read(uc.reg_read(UC_ARM64_REG_X23), 8))[0]
+                bcp = p - LOAD_BASE if p >= LOAD_BASE else p
+            except UcError:
+                pass
+            self.callout_log.append(dict(step=self.step, bcp=bcp, fn=v3, valid=valid,
+                                         x0=x0, x1=x1, x2=x2))
             if not valid:
                 self.null_callouts += 1
                 uc.reg_write(UC_ARM64_REG_X0, 0)
                 uc.reg_write(UC_ARM64_REG_PC, uc.reg_read(UC_ARM64_REG_X30))
                 if self.verbose and self.null_callouts <= 30:
                     print(f"      ! null-callout #{self.null_callouts} @step {self.step} "
-                          f"x3=0x{v3:x} → return 0")
+                          f"bcp=0x{bcp:x} x3=0x{v3:x} → return 0")
         for base in (0, LOAD_BASE):
             uc.hook_add(UC_HOOK_CODE, on_callout, begin=base + CALLOUT_BR, end=base + CALLOUT_BR)
 
@@ -475,6 +468,10 @@ class VMSymExec:
             for e in self.op44_log:
                 f.write(f"step={e['step']} hi={e['op_hi']} -> 0x{e['target']:x} "
                         f"word=0x{e['word']:08x}\n")
+            f.write("\n## native call-outs (invoker 0x9b5cc; fn ptr from ctx graph)\n")
+            for e in self.callout_log:
+                f.write(f"step={e['step']} bcp=0x{e['bcp']:x} fn=0x{e['fn']:x} "
+                        f"valid={e['valid']} x0=0x{e['x0']:x} x1=0x{e['x1']:x} x2=0x{e['x2']:x}\n")
         print(f"[=] full trace written → {OUT_TRACE}")
 
 

@@ -1,10 +1,20 @@
 # AI BOARD — cây gậy tiếp sức (relay)
 
-BATON: free            # ★★★★★ T10 PASSED (2026-09-03): TikTok server ACCEPTS the offline 290B x-argus (POST HTTP200 status_code=0 + real data, consent/api/combine/list/v3, device 7677, fresh ts via tt.Dump Mac). ⇒ full-772/#24-Widevine/slot16/pskVersion-devirt ALL UNNECESSARY. Offline signer VALIDATED end-to-end server-side. Core project goal MET for API calls. Remaining = wire signer into login/session flows (re/src/*.mjs) + test no-session user/login→2135 (Task5). Runner scratchpad/t10_mac.mjs; JDK21=brew openjdk@21.
-ROUND: 1
+BATON: free            # ★★★★★★ DEVICE_REGISTER WORKS OFFLINE (2026-09-03): tt.Dump Mac signed genesis register (random fp, device_id=0) → HTTP200 device_id_str=7681341506544584209 install_id_str=7681342031729690369 new_user=1 + tnc_data. X-Argus 324B thin. ⇒ note58 'genesis→ec7' WRONG for register. Plus T10 earlier: server accepts offline sig on API calls. OFFLINE SIGNER FULLY VALIDATED (register + API). Runners tests/t_register_offline_mac.mjs + t10_mac_server_accept.mjs. NEXT: trust test — can fresh device login→2135 (not ec7)? = Task3(device-guard)+Task5(login).
+ROUND: 2
 # --- prior ---
 # 🎉 OFFLINE SIGNER WORKS ON MAC: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon from (url,header_block)+device-store via real libmetasec (unidbg), clock lockable (FIXTIME). Byte-exact impossible (random IV). Phone genuine=772; +384 = device-state attestation (#24 dyn_seed) gated on get_seed network(MSB_NET)+keva d8b674 = last increment, NOT a code wall. Note 57 s5. DONE.
 ROUND: 0               # ✅ offline signer works on Mac — core goal done.
+
+
+
+### 2026-09-03 claude (solo)   STATUS: done — symbolic-exec engine `_vm_symexec.py` built + verified; ★handler-table BIAS correction
+
+**Deliverable (C1 phase-3, user chose symbolic-exec path):** `huongB_devirt19/_vm_symexec.py` — unicorn-driven VM replay/disassemble-by-execution of report-builder prog **0x1814f0** (interp 0x52924, enter via caller 0x95a3c). Applies all 6765 RELATIVE relocs, derives handler-set from emulator RAM, resolves op44 two-level dispatch, PLT-by-name (malloc=bump-alloc), guards null native-callouts.
+**VERIFIED:** full trace 605 handler-steps (span bcp 0x1814f0→0x186690), 121 op44-nested, 9 native callouts, terminates on trap. Output `ground-truth/vm_symexec_1814f0_trace.txt`. Run `~/.re-venv/bin/python _vm_symexec.py --steps 40000`.
+**★ CORRECTION (only dynamic replay exposed):** runtime `handler(op)=table_base[op]−0x9b374`. Prior `_vm_static_decode` used bias 0 → all its handler VMAs were +0x9b374 PHANTOM. So earlier "op44=0xedec0 computed-branch+sleep_for anti-emu" analysed the WRONG function. **Real op44=0x52b4c = 2-level dispatch escape** (sub-op=(word>>6)&0x3f via table `*(0x1f00e8)`); no anti-emu sleep. IR word=4B.
+**★ pskVersion emit = NATIVE-CALLOUT layer, not a VM branch:** builder makes 9 `emit(self,data_ptr,len)` callouts (invoker 0x9b5cc). Which fields emit (incl #18/#19/#20 pskVersion) decided by callouts. Offline synthetic state ⇒ all callouts null → offline boundary = state-gated (matches user's 1-time-capture model).
+**Next (tooled):** feed captured interp entry-state (x0 report-ctx graph at 0x95a98 `bl 0x52924`) into `_vm_symexec.py` → differential real-state ↔ zero-state → pskVersion gate. Note 59 §session-7.
 
 
 ### 2026-09-02 claude (solo)   STATUS: blocked→human — .mss (mssdk_setting) advanced: AES-256-ECB write-primitive SOLVED, inverse-pipeline behind CFF/VM+logger wall
