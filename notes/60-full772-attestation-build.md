@@ -83,3 +83,18 @@ Key addrs: collect body 0x12305c (x0=JNIEnv, x8=out-sret); caller store path 0x1
 - NEXT: trace report field #24 source (VM prog 0x1814f0 / serializer 0x154f7c) — find which store-key/global feeds #24; identify [0x1fbdf8] key string + x19 store; confirm vs 0x117f40 PUT target.
 
 ## MILESTONE: #24 Widevine collect+store WORKS (note-46 wall broken). Remaining = wire collect output to report #24-read (1 trace step). Then #18/#19/slot16/identity.
+
+## ★ CRUCIAL: report-builder GATES device-state field emission (2026-09-04)
+Empirical (WV_DRIVER + sign, /tmp/wv17): during sign the report-builder store-GETs: `2.disable_clear_ms`, `rdk2_ms`, `rtk2_ms`, `1.lgi.gli1`, `1.lgi.gli2`. NO widevine/deviceUniqueId key.
+- **rtk2_ms IS queried but #16 (device_token←rtk2_ms) is ABSENT** in the emitted report ⇒ the report-builder READS the device-state value but does NOT emit the field. #16/#24 (and #18/#19) are gated at the report-builder.
+- #24-collect output goes to [0x1fbe00] + a KV-store (0x117f40 PUT), NOT into the report-struct slot the serializer (0x154f7c) reads. The report never queries a widevine key.
+- ⇒ Wiring #24 into the report = same wall as pskVersion (C1 VM report-builder): the report struct's #24 slot is populated by device-state ingestion gated by provisioned-state, not by a store-GET. This ties #24/#16/#18/#19 back to ONE report-builder gate.
+- CONSENT sign (pskVer="0") had #18/#19 but NOT #24/#16 ⇒ #24/#16 gated SEPARATELY from #18/#19 (need their collect-threads' output in the report struct, which tt.Dump doesn't wire).
+
+## SESSION SUMMARY (2026-09-03..04) — major results:
+1. T10: TikTok server ACCEPTS offline-signed 290B x-argus (consent API, HTTP200 status_code=0). full-772 NOT needed for accepted API calls.
+2. Offline device_register WORKS (no phone): new device_id 7681341506544584209, new_user=1.
+3. #24 Widevine collect+store RUNS in tt.Dump (ret=0, DUID retrieved) — past note-46 wall. Recipe in this note.
+4. VM devirt (C1): bytecode plaintext, deobf transform addend-0xa00000, op44 data-dependent jumptable — 4 milestones (note 59).
+5. Report-builder gates device-state fields (#16/#18/#19/#24) — the unifying wall for full-772.
+CONCLUSION: full-772 pure-offline = the report-builder device-state gate (VM-level, multi-week). But T10+register prove thin sig is server-accepted for real ops, so full-772 may be unneeded for the practical goal.
