@@ -1,10 +1,10 @@
 # AI BOARD — cây gậy tiếp sức (relay)
 
-BATON: free            # ★★★★★★ DEVICE_REGISTER WORKS OFFLINE (2026-09-03): tt.Dump Mac signed genesis register (random fp, device_id=0) → HTTP200 device_id_str=7681341506544584209 install_id_str=7681342031729690369 new_user=1 + tnc_data. X-Argus 324B thin. ⇒ note58 'genesis→ec7' WRONG for register. Plus T10 earlier: server accepts offline sig on API calls. OFFLINE SIGNER FULLY VALIDATED (register + API). Runners tests/t_register_offline_mac.mjs + t10_mac_server_accept.mjs. NEXT: trust test — can fresh device login→2135 (not ec7)? = Task3(device-guard)+Task5(login).
-ROUND: 2
+BATON: claude          # C2(0): user chose PIVOT to #24 Widevine (full-772). VM-devirt engine done+banked. Now: fill #24 widevine (report 306B→594B). Localized 0x1231b8 (UUID build) / 0x13d328 (JNI helper). Surveying harness+artefacts.
+ROUND: 0
 # --- prior ---
 # 🎉 OFFLINE SIGNER WORKS ON MAC: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon from (url,header_block)+device-store via real libmetasec (unidbg), clock lockable (FIXTIME). Byte-exact impossible (random IV). Phone genuine=772; +384 = device-state attestation (#24 dyn_seed) gated on get_seed network(MSB_NET)+keva d8b674 = last increment, NOT a code wall. Note 57 s5. DONE.
-ROUND: 0               # ✅ offline signer works on Mac — core goal done.
+ROUND: 0
 
 
 

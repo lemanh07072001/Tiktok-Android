@@ -205,6 +205,15 @@ public class Dump {
             cnt[0]=0; lastpc[0]=0; calls.clear();
             Number ri=null; try { ri=mod.callFunction(emu, 0x11a1e0L, envP.peer, msJ, 0x4000001L, 0L, 0L, 0L, jcfg); } catch(Throwable t){ System.out.println("  init threw "+t); }
             System.out.println("[INIT 0x4000001] "+cnt[0]+" instrs RET="+(ri==null?"null":readObj(vm,ri.longValue())));
+            // ★ #24 Widevine collect: 0x122b00 = lazy-singleton getter (guard 0x1fc210, cache 0x1fc208) → triggers MediaDrm collect
+            if ("1".equals(System.getenv("MSB_WIDEVINE"))) {
+                System.out.println("[WIDEVINE] calling collect thread-entry 0x122b00 (JNI verbose ON)...");
+                vm.setVerbose(true);
+                cnt[0]=0;
+                try { Number cr = mod.callFunction(emu, 0x122b00L); System.out.println("[WIDEVINE 0x122b00] "+cnt[0]+" instrs ret=0x"+Long.toHexString(cr==null?0:cr.longValue())); }
+                catch(Throwable t){ System.out.println("[WIDEVINE] threw "+t); }
+                vm.setVerbose(false);
+            }
             // ★ REAL SIGN = 0x9ecc0(char* url, char* cookie) -> char* header ("X-Argus\r\n...")
             String url = new String(java.nio.file.Files.readAllBytes(new File("url.bin").toPath()), StandardCharsets.UTF_8);
             String cookie = new String(java.nio.file.Files.readAllBytes(new File("cookie.bin").toPath()), StandardCharsets.UTF_8);

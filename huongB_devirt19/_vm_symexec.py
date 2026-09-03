@@ -365,8 +365,18 @@ class VMSymExec:
                 bcp = p - LOAD_BASE if p >= LOAD_BASE else p
             except UcError:
                 pass
+            # emit-style callout: x1 = data ptr, x2 = length. If x1 is inside the
+            # module image and x2 is a sane length, read the emitted bytes → this
+            # reconstructs the report field-by-field, fully offline.
+            data = b""
+            if 0 < x2 <= 4096:
+                for addr in (x1, LOAD_BASE + x1) if x1 < 0x200000 else (x1,):
+                    try:
+                        data = bytes(uc.mem_read(addr, x2)); break
+                    except UcError:
+                        continue
             self.callout_log.append(dict(step=self.step, bcp=bcp, fn=v3, valid=valid,
-                                         x0=x0, x1=x1, x2=x2))
+                                         x0=x0, x1=x1, x2=x2, data=data))
             if not valid:
                 self.null_callouts += 1
                 uc.reg_write(UC_ARM64_REG_X0, 0)
@@ -468,11 +478,21 @@ class VMSymExec:
             for e in self.op44_log:
                 f.write(f"step={e['step']} hi={e['op_hi']} -> 0x{e['target']:x} "
                         f"word=0x{e['word']:08x}\n")
-            f.write("\n## native call-outs (invoker 0x9b5cc; fn ptr from ctx graph)\n")
+            f.write("\n## native call-outs = report field-emits (invoker 0x9b5cc)\n")
+            f.write("## emit(self, data@x1, len=x2); data bytes reconstructed offline:\n")
             for e in self.callout_log:
-                f.write(f"step={e['step']} bcp=0x{e['bcp']:x} fn=0x{e['fn']:x} "
-                        f"valid={e['valid']} x0=0x{e['x0']:x} x1=0x{e['x1']:x} x2=0x{e['x2']:x}\n")
+                d = e.get("data", b"")
+                ascii_ = "".join(chr(c) if 32 <= c < 127 else "." for c in d)
+                f.write(f"step={e['step']} bcp=0x{e['bcp']:x} x1=0x{e['x1']:x} len={e['x2']}\n")
+                f.write(f"    hex   = {d.hex()}\n")
+                f.write(f"    ascii = {ascii_}\n")
         print(f"[=] full trace written → {OUT_TRACE}")
+        # concise emit summary to stdout
+        print("\n[=] report field-emits reconstructed offline:")
+        for e in self.callout_log:
+            d = e.get("data", b"")
+            ascii_ = "".join(chr(c) if 32 <= c < 127 else "." for c in d)
+            print(f"    step {e['step']:>3} len={e['x2']:>3}  {ascii_[:64]}")
 
 
 def main():

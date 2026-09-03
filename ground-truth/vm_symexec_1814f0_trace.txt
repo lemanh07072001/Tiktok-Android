@@ -732,13 +732,32 @@ step=592 hi=18 -> 0x52c50 word=0x918c04ac
 step=596 hi=18 -> 0x52c50 word=0xb8c604ac
 step=605 hi=46 -> 0x5585c word=0x0001fbac
 
-## native call-outs (invoker 0x9b5cc; fn ptr from ctx graph)
-step=206 bcp=0x181824 fn=0x0 valid=False x0=0x601ff7d8 x1=0x6f5ff7f78f x2=0xd
-step=218 bcp=0x181854 fn=0x0 valid=False x0=0x601ff7c8 x1=0x6f5ff7f7db x2=0x10
-step=231 bcp=0x181888 fn=0x0 valid=False x0=0x601ff7bc x1=0x6f5ff7f79c x2=0x9
-step=243 bcp=0x1818b8 fn=0x0 valid=False x0=0x601ff79c x1=0x6f5ff7f7a5 x2=0x1d
-step=257 bcp=0x1818f0 fn=0x0 valid=False x0=0x601ff794 x1=0x6f5ff7f7c2 x2=0x5
-step=270 bcp=0x181924 fn=0x0 valid=False x0=0x601ff780 x1=0x6f5ff7f7c7 x2=0x14
-step=282 bcp=0x181954 fn=0x0 valid=False x0=0x601ff770 x1=0x6f5ff7f7db x2=0x10
-step=295 bcp=0x181988 fn=0x0 valid=False x0=0x601ff760 x1=0x6f5ff7f7fb x2=0xd
-step=339 bcp=0x181a38 fn=0x0 valid=False x0=0x601ff608 x1=0x6f5ffdaf68 x2=0x150
+## native call-outs = report field-emits (invoker 0x9b5cc)
+## emit(self, data@x1, len=x2); data bytes reconstructed offline:
+step=206 bcp=0x181824 x1=0x6f5ff7f78f len=13
+    hex   = 5b700bd7e3ea91c15a6d0bd690
+    ascii = [p......Zm...
+step=218 bcp=0x181854 x1=0x6f5ff7f7db len=16
+    hex   = c93f58ba15e79f9ed52458b005e3cef1
+    ascii = .?X......$X.....
+step=231 bcp=0x181888 x1=0x6f5ff7f79c len=9
+    hex   = c649f6891fcb86cfb5
+    ascii = .I.......
+step=243 bcp=0x1818b8 x1=0x6f5ff7f7a5 len=29
+    hex   = c16beffa137916dc8861f5b6146502928061a1e718350992956aa4af60
+    ascii = .k...y...a...e...a...5...j..`
+step=257 bcp=0x1818f0 x1=0x6f5ff7f7c2 len=5
+    hex   = cb7f1fa250
+    ascii = ....P
+step=270 bcp=0x181924 x1=0x6f5ff7f7c7 len=20
+    hex   = 677a0f98e2eba7d05c732b9efdfa928b153a1bf7
+    ascii = gz......\s+......:..
+step=282 bcp=0x181954 x1=0x6f5ff7f7db len=16
+    hex   = c93f58ba15e79f9ed52458b005e3cef1
+    ascii = .?X......$X.....
+step=295 bcp=0x181988 x1=0x6f5ff7f7fb len=13
+    hex   = f652f48634c5bbf7c747e49440
+    ascii = .R..4....G..@
+step=339 bcp=0x181a38 x1=0x6f5ffdaf68 len=336
+    hex   = b8b3fe5f6f00000000000000000000000000000000000000000000000000000000000000000000005a6ef95f6f0000005a6ef95f6f0000005a6ef95f6f0000005a6ef95f6f0000005a6ef95f6f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005a6ef95f6f000000000000000000000000000000000000000000000000000000000000000000000000000000000000005a6ef95f6f000000000000000000000000000000000000005a6ef95f6f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    ascii = ..._o...................................Zn._o...Zn._o...Zn._o...Zn._o...Zn._o...................................................................................Zn._o...........................................Zn._o...................Zn._o...................................................................................................

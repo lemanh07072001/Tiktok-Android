@@ -248,3 +248,9 @@
 3. (Nếu chỉ cần synthetic-772) patch callout selection ép emit #18/#19/#20="0".
 
 ### Kill-criteria (note 36-2A): session-7 = milestone THẬT (engine chạy + corrected target + localized emit→native-callout), KHÔNG chỉ "tầng sâu hơn". Nhưng full-offline-pskVersion vẫn chạm ranh giới state-gated (cần 1-lần capture) = đúng như mô hình user đã chấp nhận. Checkpoint sạch để phiên sau tiếp (feed captured entry-state).
+
+## Phase 3 — session-7 addendum: OFFLINE REPORT STRUCTURE tái dựng qua emit-callout
+- Nâng `_vm_symexec.py` đọc bytes `x1[:x2]` tại mỗi callout ⇒ **report = 9 field-emit chunk** (invoker 0x9b5cc = `emit(self, data@x1, len=x2)`).
+- **9 chunk (zero-state)**: len = 13,16,9,29,5,20,16,13,**336**. `x1` trỏ .bss `0x1f7f78f..0x1f7f7fb` (VM tự ghi lúc setup-phase op42/op18), bytes **cao-entropy** (vd step270 len20=SHA1-size `677a0f98e2eba7d05c732b9efdfa928b153a1bf7`; step243 len29; step339 len336 = mảng lặp).
+- ⇒ **CHỨNG MINH cụ thể ranh giới offline**: VM *tính được* field trên zero-input, nhưng giá trị dẫn xuất từ **device-state rỗng** → là path zero-state, KHÔNG phải giá trị device thật. Field-SET/lengths là thật; field-VALUES cần state thật. Không có decoder toolchain trên Mac này để map chunk→field-number (protobuf) tại chỗ.
+- **KẾT LUẬN hướng**: offline-pure đã tới trần chứng minh được. pskVersion="0" thực ra ĐÃ đạt qua **fresh-state tt.Dump** (note session-6 breakthrough) ⇒ VM-devirt pskVersion phần lớn moot. Gap full-772 thật = **#24 widevine** (note Phase C). Core signer đã **T10-validated server-side** (HTTP 200). ⇒ điểm quyết định của user: (A) capture entry-state thật cho differential, (B) pivot #24 widevine, (C) dừng extra-credit.
