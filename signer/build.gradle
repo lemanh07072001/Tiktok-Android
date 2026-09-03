@@ -24,5 +24,8 @@ tasks.register('dump', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'tt.Dump'
     workingDir = projectDir
+    systemProperty 'FIXTIME', System.getProperty('FIXTIME','0')
+    systemProperty 'STORE_DIR', System.getProperty('STORE_DIR','state/phone_sync/.msdata/mssdk/ov')
+    systemProperty 'FILES_MIRROR', System.getProperty('FILES_MIRROR','state/phone_files/files')
     environment System.getenv()
 }

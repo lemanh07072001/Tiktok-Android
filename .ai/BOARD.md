@@ -1,7 +1,10 @@
 # AI BOARD — cây gậy tiếp sức (relay)
 
-BATON: human           # OFFLINE CEILING: signer pipeline RUNS on Mac; real sign ABI = 0x9ecc0(url,cookie)->char* found; cookie responsive (274→997 instrs) but null — needs EXACT url+cookie+device-state(get_seed) = app's real call. Capture via frida_capture_realsign.py + frida_hook_msb.py → feed tt.Dump → X-Argus+mssdk_setting. All mechanical RE done. Note 57 s5.
-ROUND: 0               # signer runs; last mile = real MS.b call args from device.
+BATON: claude          # C1(2): user chose build symbolic-exec engine. Committing 4 milestones, then _vm_symexec.py (unicorn-driven VM replay of prog 0x1814f0).
+ROUND: 1
+# --- prior ---
+# 🎉 OFFLINE SIGNER WORKS ON MAC: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon from (url,header_block)+device-store via real libmetasec (unidbg), clock lockable (FIXTIME). Byte-exact impossible (random IV). Phone genuine=772; +384 = device-state attestation (#24 dyn_seed) gated on get_seed network(MSB_NET)+keva d8b674 = last increment, NOT a code wall. Note 57 s5. DONE.
+ROUND: 0               # ✅ offline signer works on Mac — core goal done.
 
 
 ### 2026-09-02 claude (solo)   STATUS: blocked→human — .mss (mssdk_setting) advanced: AES-256-ECB write-primitive SOLVED, inverse-pipeline behind CFF/VM+logger wall
@@ -562,7 +565,6 @@ Files phiên này: `_vm_singleshot2.js`, `_run_q2.py` (JS_FILE hook), `_diff_rep
 - **OBFUSCATION = 1 công thức (crack xong):** `real=computed_base+f(self_addr)`, f(C9..C12 cố định, C13 per-callsite). Global: `*(0x1f00e0)=0x6b5fe0`(dispatch), `*(0x1f2e70)=0xf28bd0`(keva registry). VD `0xf28bd0+f(0x11a64c)=0x1fba90` ✅. **0 init_array ctor.**
 - **NÚT THẮT THẬT:** keva-store ~0x1fba90 = .bss zero-init = **runtime-state** (psk/keva nạp lúc device-register), KHÔNG có tĩnh. keva-get 0x11a64c dùng **key-ID số** (root-fn w0=0x10003).
 
-**⇒ ĐƯỜNG OFFLINE (bounded):** (1) map key-ID→field; (2) **stub keva-get trả device-7666**; (3) emulate producer + x0/x1/x2 tối thiểu; (4) KDF thật → slot16 → khớp `0368525b…`. Iterative. **BATON:claude, tôi tiếp tục dựng stub-keva emulation.**
 
 ---
 

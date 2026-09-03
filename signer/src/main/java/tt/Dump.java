@@ -10,6 +10,7 @@ import com.github.unidbg.linux.android.dvm.array.*;
 import com.github.unidbg.debugger.Debugger;
 import com.github.unidbg.file.IOResolver;
 import com.github.unidbg.file.FileResult;
+import com.github.unidbg.linux.file.DirectoryFileIO;
 import com.github.unidbg.memory.Memory;
 import com.github.unidbg.memory.SvcMemory;
 import com.github.unidbg.pointer.UnidbgPointer;
@@ -26,7 +27,8 @@ public class Dump {
     static Emulator<?> emu0;
     static boolean[] signPhaseRef = {false};
     static VM theVM;
-    static final File STORE_DIR = new File("state/msstate_7678616678053643790/.msdata/mssdk/ov");
+    static final File STORE_DIR = new File(System.getProperty("STORE_DIR","state/phone_sync/.msdata/mssdk/ov"));
+    static final File FILES_MIRROR = new File(System.getProperty("FILES_MIRROR","state/phone_files/files"));
     public static void main(String[] args) throws Exception {
         Properties got = new Properties();
         got.load(Dump.class.getResourceAsStream("/got_symbols.properties"));
@@ -36,10 +38,17 @@ public class Dump {
         memory.setLibraryResolver(new AndroidResolver(23));
         emu.getSyscallHandler().addIOResolver(new IOResolver() {
             public FileResult resolve(Emulator e, String path, int oflags) {
+                if (signPhaseRef[0] && (path.contains("keva")||path.contains("seed")||path.contains(".msdata")||path.contains("mssdk"))) System.out.println("[OPEN] "+path);
                 String bn = path; int sl = path.lastIndexOf('/'); if (sl>=0) bn=path.substring(sl+1);
+                // device-secret store files (by basename)
                 if (bn.startsWith(".msp_")||bn.startsWith(".mss_")||bn.startsWith(".msf3_")||bn.startsWith(".msfs_")) {
                     File real = new File(STORE_DIR, bn);
-                    if (real.exists()) { System.out.println("[FILE] SERVE " + real);
+                    if (real.exists()) return FileResult.success(new com.github.unidbg.linux.file.SimpleFileIO(oflags, real, path));
+                }
+                // keva device-state blob (d8b674...) — full genuine x-argus needs it
+                if (bn.startsWith("d8b674")) {
+                    File real = new File(FILES_MIRROR, "keva/repo/d8b674543fc0b023b69f6a3f5a0f287d458ea204/"+bn);
+                    if (real.isFile()) { System.out.println("[FILE] SERVE keva "+bn);
                         return FileResult.success(new com.github.unidbg.linux.file.SimpleFileIO(oflags, real, path)); }
                 }
                 return null;
@@ -89,12 +98,54 @@ public class Dump {
                 if (sym.contains("clock")&&sym.contains("now")) return (tick+=1_000_000); return 0; }});
             writeLong(emu, base+gotOff, stub.peer);
         }
+        // ---- TIME LOCK (byte-exact): force gettimeofday/clock_gettime/time to FIXTIME ----
+        final long FIXTIME = Long.getLong("FIXTIME", 0L);
+        if (FIXTIME > 0) {
+          long[][] tf = {{0x1eedf8,0},{0x1eeeb0,1},{0x1ef1f8,2}}; // {gotoff, kind: 0=gettimeofday,1=clock_gettime,2=time}
+          for (long[] e : tf) {
+            final int kind=(int)e[1];
+            UnidbgPointer stub = svc.registerSvc(new Arm64Svc(){ public long handle(Emulator<?> ee){
+              com.github.unidbg.arm.backend.Backend b=ee.getBackend();
+              if (kind==0){ long tv=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue(); if(tv!=0){ wl(ee,tv,FIXTIME); wl(ee,tv+8,0);} return 0; }
+              if (kind==1){ long tp=b.reg_read(Arm64Const.UC_ARM64_REG_X1).longValue(); if(tp!=0){ wl(ee,tp,FIXTIME); wl(ee,tp+8,0);} return 0; }
+              long t=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue(); if(t!=0) wl(ee,t,FIXTIME); return FIXTIME;
+            }});
+            writeLong(emu, base+e[0], stub.peer);
+          }
+          System.out.println("[TIME LOCK] FIXTIME="+FIXTIME);
+        }
         Debugger dbg = emu.attach();
         dbg.addBreakPoint(mod, 0x119ba0, (e,a) -> { e.getBackend().reg_write(Arm64Const.UC_ARM64_REG_X0,0L);
             e.getBackend().reg_write(Arm64Const.UC_ARM64_REG_PC, base+0x119ba4); return true; });
         dbg.addBreakPoint(mod, 0xb0d10, (e,a) -> {
             long x1=e.getBackend().reg_read(Arm64Const.UC_ARM64_REG_X1).longValue();
             System.out.println("[READER 0xb0d10] key="+readCpp(e,x1)); return false; });
+        // Phase 3 (Mac fresh-RE): anchor pipeline at AES-CBC 0x159d70; capture report via magic scan
+        final long CB=base;
+        final int[] aesHits={0};
+        final long[] aesInBuf={0};
+        emu.getBackend().hook_add_new(new CodeHook(){
+            public void hook(Backend b,long a,int sz,Object u){
+                if(!signPhaseRef[0]) return;
+                aesHits[0]++;
+                if(aesHits[0]==1){ long x0=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
+                    long x1=b.reg_read(Arm64Const.UC_ARM64_REG_X1).longValue();
+                    System.out.printf("   [AES-CBC 0x159d70 hit#1] x0=0x%x x1=0x%x%n", x0, x1);
+                    byte[] magic={0x08,(byte)0xd2,(byte)0xa4,(byte)0x80,(byte)0x82,0x04};
+                    int found=0;
+                    for(long sb=0x12000000L; sb<0x12800000L && found<3; sb+=0x1000){
+                        try{ byte[] pg=b.mem_read(sb,0x1000);
+                            for(int i=0;i<pg.length-6;i++){ boolean m=true; for(int k=0;k<6;k++) if(pg[i+k]!=magic[k]){m=false;break;}
+                                if(m){ found++; byte[] rpt=b.mem_read(sb+i,Math.min(700,0x1000-i));
+                                    java.nio.file.Files.write(new File("/tmp/rpt"+found+".bin").toPath(),rpt);
+                                    StringBuilder hx=new StringBuilder(); for(int j=0;j<32;j++) hx.append(String.format("%02x",rpt[j]&0xff));
+                                    System.out.printf("   [REPORT @0x%x] %s (/tmp/rpt%d.bin)%n",sb+i,hx,found);} }
+                        }catch(Throwable t){}
+                    }
+                    System.out.println("   [magic scan at AES-time: found="+found+"]"); }
+            }
+            public void onAttach(UnHook un){} public void detach(){}
+        }, base+0x159d70, base+0x159d71, null);
         dmod.callJNI_OnLoad(emu);
         System.out.println("[OK] JNI_OnLoad done -> call device-secret getter 0x1185d0");
         long[] outbuf = { emu.getMemory().malloc(24, true).getPointer().peer };
@@ -155,9 +206,11 @@ public class Dump {
             Number ri=null; try { ri=mod.callFunction(emu, 0x11a1e0L, envP.peer, msJ, 0x4000001L, 0L, 0L, 0L, jcfg); } catch(Throwable t){ System.out.println("  init threw "+t); }
             System.out.println("[INIT 0x4000001] "+cnt[0]+" instrs RET="+(ri==null?"null":readObj(vm,ri.longValue())));
             // ★ REAL SIGN = 0x9ecc0(char* url, char* cookie) -> char* header ("X-Argus\r\n...")
-            String url = "https://api16-normal-c-alisg.tiktokv.com/aweme/v2/feed/?device_platform=android&aid=1233";
+            String url = new String(java.nio.file.Files.readAllBytes(new File("url.bin").toPath()), StandardCharsets.UTF_8);
+            String cookie = new String(java.nio.file.Files.readAllBytes(new File("cookie.bin").toPath()), StandardCharsets.UTF_8);
+            System.out.println("  url="+url.substring(0,Math.min(80,url.length()))+"...  headerblock="+cookie.length()+"B");
             UnidbgPointer urlP = allocCStr(emu, url);
-            UnidbgPointer ckP  = allocCStr(emu, "aweme_app_version=45.7.3&version_code=450703&device_platform=android&device_type=SM-G930F&os_version=8.0.0");
+            UnidbgPointer ckP  = allocCStr(emu, cookie);
             final long[] slast={0};
             emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){ slast[0]=a; }
                 public void onAttach(UnHook un){} public void detach(){} }, mod.base+0x9ecc0, mod.base+0xa0000, null);
@@ -169,6 +222,24 @@ public class Dump {
             String hdr = retp==0?"(null)":readCStr(emu, retp);
             System.out.printf("[REALSIGN 0x9ecc0] %d instrs, exit-PC=0x%x retptr=0x%x%n", cnt[0], slast[0]-mod.base, retp);
             System.out.println("  HEADER = " + (hdr==null?"null":hdr.replace("\r\n"," | ")));
+            System.out.println("  [AES-CBC hits during sign="+aesHits[0]+"]");
+            // scan unidbg memory for report protobuf magic (field#1=1077940818 -> 08 d2 a4 80 82 04)
+            byte[] magic={0x08,(byte)0xd2,(byte)0xa4,(byte)0x80,(byte)0x82,0x04};
+            long[] scanBases={0x40000000L, 0xbf000000L, 0xc0000000L, mod.base+0x30000000L};
+            int found=0;
+            for(long sb: scanBases){
+                for(long off=0; off<0x400000 && found<5; off+=0x1000){
+                    try{ byte[] page=emu.getBackend().mem_read(sb+off,0x1000);
+                        for(int i=0;i<page.length-6;i++){ boolean m=true; for(int k=0;k<6;k++) if(page[i+k]!=magic[k]){m=false;break;}
+                            if(m){ found++; System.out.printf("   [REPORT MAGIC @0x%x] ",sb+off+i);
+                                byte[] rpt=emu.getBackend().mem_read(sb+off+i,Math.min(700,0x1000-i));
+                                java.nio.file.Files.write(new File("/tmp/report_"+found+".bin").toPath(), rpt);
+                                StringBuilder hx=new StringBuilder(); for(int j=0;j<48;j++) hx.append(String.format("%02x",rpt[j]&0xff));
+                                System.out.println(hx+" (saved /tmp/report_"+found+".bin)"); if(found>=5)break; } }
+                    }catch(Throwable t){}
+                }
+            }
+            System.out.println("  [report-magic scan: found="+found+"]");
         } catch (Throwable t){ System.out.println("[SIGN-STOP] "+t); }
         emu.close();
     }
@@ -202,6 +273,7 @@ public class Dump {
         if(l4>0&&l4<256&&p8!=0){return new String(e.getBackend().mem_read(p8,(int)l4));}
         if((h[0]&1)==0){int n=(h[0]&0xff)>>1; if(n>0&&n<23) return new String(e.getBackend().mem_read(p+1,n));}
     } catch(Throwable t){} return "?"; }
+    static void wl(Emulator<?> e,long a,long v){ writeLong(e,a,v); }
     static long readLong(Emulator<?> e,long a){byte[] b=e.getBackend().mem_read(a,8);long v=0;for(int i=7;i>=0;i--)v=(v<<8)|(b[i]&0xffL);return v;}
     static void writeLong(Emulator<?> e,long a,long v){byte[] b=new byte[8];for(int i=0;i<8;i++){b[i]=(byte)(v&0xff);v>>=8;}e.getBackend().mem_write(a,b);}
 }
