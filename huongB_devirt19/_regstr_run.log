@@ -1,0 +1,14 @@
+attach pid 27959
+  {'k': 'HOOK', 'off': '0x12fd3c'}
+  {'k': 'READY'}
+collecting 50s...
+=== STRINGS === 6
+  KEY '1233-0-1-ecneuq' sha1=db4d23f8db24 file=['.msf3_db4d23f8db24d05e480f1adf6e308aa5a466ef6b']
+  KEY '3019' sha1=3dddca0f066c file=[]
+  KEY '3019-0-1-f5e6f45698837e51c10f69f5e1838bc5' sha1=5a78573b16f3 file=['.msf3_5a78573b16f3ea4c2cd50666201214b78de95b0e']
+  KEY 'ab21f14570db6a3770455672052f9c07' sha1=e2a7acdbf9be file=[]
+  KEY 'f5e6f45698837e51c10f69f5e1838bc5' sha1=3e20a2c68311 file=[]
+  KEY 'xxsibt' sha1=fcd72fd629e1 file=[]
+--- value-sized blobs (match store file sizes) ---
+  size=32 -> .msf3_5bbde2d70532c7b6b3b1d67db50b5957637dbf56 hex=616232316631343537306462366133373730343535363732 pr=1.00
+  size=32 -> .msf3_5bbde2d70532c7b6b3b1d67db50b5957637dbf56 hex=663565366634353639383833376535316331306636396635 pr=1.00

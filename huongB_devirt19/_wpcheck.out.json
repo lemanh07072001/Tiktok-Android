@@ -1,0 +1,15 @@
+[
+ {
+  "t": "boot"
+ },
+ {
+  "t": "API",
+  "out": {
+   "setExceptionHandler": "function",
+   "hasThread": true,
+   "setHWWP": "undefined",
+   "unsetHWWP": "undefined",
+   "getCurTid": "function"
+  }
+ }
+]

@@ -1,0 +1,2036 @@
+[
+ {
+  "t": "mon"
+ },
+ {
+  "t": "info",
+  "base": "0x74fe600000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977763390,
+  "slot16": "435d160a99525cb568b0e98820f82565",
+  "hexstr": "435d160a99525cb568b0e98820f82565",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v2/feed/?os=android&_rticket=1787977754863&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&ts=1787977754&effect_"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977763788,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v2/feed/?os=android&_rticket=1787977754863&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&ts=1787977754&effect_",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4de4490",
+    "win": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977763972,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/ultimate/cmpl/settings/?device_platform=android&os=android&ssmix=a&_rticket=1787977759462&channel=googleplay&aid=1233",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684be3730",
+    "win": "313233330035323030310000000000000181000000005bf700000000000000000200000000797065000000000000000001010100000077fb0000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 24,
+     "ascii": "1............[........",
+     "data": "310000000000000181000000005bf700000000000000"
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977764047,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&version_code=450504\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977764047,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&version_code=450504\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4e075d0",
+    "win": "00572d49532d4341000000000000000003000300000071ca000000000000000073656172636831392d6e6f726d616c2d616c6973672e74696b746f6b762e636f",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977764141,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/consentbox/should_show/?ssaid=d0e397ab87a29fd3&app_version=2024505040450504&business=us_dnu_consent_box&store_region=",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684ba36f0",
+    "win": "0000000000000000000000000000000001410000000070fd0000000000000000110000000000000000000000000000000121000000000db90000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977764309,
+  "slot16": "2a91daee4602256a97473a5041260782",
+  "hexstr": "2a91daee4602256a97473a5041260782",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/mall/shop_tab/algorithm/reach/get?device_platform=android&os=android&ssmix=a&_rticket=1787977754593&channel=googleplay&a"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977764412,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/mall/shop_tab/algorithm/reach/get?device_platform=android&os=android&ssmix=a&_rticket=1787977754593&channel=googleplay&a",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4e09a10",
+    "win": "00572d49532d434100574d3d0000000003810200000008af0000000000000000885bc30477000000885bc304770000002473646b5f6770686f6e6536345f6172",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977765961,
+  "sel": 369,
+  "url": "https://tnc16-normal-useast8.tiktokv.us/get_domains/v5/?aid=1233&device_id=7678616678053643790&device_platform=android&version_code=2024505040&channel=googlepla",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684be1a70",
+    "win": "4076c4d47600000060f4c6d476000000018100000000623e00000000000000000800000000000000000000000000000001010100000087c60000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 48,
+     "ascii": "...v.........b>.......",
+     "data": "f4c6d476000000018100000000623e00000000000000"
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977768111,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "hexstr": "46c03b52742b3f2615a3abdf1636b754",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/consent/api/combine/list/v3?sdk_version=2.7.4.4&sdk_name=pns_consent_sdk&device_platform=android&os=android&ssmix=a&_rticket=17"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977768142,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/consent/api/combine/list/v3?sdk_version=2.7.4.4&sdk_name=pns_consent_sdk&device_platform=android&os=android&ssmix=a&_rticket=17",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4eebe90",
+    "win": "00572d49532d43410000000000000000032102000000549a000000000000000072645f74696b746f6b65635f6c6976655f73686f7070696e675f6261675f7368",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977769738,
+  "slot16": "9857f0b1028de50f4ecbabed37144ba2",
+  "hexstr": "9857f0b1028de50f4ecbabed37144ba2",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=3.2.2.i18n&version_code=45.5.4&lang=en&aid=123"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977769777,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=3.2.2.i18n&version_code=45.5.4&lang=en&aid=123",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4d16cd0",
+    "win": "00572d49532d43410000000000000000030103000000051e0000000000000000626963686f6e2d717569632d737562312e627974656f7665727365612e6e6574",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977771118,
+  "slot16": "4f67c440615aba7d20dd4753c3ce5922",
+  "hexstr": "4f67c440615aba7d20dd4753c3ce5922",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/translation/description/?device_platform=android&os=android&ssmix=a&_rticket=1787977768369&channel=googleplay&aid=1233"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977771283,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/translation/description/?device_platform=android&os=android&ssmix=a&_rticket=1787977768369&channel=googleplay&aid=1233",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000000800000000000000f022ba8476000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4e3e950",
+    "win": "00572d49532d43410000000000000000038d02000000b62000000000000000001025bf3478000000a701000001000000040c8497750000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29752,
+  "ts": 1787977771917,
+  "slot16": "6a0e06e3782dcc2137154051137b5444",
+  "hexstr": "6a0e06e3782dcc2137154051137b5444"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977772105,
+  "slot16": "f52f685bb74a9d45cc905803d8d3d2f4",
+  "hexstr": "f52f685bb74a9d45cc905803d8d3d2f4",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/cs/setting?device_platform=android&app_version=45.5.4&aid=1233&sdk_version=v10.02.08-ov-android&device_id=76786166780536"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977772109,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/cs/setting?device_platform=android&app_version=45.5.4&aid=1233&sdk_version=v10.02.08-ov-android&device_id=76786166780536",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4e3cfd0",
+    "win": "00572d49532d43410000000000000000039002000000007900000000000000007474736f6369616c5f6169617373745f636861745f6175746f5f7265706c795f",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977773615,
+  "slot16": "d154406d7759fb19c13fd40c82c1b9ed",
+  "hexstr": "d154406d7759fb19c13fd40c82c1b9ed",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787977768424&channel=googleplay&aid=1233&app_name"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977773637,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787977768424&channel=googleplay&aid=1233&app_name",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4e39210",
+    "win": "00572d49532d434100363032375f300003810200000093ed0000000000000000a81fc70477000000a81fc7047700000004333400000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977773665,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/inspect/item/v1?item_ids=7670680466164419872%2C7658221613866831124%2C7665354676887440654%2C7662818835384241415%2C7656708",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c18770",
+    "win": "3026b6647800000000dac3a4750000000181000000000044000000000000000032007c363235323030310000000000000100010000002ef80000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977774476,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/popup/dispatch/v1?scene=5&device_platform=android&os=android&ssmix=a&_rticket=1787977770420&channel=googleplay&aid=1233&",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c1ab10",
+    "win": "582d54542d54524143452d4944000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "valA": {
+     "L": 1,
+     "size": 0,
+     "data": "",
+     "ascii": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977774606,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/webcast/user/?target_uid=0&packed_level=2&sec_target_uid=0&request_from_type=UserCenter_init&device_platform=android&os=android",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c1ae70",
+    "win": "3200383739373737373130393800000001010100000005e50000000000000000322e342e322e6931386e00000000000001010100000053620000000000000000",
+    "valA": {
+     "L": 1,
+     "size": -1944147664140435200,
+     "data": null,
+     "ascii": null
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977777715,
+  "slot16": "24e8ae2a65739c6a42e3d9b527b11b73",
+  "hexstr": "24e8ae2a65739c6a42e3d9b527b11b73",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ms/get_seed?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=8401897"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977777741,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ms/get_seed?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=8401897",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4c5cad0",
+    "win": "00572d49532d4341006f6e733b0000000381020000002f1500000000000000000000803f0000000000000000000000000000803f000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977777753,
+  "slot16": "999c6db171ce039eb887a80c44c40f08",
+  "hexstr": "999c6db171ce039eb887a80c44c40f08",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ms/dyn/task?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=8401897"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977777769,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ms/dyn/task?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=8401897",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4e1fc50",
+    "win": "00572d49532d4341000000000000000003810200000066f0000000000000000008f9c9047700000008f9c9047700000002320000000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977779969,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/ad/v1/splash/stock/?_unused=0&carrier=T-Mobile&mcc_mnc=310260&ad_area=1080x2081&sdk_version=2013656&os_api=34&device_platfo",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684be0f50",
+    "win": "00000000000000009018b9d476000000010101000000fe3d00000000000000000800000000000000687474702f312e310181000000007f3f0000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 72,
+     "ascii": "...v..........=.......",
+     "data": "18b9d476000000010101000000fe3d00000000000000"
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977780273,
+  "slot16": "1c7ae33a1afc854190cae2043d7ea7d9",
+  "hexstr": "1c7ae33a1afc854190cae2043d7ea7d9",
+  "sel": 369,
+  "url": "https://cp-rp16-normal-useast5.tiktokv.us/track_event\ufffd1\ufffd\ufffdcket\ufffd\ufffd\ufffd\u0004\u0001\u0004\ufffd\ufffd\ufffd\u007fU\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd \ufffdZ-y\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd4w\ufffd\ufffd\ufffdX\ufffdZ-y\ufffd\ufffd\ufffdP\ufffd\ufffd4w\ufffd\ufffd\ufffd\ufffdh\ufffdNv\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdZ-y\ufffd\ufffd\ufffd\ufffd2\ufffd\ufffdw\ufffd\ufffd\ufffd\u0004\ufffd\u0003\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977780273,
+  "sel": 369,
+  "url": "https://cp-rp16-normal-useast5.tiktokv.us/track_event\ufffd1\ufffd\ufffdcket\ufffd\ufffd\ufffd\u0004\u0001\u0004\ufffd\ufffd\ufffd\u007fU\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd \ufffdZ-y\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd4w\ufffd\ufffd\ufffdX\ufffdZ-y\ufffd\ufffd\ufffdP\ufffd\ufffd4w\ufffd\ufffd\ufffd\ufffdh\ufffdNv\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdZ-y\ufffd\ufffd\ufffd\ufffd2\ufffd\ufffdw\ufffd\ufffd\ufffd\u0004\ufffd\u0003\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4f77e10",
+    "win": "00572d49532d4341000000000000000003010300000020eb000000000000000064697361626c655f7465787475726572656e6465725f737572666163655f636f",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977781427,
+  "slot16": "3309acd6108fe1de8ab73163bd2391c7",
+  "hexstr": "3309acd6108fe1de8ab73163bd2391c7",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/region/submit?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787977778892&channel=googlepl"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977781464,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/region/submit?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787977778892&channel=googlepl",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4f508d0",
+    "win": "006f5f666f6e742e74746600000000000301030000007b5b0000000000000000656e61626c65645f636f6d706f6e656e74735f616e63686f725f73686f705f73",
+    "valA": {
+     "L": 0,
+     "size": 58,
+     "ascii": "tf...........{[.......",
+     "data": "746600000000000301030000007b5b00000000000000"
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977781714,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/incentive/user/product_facade/data/get/v1/?request_type=1&crossday_delay_min=12&m2_condition=%7B%22is_m2_account_active%",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb347700000020000000130000006064fbe477000000025d926a0700000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c21750",
+    "win": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977784009,
+  "sel": 369,
+  "url": "https://tnc19-normal-useast5.tiktokv.us/get_domains/v5/?aid=1233&device_id=7678616678053643790&device_platform=android&version_code=2024505040&channel=googlepla",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c23470",
+    "win": "010000000000000090cbbfd47600000001b000000000f2730000000000000000676f6f676c65706c617900e57700000000000000000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 72,
+     "ascii": "...v..........s.......",
+     "data": "cbbfd47600000001b000000000f27300000000000000"
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977784238,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "hexstr": "46c03b52742b3f2615a3abdf1636b754",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/ppf/api/eligibility/v2?device_platform=android&os=android&ssmix=a&_rticket=1787977781243&channel=googleplay&aid=1233&app"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977784249,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/ppf/api/eligibility/v2?device_platform=android&os=android&ssmix=a&_rticket=1787977781243&channel=googleplay&aid=1233&app",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4b8a490",
+    "win": "00572d49532d43410000000000000000030103000000615700000000000000006c65676f5f726571756573745f626f6f745f66696e6973685f74726967676572",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977784452,
+  "slot16": "f31361844bd2a9dfda8e7ff7edc91ce0",
+  "hexstr": "f31361844bd2a9dfda8e7ff7edc91ce0",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787977781499&channel=googleplay&aid=1233&app_name="
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977784456,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787977781499&channel=googleplay&aid=1233&app_name=",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4f90050",
+    "win": "00572d49532d43410000000000000000038102000000fe910000000000000000a83acd0477000000a83acd047700000014323032343530353034300000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977784460,
+  "slot16": "41095ab04d460685a7d74e2e9f33f7a0",
+  "hexstr": "41095ab04d460685a7d74e2e9f33f7a0",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/dynamic/fetch?device_platform=android&os=android&ssmix=a&_rticket=1787977781475&channel=googleplay&aid=1233&"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977784462,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/dynamic/fetch?device_platform=android&os=android&ssmix=a&_rticket=1787977781475&channel=googleplay&aid=1233&",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4f920d0",
+    "win": "00572d49532d43410000000000000000038102000000d9fa000000000000000002000000b8e765e9000000000000000000000000000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977784524,
+  "slot16": "bdd229713b0ecba161d0e167d94b11cf",
+  "hexstr": "bdd229713b0ecba161d0e167d94b11cf",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=2.4.2.i18n&version_code=45.5.4&lang=en&aid=123"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977784526,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=2.4.2.i18n&version_code=45.5.4&lang=en&aid=123",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4f96410",
+    "win": "00572d49532d43410000000000000000038102000000cefa000000000000000010c3e3c477000000502fe2c477000000d05fe2c4770000000139344231314346",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977784530,
+  "slot16": "d6334c80dc70137600866336d032076b",
+  "hexstr": "d6334c80dc70137600866336d032076b",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/record/sync?device_platform=android&os=android&ssmix=a&_rticket=1787977781723&channel=googleplay&aid=1233&ap"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977784532,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/record/sync?device_platform=android&os=android&ssmix=a&_rticket=1787977781723&channel=googleplay&aid=1233&ap",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4f95cd0",
+    "win": "00572d49532d434100000000000000000301030000001f230000000000000000683420627600000068a3caa20000000000000000010000003021b544770000b4",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977785233,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787977784878&cha"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977785270,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787977784878&cha",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4f12690",
+    "win": "00572d49532d4341000000000000000003010300000045d100000000000000009024f1c477000000adee07e59b1b4dc921000000000000001f00000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977785899,
+  "slot16": "e10b8c32997221b481f2e14efd962cc8",
+  "hexstr": "e10b8c32997221b481f2e14efd962cc8",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/aweme/stats/?os=android&_rticket=1787977784298&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&ts=1787977780&"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977785926,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/aweme/stats/?os=android&_rticket=1787977784298&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&ts=1787977780&",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4fa0c10",
+    "win": "00002d49532d43410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977786131,
+  "slot16": "bc1f61eaeacefe5909e95788359cbd3a",
+  "hexstr": "bc1f61eaeacefe5909e95788359cbd3a",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/dynamic/fetch?device_platform=android&os=android&ssmix=a&_rticket=1787977784998&channel=googleplay&aid=1233&"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977786147,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/dynamic/fetch?device_platform=android&os=android&ssmix=a&_rticket=1787977784998&channel=googleplay&aid=1233&",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4e355d0",
+    "win": "00572d49532d43410000000000000000038102000000abf700000000000000004834c704770000004834c704770000001455537c363235323030310000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977788466,
+  "slot16": "08920d1d2a924512d7ec603710d47a83",
+  "hexstr": "08920d1d2a924512d7ec603710d47a83",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787977786151&channel=googleplay&aid=1233&app_name"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977788688,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787977786151&channel=googleplay&aid=1233&app_name",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4f7b710",
+    "win": "00572d49532d4341000000000000000003010300000089c900000000000000009054f4c4770000008bd20394121fa85621000000000000001e00000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977791067,
+  "slot16": "41772151fffccdb9777097cff190db4c",
+  "hexstr": "41772151fffccdb9777097cff190db4c",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/translation/description/?device_platform=android&os=android&ssmix=a&_rticket=1787977790300&channel=googleplay&aid=1233"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977791094,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/translation/description/?device_platform=android&os=android&ssmix=a&_rticket=1787977790300&channel=googleplay&aid=1233",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4fb1c50",
+    "win": "00572d49532d43410000000000000000038102000000b64900000000000000000000803f0000000000000000000000000000803f000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977792261,
+  "slot16": "b8591fcb8d86ff40ed3989462a588bf1",
+  "hexstr": "b8591fcb8d86ff40ed3989462a588bf1",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/efficiency_portrait/?device_platform=android&os=android&ssmix=a&_rticket=1787977790163&channel=googleplay&aid=1233&ap"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977792728,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/efficiency_portrait/?device_platform=android&os=android&ssmix=a&_rticket=1787977790163&channel=googleplay&aid=1233&ap",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4e5bb90",
+    "win": "00572d49532d434100363032375f300003b1020000006d6b00000000000000006274735f63616d706169676e6875625f6461696c79626f6f73745f6c6f73696e",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977794277,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tfe/api/request_combine/v1/?effect_sdk_version=21.5.0&current_network_quality_info=%7B%22tcp_rtt%22%3A260%2C%22quic_rtt%22%3A26",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c34d50",
+    "win": "90e1b494770000b4ffffffff0202000001810000000089b60000000000000000000000000000000000000000000000000161000000000af30000000000000000",
+    "valA": {
+     "L": 1,
+     "size": -5293699886997275000,
+     "data": null,
+     "ascii": null
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977795647,
+  "slot16": "3533864cb677fe084a3ab05dbfcd1bd8",
+  "hexstr": "3533864cb677fe084a3ab05dbfcd1bd8",
+  "sel": 369,
+  "url": "https://log-dr16-normal-useast8.tiktokv.us/service/2/app_log_forward/?version_code=450504&ab_version=45.5.4&device_platform=android&device_id=767861667805364379"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977795657,
+  "sel": 369,
+  "url": "https://log-dr16-normal-useast8.tiktokv.us/service/2/app_log_forward/?version_code=450504&ab_version=45.5.4&device_platform=android&device_id=767861667805364379",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4fc3650",
+    "win": "00572d49532d434100000000000000000381020000004b4d0000000000000000a0c3c24477000000a0c3c24477000000d040fcc477000000d0c4fbc477000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977798245,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/anchor/list/?os=android&_rticket=1787977792246&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&ts=1787977790&",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c389d0",
+    "win": "65006e00000000000000000000000000019100000000716b00000000000000006d6461745f706f73005f6d6f64650000014100000000e9f60000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977799061,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787977793738&cha"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977799063,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787977793738&cha",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4fcdc90",
+    "win": "00572d49532d43410000000000000000038102000000773f000000000000000050e4fcc47700000048c700000000000048c70000000000004846bc0477000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977799130,
+  "slot16": "f31361844bd2a9dfda8e7ff7edc91ce0",
+  "hexstr": "f31361844bd2a9dfda8e7ff7edc91ce0",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787977794314&channel=googleplay&aid=1233&app_name="
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977799315,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787977794314&channel=googleplay&aid=1233&app_name=",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4fd2a10",
+    "win": "00572d49532d43410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977799882,
+  "slot16": "492d1e05b4e425e0e80a1644cea72109",
+  "hexstr": "492d1e05b4e425e0e80a1644cea72109",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/translation/description/?device_platform=android&os=android&ssmix=a&_rticket=1787977796463&channel=googleplay&aid=1233"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977799891,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/translation/description/?device_platform=android&os=android&ssmix=a&_rticket=1787977796463&channel=googleplay&aid=1233",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4faff90",
+    "win": "00572d49532d434100000000000000000390020000002ac300000000000000007270632d706572736973742d70797869732d706f6c6963792d73746174652d6c",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977802016,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/user/relation/alias/list/v1?device_platform=android&os=android&ssmix=a&_rticket=1787977796372&channel=googleplay&aid=123",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c3df10",
+    "win": "782d73732d647000636f64650000000001010100000098f00000000000000000332e322e322e6931386e00000000000001000100000061c90000000000000000",
+    "valA": {
+     "L": 1,
+     "size": -1110137308146761500,
+     "data": null,
+     "ascii": null
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977809640,
+  "slot16": "a8335be53038eb209f923150cce89af7",
+  "hexstr": "a8335be53038eb209f923150cce89af7",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/screen_time/upload/?device_platform=android&os=android&ssmix=a&_rticket=1787977807113&channel=googleplay&aid=1233&app"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977810107,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/screen_time/upload/?device_platform=android&os=android&ssmix=a&_rticket=1787977807113&channel=googleplay&aid=1233&app",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4d1b910",
+    "win": "00572d49532d434100000000000000000381020000003ef9000000000000000090ffb6c4770000005062d1c4770000005013b7c47700000001a0736f00000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977811034,
+  "slot16": "3533864cb677fe084a3ab05dbfcd1bd8",
+  "hexstr": "3533864cb677fe084a3ab05dbfcd1bd8",
+  "sel": 369,
+  "url": "https://log-dr16-normal-useast5.tiktokv.us/service/2/app_log_forward_backup/?version_code=450504&ab_version=45.5.4&device_platform=android&device_id=76786166780"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977811095,
+  "sel": 369,
+  "url": "https://log-dr16-normal-useast5.tiktokv.us/service/2/app_log_forward_backup/?version_code=450504&ab_version=45.5.4&device_platform=android&device_id=76786166780",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c4d16b90",
+    "win": "00572d49532d4341009cd2e477000000030103000000953c00000000000000006765636b6f33312d6e6f726d616c2d616c6973672e74696b746f6b762e636f6d",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977812385,
+  "slot16": "851dbc7109471d9b56f8c9c29ca143db",
+  "hexstr": "851dbc7109471d9b56f8c9c29ca143db",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/hybrid/ab/?feature_name=ttk_app_dau_launch&is_first_hybridab_request=false&is_first_app_session=false&ssaid=d0e397ab8"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977812402,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/hybrid/ab/?feature_name=ttk_app_dau_launch&is_first_hybridab_request=false&is_first_app_session=false&ssaid=d0e397ab8",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c5001bd0",
+    "win": "0000000000000000000000000000000003010300000031bb0000000000000000901a00c577000000e52b5788ab45a9c831000000000000002100000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977812579,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/im/user/feature/get?im_user_feature_names=5&im_user_feature_names=6&im_user_feature_names=8&im_user_feature_names=9&i",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c375b0",
+    "win": "6230007469737469637300005f696f00010101000000e588000000000000000068006f00730074005f00610062006900018000000000926f0000000000000000",
+    "valA": {
+     "L": 1,
+     "size": -8582453514884547000,
+     "data": null,
+     "ascii": null
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977813966,
+  "slot16": "870fd94951a67d246f7efb9ac6130ba0",
+  "hexstr": "870fd94951a67d246f7efb9ac6130ba0",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ri/report?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=84018976&"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977814182,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ri/report?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=84018976&",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c5009bd0",
+    "win": "00572d49532d434100000000000000000371020000006e1a000000000000000001000000000000000f000000000000000000000000000000526f6f7452656e64",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977814784,
+  "slot16": "051afb6b2a4b02cdb42d28ab0f81b736",
+  "hexstr": "051afb6b2a4b02cdb42d28ab0f81b736",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/passport/app/store_region/?passport-sdk-version=1&device_platform=android&os=android&ssmix=a&_rticket=1787977813815&channel=goo"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977814806,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/passport/app/store_region/?passport-sdk-version=1&device_platform=android&os=android&ssmix=a&_rticket=1787977813815&channel=goo",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c5013b10",
+    "win": "00002d49532d434100644d7573696300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977815033,
+  "slot16": "e81ea983880553838e8cfc26f9e43773",
+  "hexstr": "e81ea983880553838e8cfc26f9e43773",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/passport/auth/get_nonce/?device_platform=android&os=android&ssmix=a&_rticket=1787977813868&channel=googleplay&aid=1233&app_name"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977815037,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/passport/auth/get_nonce/?device_platform=android&os=android&ssmix=a&_rticket=1787977813868&channel=googleplay&aid=1233&app_name",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c5016e50",
+    "win": "00002d49532d4341000000000000000003000300000062c100000000000000006c6f6732322d6e6f726d616c2d75736561737431612e74696b746f6b762e636f",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977817842,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/popup/dispatch/v1?scene=0&device_platform=android&os=android&ssmix=a&_rticket=1787977816542&channel=googleplay&aid=1233&",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x7684c62b70",
+    "win": "55537c36323532303031000065000000010101000000d3930000000000000000582fd6c4770000009892d2c47700000001010100000085140000000000000000",
+    "valA": {
+     "L": 0,
+     "size": 24,
+     "ascii": "1..e..................",
+     "data": "31000065000000010101000000d39300000000000000"
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977818210,
+  "slot16": "d65d9aa8fd79c55ebaea55e0a6d54e59",
+  "hexstr": "d65d9aa8fd79c55ebaea55e0a6d54e59",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/ttec/diversion/?device_platform=android&os=android&ssmix=a&_rticket=1787977816863&channel=googleplay&aid=1233&a"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977818445,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/ttec/diversion/?device_platform=android&os=android&ssmix=a&_rticket=1787977816863&channel=googleplay&aid=1233&a",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c502c150",
+    "win": "000e00000000000010fbbf747700000003010300000041f40000000000000000d01401c5770000007ee4820bfd7aa7fc1a67726f75705f6b65795f3138370000",
+    "valA": {
+     "L": 0,
+     "size": 8,
+     "ascii": "..tw....",
+     "data": "fbbf747700000003"
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 29678,
+  "ts": 1787977819190,
+  "slot16": "773fdd92d3df5bed1c67603347cebe31",
+  "hexstr": "773fdd92d3df5bed1c67603347cebe31",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/common_chunk?aid=1233&device_id=7678616678053643790&client_version=2024505040&new_cluster=1&cpu_model=ranchu&oid=0&meta_version"
+ },
+ {
+  "t": "PROD",
+  "tid": 29678,
+  "ts": 1787977819240,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/common_chunk?aid=1233&device_id=7678616678053643790&client_version=2024505040&new_cluster=1&cpu_model=ranchu&oid=0&meta_version",
+  "ctxhex": "e0ad7dfe7400000000010000840000003061bb34770000001400000013000000409403e5770000003760926a0500000000000000000000000000000000000000",
+  "nfinds": 1,
+  "finds": [
+   {
+    "keyi": 1397960024,
+    "keys": {
+     "L": 0,
+     "size": 44,
+     "ascii": "-SS-STUB.X-METASEC-MOD",
+     "data": "2d53532d5354554200582d4d4554415345432d4d4f44"
+    },
+    "node": "0x77c502f0d0",
+    "win": "00572d49532d434100000000000000000311020000008d6500000000000000000100000077000000090000000000000050ee02c5000000005669657753747562",
+    "valA": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    },
+    "valB": {
+     "L": 0,
+     "size": 0,
+     "ascii": "",
+     "data": ""
+    }
+   }
+  ]
+ }
+]

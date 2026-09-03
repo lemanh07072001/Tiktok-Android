@@ -6,3 +6,25 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+# Frida/RE scratch (huongB_devirt19) — venv + raw runtime dumps (regenerable từ bin/*.so)
+huongB_devirt19/.venv-frida/
+*.venv-frida/
+huongB_devirt19/_ctx*.json
+huongB_devirt19/_singleshot*.json
+huongB_devirt19/_*trace*.json*
+huongB_devirt19/_*dump*.bin
+huongB_devirt19/_hex*.txt
+huongB_devirt19/_dis_full.txt
+huongB_devirt19/_text.asm
+
+# --- session temp + build artifacts + tool distributions (regenerable, too big for git) ---
+# in-repo scratchpad (session memdumps/screenshots — NOT project work)
+scratchpad/
+# unidbg signer: downloaded gradle distribution + build outputs (regenerable)
+signer/tools/
+signer/.gradle/
+signer/build/
+# large runtime slot16 trace outputs (need a live phone to regenerate; kept out of git)
+huongB_devirt19/_slot16*_out.json
+# android system libs pulled for emulation (regenerable from device)
+huongB_devirt19/bin/libart.so

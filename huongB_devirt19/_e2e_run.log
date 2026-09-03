@@ -1,0 +1,6 @@
+attach pid 4287 t=8.1
+  {'k': 'READY'}
+collecting 60s (natural write ~t20-40 + swipes)...
+=== EVENTS === 3
+store files CHANGED this run: ['.msf3_58abed2bdf5ce9620cbf2b23e7b463da6969535a', '.msf3_b99efaf51e5a34819fa1e9d5151593b79e3b58a0', '.msp_092fde7a53a0274594af0984c7830fc0c13dc8bd', '.msp_589c22335a381f122d129225f5c0ba3056ed5811']
+ct-match hits: 0

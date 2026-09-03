@@ -1,0 +1,272 @@
+[
+ {
+  "t": "closure",
+  "n": 1,
+  "concat": "0x150348",
+  "slotPtr": "0x7826655478",
+  "slotOff": "heap",
+  "slot16": "0800000006000000b09ba19b79000000",
+  "qPtr": "0x7826655c58",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 2,
+  "concat": "0x150348",
+  "slotPtr": "0x7826655418",
+  "slotOff": "heap",
+  "slot16": "0500000004000000f09da19b79000000",
+  "qPtr": "0x7826655428",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 3,
+  "concat": "0x150348",
+  "slotPtr": "0x7826655450",
+  "slotOff": "heap",
+  "slot16": "0500000004000000109aa19b79000000",
+  "qPtr": "0x7826655468",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 4,
+  "concat": "0x150348",
+  "slotPtr": "0x7826655488",
+  "slotOff": "heap",
+  "slot16": "2100000020000000d053fa2b7b000000",
+  "qPtr": "0x7826655418",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 5,
+  "concat": "0x150348",
+  "slotPtr": "0x7826655450",
+  "slotOff": "heap",
+  "slot16": "0500000004000000109aa19b79000000",
+  "qPtr": "0x7826655468",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 6,
+  "concat": "0x150348",
+  "slotPtr": "0x7826655418",
+  "slotOff": "heap",
+  "slot16": "100000000c000000d09ba19b79000000",
+  "qPtr": "0x78266553f8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 7,
+  "concat": "0x150348",
+  "slotPtr": "0x7826655450",
+  "slotOff": "heap",
+  "slot16": "0500000004000000109aa19b79000000",
+  "qPtr": "0x7826655468",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 8,
+  "concat": "0x150348",
+  "slotPtr": "0x7826655438",
+  "slotOff": "heap",
+  "slot16": "100000000c000000709ca19b79000000",
+  "qPtr": "0x78266553e0",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 9,
+  "concat": "0x150348",
+  "slotPtr": "0x78266553f8",
+  "slotOff": "heap",
+  "slot16": "2000000011000000b0f2de1b7a000000",
+  "qPtr": "0x78266553d0",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 10,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573d8",
+  "slotOff": "heap",
+  "slot16": "0800000006000000d074a19b79000000",
+  "qPtr": "0x7826657bb8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 11,
+  "concat": "0x150348",
+  "slotPtr": "0x7826657378",
+  "slotOff": "heap",
+  "slot16": "0500000004000000d07ba19b79000000",
+  "qPtr": "0x7826657388",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 12,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573b0",
+  "slotOff": "heap",
+  "slot16": "0500000004000000309aa19b79000000",
+  "qPtr": "0x78266573c8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 13,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573e8",
+  "slotOff": "heap",
+  "slot16": "2100000020000000d0ea552c7b000000",
+  "qPtr": "0x7826657378",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 14,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573b0",
+  "slotOff": "heap",
+  "slot16": "0500000004000000309aa19b79000000",
+  "qPtr": "0x78266573c8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 15,
+  "concat": "0x150348",
+  "slotPtr": "0x7826657378",
+  "slotOff": "heap",
+  "slot16": "100000000c0000009074a19b79000000",
+  "qPtr": "0x7826657358",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 16,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573b0",
+  "slotOff": "heap",
+  "slot16": "0500000004000000309aa19b79000000",
+  "qPtr": "0x78266573c8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 17,
+  "concat": "0x150348",
+  "slotPtr": "0x7826657398",
+  "slotOff": "heap",
+  "slot16": "100000000c0000005076a19b79000000",
+  "qPtr": "0x7826657340",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 18,
+  "concat": "0x150348",
+  "slotPtr": "0x7826657358",
+  "slotOff": "heap",
+  "slot16": "2000000011000000e0d5cb1b7a000000",
+  "qPtr": "0x7826657330",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 19,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573d8",
+  "slotOff": "heap",
+  "slot16": "0800000006000000f082a19b79000000",
+  "qPtr": "0x7826657bb8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 20,
+  "concat": "0x150348",
+  "slotPtr": "0x7826657378",
+  "slotOff": "heap",
+  "slot16": "05000000040000007081a19b79000000",
+  "qPtr": "0x7826657388",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 21,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573b0",
+  "slotOff": "heap",
+  "slot16": "0500000004000000b082a19b79000000",
+  "qPtr": "0x78266573c8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 22,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573e8",
+  "slotOff": "heap",
+  "slot16": "21000000200000001024562c7b000000",
+  "qPtr": "0x7826657378",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 23,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573b0",
+  "slotOff": "heap",
+  "slot16": "0500000004000000b082a19b79000000",
+  "qPtr": "0x78266573c8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 24,
+  "concat": "0x150348",
+  "slotPtr": "0x7826657378",
+  "slotOff": "heap",
+  "slot16": "100000000c0000001074a19b79000000",
+  "qPtr": "0x7826657358",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 25,
+  "concat": "0x150348",
+  "slotPtr": "0x78266573b0",
+  "slotOff": "heap",
+  "slot16": "0500000004000000b082a19b79000000",
+  "qPtr": "0x78266573c8",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 26,
+  "concat": "0x150348",
+  "slotPtr": "0x7826657398",
+  "slotOff": "heap",
+  "slot16": "100000000c0000005085a19b79000000",
+  "qPtr": "0x7826657340",
+  "concatIsExpected": true
+ },
+ {
+  "t": "closure",
+  "n": 27,
+  "concat": "0x150348",
+  "slotPtr": "0x7826657358",
+  "slotOff": "heap",
+  "slot16": "2000000011000000e0d5cb1b7a000000",
+  "qPtr": "0x7826657330",
+  "concatIsExpected": true
+ }
+]

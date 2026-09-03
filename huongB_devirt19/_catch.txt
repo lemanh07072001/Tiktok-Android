@@ -1,0 +1,2 @@
+[*] catch-nonzero installed
+[DONE] nonzero=0

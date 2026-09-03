@@ -1,0 +1,18 @@
+[*] spawned 12056
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 0}
+{"t": "info", "msg": "hooked memcpy"}
+{"t": "info", "msg": "hooked memmove"}
+{"t": "info", "msg": "installed base=0x75c8000000"}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 0}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 188}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 188}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 188}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 188}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 316}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 336}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 336}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 336}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 336}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 336}
+{"t": "mon", "hits": 0, "match": 0, "nocopy": 0, "mapSz": 336}
+[*] done

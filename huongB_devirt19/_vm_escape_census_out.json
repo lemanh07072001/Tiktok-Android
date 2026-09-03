@@ -1,0 +1,697 @@
+[
+ {
+  "t": "info",
+  "base": "0x7528601000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "ndrv": 0,
+  "vmIters": 0,
+  "ringLen": 0
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "ndrv": 0,
+  "vmIters": 0,
+  "ringLen": 0
+ },
+ {
+  "t": "safe"
+ },
+ {
+  "t": "DRV",
+  "drv": 1,
+  "V": "5fad7d60bb834bf85cc9ddcca9588fa5",
+  "P": "0x77e4e2f650",
+  "vmIters": 691,
+  "ringLen": 691,
+  "distinctFns": [
+   [
+    "SELF+0x117c5c",
+    562
+   ],
+   [
+    "SELF+0x117c90",
+    12
+   ],
+   [
+    "SELF+0x1187a4",
+    11
+   ],
+   [
+    "SELF+0x146560",
+    10
+   ],
+   [
+    "SELF+0x9b5cc",
+    9
+   ],
+   [
+    "SELF+0x1465a0",
+    6
+   ],
+   [
+    "SELF+0x117cc0",
+    4
+   ],
+   [
+    "SELF+0x117cac",
+    4
+   ],
+   [
+    "SELF+0x9b5dc",
+    3
+   ],
+   [
+    "SELF+0x117d98",
+    3
+   ],
+   [
+    "SELF+0x11881c",
+    3
+   ],
+   [
+    "SELF+0x1187ac",
+    3
+   ],
+   [
+    "SELF+0xa1004",
+    2
+   ],
+   [
+    "SELF+0xa0fe8",
+    2
+   ],
+   [
+    "SELF+0x9b604",
+    2
+   ],
+   [
+    "SELF+0x76e88",
+    2
+   ]
+  ],
+  "argEqualsP": [],
+  "argHasV": []
+ },
+ {
+  "t": "DRV",
+  "drv": 2,
+  "V": "70208dae6764a6a7800499a4d2bef595",
+  "P": "0x77e4e8da60",
+  "vmIters": 2188,
+  "ringLen": 2188,
+  "distinctFns": [
+   [
+    "SELF+0x117c5c",
+    1140
+   ],
+   [
+    "SELF+0x9b5dc",
+    119
+   ],
+   [
+    "SELF+0x9b5cc",
+    47
+   ],
+   [
+    "SELF+0x9b6e8",
+    30
+   ],
+   [
+    "SELF+0x117d98",
+    28
+   ],
+   [
+    "SELF+0x117c90",
+    24
+   ],
+   [
+    "SELF+0x9bcd0",
+    20
+   ],
+   [
+    "SELF+0x9b658",
+    20
+   ],
+   [
+    "SELF+0x13a664",
+    18
+   ],
+   [
+    "SELF+0x9b46c",
+    16
+   ],
+   [
+    "SELF+0x9b878",
+    14
+   ],
+   [
+    "SELF+0x9b73c",
+    14
+   ],
+   [
+    "SELF+0x9b704",
+    14
+   ],
+   [
+    "SELF+0x146560",
+    14
+   ],
+   [
+    "SELF+0x9b604",
+    12
+   ],
+   [
+    "SELF+0x9b818",
+    12
+   ]
+  ],
+  "argEqualsP": [],
+  "argHasV": []
+ },
+ {
+  "t": "DRV",
+  "drv": 3,
+  "V": "416b195b0ccedc1cc28487da0daacdee",
+  "P": "0x77e4e10c90",
+  "vmIters": 2903,
+  "ringLen": 2903,
+  "distinctFns": [
+   [
+    "SELF+0x117c5c",
+    1425
+   ],
+   [
+    "SELF+0x9b5dc",
+    177
+   ],
+   [
+    "SELF+0x9b5cc",
+    66
+   ],
+   [
+    "SELF+0x9b6e8",
+    45
+   ],
+   [
+    "SELF+0x117d98",
+    35
+   ],
+   [
+    "SELF+0x9bcd0",
+    30
+   ],
+   [
+    "SELF+0x117c90",
+    30
+   ],
+   [
+    "SELF+0x9b658",
+    30
+   ],
+   [
+    "SELF+0x13a664",
+    27
+   ],
+   [
+    "SELF+0x9b46c",
+    24
+   ],
+   [
+    "SELF+0x9b878",
+    21
+   ],
+   [
+    "SELF+0x9b73c",
+    21
+   ],
+   [
+    "SELF+0x9b704",
+    21
+   ],
+   [
+    "SELF+0x9b818",
+    18
+   ],
+   [
+    "SELF+0x9b604",
+    17
+   ],
+   [
+    "SELF+0x9b61c",
+    16
+   ]
+  ],
+  "argEqualsP": [],
+  "argHasV": []
+ },
+ {
+  "t": "DRV",
+  "drv": 4,
+  "V": "7aef54af1f28e848d01a6a5b33553f94",
+  "P": "0x77e4e7cdb0",
+  "vmIters": 3618,
+  "ringLen": 3000,
+  "distinctFns": [
+   [
+    "SELF+0x117c5c",
+    1190
+   ],
+   [
+    "SELF+0x9b5dc",
+    235
+   ],
+   [
+    "SELF+0x9b5cc",
+    85
+   ],
+   [
+    "SELF+0x9b6e8",
+    60
+   ],
+   [
+    "SELF+0x117d98",
+    42
+   ],
+   [
+    "SELF+0x9bcd0",
+    40
+   ],
+   [
+    "SELF+0x9b658",
+    40
+   ],
+   [
+    "SELF+0x13a664",
+    36
+   ],
+   [
+    "SELF+0x9b46c",
+    32
+   ],
+   [
+    "SELF+0x9b878",
+    28
+   ],
+   [
+    "SELF+0x9b73c",
+    28
+   ],
+   [
+    "SELF+0x9b704",
+    28
+   ],
+   [
+    "SELF+0x9b818",
+    24
+   ],
+   [
+    "SELF+0x117c90",
+    24
+   ],
+   [
+    "SELF+0x9b604",
+    22
+   ],
+   [
+    "SELF+0x9b61c",
+    21
+   ]
+  ],
+  "argEqualsP": [],
+  "argHasV": []
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 4,
+  "vmIters": 4307,
+  "ringLen": 3000
+ },
+ {
+  "t": "DRV",
+  "drv": 5,
+  "V": "41095ab04d460685a7d74e2e9f33f7a0",
+  "P": "0x77e4ee1f40",
+  "vmIters": 4704,
+  "ringLen": 3000,
+  "distinctFns": [
+   [
+    "SELF+0x117c5c",
+    1425
+   ],
+   [
+    "SELF+0x9b5dc",
+    217
+   ],
+   [
+    "SELF+0x9b5cc",
+    71
+   ],
+   [
+    "SELF+0x9b6e8",
+    49
+   ],
+   [
+    "SELF+0x9bcd0",
+    40
+   ],
+   [
+    "SELF+0x117d98",
+    35
+   ],
+   [
+    "SELF+0x117c90",
+    30
+   ],
+   [
+    "SELF+0x9b658",
+    30
+   ],
+   [
+    "SELF+0x9b878",
+    28
+   ],
+   [
+    "SELF+0x13a664",
+    27
+   ],
+   [
+    "SELF+0x9b73c",
+    24
+   ],
+   [
+    "SELF+0x9b46c",
+    24
+   ],
+   [
+    "SELF+0x9b818",
+    22
+   ],
+   [
+    "SELF+0x9b704",
+    21
+   ],
+   [
+    "SELF+0x9b604",
+    20
+   ],
+   [
+    "SELF+0x9bc78",
+    20
+   ]
+  ],
+  "argEqualsP": [],
+  "argHasV": []
+ },
+ {
+  "t": "DRV",
+  "drv": 6,
+  "V": "3952c35cc874301febdfaa22233a7da9",
+  "P": "0x77e4ee2fc0",
+  "vmIters": 5425,
+  "ringLen": 3000,
+  "distinctFns": [
+   [
+    "SELF+0x117c5c",
+    1425
+   ],
+   [
+    "SELF+0x9b5dc",
+    217
+   ],
+   [
+    "SELF+0x9b5cc",
+    70
+   ],
+   [
+    "SELF+0x9b6e8",
+    48
+   ],
+   [
+    "SELF+0x9bcd0",
+    40
+   ],
+   [
+    "SELF+0x117d98",
+    35
+   ],
+   [
+    "SELF+0x117c90",
+    30
+   ],
+   [
+    "SELF+0x9b658",
+    30
+   ],
+   [
+    "SELF+0x9b878",
+    28
+   ],
+   [
+    "SELF+0x9b46c",
+    27
+   ],
+   [
+    "SELF+0x13a664",
+    27
+   ],
+   [
+    "SELF+0x9b73c",
+    24
+   ],
+   [
+    "SELF+0x9b818",
+    22
+   ],
+   [
+    "SELF+0x9b704",
+    21
+   ],
+   [
+    "SELF+0x9b604",
+    20
+   ],
+   [
+    "SELF+0x9bc78",
+    20
+   ]
+  ],
+  "argEqualsP": [],
+  "argHasV": []
+ },
+ {
+  "t": "DRV",
+  "drv": 7,
+  "V": "e80f8ceb04d31fde8cf20514596e5a75",
+  "P": "0x77e4ee1a90",
+  "vmIters": 6146,
+  "ringLen": 3000,
+  "distinctFns": [
+   [
+    "SELF+0x117c5c",
+    1425
+   ],
+   [
+    "SELF+0x9b5dc",
+    217
+   ],
+   [
+    "SELF+0x9b5cc",
+    70
+   ],
+   [
+    "SELF+0x9b6e8",
+    48
+   ],
+   [
+    "SELF+0x9bcd0",
+    40
+   ],
+   [
+    "SELF+0x117d98",
+    35
+   ],
+   [
+    "SELF+0x117c90",
+    30
+   ],
+   [
+    "SELF+0x9b658",
+    30
+   ],
+   [
+    "SELF+0x9b46c",
+    30
+   ],
+   [
+    "SELF+0x9b878",
+    28
+   ],
+   [
+    "SELF+0x13a664",
+    27
+   ],
+   [
+    "SELF+0x9b73c",
+    23
+   ],
+   [
+    "SELF+0x9b818",
+    22
+   ],
+   [
+    "SELF+0x9b704",
+    21
+   ],
+   [
+    "SELF+0x9b604",
+    20
+   ],
+   [
+    "SELF+0x9bc78",
+    20
+   ]
+  ],
+  "argEqualsP": [],
+  "argHasV": []
+ },
+ {
+  "t": "DRV",
+  "drv": 8,
+  "V": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "P": "0x77e4ef3c10",
+  "vmIters": 7594,
+  "ringLen": 3000,
+  "distinctFns": [
+   [
+    "SELF+0x117c5c",
+    1168
+   ],
+   [
+    "SELF+0x9b5dc",
+    235
+   ],
+   [
+    "SELF+0x9b5cc",
+    85
+   ],
+   [
+    "SELF+0x9b6e8",
+    60
+   ],
+   [
+    "SELF+0x9b46c",
+    44
+   ],
+   [
+    "SELF+0x9bcd0",
+    40
+   ],
+   [
+    "SELF+0x9b658",
+    40
+   ],
+   [
+    "SELF+0x13a664",
+    36
+   ],
+   [
+    "SELF+0x117d98",
+    35
+   ],
+   [
+    "SELF+0x9b878",
+    28
+   ],
+   [
+    "SELF+0x9b73c",
+    28
+   ],
+   [
+    "SELF+0x9b704",
+    28
+   ],
+   [
+    "SELF+0x9b818",
+    24
+   ],
+   [
+    "SELF+0x117c90",
+    24
+   ],
+   [
+    "SELF+0x9b604",
+    22
+   ],
+   [
+    "SELF+0x9b61c",
+    21
+   ]
+  ],
+  "argEqualsP": [],
+  "argHasV": []
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "vmIters": 21620,
+  "ringLen": 3000
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "vmIters": 77934,
+  "ringLen": 3000
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "vmIters": 88338,
+  "ringLen": 3000
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "vmIters": 88338,
+  "ringLen": 3000
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "vmIters": 89059,
+  "ringLen": 3000
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "vmIters": 89059,
+  "ringLen": 3000
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "vmIters": 89780,
+  "ringLen": 3000
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "vmIters": 89780,
+  "ringLen": 3000
+ }
+]

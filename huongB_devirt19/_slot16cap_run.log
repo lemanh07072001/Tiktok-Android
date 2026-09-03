@@ -1,0 +1,8 @@
+ATTACH pid 21946
+  {'k': 'INSTALLED'}
+  {'k': 'READY'}
+navigating to trigger producer (feed signs)...
+  {'k': 'CAPTURED', 'url': 'https://api22-core-c-alisg.tiktokv.com/aweme/v1/aweme/stats/?os=android&_rticket=1788229288755&is_pad=0&last_install_tim'}
+captured base=0x7610001000 url=https://api22-core-c-alisg.tiktokv.com/aweme/v1/aweme/stats/?os=android&_rticket=1788229288755&is_pad=0&last_install_tim closure=50
+pulled .so 2093056B
+=== SAVED ===

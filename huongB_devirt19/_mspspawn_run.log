@@ -1,0 +1,11 @@
+spawning...
+  {'k': 'WAIT_DLOPEN'}
+resumed, collecting 50s (startup sdi_v2 recompute)...
+  {'k': 'INSTALLED', 'base': '0x760e601000'}
+  {'k': 'STORE', 'kind': 'K0'}
+  {'k': 'STORE', 'kind': 'K0'}
+  {'k': 'STORE', 'kind': 'K0'}
+  {'k': 'STORE', 'kind': 'K0'}
+  {'k': 'STORE', 'kind': 'K0'}
+  {'k': 'STORE', 'kind': 'K0'}
+=== EVENTS === 6

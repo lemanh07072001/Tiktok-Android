@@ -1,0 +1,6 @@
+[*] find-producer installed
+[*] collecting 150s ...
+
+=== TALLY (which candidate buffer held the slot16) ===
+total slots seen: 1 (zero=1, nonzero=0)
+saved 0 nonzero -> _nonzero_slots.json

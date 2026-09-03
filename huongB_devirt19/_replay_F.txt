@@ -1,0 +1,37 @@
+[+] mapped .so @ 0x7859201000, applied 6765 RELATIVE relocs
+[+] wrote 1228 mem windows + stack + regfile + bytecode + soRW + bcFull
+[+] un-patched frida hooks: re-wrote 1 clean executable segment(s) + re-applied bcFull + soData
+[+] frida gum cleanup: replaced 0 gum-trampoline pointers with clean ret 0x78592a0f1c
+[+] filled 165 import GOT slots with stubs
+[chk] [x23]=0x78593835c4  bcptr=0x78593835c4  match=True
+[chk] [fp-0x58]=0x3f956c (expect bias 0x9b374)
+[+] running from pc=0x7859253924 until ret 0x785925e484 ...
+[+] reached_ret=False
+[+] distinct VM-PCs visited = 786
+[+] VMTRACE: wrote 786 VM instructions -> _vm_trace.jsonl
+[+] STUB fired: data-unmapped=0 fetch-unmapped=0 blr-skipped=2 lazy=0
+[+] blr-skip sites (off:count): {'0x13b010': 1, '0x13b034': 1}
+[+] can map page 0? NO: Invalid memory mapping (UC_ERR_MAP)
+[+] no clean period; last 40 VM-PCs: ['0x18faf4', '0x18faf8', '0x18fafc', '0x18fb00', '0x18fb04', '0x18fb08', '0x18fb0c', '0x18fb10', '0x18fb14', '0x18fb18', '0x18fb1c', '0x18fb20', '0x18fb24', '0x18fb28', '0x18fb2c', '0x18fb30', '0x18fb34', '0x18fb38', '0x18fb40', '0x18fb44', '0x18fb48', '0x18fb58', '0x18fb60', '0x18fb78', '0x18fb7c', '0x18fb80', '0x18fb84', '0x18fb8c', '0x18fba0', '0x18fba4', '0x18fba8', '0x18fbb4', '0x18fbb8', '0x18fbc0', '0x18fbc8', '0x18fbd0', '0x18fbd8', '0x18fbf0', '0x18fbf4', '0x18fbfc']
+[+] TOP loop memory-reads (addr : count : current value):
+[+] TOP loop memory-WRITES (addr : count : value-sequence) — counter candidates:
+[+] emu stopped: Unhandled CPU exception (UC_ERR_EXCEPTION); blocks=5486; unmapped_pages=5
+[dbg] fault pc=0x1000 (off OUT)
+[dbg] last 12 block addrs: ['0x178e04', '0x178e04', '0x178e04', '0x178e04', '0x178e04', '0x178e04', '0x178e04', '0x178e04', '0x178e04', '0x178e04', '0x178e18', '0x1000']
+    x15=0x7859256834
+    x16=0x7b
+    x17=0x1000
+    x0=0x7859379d60
+
+=== search for captured slot16 in replayed memory ===
+  [HIT] 746e635f7372633d312664656c61793d as RAW @ 0x7b4b8c1bc1
+
+1/48 captured slot16 reproduced in replayed VM memory
+
+=== VM output-buffer inspection (args x1/x4 captured at entry) ===
+  [x1=0x782b9825e8]: 010000000000000000000000000000000027982b00000000388c315978000000800a39597800000080a63d5978000000
+  [x2=0x78593e1530]: a8f07c597800000021dc7659780000002adc7659780000002fdc76597800000016dc76597800000034dc765978000000
+  [x4=0x782b982600]: 388c315978000000800a39597800000080a63d5978000000502b982b78000000382b982b78000000482b982b78000000
+  [x0=0x7859392f40]: 66007bff2ac0deef2a80dcef2a40ceef2a00ccef2ac0aaef2a80a8ef2a40a6ef2a00a4ef2ac082ef2a8080ef2c742000
+  [x8=0x782b982cc0]: 07000000000000000000000000000000d02d982b7800000070cb29597800000050692559780000005069255978000000
+[i] VM ran 5486 blocks, 786 distinct bytecode-PCs (short=False)

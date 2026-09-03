@@ -1,0 +1,8 @@
+[*] ctxtrace installed F_PROG=0x191f40
+[*] attached 23878 100s
+[*] F-entry tid=24082 regfile=ok tracing...
+[*] F onLeave — trace=35
+[ENTRY] nmem=3584 ntrace=35 slot16=None
+[DONE]
+[CTX] ctxptr=0x7df2446c90 npg=4000 ntrace=35 slot16=929b518637c9141cc1672d1a9749c4d7
+[SAVED-JSON] mem=3584 trace=35 slot16=929b518637c9141cc1672d1a9749c4d7

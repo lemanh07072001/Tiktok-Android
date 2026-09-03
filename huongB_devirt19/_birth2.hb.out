@@ -1,0 +1,6 @@
+[*] attach pid 20392
+{"t": "info", "base": "0x753f601000"}
+{"t": "ready"}
+[*] HOME then re-foreground to force heartbeat
+{"t": "mon", "seq": 0, "seen": {}}
+[*] done

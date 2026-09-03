@@ -1,0 +1,429 @@
+[
+ {
+  "t": "info",
+  "base": "0x7541201000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon",
+  "n": 0
+ },
+ {
+  "t": "BT",
+  "n": 1,
+  "P": "0x77e4dfbd20",
+  "val": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "x1": "0x10",
+  "x2": "0x75054ee170",
+  "lr": "SELF+0xa101c",
+  "acc": [
+   "SELF+0xa101c",
+   "SELF+0xa101c"
+  ],
+  "fuz": [
+   "SELF+0xa101c",
+   "libc.so+0x56dd4",
+   "libc.so+0x56cf4",
+   "libc.so+0x57520",
+   "libc.so+0x51510",
+   "SELF+0x55950",
+   "SELF+0x9b614",
+   "SELF+0x9fd74",
+   "SELF+0x9b614",
+   "libart.so+0x31f764",
+   "SELF+0x9fd98",
+   "libc.so+0x5cc54",
+   "libc.so+0x57368",
+   "SELF+0x9b614"
+  ],
+  "selfPtrs": [
+   [
+    328,
+    "SELF+0x55950"
+   ],
+   [
+    352,
+    "SELF+0xa103c"
+   ],
+   [
+    360,
+    "SELF+0x1864f0"
+   ],
+   [
+    368,
+    "SELF+0x1d9680"
+   ],
+   [
+    400,
+    "SELF+0x9b614"
+   ],
+   [
+    568,
+    "SELF+0x9fd74"
+   ],
+   [
+    592,
+    "SELF+0xa103c"
+   ],
+   [
+    608,
+    "SELF+0x9b614"
+   ]
+  ],
+  "valPtrs": []
+ },
+ {
+  "t": "BT",
+  "n": 2,
+  "P": "0x77e4e023e0",
+  "val": "4e8d227f8405d22d1966f46bb21e148d",
+  "x1": "0x10",
+  "x2": "0x75054ee170",
+  "lr": "SELF+0xa101c",
+  "acc": [
+   "SELF+0xa101c",
+   "SELF+0xa101c"
+  ],
+  "fuz": [
+   "SELF+0xa101c",
+   "libc.so+0x56dd4",
+   "libc.so+0x56cf4",
+   "libc.so+0x57520",
+   "libc.so+0x51510",
+   "SELF+0x55950",
+   "SELF+0x9b614",
+   "SELF+0x9fd74",
+   "SELF+0x9b614",
+   "libart.so+0x31f764",
+   "SELF+0x9fd98",
+   "libc.so+0x5cc54",
+   "libc.so+0x57368",
+   "SELF+0x9b614"
+  ],
+  "selfPtrs": [
+   [
+    328,
+    "SELF+0x55950"
+   ],
+   [
+    352,
+    "SELF+0xa103c"
+   ],
+   [
+    360,
+    "SELF+0x1864f0"
+   ],
+   [
+    368,
+    "SELF+0x1d9680"
+   ],
+   [
+    400,
+    "SELF+0x9b614"
+   ],
+   [
+    568,
+    "SELF+0x9fd74"
+   ],
+   [
+    592,
+    "SELF+0xa103c"
+   ],
+   [
+    608,
+    "SELF+0x9b614"
+   ]
+  ],
+  "valPtrs": []
+ },
+ {
+  "t": "BT",
+  "n": 3,
+  "P": "0x77e4e03cd0",
+  "val": "5ef8bb833ca9c2d443037fe8730b7143",
+  "x1": "0x10",
+  "x2": "0x75054ee170",
+  "lr": "SELF+0xa101c",
+  "acc": [
+   "SELF+0xa101c",
+   "SELF+0xa101c"
+  ],
+  "fuz": [
+   "SELF+0xa101c",
+   "libc.so+0x56dd4",
+   "libc.so+0x56cf4",
+   "libc.so+0x57520",
+   "libc.so+0x51510",
+   "SELF+0x55950",
+   "SELF+0x9b614",
+   "SELF+0x9fd74",
+   "SELF+0x9b614",
+   "libart.so+0x31f764",
+   "SELF+0x9fd98",
+   "libc.so+0x5cc54",
+   "libc.so+0x57368",
+   "SELF+0x9b614"
+  ],
+  "selfPtrs": [
+   [
+    328,
+    "SELF+0x55950"
+   ],
+   [
+    352,
+    "SELF+0xa103c"
+   ],
+   [
+    360,
+    "SELF+0x1864f0"
+   ],
+   [
+    368,
+    "SELF+0x1d9680"
+   ],
+   [
+    400,
+    "SELF+0x9b614"
+   ],
+   [
+    568,
+    "SELF+0x9fd74"
+   ],
+   [
+    592,
+    "SELF+0xa103c"
+   ],
+   [
+    608,
+    "SELF+0x9b614"
+   ]
+  ],
+  "valPtrs": []
+ },
+ {
+  "t": "BT",
+  "n": 4,
+  "P": "0x77e4e285d0",
+  "val": "3a5f93d346d85ab6b12abc9b772df3e9",
+  "x1": "0x10",
+  "x2": "0x75054ee170",
+  "lr": "SELF+0xa101c",
+  "acc": [
+   "SELF+0xa101c",
+   "SELF+0xa101c"
+  ],
+  "fuz": [
+   "SELF+0xa101c",
+   "libc.so+0x56dd4",
+   "libc.so+0x56cf4",
+   "libc.so+0x57520",
+   "libc.so+0x51510",
+   "SELF+0x55950",
+   "SELF+0x9b614",
+   "SELF+0x9fd74",
+   "SELF+0x9b614",
+   "libart.so+0x31f764",
+   "SELF+0x9fd98",
+   "libc.so+0x5cc54",
+   "libc.so+0x57368",
+   "SELF+0x9b614"
+  ],
+  "selfPtrs": [
+   [
+    328,
+    "SELF+0x55950"
+   ],
+   [
+    352,
+    "SELF+0xa103c"
+   ],
+   [
+    360,
+    "SELF+0x1864f0"
+   ],
+   [
+    368,
+    "SELF+0x1d9680"
+   ],
+   [
+    400,
+    "SELF+0x9b614"
+   ],
+   [
+    568,
+    "SELF+0x9fd74"
+   ],
+   [
+    592,
+    "SELF+0xa103c"
+   ],
+   [
+    608,
+    "SELF+0x9b614"
+   ]
+  ],
+  "valPtrs": []
+ },
+ {
+  "t": "BT",
+  "n": 5,
+  "P": "0x77e4e2f0b0",
+  "val": "70208dae6764a6a7800499a4d2bef595",
+  "x1": "0x10",
+  "x2": "0x75054ee170",
+  "lr": "SELF+0xa101c",
+  "acc": [
+   "SELF+0xa101c",
+   "SELF+0xa101c"
+  ],
+  "fuz": [
+   "SELF+0xa101c",
+   "libc.so+0x56dd4",
+   "libc.so+0x56cf4",
+   "libc.so+0x57520",
+   "libc.so+0x51510",
+   "SELF+0x55950",
+   "SELF+0x9b614",
+   "SELF+0x9fd74",
+   "SELF+0x9b614",
+   "libart.so+0x31f764",
+   "SELF+0x9fd98",
+   "libc.so+0x5cc54",
+   "libc.so+0x57368",
+   "SELF+0x9b614"
+  ],
+  "selfPtrs": [
+   [
+    328,
+    "SELF+0x55950"
+   ],
+   [
+    352,
+    "SELF+0xa103c"
+   ],
+   [
+    360,
+    "SELF+0x1864f0"
+   ],
+   [
+    368,
+    "SELF+0x1d9680"
+   ],
+   [
+    400,
+    "SELF+0x9b614"
+   ],
+   [
+    568,
+    "SELF+0x9fd74"
+   ],
+   [
+    592,
+    "SELF+0xa103c"
+   ],
+   [
+    608,
+    "SELF+0x9b614"
+   ]
+  ],
+  "valPtrs": []
+ },
+ {
+  "t": "BT",
+  "n": 6,
+  "P": "0x77e4e566b0",
+  "val": "46c03b52742b3f2615a3abdf1636b754",
+  "x1": "0x10",
+  "x2": "0x75054ee170",
+  "lr": "SELF+0xa101c",
+  "acc": [
+   "SELF+0xa101c",
+   "SELF+0xa101c"
+  ],
+  "fuz": [
+   "SELF+0xa101c",
+   "libc.so+0x56dd4",
+   "libc.so+0x56cf4",
+   "libc.so+0x57520",
+   "libc.so+0x51510",
+   "SELF+0x55950",
+   "SELF+0x9b614",
+   "SELF+0x9fd74",
+   "SELF+0x9b614",
+   "libart.so+0x31f764",
+   "SELF+0x9fd98",
+   "libc.so+0x5cc54",
+   "libc.so+0x57368",
+   "SELF+0x9b614"
+  ],
+  "selfPtrs": [
+   [
+    328,
+    "SELF+0x55950"
+   ],
+   [
+    352,
+    "SELF+0xa103c"
+   ],
+   [
+    360,
+    "SELF+0x1864f0"
+   ],
+   [
+    368,
+    "SELF+0x1d9680"
+   ],
+   [
+    400,
+    "SELF+0x9b614"
+   ],
+   [
+    568,
+    "SELF+0x9fd74"
+   ],
+   [
+    592,
+    "SELF+0xa103c"
+   ],
+   [
+    608,
+    "SELF+0x9b614"
+   ]
+  ],
+  "valPtrs": []
+ },
+ {
+  "t": "mon",
+  "n": 6
+ },
+ {
+  "t": "mon",
+  "n": 6
+ },
+ {
+  "t": "mon",
+  "n": 6
+ },
+ {
+  "t": "mon",
+  "n": 6
+ },
+ {
+  "t": "mon",
+  "n": 6
+ },
+ {
+  "t": "mon",
+  "n": 6
+ },
+ {
+  "t": "mon",
+  "n": 6
+ },
+ {
+  "t": "mon",
+  "n": 6
+ }
+]

@@ -1,0 +1,17 @@
+[*] spawned 16748
+[*] resumed
+[*] singleshot installed base=0x6f7cc01000
+[SLOT] NONZERO 746e635f7372633d312664656c61793d
+[*] F hit #1 (waiting for #2, singleton populated)
+[*] F invocation #2 ENTRY (x0=0x191f40) tid=16981 — capturing...
+[*] maps saved
+[ENTRY+SAVED] tid=16981 base=0x6f7cc01000 mem=15 regions=['bcFull', 'soData', 'soRW', 'stack', 'regfile']
+[*] VM entry captured (tid 16981) — waiting onLeave for output
+[OUTRF] output regfile captured @ 0x6f59dffc00
+[*] output regfile captured + DETACHED
+[EXPECTED] slot16 for captured F tid = 3d55532674733d313738373635313734
+[SLOT] NONZERO 3d55532674733d313738373635313734
+[FCTXPTR] F's own context ptr = 0x7154e3b1f0
+[SLOT] NONZERO cb12155b4933d1500308499e4fcb6694
+[SLOT] NONZERO 5f75675f73686f707461625f6e65773d
+[SLOT] NONZERO d1433ed2009ea6a376f49115b0bd4f9a

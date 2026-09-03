@@ -1,0 +1,55 @@
+waiting for stable pid ...
+  pid poll=None streak=1
+  pid poll=22808 streak=1
+  pid poll=22808 streak=2
+  pid poll=22808 streak=3
+  pid poll=22808 streak=4
+stable pid 22808
+attach attempt 1 pid 22808
+  [js] READY 0x6f89400000
+script loaded; driving 90 s ...
+  [ev] {"tag": "KSCH", "seq": 1, "win": false, "keyBytes": 16, "userKey": "33653333383532626534343139653662"}
+  [ev] {"tag": "KSCH", "seq": 2, "win": false, "keyBytes": 16, "userKey": "b114249b7bed9d2691d70c60d69f9c4f"}
+  [ev] {"tag": "EINIT", "seq": 3, "win": false, "keyBytes": 16, "userKey": "8252970d959b06db102e17d85c0ec1af", "iv": "4d207ea37a419f7d622f81c6a2f53594"}
+  [ev] {"tag": "KSCH", "seq": 4, "win": false, "keyBytes": 16, "userKey": "8252970d959b06db102e17d85c0ec1af"}
+  [ev] {"tag": "KSCH", "seq": 5, "win": false, "keyBytes": 16, "userKey": "66623765663933646332363839616332"}
+  [ev] {"tag": "KSCH", "seq": 6, "win": false, "keyBytes": 16, "userKey": "64643037663836303161646630303562"}
+  [ev] {"tag": "KSCH", "seq": 7, "win": false, "keyBytes": 16, "userKey": "37326237636536363533363665396637"}
+  [ev] {"tag": "KSCH", "seq": 8, "win": false, "keyBytes": 16, "userKey": "32373766316336343466633235323261"}
+  [ev] {"tag": "KSCH", "seq": 9, "win": false, "keyBytes": 16, "userKey": "34346131613135303462306333646636"}
+  [ev] {"tag": "KSCH", "seq": 10, "win": false, "keyBytes": 16, "userKey": "39373661313165616632333562626561"}
+  [ev] {"tag": "KSCH", "seq": 11, "win": false, "keyBytes": 16, "userKey": "64356363613831636265383733666433"}
+  [ev] {"tag": "KSCH", "seq": 12, "win": false, "keyBytes": 16, "userKey": "39646435386236666634376362303538"}
+  [ev] {"tag": "KSCH", "seq": 13, "win": false, "keyBytes": 16, "userKey": "36636238313533306336623836306230"}
+  t=4s status={'installed': True, 'events': 13}
+  [ev] {"tag": "EINIT", "seq": 14, "win": false, "keyBytes": 16, "userKey": "b8d72ddec05142948bbf2dc81d63759c", "iv": "d6c3969582f9ac5313d39c180b54a2bc"}
+  [ev] {"tag": "KSCH", "seq": 15, "win": false, "keyBytes": 16, "userKey": "b8d72ddec05142948bbf2dc81d63759c"}
+  [ev] {"tag": "KSCH", "seq": 16, "win": false, "keyBytes": 16, "userKey": "61383731323461376133343232633731"}
+  [ev] {"tag": "KSCH", "seq": 17, "win": false, "keyBytes": 16, "userKey": "63623861396331356638616164356336"}
+  [ev] {"tag": "KSCH", "seq": 18, "win": false, "keyBytes": 16, "userKey": "30363637353465616565306261306665"}
+  [ev] {"tag": "KSCH", "seq": 19, "win": false, "keyBytes": 16, "userKey": "32323434303139363164346635336431"}
+  [ev] {"tag": "KSCH", "seq": 20, "win": false, "keyBytes": 16, "userKey": "38636663306131386434663737383537"}
+  [ev] {"tag": "KSCH", "seq": 21, "win": false, "keyBytes": 16, "userKey": "38306338623434326466643136393162"}
+  [ev] {"tag": "KSCH", "seq": 22, "win": false, "keyBytes": 16, "userKey": "34646531313431613339373366633139"}
+  t=8s status={'installed': True, 'events': 22}
+  t=12s status={'installed': True, 'events': 22}
+  t=17s status={'installed': True, 'events': 22}
+  t=20s status={'installed': True, 'events': 22}
+  t=24s status={'installed': True, 'events': 22}
+  t=28s status={'installed': True, 'events': 22}
+  t=37s status={'installed': True, 'events': 22}
+  t=40s status={'installed': True, 'events': 22}
+  t=44s status={'installed': True, 'events': 22}
+  t=48s status={'installed': True, 'events': 22}
+  t=55s status={'installed': True, 'events': 22}
+  t=58s status={'installed': True, 'events': 22}
+  t=68s status={'installed': True, 'events': 22}
+  [ev] {"tag": "KSCH", "seq": 23, "win": false, "keyBytes": 32, "userKey": "3233363530396436666338666135333738323736653464343831343464613239"}
+  t=72s status={'installed': True, 'events': 23}
+  adb err ('shell', 'input', 'swipe', '540', '1500', '540', '400', '120') Command '['/Users/lemanh/Library/Android/sdk/platform-tools/adb', 'shell', 'input', 'swipe', '540', '1500', '540', '400', '120']' timed out after 15 seconds
+  t=96s status={'installed': True, 'events': 23}
+=== wrote _grab_out.json events 23 ===
+RDR store reads   : 0 []
+KSCH in-window    : 0 []
+EINIT in-window   : 0 []
+block prims in-win: 0

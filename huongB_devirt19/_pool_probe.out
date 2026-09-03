@@ -1,0 +1,5 @@
+[*] spawned 9501
+{"t": "mon", "nAll": 0, "nSelf": 0, "distinct": 0}
+{"t": "mon", "nAll": 0, "nSelf": 0, "distinct": 0}
+{"t": "info", "msg": "base=0x75be800000 size=0x1ff000"}
+{"t": "info", "msg": "hooked mmap"}

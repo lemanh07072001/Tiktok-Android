@@ -1,0 +1,24 @@
+[
+ {
+  "t": "info",
+  "msg": "psk-home installed"
+ },
+ {
+  "t": "home",
+  "npsk": 2,
+  "hits": [
+   {
+    "at": "0x6f6729f798",
+    "region": "anon rw-",
+    "before16": "dc95031be47e7fc82d29f3984770c94d",
+    "after16": "7e55243988ae9d366cccbe8ec3d78252"
+   },
+   {
+    "at": "0x6f6729f8c8",
+    "region": "anon rw-",
+    "before16": "90fb29676f000000b8a5098e6f000000",
+    "after16": "7e55243988ae9d366cccbe8ec3d78252"
+   }
+  ]
+ }
+]

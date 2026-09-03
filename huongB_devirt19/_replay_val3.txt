@@ -1,0 +1,43 @@
+[+] mapped .so @ 0x7857201000, applied 6765 RELATIVE relocs
+[+] wrote 1188 mem windows + stack + regfile + bytecode + soRW + bcFull
+[+] un-patched frida hooks: re-wrote 1 clean executable segment(s) + re-applied bcFull + soData
+[+] frida gum cleanup: replaced 7 gum-trampoline pointers with clean ret 0x78572a0f1c
+[+] filled 165 import GOT slots with stubs
+[chk] [x23]=0x78573835c4  bcptr=0x78573835c4  match=True
+[chk] [fp-0x58]=0x3f956c (expect bias 0x9b374)
+[+] running from pc=0x7857253924 until ret 0x785725e484 ...
+[+] proactive context fetch: overwrote 0 live pages from ctxptr 0x7a2b8ea4f0 closure
+
+=== F EPILOGUE 0x5d464: outbuf @captured-x4=0x7834a268c0 ===
+  x4[0:64]= 1f000000000000006c953f0000000000c84d2f57000000001d0000000000000050c117ffffffffff00203f577800000050c117ffffffffff0000000000000000
+[+] reached_ret=True
+[+] distinct VM-PCs visited = 1344
+[+] STUB fired: data-unmapped=0 fetch-unmapped=0 blr-skipped=1 ctx_inj=1 lazy=0
+[+] blr-skip sites (off:count): {'0x13b010': 1}
+[+] can map page 0? NO: Invalid memory mapping (UC_ERR_MAP)
+[+] LOOP CYCLE period=79 bytecode-PCs (hex offsets):
+    ['0x186420', '0x186424', '0x186428', '0x18642c', '0x186430', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x18645c', '0x186474', '0x186478']
+[+] TOP loop memory-reads (addr : count : current value):
+[+] TOP loop memory-WRITES (addr : count : value-sequence) — counter candidates:
+[+] emu stopped: None; blocks=81454; unmapped_pages=2
+[dbg] fault pc=0x785725e464 (off 0x5d464)
+[dbg] last 12 block addrs: ['0x55540', '0x58f44', '0x58f94', '0x59000', '0x5a1d0', '0x5a2a4', '0x5c0fc', '0x5c0fc', '0x52b4c', '0x5585c', '0x55884', '0x5d464']
+    0x5d464: ldp x29, x30, [sp, #0xe0]
+    x15=0x785725685c
+    x16=0x9b374
+    x17=0xff5f9ebbf4b521ec
+    x0=0xa061440a021440
+
+=== search for captured slot16 in replayed memory ===
+
+0/51 captured slot16 reproduced in replayed VM memory
+
+=== VM output-buffer inspection (args x1/x4 captured at entry) ===
+  [x1=0x7834a268a8]: ac0d000000000000000000000000000000000000000000001f000000000000006c953f0000000000c84d2f5700000000
+  [x2=0x78573e1530]: a8f07c577800000021dc7657780000002adc7657780000002fdc76577800000016dc76577800000034dc765778000000
+  [x4=0x7834a268c0]: 1f000000000000006c953f0000000000c84d2f57000000001d0000000000000050c117ffffffffff00203f5778000000
+  [x0=0x7857392f40]: 66007bff2ac0deef2a80dcef2a40ceef2a00ccef2ac0aaef2a80a8ef2a40a6ef2a00a4ef2ac082ef2a8080ef2c742000
+  [x8=0x7834a26f80]: 19000000000000000800000000000000070000000000000000000000000000009070a234780000005069255778000000
+[i] VM ran 81454 blocks, 1344 distinct bytecode-PCs (short=False)
+[-] none reproduced yet — likely need more captured memory (unmapped pages read as zero)
+    top unmapped pages (need capture): ['0x0', '0x78573ff000']

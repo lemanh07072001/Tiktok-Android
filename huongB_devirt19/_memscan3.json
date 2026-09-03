@@ -1,0 +1,97 @@
+[
+ {
+  "t": "info",
+  "msg": "loaded",
+  "base": "0x753a800000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon",
+  "armed": false,
+  "scanned": false
+ },
+ {
+  "t": "BUF_HIT",
+  "len": 68,
+  "buf": {
+   "addr": "0x77f4c32150",
+   "base": "0x77f4b8d000",
+   "size": 786432,
+   "prot": "rw-",
+   "file": null,
+   "foff": null
+  }
+ },
+ {
+  "t": "scanning"
+ },
+ {
+  "t": "SCAN",
+  "label": "device_key_A",
+  "hits": 0,
+  "nranges": 5987,
+  "out": []
+ },
+ {
+  "t": "SCAN",
+  "label": "slot16_privacy",
+  "hits": 0,
+  "nranges": 8015,
+  "out": []
+ },
+ {
+  "t": "done"
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ },
+ {
+  "t": "mon",
+  "armed": true,
+  "scanned": true
+ }
+]

@@ -1,0 +1,12 @@
+spawn...
+pid 20132
+MSG {"tag": "READY"}
+resumed
+MSG {"tag": "ARMED", "base": "0x7557400000", "nblocks": 364}
+=== STOREHITs 0  distinct KEYs 3
+=== distinct keys ===
+  KEY BDEC 9b2414b1269ded7b600cd7914f9c9fd6 sched32= 9b2414b1269ded7b600cd7914f9c9fd66da0ca6b4b3d27102b31f08164ad6f57
+  KEY BENC 0d975282db069b95d8172e10afc10e5c sched32= 0d975282db069b95d8172e10afc10e5c47ee2a289ce8b1bd44ff9fadeb3e91f1
+  KEY BENC de2dd7b8944251c0c82dbf8b9c75631d sched32= de2dd7b8944251c0c82dbf8b9c75631d7af34a42eeb11b82269ca409bae9c714
+DETACHED application-requested
+DONE

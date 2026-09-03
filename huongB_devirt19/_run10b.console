@@ -1,0 +1,22 @@
+[*] Spawning com.zhiliaoapp.musically...
+[*] Waiting up to 75s for trigger...
+[*] libmetasec loaded
+[*] Hooks installed — waiting for SM3 driver trigger...
+
+[TRACE DUMP] 1204 entries
+  Trace saved to _vm_trace10b.out.jsonl (1204 lines)
+
+[TRIGGER] SM3 driver called!
+  slot16 = 50fc9ad7bd5730bbd1553a5c28fb661e
+  lr     = 659484
+  x0     = 0x77e4dc7af0
+  x1     = 0x10
+  x2     = 0x7556637170
+  x3     = 0x842002a0
+  x22    = 0x19
+  x23    = 0x7556637250
+  x24    = 0x7556637258
+
+  Trigger saved to _vm_trace10b.out.jsonl
+  [mon] seq=1204 dumped=True
+[*] Detached. Output: _vm_trace10b.out.jsonl

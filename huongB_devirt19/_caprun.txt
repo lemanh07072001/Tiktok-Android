@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\Tiktok-Android\huongB_devirt19\_run_singleshot_spawn.py", line 44, in <module>
+    pid=dev.spawn([PKG]); print("[*] spawned",pid,flush=True)
+        ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\Python\Python311\site-packages\frida\__init__.py", line 632, in spawn
+    return _invoke(self._impl.spawn, (program, options, ))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\Python\Python311\site-packages\frida\__init__.py", line 226, in _invoke
+    raise error
+frida.ServerNotRunningError: unable to connect to remote frida-server

@@ -1,0 +1,2 @@
+APIRESULT {"frida": "17.17.0", "Process_setExceptionHandler": "function", "Thread_setHW": "undefined", "Thread_unsetHW": "undefined", "nThreads": 78, "thread_keys": ["id", "name", "state", "context"], "thread_setHW": "function", "thread_id": 22700}
+PROBE_DONE got= True

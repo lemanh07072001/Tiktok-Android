@@ -1,0 +1,5 @@
+force-stop+launch
+attach pid=10471 t=8.2
+   {'k': 'READY', 'meta': '0x7b69200000', 'fileSvc': 0, 'sites': []}
+collecting 55s (store write ~t20-40)...
+=== KINDS === {} total 0

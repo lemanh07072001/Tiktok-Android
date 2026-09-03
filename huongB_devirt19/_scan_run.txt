@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\Tiktok-Android\huongB_devirt19\_run_scan.py", line 5, in <module>
+    pid=dev.spawn([PKG]); print("[*] spawned",pid,flush=True); sess=dev.attach(pid)
+        ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\Python\Python311\site-packages\frida\__init__.py", line 632, in spawn
+    return _invoke(self._impl.spawn, (program, options, ))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\Python\Python311\site-packages\frida\__init__.py", line 226, in _invoke
+    raise error
+frida.TimedOutError: unexpectedly timed out while waiting for app to launch

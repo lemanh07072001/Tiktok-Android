@@ -1,0 +1,10 @@
+[
+ {
+  "t": "info",
+  "msg": "mmap-hook armed (protect 3-5MB anon)"
+ },
+ {
+  "t": "info",
+  "msg": "producer-wp3 installed"
+ }
+]

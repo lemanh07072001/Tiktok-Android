@@ -1,0 +1,1378 @@
+[
+{
+"n": 40,
+"arx": 6,
+"mem": 13,
+"call": true,
+"ops": [
+"add",
+"lsl",
+"sub"
+],
+"off": "0xedec0",
+"head": "mov x0, x8 ; mov x23, x8 ; bl #0x30610",
+"tail": "bl #0x30610"
+},
+{
+"n": 40,
+"arx": 5,
+"mem": 8,
+"call": true,
+"ops": [
+"add",
+"sub"
+],
+"off": "0xedfc4",
+"head": "bl #0x30b40 ; mov x0, x23 ; bl #0x30610",
+"tail": "stp x22, x21, [sp, #0x70]"
+},
+{
+"n": 40,
+"arx": 7,
+"mem": 18,
+"call": false,
+"ops": [
+"add",
+"and",
+"asr"
+],
+"off": "0xee130",
+"head": "mov x10, #0xfffd00000000 ; movk x10, #0xffff, lsl #48 ; mov x11, #-0x100000000",
+"tail": "cbnz w13, #0xee1fc"
+},
+{
+"n": 40,
+"arx": 6,
+"mem": 10,
+"call": true,
+"ops": [
+"add",
+"asr",
+"lsl"
+],
+"off": "0xee290",
+"head": "str x0, [sp, #0x18] ; bl #0x30610 ; mov x25, x0",
+"tail": "lsl w8, w9, #1"
+},
+{
+"n": 40,
+"arx": 6,
+"mem": 11,
+"call": true,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xee3f4",
+"head": "ldr x1, [sp, #8] ; mov x0, x24 ; bl #0x30760",
+"tail": "ldr x8, [x20, #0x10]"
+},
+{
+"n": 40,
+"arx": 10,
+"mem": 14,
+"call": false,
+"ops": [
+"add",
+"and",
+"madd"
+],
+"off": "0xee70c",
+"head": "mov x26, x19 ; cmp x9, x8 ; b.hs #0xee738",
+"tail": "ldr x16, [x13]"
+},
+{
+"n": 40,
+"arx": 4,
+"mem": 10,
+"call": true,
+"ops": [
+"add",
+"lsl"
+],
+"off": "0xee984",
+"head": "stp w9, w3, [sp, #0xc] ; ldr x21, [x24] ; mov w8, w9",
+"tail": "movk w8, #0x4c4, lsl #16"
+},
+{
+"n": 40,
+"arx": 5,
+"mem": 7,
+"call": true,
+"ops": [
+"add"
+],
+"off": "0xeeb9c",
+"head": "str x8, [sp, #0x30] ; bl #0x30b40 ; mov x0, x21",
+"tail": "ldrh w9, [x8, #0xa]"
+},
+{
+"n": 21,
+"arx": 4,
+"mem": 3,
+"call": false,
+"ops": [
+"sub"
+],
+"off": "0xeed7c",
+"head": "cmp w9, #0 ; mov w9, #0xf ; csel w9, w9, w10, ne",
+"tail": "br x4"
+},
+{
+"n": 15,
+"arx": 3,
+"mem": 3,
+"call": false,
+"ops": [
+"sub"
+],
+"off": "0xeee80",
+"head": "tst x8, #-0xf0f0f0f0f0f0f10 ; sub w10, w9, #4 ; csel w9, w9, w10, eq",
+"tail": "br x4"
+},
+{
+"n": 25,
+"arx": 5,
+"mem": 3,
+"call": false,
+"ops": [
+"and",
+"sub"
+],
+"off": "0xeefcc",
+"head": "cbz w8, #0xef01c ; neg w9, w8 ; and w8, w8, w9",
+"tail": "br x4"
+},
+{
+"n": 1,
+"arx": 0,
+"mem": 0,
+"call": false,
+"ops": [],
+"off": "0xef15c",
+"head": "br x4",
+"tail": "br x4"
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xef254",
+"head": "frintp d0, d0 ; str d0, [x1, x8, lsl #3] ; ldr x4, [x0, #0x18]!",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 1,
+"mem": 3,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xef398",
+"head": "ldrh w9, [x8, #0xa] ; ldrb w8, [x8, #8] ; add x9, x10, x9, lsl #4",
+"tail": "ret "
+},
+{
+"n": 7,
+"arx": 2,
+"mem": 4,
+"call": false,
+"ops": [
+"add",
+"lsl"
+],
+"off": "0xef524",
+"head": "ldrsw x10, [x0, #0x18] ; lsl x8, x8, #3 ; ldr w8, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 1,
+"arx": 0,
+"mem": 0,
+"call": false,
+"ops": [],
+"off": "0xef6bc",
+"head": "br x4",
+"tail": "br x4"
+},
+{
+"n": 9,
+"arx": 1,
+"mem": 5,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xef85c",
+"head": "ldr s0, [x0, #8] ; lsl x8, x8, #3 ; ldr s1, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 2,
+"mem": 2,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xef968",
+"head": "ldrb w8, [x8, #0x10] ; add x9, x11, x9, lsl #5 ; add x9, x9, x10, lsl #4",
+"tail": "ret "
+},
+{
+"n": 6,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xefab8",
+"head": "ldrsw x8, [x0, #0x18] ; fmul s0, s0, s1 ; fmov w9, s0",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 2,
+"mem": 3,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xefbb4",
+"head": "ldrb w10, [x8, #8] ; ldrb w8, [x8, #0x10] ; add x9, x11, x9, lsl #5",
+"tail": "ret "
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xefe4c",
+"head": "ldr x0, [x9, x8, lsl #3] ; ret ",
+"tail": "ret "
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf0164",
+"head": "ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 8,
+"arx": 1,
+"mem": 6,
+"call": false,
+"ops": [
+"asr"
+],
+"off": "0xf02b8",
+"head": "ldrsw x8, [x0, #0x10] ; ldr x9, [x0, #8] ; ldrsw x10, [x0, #0x18]",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 2,
+"mem": 3,
+"call": false,
+"ops": [
+"lsl",
+"lsr"
+],
+"off": "0xf036c",
+"head": "lsl x8, x8, #3 ; ldr w8, [x1, x8] ; lsr x8, x9, x8",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 1,
+"mem": 2,
+"call": false,
+"ops": [
+"ror"
+],
+"off": "0xf04ac",
+"head": "neg w8, w8 ; ror w8, w9, w8 ; str x8, [x1, x10, lsl #3]",
+"tail": "br x4"
+},
+{
+"n": 9,
+"arx": 3,
+"mem": 5,
+"call": false,
+"ops": [
+"lsl",
+"ror"
+],
+"off": "0xf0638",
+"head": "ldrsw x10, [x0, #0x18] ; lsl x8, x8, #3 ; lsl x9, x9, #3",
+"tail": "br x4"
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf0734",
+"head": "str x8, [x1, x10, lsl #3] ; ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf0868",
+"head": "str x8, [x1, x10, lsl #3] ; ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 1,
+"mem": 3,
+"call": false,
+"ops": [
+"and"
+],
+"off": "0xf09fc",
+"head": "ldrsw x10, [x0, #0x18] ; and x8, x9, x8 ; str x8, [x1, x10, lsl #3]",
+"tail": "br x4"
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf0afc",
+"head": "fmov w9, s0 ; str x9, [x1, x8, lsl #3] ; ldr x4, [x0, #0x20]!",
+"tail": "br x4"
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf0ba8",
+"head": "fmaxnm d0, d0, d1 ; str d0, [x1, x8, lsl #3] ; ldr x4, [x0, #0x20]!",
+"tail": "br x4"
+},
+{
+"n": 4,
+"arx": 2,
+"mem": 1,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf0bd0",
+"head": "add x9, x11, x9, lsl #5 ; add x9, x9, x10, lsl #4 ; ldr x0, [x9, x8, lsl #3]",
+"tail": "ret "
+},
+{
+"n": 5,
+"arx": 2,
+"mem": 2,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf0d10",
+"head": "ldrb w8, [x8, #0x10] ; add x9, x11, x9, lsl #5 ; add x9, x9, x10, lsl #4",
+"tail": "ret "
+},
+{
+"n": 8,
+"arx": 0,
+"mem": 4,
+"call": false,
+"ops": [],
+"off": "0xf0e6c",
+"head": "ldr s1, [x0, #0x10] ; ldrsw x8, [x0, #0x18] ; movi v2.4s, #0x80, lsl #24",
+"tail": "br x4"
+},
+{
+"n": 12,
+"arx": 3,
+"mem": 2,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf0fc0",
+"head": "cbz w10, #0xf0fd0 ; ldrb w9, [x9, #8] ; mov w10, #1",
+"tail": "ret "
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf106c",
+"head": "csel x8, x9, x8, eq ; ldr x0, [x0, x8] ; ldr x4, [x0]",
+"tail": "br x4"
+},
+{
+"n": 8,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf1164",
+"head": "ldr s1, [x1, x9] ; mov w8, #0x20 ; mov w9, #0x18",
+"tail": "br x4"
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf12c0",
+"head": "ldr x4, [x0] ; br x4",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf13bc",
+"head": "fcmp s0, s1 ; csel x8, x9, x8, ne ; ldr x0, [x0, x8]",
+"tail": "br x4"
+},
+{
+"n": 9,
+"arx": 3,
+"mem": 1,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf1464",
+"head": "b #0xf1470 ; mov x10, xzr ; mov w9, #1",
+"tail": "ret "
+},
+{
+"n": 1,
+"arx": 0,
+"mem": 0,
+"call": false,
+"ops": [],
+"off": "0xf15b8",
+"head": "br x4",
+"tail": "br x4"
+},
+{
+"n": 7,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf176c",
+"head": "cmp x9, x8 ; mov w8, #0x18 ; mov w9, #0x20",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 3,
+"mem": 1,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf1908",
+"head": "adrp x11, #0x1de000 ; add x11, x11, #0xc20 ; add x8, x11, x8, lsl #5",
+"tail": "ret "
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf1aa4",
+"head": "csel x8, x9, x8, lt ; ldr x0, [x0, x8] ; ldr x4, [x0]",
+"tail": "br x4"
+},
+{
+"n": 7,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf1c58",
+"head": "cmp x8, x9 ; mov w8, #0x18 ; mov w9, #0x20",
+"tail": "br x4"
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf1d74",
+"head": "ldr x4, [x0] ; br x4",
+"tail": "br x4"
+},
+{
+"n": 9,
+"arx": 3,
+"mem": 1,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf1ed8",
+"head": "b #0xf1ee4 ; mov x10, xzr ; mov w9, #1",
+"tail": "ret "
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf1ff8",
+"head": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4",
+"tail": "br x4"
+},
+{
+"n": 1,
+"arx": 0,
+"mem": 0,
+"call": false,
+"ops": [],
+"off": "0xf2118",
+"head": "br x4",
+"tail": "br x4"
+},
+{
+"n": 9,
+"arx": 0,
+"mem": 4,
+"call": false,
+"ops": [],
+"off": "0xf223c",
+"head": "ldr x9, [x0, #0x10] ; ldr x8, [x1, x8, lsl #3] ; cmp x8, x9",
+"tail": "br x4"
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf239c",
+"head": "ldrsh x8, [x1, x8] ; str x8, [x1, x9, lsl #3] ; ldr x4, [x0, #0x18]!",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 1,
+"mem": 3,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf2544",
+"head": "ldr x8, [x0, #8] ; adrp x9, #0x1de000 ; add x9, x9, #0xfb0",
+"tail": "ret "
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf26f8",
+"head": "ldr x4, [x0, #0x18]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 9,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf2800",
+"head": "fccmp s0, s1, #0, lt ; fcvtzu w8, s0 ; csel x8, x8, xzr, hi",
+"tail": "br x4"
+},
+{
+"n": 8,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf28ac",
+"head": "fcvtzs x8, s0 ; csel x8, x8, xzr, hi ; b #0xf28bc",
+"tail": "br x4"
+},
+{
+"n": 7,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf2958",
+"head": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr",
+"tail": "br x4"
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf29e0",
+"head": "str d0, [x1, x8, lsl #3] ; ldr x4, [x0, #0x18]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf2a04",
+"head": "ldr x4, [x0, #0x18]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 1,
+"arx": 0,
+"mem": 0,
+"call": false,
+"ops": [],
+"off": "0xf2a20",
+"head": "ret ",
+"tail": "ret "
+},
+{
+"n": 5,
+"arx": 1,
+"mem": 2,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf2ca0",
+"head": "adrp x9, #0x1df000 ; add x9, x9, #0xa0 ; ldrb w8, [x8, #8]",
+"tail": "ret "
+},
+{
+"n": 5,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf2cbc",
+"head": "fcvt s0, d0 ; fmov w9, s0 ; str x9, [x1, x8, lsl #3]",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf2cdc",
+"head": "fcvt s0, d0 ; fmov w9, s0 ; str x9, [x1, x8, lsl #3]",
+"tail": "br x4"
+},
+{
+"n": 13,
+"arx": 3,
+"mem": 7,
+"call": false,
+"ops": [
+"add",
+"lsl"
+],
+"off": "0xf2ef4",
+"head": "ldrsw x8, [x0, #8] ; lsl x8, x8, #3 ; ldr w8, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 10,
+"arx": 2,
+"mem": 5,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf3018",
+"head": "ldrsw x10, [x0, #0x18] ; lsl x8, x8, #3 ; ldr w8, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 8,
+"arx": 1,
+"mem": 4,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf3134",
+"head": "ldr x9, [x1, x9, lsl #3] ; cmp x8, x9 ; lsl x8, x10, #3",
+"tail": "br x4"
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf3308",
+"head": "ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 8,
+"arx": 1,
+"mem": 4,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf34bc",
+"head": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 8,
+"arx": 1,
+"mem": 4,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf3544",
+"head": "ldr d1, [x1, x8, lsl #3] ; lsl x8, x9, #3 ; str xzr, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf35b8",
+"head": "ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 1,
+"mem": 3,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf36e0",
+"head": "lsl x8, x10, #3 ; cset w9, gt ; str xzr, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 10,
+"arx": 1,
+"mem": 6,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf372c",
+"head": "ldrsw x10, [x0, #0x18] ; ldr x8, [x1, x8, lsl #3] ; ldr x9, [x1, x9, lsl #3]",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 1,
+"mem": 3,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf3928",
+"head": "lsl x8, x10, #3 ; cset w9, ge ; str xzr, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf399c",
+"head": "str w9, [x1, x8] ; ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf3b84",
+"head": "str w9, [x1, x8] ; ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 10,
+"arx": 2,
+"mem": 5,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf3c18",
+"head": "ldrsw x10, [x0, #0x18] ; lsl x8, x8, #3 ; ldr w8, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf3dc8",
+"head": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf3f2c",
+"head": "cset w9, le ; str xzr, [x1, x8] ; str w9, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 13,
+"arx": 3,
+"mem": 7,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf40e0",
+"head": "ldrsw x9, [x0, #0x10] ; lsl x8, x8, #3 ; lsl x9, x9, #3",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf42b8",
+"head": "cset w9, hi ; str xzr, [x1, x8] ; str w9, [x1, x8]",
+"tail": "br x4"
+},
+{
+"n": 11,
+"arx": 1,
+"mem": 7,
+"call": false,
+"ops": [
+"lsl"
+],
+"off": "0xf44bc",
+"head": "ldrsw x9, [x0, #0x10] ; ldrsw x10, [x0, #0x18] ; ldr x8, [x1, x8, lsl #3]",
+"tail": "br x4"
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf46c0",
+"head": "str w9, [x1, x8] ; ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 1,
+"mem": 2,
+"call": false,
+"ops": [
+"orr"
+],
+"off": "0xf488c",
+"head": "orr x10, x8, #0xffffffffffffff00 ; cmp w8, #0 ; csel x8, x10, x8, lt",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 1,
+"mem": 2,
+"call": false,
+"ops": [
+"orr"
+],
+"off": "0xf4a88",
+"head": "orr x10, x8, #0xffffffffffff0000 ; cmp w8, #0 ; csel x8, x10, x8, lt",
+"tail": "br x4"
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf4c98",
+"head": "ldr x0, [x9, x8, lsl #3] ; ret ",
+"tail": "ret "
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf4db0",
+"head": "ldrsw x8, [x0, #0x18] ; str xzr, [x1, x8, lsl #3] ; ldr x4, [x0, #0x20]!",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 2,
+"mem": 3,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf4f68",
+"head": "add x10, x10, #0x850 ; ldrh w9, [x8, #2] ; ldrb w8, [x8, #8]",
+"tail": "ret "
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf50b8",
+"head": "strb w10, [x8, x9] ; ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 1,
+"arx": 0,
+"mem": 0,
+"call": false,
+"ops": [],
+"off": "0xf5128",
+"head": "br x4",
+"tail": "br x4"
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf52fc",
+"head": "strh w9, [x8, x10] ; ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 0,
+"mem": 4,
+"call": false,
+"ops": [],
+"off": "0xf5348",
+"head": "ldr x9, [x0, #0x10] ; ldr x8, [x1, x8, lsl #3] ; fcvtzs w10, s0",
+"tail": "br x4"
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf5544",
+"head": "fcvtzu w10, s0 ; str w10, [x8, x9] ; ldr x4, [x0, #0x20]!",
+"tail": "br x4"
+},
+{
+"n": 4,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf55c0",
+"head": "fcvtzu w10, d0 ; str w10, [x8, x9] ; ldr x4, [x0, #0x20]!",
+"tail": "br x4"
+},
+{
+"n": 3,
+"arx": 0,
+"mem": 2,
+"call": false,
+"ops": [],
+"off": "0xf56c4",
+"head": "str x10, [x8, x9] ; ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 2,
+"arx": 0,
+"mem": 1,
+"call": false,
+"ops": [],
+"off": "0xf5720",
+"head": "ldr x4, [x0, #0x20]! ; br x4",
+"tail": "br x4"
+},
+{
+"n": 6,
+"arx": 0,
+"mem": 4,
+"call": false,
+"ops": [],
+"off": "0xf58c8",
+"head": "ldp x9, x10, [x0, #0x10] ; ldr x8, [x1, x8, lsl #3] ; ucvtf s0, x10",
+"tail": "br x4"
+},
+{
+"n": 5,
+"arx": 0,
+"mem": 3,
+"call": false,
+"ops": [],
+"off": "0xf5a38",
+"head": "ldp x8, x9, [x0, #8] ; ucvtf d0, d0 ; str d0, [x8, x9]",
+"tail": "br x4"
+},
+{
+"n": 40,
+"arx": 5,
+"mem": 14,
+"call": true,
+"ops": [
+"add",
+"lsl"
+],
+"off": "0xf5c8c",
+"head": "cmp w9, w10 ; b.ls #0xf5cb0 ; cbz w8, #0xf5d64",
+"tail": "str w8, [x27, #0x20]"
+},
+{
+"n": 40,
+"arx": 2,
+"mem": 13,
+"call": true,
+"ops": [
+"add",
+"sub"
+],
+"off": "0xf5e94",
+"head": "bl #0x30b40 ; mov x0, x19 ; mov x1, x20",
+"tail": "ldr x8, [x1, x26, lsl #3]"
+},
+{
+"n": 40,
+"arx": 0,
+"mem": 4,
+"call": true,
+"ops": [],
+"off": "0xf60a0",
+"head": "mov x1, x24 ; bl #0x30760 ; cbnz x0, #0xf5f94",
+"tail": "cbnz x0, #0xf600c"
+},
+{
+"n": 40,
+"arx": 14,
+"mem": 5,
+"call": false,
+"ops": [
+"add",
+"and",
+"asr",
+"lsr",
+"madd",
+"mul",
+"sub"
+],
+"off": "0xf62a8",
+"head": "mov x14, #0xca1b ; movk x14, #0x286b, lsl #16 ; mov w13, #0xaaab",
+"tail": "b.eq #0xf6600"
+},
+{
+"n": 40,
+"arx": 6,
+"mem": 15,
+"call": false,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xf6454",
+"head": "madd x14, x8, x14, x9 ; ldr x14, [x14, #8] ; ldr w15, [x6, #0x44]",
+"tail": "mov w0, #0x10"
+},
+{
+"n": 40,
+"arx": 8,
+"mem": 13,
+"call": true,
+"ops": [
+"add",
+"asr",
+"mul",
+"sub"
+],
+"off": "0xf66f8",
+"head": "mov x21, xzr ; mov x25, xzr ; mov x26, xzr",
+"tail": "ldp x28, x27, [sp, #0x20]"
+},
+{
+"n": 40,
+"arx": 10,
+"mem": 12,
+"call": false,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xf6914",
+"head": "madd x8, x23, x8, x20 ; ldr x8, [x8, #8] ; adrp x12, #0x1de000",
+"tail": "cbz w9, #0xf7f54"
+},
+{
+"n": 40,
+"arx": 13,
+"mem": 8,
+"call": false,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xf6a34",
+"head": "ldr w12, [x13, x12] ; mov w13, #0x30 ; madd x12, x12, x13, x20",
+"tail": "madd x8, x23, x8, x20"
+},
+{
+"n": 40,
+"arx": 13,
+"mem": 7,
+"call": false,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xf6b58",
+"head": "b #0xf75d4 ; mov w8, #0x30 ; madd x8, x23, x8, x20",
+"tail": "ldr x8, [x8, #8]"
+},
+{
+"n": 40,
+"arx": 9,
+"mem": 9,
+"call": true,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xf6d24",
+"head": "b #0xf7834 ; mov w8, #0x30 ; madd x8, x23, x8, x20",
+"tail": "cbz w8, #0xf7f7c"
+},
+{
+"n": 40,
+"arx": 11,
+"mem": 10,
+"call": false,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xf6f2c",
+"head": "add x10, x10, #0xd60 ; ldrb w9, [x8] ; ldr x10, [x10, x9, lsl #3]",
+"tail": "madd x8, x23, x8, x20"
+},
+{
+"n": 40,
+"arx": 6,
+"mem": 18,
+"call": true,
+"ops": [
+"asr",
+"madd",
+"mul",
+"sub"
+],
+"off": "0xf7090",
+"head": "ldr w19, [x5] ; ldr w8, [x24, #0xc] ; cmp w19, w8",
+"tail": "ldrh w8, [x8, #0x3a]"
+},
+{
+"n": 40,
+"arx": 10,
+"mem": 16,
+"call": false,
+"ops": [
+"add",
+"lsl",
+"madd",
+"mul"
+],
+"off": "0xf7288",
+"head": "ldr w9, [x10, #0x14] ; cmp w12, w9 ; b.ls #0xf8318",
+"tail": "adrp x12, #0x1df000"
+},
+{
+"n": 40,
+"arx": 10,
+"mem": 16,
+"call": false,
+"ops": [
+"add",
+"lsl",
+"madd",
+"mul"
+],
+"off": "0xf7470",
+"head": "b.hi #0xf7e6c ; ldr w10, [x8, #0xc] ; ldr w9, [x5]",
+"tail": "mov w8, #0x30"
+},
+{
+"n": 40,
+"arx": 8,
+"mem": 16,
+"call": false,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xf7584",
+"head": "b.ls #0xf796c ; ldr w9, [x4] ; ldr w10, [x8, #0xc]",
+"tail": "ldr w11, [x8, #0x14]"
+},
+{
+"n": 40,
+"arx": 8,
+"mem": 18,
+"call": false,
+"ops": [
+"add",
+"lsl",
+"madd"
+],
+"off": "0xf76b8",
+"head": "ldrh w9, [x8, #2] ; cmp w9, #1 ; b.hi #0xf8168",
+"tail": "cbz x11, #0xf7d94"
+},
+{
+"n": 40,
+"arx": 7,
+"mem": 16,
+"call": false,
+"ops": [
+"add",
+"madd"
+],
+"off": "0xf780c",
+"head": "madd x8, x23, x8, x20 ; ldr x8, [x8, #8] ; adrp x12, #0x1df000",
+"tail": "madd x8, x23, x8, x20"
+},
+{
+"n": 40,
+"arx": 13,
+"mem": 13,
+"call": false,
+"ops": [
+"add",
+"asr",
+"madd",
+"sub"
+],
+"off": "0xf79f0",
+"head": "mov w8, #0x30 ; madd x8, x23, x8, x20 ; ldr x8, [x8, #0x10]",
+"tail": "ldr x22, [sp, #0x28]"
+},
+{
+"n": 40,
+"arx": 11,
+"mem": 12,
+"call": false,
+"ops": [
+"add",
+"lsl",
+"madd",
+"orr",
+"sub"
+],
+"off": "0xf7c04",
+"head": "ldr x22, [sp, #0x28] ; add x26, x9, #0x10 ; mov w7, #0x30",
+"tail": "ldr w0, [x14]"
+},
+{
+"n": 40,
+"arx": 1,
+"mem": 15,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf7d74",
+"head": "cmp w10, w9 ; b.ls #0xf8318 ; ldr x10, [x6]",
+"tail": "mov w7, #0x30"
+},
+{
+"n": 40,
+"arx": 5,
+"mem": 18,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf7e34",
+"head": "mov x13, x5 ; mov w7, #0x30 ; ldr x10, [x11, x10, lsl #3]",
+"tail": "mov x13, x1"
+},
+{
+"n": 40,
+"arx": 3,
+"mem": 15,
+"call": false,
+"ops": [
+"add"
+],
+"off": "0xf8070",
+"head": "b #0xf72c0 ; ldr w8, [x8, #4] ; ldr w9, [x5]",
+"tail": "mov w7, #0x30"
+},
+{
+"n": 40,
+"arx": 5,
+"mem": 10,
+"call": true,
+"ops": [
+"add",
+"madd",
+"mul",
+"orr"
+],
+"off": "0xf87d8",
+"head": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23",
+"tail": "orr x8, x8, x9"
+}
+]

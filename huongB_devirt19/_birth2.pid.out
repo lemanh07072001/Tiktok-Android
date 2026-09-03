@@ -1,0 +1,6 @@
+[*] attach by pid 19328
+{"t": "info", "base": "0x7546e01000"}
+{"t": "ready"}
+[*] loaded; driving UI
+{"t": "mon", "seq": 0, "seen": {}}
+[*] done

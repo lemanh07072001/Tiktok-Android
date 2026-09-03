@@ -1,0 +1,68 @@
+[
+ {
+  "query": "device_platform=android&os=android&ssmix=a&_rticket=1787738334798&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738334&iid=7678275544206690066&device_id=7678240242940478989&webcast_sdk_version=4460&webcast_language=en&webcast_locale=en_US&effect_sdk_version=21.5.0&current_network_quality_info=%7B%22tcp_rtt%22%3A24%2C%22quic_rtt%22%3A24%2C%22http_rtt%22%3A24%2C%22downstream_throughput_kbps%22%3A9336%2C%22quic_send_loss_rate%22%3A-1%2C%22quic_receive_loss_rate%22%3A-1%2C%22net_effective_connection_type%22%3A8%2C%22video_download_speed%22%3A467%7D",
+  "slot16": "2081439f4a65b8a7ab2392086e60a483",
+  "digest_std": "f4ad3ab7f7be71be2cd1635a1b5826c747cc2c94df4f117e0c6c934647a5c195",
+  "mlen": 1134
+ },
+ {
+  "query": "device_platform=android&os=android&ssmix=a&_rticket=1787738335652&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738335&iid=7678275544206690066&device_id=7678240242940478989",
+  "slot16": "898a52bf3850d26e1d7daa406f5eda8d",
+  "digest_std": "b66a5000987b5c6dc1e47a69c161f13fb983188eb1fd7a9286372366ed18fb6a",
+  "mlen": 756
+ },
+ {
+  "query": "source=profile&device_platform=android&os=android&ssmix=a&_rticket=1787738338314&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738338&iid=7678275544206690066&device_id=7678240242940478989",
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "digest_std": "b8a9a8baa9931bb7cc2383395f09db1905e08ad9590d0bae4af78faa44a49b97",
+  "mlen": 771
+ },
+ {
+  "query": "device_platform=android&os=android&ssmix=a&_rticket=1787738338600&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738338&iid=7678275544206690066&device_id=7678240242940478989",
+  "slot16": "5ea8c6aea7d26656924ffe3d7906bf56",
+  "digest_std": "0665c2caf308fa05d6e6c6328cae721c331793d18d7ada21c35f38d12b1593f5",
+  "mlen": 756
+ },
+ {
+  "query": "device_platform=android&os=android&ssmix=a&_rticket=1787738341064&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738341&iid=7678275544206690066&device_id=7678240242940478989",
+  "slot16": "18b71f99c143bcc8992de9b69243a1fe",
+  "digest_std": "7fb37dbd54d5d0e2dacef79319ce73b2d8447804b318d604ea3e1f4739efb2ce",
+  "mlen": 756
+ },
+ {
+  "query": "device_platform=android&os=android&ssmix=a&_rticket=1787738341692&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738341&iid=7678275544206690066&device_id=7678240242940478989",
+  "slot16": "79ca141e854d11f2717a9cbce652fb16",
+  "digest_std": "767f1134edc71c0a77ef34903c52d9330bca19a582ea69d68a76a3a4147f1ab7",
+  "mlen": 756
+ },
+ {
+  "query": "device_platform=android&os=android&ssmix=a&_rticket=1787738350505&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738350&iid=7678275544206690066&device_id=7678240242940478989",
+  "slot16": "083c2a4d6203899e3f2ea64c5b8a3954",
+  "digest_std": "45f5340c313cb2a58f4a06a657fb46c90476409c43be8bc1b890b0f6a7f4a9f8",
+  "mlen": 756
+ },
+ {
+  "query": "version_code=450504&ab_version=45.5.4&device_platform=android&device_id=7678240242940478989&aid=1233&iid=7678275544206690066&os=android&ssmix=a&_rticket=1787738372640&channel=googleplay&app_name=musical_ly&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738372",
+  "slot16": "0fa9508221ea96a1b3448f3e32caf988",
+  "digest_std": "2f65a3726450cbc2764c5404f2a5537aa89d34adb957dd51926cc06c0f411bc2",
+  "mlen": 756
+ },
+ {
+  "query": "version_code=450504&ab_version=45.5.4&device_platform=android&device_id=7678240242940478989&aid=1233&iid=7678275544206690066&os=android&ssmix=a&_rticket=1787738375662&channel=googleplay&app_name=musical_ly&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738375",
+  "slot16": "0fa9508221ea96a1b3448f3e32caf988",
+  "digest_std": "0b911355233e36a89720f64d8124b905ead26c63fef5e9878b8d5c30a6f4b33c",
+  "mlen": 756
+ },
+ {
+  "query": "sdk_version=1&_rticket=1787736580308&manifest_version_code=2024505040&current_region=US&app_language=en&app_type=normal&device_model=sdk_gphone64_arm64&iid=7678241371916453645&channel=googleplay&device_type=sdk_gphone64_arm64&language=en&host_abi=arm64-v8a&locale=en&resolution=1080*2209&update_version_code=2024505040&is_pad=0&ac2=wifi&sys_region=US&os_api=34&uoo=0&last_install_time=1787735147&timezone_name=Asia%2FHo_Chi_Minh&dpi=420&residence=US&app_id=1233&carrier_region=US&ac=wifi&os=Android&device_id=7678240242940478989&mcc_mnc=310260&os_version=14&timezone_offset=25200&version_code=450504&carrier_region_v2=310&app_name=musical_ly&ab_version=45.5.4&version_name=45.5.4&device_brand=google&op_region=US&ssmix=a&device_platform=android&build_number=45.5.4&region=US&aid=1233&ts=1787736580",
+  "slot16": "441658627b306e21b01645dda1d03a19",
+  "digest_std": "22606e01d2b9baa4e0c8af962e03dfe860785bcf6410aa0ffbecb3461a30a02b",
+  "mlen": 814
+ },
+ {
+  "query": "device_platform=android&os=android&ssmix=a&_rticket=1787738551733&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_name=45.5.4&manifest_version_code=2024505040&update_version_code=2024505040&ab_version=45.5.4&resolution=1080*2209&dpi=420&device_type=sdk_gphone64_arm64&device_brand=google&language=en&os_api=34&os_version=14&ac=wifi&is_pad=0&current_region=US&app_type=normal&sys_region=US&last_install_time=1787735147&mcc_mnc=310260&timezone_name=Asia%2FHo_Chi_Minh&carrier_region_v2=310&residence=US&app_language=en&carrier_region=US&timezone_offset=25200&host_abi=arm64-v8a&locale=en&ac2=wifi&uoo=0&op_region=US&build_number=45.5.4&region=US&ts=1787738551&iid=7678275544206690066&device_id=7678240242940478989",
+  "slot16": "0368525bbc8948577a33284cac9c660d",
+  "digest_std": "a0b0dcfcfe0c34c9f413374d89f8b11f932b96118f6643bb5e06f164aae98888",
+  "mlen": 756
+ }
+]

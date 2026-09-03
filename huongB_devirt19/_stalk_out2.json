@@ -1,0 +1,70 @@
+[
+ {
+  "t": "info",
+  "base": "0x74f1e00000",
+  "size": 2093056
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "ringN": 0,
+  "nProd": 0
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "ringN": 0,
+  "nProd": 0
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "ringN": 0,
+  "nProd": 0
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "ringN": 0,
+  "nProd": 0
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "ringN": 0,
+  "nProd": 0
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "ringN": 0,
+  "nProd": 0
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "ringN": 0,
+  "nProd": 0
+ }
+]

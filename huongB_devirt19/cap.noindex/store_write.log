@@ -1,0 +1,24 @@
+BEFORE md5 count=12
+pid @2.23s 21371
+attached @9.16s
+  << IOHOOK 
+  << WAIT_DLOPEN 
+t10 {'installed': False, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t12 {'installed': False, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t13 {'installed': False, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t14 {'installed': False, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t16 {'installed': False, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t17 {'installed': False, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t18 {'installed': False, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+  ** trigger HOME->resume (flush) **
+  << READY 0x6f86800000
+t33 {'installed': True, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t35 {'installed': True, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t36 {'installed': True, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t37 {'installed': True, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t40 {'installed': True, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t41 {'installed': True, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+t42 {'installed': True, 'nwrite': 0, 'nfd': 0, 'nkey': 0, 'neinit': 0, 'nenc': 0}
+=== CHANGED files during window: []  NEW: [] ===
+=== WRITE=0 EINIT=0 KEY=0 ===
+WROTE cap.noindex/store_write.json

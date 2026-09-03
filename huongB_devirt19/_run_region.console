@@ -1,0 +1,6 @@
+[mon] {'t': 'mon', 'done': False}
+[info] {'t': 'info', 'base': '0x75bd601000'}
+[*] ready
+[mon] {'t': 'mon', 'done': False}
+[REGION] {"t": "REGION", "slot16": "e2850bd7fafc61a7ea7d17139c67ab9b", "P": "0x77e4bb7790", "base": "0x77e4b54000", "size": 524288, "prot": "rw-", "file": null, "offInRegion": "0x63790", "neighbors": [{"base": "0x77d4bd0000", "size": 262144, "prot": "rw-", "file": null}, {"base": "0x77d4c10000", "size": 267665408, "prot": "---", "file": null}, {"base": "0x77e4b54000", "size": 524288, "prot": "rw-", "file":
+done -> _p_region.out.json have= True

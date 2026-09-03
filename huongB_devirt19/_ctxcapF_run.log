@@ -1,0 +1,8 @@
+[*] ctxcap installed F_PROG=0x191f40 CAP=4000
+[*] attached 23878, 100s window
+[*] F-entry captured tid=24082 x24=0x7b5db30268 regfile=ok
+[CTX] ctxptr=0x7df2446c90 npg=4000
+[ENTRY] nmem=3571 ctxDone=True
+[DONE]
+[SAVED-JSON]
+[SAVED] nmem=3571 ctxptr=0x7df2446c90 regfile=ok

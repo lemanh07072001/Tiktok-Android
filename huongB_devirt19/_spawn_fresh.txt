@@ -1,0 +1,8 @@
+[*] spawning com.zhiliaoapp.musically
+[*] spawned pid 21752
+[*] resumed; collecting 50s
+[*] seq-correlate installed
+[REG] cb12155b4933d1500308499e4fcb6694 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=_unused=0&ad_area=1440x2294&sdk_version=2013656&os
+[REG] 2ac0bbf84a0de9c148d6bff406cd81a2 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+
+[DONE] nonzero signs=2 -> _spawn_seq.json

@@ -1,0 +1,123 @@
+
+/* WARNING: Removing unreachable block (ram,0x00189478) */
+/* WARNING: Removing unreachable block (ram,0x00189484) */
+/* WARNING: Removing unreachable block (ram,0x001894e0) */
+/* WARNING: Removing unreachable block (ram,0x001894b4) */
+/* WARNING: Removing unreachable block (ram,0x001894f8) */
+/* WARNING: Removing unreachable block (ram,0x00189554) */
+/* WARNING: Removing unreachable block (ram,0x00189590) */
+/* WARNING: Removing unreachable block (ram,0x001894bc) */
+/* WARNING: Removing unreachable block (ram,0x0018cc54) */
+/* WARNING: Removing unreachable block (ram,0x0018cc94) */
+/* WARNING: Removing unreachable block (ram,0x0018cca0) */
+/* WARNING: Removing unreachable block (ram,0x0018ccbc) */
+/* WARNING: Removing unreachable block (ram,0x0018ccc8) */
+/* WARNING: Removing unreachable block (ram,0x0018cce0) */
+/* WARNING: Removing unreachable block (ram,0x0018ccec) */
+/* WARNING: Removing unreachable block (ram,0x0018cd00) */
+/* WARNING: Removing unreachable block (ram,0x0018cd0c) */
+/* WARNING: Removing unreachable block (ram,0x0018cd18) */
+/* WARNING: Removing unreachable block (ram,0x0018cd40) */
+/* WARNING: Removing unreachable block (ram,0x0018da84) */
+/* WARNING: Removing unreachable block (ram,0x0018cd48) */
+/* WARNING: Removing unreachable block (ram,0x0018cd68) */
+/* WARNING: Removing unreachable block (ram,0x0018cd80) */
+/* WARNING: Removing unreachable block (ram,0x0018d290) */
+/* WARNING: Removing unreachable block (ram,0x0018d298) */
+/* WARNING: Removing unreachable block (ram,0x0018cc2c) */
+/* WARNING: Removing unreachable block (ram,0x0018cd88) */
+/* WARNING: Removing unreachable block (ram,0x0018cda4) */
+/* WARNING: Removing unreachable block (ram,0x0018cdac) */
+/* WARNING: Removing unreachable block (ram,0x0018cd90) */
+/* WARNING: Removing unreachable block (ram,0x0018cda0) */
+/* WARNING: Removing unreachable block (ram,0x0018cdb0) */
+/* WARNING: Removing unreachable block (ram,0x0018cdbc) */
+/* WARNING: Removing unreachable block (ram,0x0018cd20) */
+/* WARNING: Removing unreachable block (ram,0x0018cdc0) */
+/* WARNING: Removing unreachable block (ram,0x0018cdd4) */
+/* WARNING: Removing unreachable block (ram,0x0018cddc) */
+/* WARNING: Removing unreachable block (ram,0x0018cde8) */
+/* WARNING: Removing unreachable block (ram,0x0018cd28) */
+/* WARNING: Removing unreachable block (ram,0x0018cd3c) */
+/* WARNING: Removing unreachable block (ram,0x0018cdf8) */
+/* WARNING: Removing unreachable block (ram,0x0018cf94) */
+/* WARNING: Removing unreachable block (ram,0x0018cf98) */
+/* WARNING: Removing unreachable block (ram,0x0018cfa4) */
+/* WARNING: Removing unreachable block (ram,0x0018cfac) */
+/* WARNING: Removing unreachable block (ram,0x0018d2ac) */
+/* WARNING: Removing unreachable block (ram,0x0018d300) */
+/* WARNING: Removing unreachable block (ram,0x0018d30c) */
+/* WARNING: Removing unreachable block (ram,0x0018d314) */
+/* WARNING: Removing unreachable block (ram,0x0018d324) */
+/* WARNING: Removing unreachable block (ram,0x0018d328) */
+/* WARNING: Removing unreachable block (ram,0x0018d338) */
+/* WARNING: Removing unreachable block (ram,0x0018d33c) */
+/* WARNING: Removing unreachable block (ram,0x0018d344) */
+/* WARNING: Removing unreachable block (ram,0x0018d34c) */
+/* WARNING: Removing unreachable block (ram,0x0018cca4) */
+/* WARNING: Removing unreachable block (ram,0x0018ccb4) */
+/* WARNING: Removing unreachable block (ram,0x0018ccb8) */
+/* WARNING: Removing unreachable block (ram,0x0018d354) */
+/* WARNING: Removing unreachable block (ram,0x0018d368) */
+/* WARNING: Removing unreachable block (ram,0x0018d528) */
+/* WARNING: Removing unreachable block (ram,0x0018d36c) */
+/* WARNING: Removing unreachable block (ram,0x0018d52c) */
+/* WARNING: Removing unreachable block (ram,0x0018d374) */
+/* WARNING: Removing unreachable block (ram,0x0018d388) */
+/* WARNING: Removing unreachable block (ram,0x0018d39c) */
+/* WARNING: Removing unreachable block (ram,0x0018d3a0) */
+/* WARNING: Removing unreachable block (ram,0x0018d3dc) */
+/* WARNING: Removing unreachable block (ram,0x0018d3f8) */
+/* WARNING: Removing unreachable block (ram,0x0018d3a8) */
+/* WARNING: Removing unreachable block (ram,0x0018d3cc) */
+/* WARNING: Removing unreachable block (ram,0x0018d3b4) */
+/* WARNING: Removing unreachable block (ram,0x0018d3c8) */
+/* WARNING: Removing unreachable block (ram,0x0018d3fc) */
+/* WARNING: Removing unreachable block (ram,0x0018d400) */
+/* WARNING: Removing unreachable block (ram,0x0018d41c) */
+/* WARNING: Removing unreachable block (ram,0x0018d424) */
+/* WARNING: Removing unreachable block (ram,0x0018d558) */
+/* WARNING: Removing unreachable block (ram,0x0018d57c) */
+/* WARNING: Removing unreachable block (ram,0x0018d42c) */
+/* WARNING: Removing unreachable block (ram,0x0018d470) */
+/* WARNING: Removing unreachable block (ram,0x0018d474) */
+/* WARNING: Removing unreachable block (ram,0x0018d500) */
+/* WARNING: Removing unreachable block (ram,0x0018d508) */
+/* WARNING: Removing unreachable block (ram,0x0018d540) */
+/* WARNING: Removing unreachable block (ram,0x0018d47c) */
+/* WARNING: Removing unreachable block (ram,0x0018d458) */
+/* WARNING: Removing unreachable block (ram,0x0018d464) */
+/* WARNING: Removing unreachable block (ram,0x0018d484) */
+/* WARNING: Removing unreachable block (ram,0x0018d494) */
+/* WARNING: Removing unreachable block (ram,0x0018d4a4) */
+/* WARNING: Removing unreachable block (ram,0x0018d454) */
+/* WARNING: Removing unreachable block (ram,0x0018d4a8) */
+/* WARNING: Removing unreachable block (ram,0x0018d4bc) */
+/* WARNING: Removing unreachable block (ram,0x0018d4c4) */
+/* WARNING: Removing unreachable block (ram,0x0018d4cc) */
+/* WARNING: Removing unreachable block (ram,0x0018d4d0) */
+/* WARNING: Removing unreachable block (ram,0x0018d4dc) */
+/* WARNING: Removing unreachable block (ram,0x0018d204) */
+/* WARNING: Removing unreachable block (ram,0x0018d224) */
+/* WARNING: Removing unreachable block (ram,0x0018d20c) */
+/* WARNING: Removing unreachable block (ram,0x0018d21c) */
+/* WARNING: Removing unreachable block (ram,0x0018d23c) */
+/* WARNING: Removing unreachable block (ram,0x0018d250) */
+/* WARNING: Removing unreachable block (ram,0x0018ce0c) */
+/* WARNING: Removing unreachable block (ram,0x0018ce24) */
+/* WARNING: Removing unreachable block (ram,0x0018ce2c) */
+/* WARNING: Removing unreachable block (ram,0x0018ce34) */
+/* WARNING: Removing unreachable block (ram,0x0018ce10) */
+/* WARNING: Removing unreachable block (ram,0x0018ce38) */
+/* WARNING: Removing unreachable block (ram,0x0018ce44) */
+/* WARNING: Removing unreachable block (ram,0x0018d254) */
+
+undefined8 * FUN_00189320(void)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = tpidr_el0;
+  return &DAT_002f0a28;
+}
+

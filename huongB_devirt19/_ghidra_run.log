@@ -1,0 +1,91 @@
+== JAVA_HOME=/Users/lemanh/tools/jdk-21.0.12.1+1/Contents/Home
+== Ghidra=/Users/lemanh/tools/ghidra_12.1.3_PUBLIC
+== import=/Users/lemanh/Documents/Tiktok-Android/huongB_devirt19/bin/libmetasec_ov.so
+== (lần đầu sẽ auto-analyze ~1-3 phút cho 2MB ARM64) ==
+== program đã import, dùng -process (bỏ qua analyze) ==
+openjdk version "21.0.12.1" 2026-08-18 LTS
+OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode)
+INFO  Using log config file: jar:file:/Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /Users/lemanh/Library/ghidra/ghidra_12.1.3_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /Users/lemanh/Library/ghidra/ghidra_12.1.3_PUBLIC/preferences (Preferences)  
+INFO  Loading previous preferences: /Users/lemanh/Library/ghidra/ghidra_12.1.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1262 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (2647 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 59 extension points (20 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /Users/lemanh/Documents/Tiktok-Android/huongB_devirt19
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /Users/lemanh/tools/ghidra_proj/tt (HeadlessAnalyzer)  
+INFO  Opening project: /Users/lemanh/tools/ghidra_proj/tt (HeadlessProject)  
+INFO  REPORT: Processing project file: /libmetasec_ov.so (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: GhidraFindSlot16.java  (HeadlessAnalyzer)  
+INFO  SCRIPT: /Users/lemanh/Documents/Tiktok-Android/huongB_devirt19/GhidraFindSlot16.java (HeadlessAnalyzer)  
+INFO  GhidraFindSlot16.java> === decompiler openProgram = true (GhidraScript)  
+INFO  GhidraFindSlot16.java> === image base = 00100000 (GhidraScript)  
+INFO  GhidraFindSlot16.java> === callers of UNHEX 0x891f4 === (GhidraScript)  
+INFO  GhidraFindSlot16.java>   call@00219130  in fn 0x119108 (GhidraScript)  
+INFO  GhidraFindSlot16.java>   call@00234a70  in fn 0x1349ac (GhidraScript)  
+INFO  GhidraFindSlot16.java>   call@001caa40  in fn 0xcaa0c (GhidraScript)  
+INFO  GhidraFindSlot16.java>   call@0023ac14  in fn 0x13ab30 (GhidraScript)  
+INFO  GhidraFindSlot16.java> 
+=== SM3 driver (consumer) = 0019fd98 === (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x887e0 -> FUN_001887e0  (C 84B, hash-hint=0, feeds-unhex=0) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0xcaa0c -> FUN_001caa0c  (C 668B, hash-hint=0, feeds-unhex=1) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x119108 -> FUN_00219108  (C 1184B, hash-hint=0, feeds-unhex=1) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x1349ac -> FUN_002349ac  (C 1276B, hash-hint=1, feeds-unhex=1) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x13ab30 -> FUN_0023ab30  (C 1500B, hash-hint=0, feeds-unhex=1) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x879d8 -> FUN_001879d8  (C 23426B, hash-hint=0, feeds-unhex=0) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x9fdac -> FUN_0019fd98  (C 628B, hash-hint=0, feeds-unhex=0) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x9fd24 -> FUN_0019fd18  (C 610B, hash-hint=0, feeds-unhex=0) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x9b394 -> FUN_0019b388  (C 654B, hash-hint=0, feeds-unhex=0) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x95a4c -> FUN_00195a3c  (C 552B, hash-hint=0, feeds-unhex=0) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x8913c -> FUN_0018913c  (C 971B, hash-hint=0, feeds-unhex=0) (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x89320 -> FUN_00189320  (C 6716B, hash-hint=0, feeds-unhex=0) (GhidraScript)  
+INFO  GhidraFindSlot16.java> 
+=== RANK (feeds-unhex + hash-hint cao = ứng viên producer) === (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x1349ac  feeds-unhex=1  hash-hint=1  size=1276  FUN_002349ac (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0xcaa0c  feeds-unhex=1  hash-hint=0  size=668  FUN_001caa0c (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x119108  feeds-unhex=1  hash-hint=0  size=1184  FUN_00219108 (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x13ab30  feeds-unhex=1  hash-hint=0  size=1500  FUN_0023ab30 (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x887e0  feeds-unhex=0  hash-hint=0  size=84  FUN_001887e0 (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x879d8  feeds-unhex=0  hash-hint=0  size=23426  FUN_001879d8 (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x9fdac  feeds-unhex=0  hash-hint=0  size=628  FUN_0019fd98 (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x9fd24  feeds-unhex=0  hash-hint=0  size=610  FUN_0019fd18 (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x9b394  feeds-unhex=0  hash-hint=0  size=654  FUN_0019b388 (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x95a4c  feeds-unhex=0  hash-hint=0  size=552  FUN_00195a3c (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x8913c  feeds-unhex=0  hash-hint=0  size=971  FUN_0018913c (GhidraScript)  
+INFO  GhidraFindSlot16.java>   0x89320  feeds-unhex=0  hash-hint=0  size=6716  FUN_00189320 (GhidraScript)  
+INFO  GhidraFindSlot16.java> 
+Đọc _ghidra_out/fn_*.c của hàm top-rank = producer slot16. (GhidraScript)  
+INFO  REPORT: Save succeeded for processed file: /libmetasec_ov.so (HeadlessAnalyzer)  
+
+== XONG. Đọc kết quả decompile tại: huongB_devirt19/_ghidra_out/fn_*.c ==
+== Bảng RANK hash-hint in ở trên; hàm hash-hint cao nhất = ứng viên producer ==

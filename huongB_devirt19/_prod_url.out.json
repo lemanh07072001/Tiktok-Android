@@ -1,0 +1,345 @@
+[
+ {
+  "t": "mon"
+ },
+ {
+  "t": "info",
+  "base": "0x751ca00000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976932430,
+  "slot16": "028f18c72b418f627d84569fa8f0dfb0",
+  "hexstr": "028f18c72b418f627d84569fa8f0dfb0",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v2/feed/?os=android&_rticket=1787976925362&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&ts=1787976925&effect_sdk_version=21.5.0&req_from=enter_auto&p",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976932750,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&version_code=450504\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0007\ufffd\u0007\ufffd\ufffd\ufffd\ufffd]\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd8\ufffd\ufffd\ufffdu\ufffd\ufffd\ufffd\ufffd\ufffd&\ufffdx\ufffd\ufffd\ufffd\ufffd\u0010\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdq\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffda\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdP\ufffd\ufffd\ufffdw\ufffd\ufffd\ufffd\ufffd\ufffd&\ufffdx\ufffd\ufffd\ufffd",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976932791,
+  "slot16": "8a286f9f1ddfe71d5a00ca8530b57570",
+  "hexstr": "8a286f9f1ddfe71d5a00ca8530b57570",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/mall/shop_tab/algorithm/reach/get?device_platform=android&os=android&ssmix=a&_rticket=1787976924550&channel=googleplay&aid=1233&app_name=musical_ly&version_code",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976932880,
+  "slot16": "63bf58b8ded00a4b81587162dffcd0e5",
+  "hexstr": "63bf58b8ded00a4b81587162dffcd0e5",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787976932350&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976936089,
+  "slot16": "80e0bb30233c7514bc3e3df2ffd5ff48",
+  "hexstr": "80e0bb30233c7514bc3e3df2ffd5ff48",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/region/submit?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787976934739&channel=googleplay&aid=1233&app_name=musical_ly&version_",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976936873,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "hexstr": "46c03b52742b3f2615a3abdf1636b754",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/consent/api/combine/list/v3?sdk_version=2.7.4.4&sdk_name=pns_consent_sdk&device_platform=android&os=android&ssmix=a&_rticket=1787976934164&channel=googleplay&aid=1233&",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976936889,
+  "slot16": "48257f6a140891a1ad69ca72c53d4c1b",
+  "hexstr": "48257f6a140891a1ad69ca72c53d4c1b",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=3.2.2.i18n&version_code=45.5.4&lang=en&aid=1233\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\t\ufffd\n\ufffd\ufffd\ufffd\u001a\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0002\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd@",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976936924,
+  "slot16": "283a0cbf71c713f66cc3142d51f91788",
+  "hexstr": "283a0cbf71c713f66cc3142d51f91788",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787976936116&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976940987,
+  "slot16": "79bfec7738dbd77aa49e7d33ee4bb182",
+  "hexstr": "79bfec7738dbd77aa49e7d33ee4bb182",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/cs/setting?device_platform=android&app_version=45.5.4&aid=1233&sdk_version=v10.02.08-ov-android&device_id=7678616678053643790&channel=googleplay\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976941851,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787976940258&channel=googleplay&aid=1233&app_name=musica",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb93477000000080000000000000070d3b984760000003756926a06000000"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "MAP",
+  "tid": 28629,
+  "ts": 1787976946871,
+  "slot16": "d7630243b82918aaa69912cfd068f9f3",
+  "hexstr": "d7630243b82918aaa69912cfd068f9f3",
+  "sel": null,
+  "url": null,
+  "ctxhead": null
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976949333,
+  "slot16": "756679c6a312acad8156058c6704659e",
+  "hexstr": "756679c6a312acad8156058c6704659e",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=2.4.2.i18n&version_code=45.5.4&lang=en&aid=1233\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\t\u0001\u000b\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb9347700000020000000130000006088fbe4770000003756926a06000000"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976953918,
+  "slot16": "27aace4f09a5e5cf770aecf5a760f80e",
+  "hexstr": "27aace4f09a5e5cf770aecf5a760f80e",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ms/get_seed?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=84018976&app_ver=45.5.4&version_code=2024505040",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb9347700000020000000130000006088fbe4770000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976954762,
+  "slot16": "6bc9052c3436e63187492e80abc4c4f2",
+  "hexstr": "6bc9052c3436e63187492e80abc4c4f2",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ms/dyn/task?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=84018976&app_ver=45.5.4&version_code=2024505040",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb9347700000020000000130000006088fbe4770000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976955369,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787976951799&channel=googleplay&aid=1233&app_name=musica",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb9347700000020000000130000006088fbe4770000003756926a06000000"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976960480,
+  "slot16": "f31361844bd2a9dfda8e7ff7edc91ce0",
+  "hexstr": "f31361844bd2a9dfda8e7ff7edc91ce0",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787976955817&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_n",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb9347700000020000000130000006088fbe4770000003756926a06000000"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976961872,
+  "slot16": "8385a886c73905b4652d26c4329f2268",
+  "hexstr": "8385a886c73905b4652d26c4329f2268",
+  "sel": 369,
+  "url": "https://cp-rp16-normal-useast5.tiktokv.us/track_event\ufffd1\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0004\ufffd\u0003\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd@\ufffd\ufffd\ufffdv\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd!\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u001b\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0010\ufffd\u0001\ufffdw\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0004\u0001\u0004\ufffd\ufffd\ufffdC\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdapplication/x-www-form-urlencoded; chars",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb9347700000020000000130000006088fbe4770000003756926a06000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976962835,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "hexstr": "46c03b52742b3f2615a3abdf1636b754",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/ppf/api/eligibility/v2?device_platform=android&os=android&ssmix=a&_rticket=1787976960437&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&ver",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976963211,
+  "slot16": "55359e3dde7c4ac445c5d378df7bed52",
+  "hexstr": "55359e3dde7c4ac445c5d378df7bed52",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/record/sync?device_platform=android&os=android&ssmix=a&_rticket=1787976962012&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&ve",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976963357,
+  "slot16": "a98bfe26cee83ccde877e5cd929a1bb4",
+  "hexstr": "a98bfe26cee83ccde877e5cd929a1bb4",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/cloudpush/update_sender/?country=US&push_sdk_version=30204&iid=7678617584539027214&channel=googleplay&device_type=sdk_gphone64_arm64&language=en&update_version_code=20",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976963461,
+  "slot16": "41095ab04d460685a7d74e2e9f33f7a0",
+  "hexstr": "41095ab04d460685a7d74e2e9f33f7a0",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/dynamic/fetch?device_platform=android&os=android&ssmix=a&_rticket=1787976962843&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976963719,
+  "slot16": "3016f60d8dea98e83c76f410867d1bf3",
+  "hexstr": "3016f60d8dea98e83c76f410867d1bf3",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/aweme/stats/?os=android&_rticket=1787976963391&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&ts=1787976960&ab_version=45.5.4&ac=wifi&ac2=wifi&aid=1",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976964648,
+  "slot16": "f31361844bd2a9dfda8e7ff7edc91ce0",
+  "hexstr": "f31361844bd2a9dfda8e7ff7edc91ce0",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787976964350&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_n",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976964859,
+  "slot16": "b8591fcb8d86ff40ed3989462a588bf1",
+  "hexstr": "b8591fcb8d86ff40ed3989462a588bf1",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/efficiency_portrait/?device_platform=android&os=android&ssmix=a&_rticket=1787976964533&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&ve",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976965576,
+  "slot16": "6e0f4c5388b18ee23cb63b0f1202db72",
+  "hexstr": "6e0f4c5388b18ee23cb63b0f1202db72",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/screen_time/upload/?device_platform=android&os=android&ssmix=a&_rticket=1787976965375&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&ver",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976967402,
+  "slot16": "851dbc7109471d9b56f8c9c29ca143db",
+  "hexstr": "851dbc7109471d9b56f8c9c29ca143db",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/hybrid/ab/?feature_name=ttk_app_dau_launch&is_first_hybridab_request=false&is_first_app_session=false&ssaid=d0e397ab87a29fd3&device_platform=android&os=andro",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976970263,
+  "slot16": "e81ea983880553838e8cfc26f9e43773",
+  "hexstr": "e81ea983880553838e8cfc26f9e43773",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/passport/auth/get_nonce/?device_platform=android&os=android&ssmix=a&_rticket=1787976970171&channel=googleplay&aid=1233&app_name=musical_ly&version_code=450504&version_",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976970278,
+  "slot16": "051afb6b2a4b02cdb42d28ab0f81b736",
+  "hexstr": "051afb6b2a4b02cdb42d28ab0f81b736",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/passport/app/store_region/?passport-sdk-version=1&device_platform=android&os=android&ssmix=a&_rticket=1787976970233&channel=googleplay&aid=1233&app_name=musical_ly&ver",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976970692,
+  "slot16": "5024146e6380fa45b218bf70d368db20",
+  "hexstr": "5024146e6380fa45b218bf70d368db20",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/common_chunk?aid=1233&device_id=7678616678053643790&client_version=2024505040&new_cluster=1&cpu_model=ranchu&oid=0&meta_version=&ab_extra_data=%7B%22tt_ug_shoptab_new%",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "MAP",
+  "tid": 28514,
+  "ts": 1787976970980,
+  "slot16": "c1ca370c60cf1dda76d7284e4fa468e8",
+  "hexstr": "c1ca370c60cf1dda76d7284e4fa468e8",
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ri/report?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&sdk_ver_code=84018976&app_ver=45.5.4&version_code=2024505040&a",
+  "ctxhead": "e0adbd1c750000000001000084000000f09cb934770000001400000013000000e06ee3e477000000025d926a07000000"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "mon"
+ }
+]

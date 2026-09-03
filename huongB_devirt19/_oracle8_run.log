@@ -1,0 +1,3 @@
+spawn gating ON; force-stop + launch
+launch issued, collecting 25s
+TOTAL 0 KINDS {}

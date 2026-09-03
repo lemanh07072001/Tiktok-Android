@@ -1,0 +1,258 @@
+[
+ {
+  "t": "info",
+  "msg": "psk-struct installed"
+ },
+ {
+  "t": "struct",
+  "x1": "0x6f6f525de8",
+  "nnodes": 48,
+  "npsk": 0,
+  "psk": [],
+  "sample": [
+   {
+    "path": "x1[0]",
+    "at": "0x6f6f5277e0",
+    "prot": "rw- anon",
+    "ent": 17,
+    "asc": 17,
+    "pskLike": false,
+    "hex": "2d628d6a000000003076526f6f000000987c526f6f0000004076526f6f0000008876526f6f0000007076526f6f000000c077526f6f000000d077526f6f000000"
+   },
+   {
+    "path": "x1[1]",
+    "at": "0x6f8ee9c414",
+    "prot": "r-x libmetasec_ov.so",
+    "ent": 20,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "e20300aae00301aa40001fd6032040a9010841a9e00308aa60001fd6032040a9020c40f901404039e00308aa60001fd6080840b9020040f9010840f9e003082a"
+   },
+   {
+    "path": "x1[2]",
+    "at": "0x6f6f5270c0",
+    "prot": "rw- anon",
+    "ent": 22,
+    "asc": 8,
+    "pskLike": false,
+    "hex": "f07a526f6f0000007b9ebe5dbeef5494d500000000000000d1dfe88e6f0000000071526f6f00000004f3e88e6f000000da000000000000006800000000000000"
+   },
+   {
+    "path": "x1[3]",
+    "at": "0x6f8ee8f304",
+    "prot": "r-x libmetasec_ov.so",
+    "ent": 36,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "01b00394087c40931f0114eb22010054fdaf0394087c40931f0113eba200005496af039488a603d1695603d1082400a9fd7b41a9f44fc2a8c0035fd6f44fbea9"
+   },
+   {
+    "path": "x1[4]",
+    "at": "0x7052d3fb34",
+    "prot": "?",
+    "ent": 35,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "c00000b493020133280080521f0c00b9080000b9134000f8f44f41a9fd7bc2a8c0035fd6ffc300d1fd7b01a9f44f02a9fd430091081c40b9080100350800a852"
+   },
+   {
+    "path": "x1[5]",
+    "at": "0x6f6f5260f0",
+    "prot": "rw- anon",
+    "ent": 14,
+    "asc": 6,
+    "pskLike": false,
+    "hex": "a0cd276873000000ffffffffffffffffc0325b9f6f000000ffffffffffffffff0000000000000000030000000000000000000000000000000400000000000000"
+   }
+  ]
+ },
+ {
+  "t": "struct",
+  "x1": "0x6f6f5250a8",
+  "nnodes": 49,
+  "npsk": 0,
+  "psk": [],
+  "sample": [
+   {
+    "path": "x1[0]",
+    "at": "0x6f6f526aa0",
+    "prot": "rw- anon",
+    "ent": 15,
+    "asc": 16,
+    "pskLike": false,
+    "hex": "2f628d6a00000000f068526f6f000000586f526f6f0000000069526f6f0000004869526f6f0000003069526f6f000000806a526f6f000000906a526f6f000000"
+   },
+   {
+    "path": "x1[1]",
+    "at": "0x6f8ee9c414",
+    "prot": "r-x libmetasec_ov.so",
+    "ent": 20,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "e20300aae00301aa40001fd6032040a9010841a9e00308aa60001fd6032040a9020c40f901404039e00308aa60001fd6080840b9020040f9010840f9e003082a"
+   },
+   {
+    "path": "x1[2]",
+    "at": "0x6f6f526380",
+    "prot": "rw- anon",
+    "ent": 23,
+    "asc": 8,
+    "pskLike": false,
+    "hex": "b06d526f6f0000007b9ebe5dbeef5494d500000000000000d1dfe88e6f000000c063526f6f00000004f3e88e6f000000da000000000000006800000000000000"
+   },
+   {
+    "path": "x1[3]",
+    "at": "0x6f8ee8f304",
+    "prot": "r-x libmetasec_ov.so",
+    "ent": 36,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "01b00394087c40931f0114eb22010054fdaf0394087c40931f0113eba200005496af039488a603d1695603d1082400a9fd7b41a9f44fc2a8c0035fd6f44fbea9"
+   },
+   {
+    "path": "x1[4]",
+    "at": "0x7052d3fb34",
+    "prot": "?",
+    "ent": 35,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "c00000b493020133280080521f0c00b9080000b9134000f8f44f41a9fd7bc2a8c0035fd6ffc300d1fd7b01a9f44f02a9fd430091081c40b9080100350800a852"
+   },
+   {
+    "path": "x1[5]",
+    "at": "0x6f6f5253b0",
+    "prot": "rw- anon",
+    "ent": 14,
+    "asc": 6,
+    "pskLike": false,
+    "hex": "a0cd276873000000ffffffffffffffff40eb5b9f6f000000ffffffffffffffff0000000000000000030000000000000000000000000000000400000000000000"
+   }
+  ]
+ },
+ {
+  "t": "struct",
+  "x1": "0x6f6f5250a8",
+  "nnodes": 49,
+  "npsk": 0,
+  "psk": [],
+  "sample": [
+   {
+    "path": "x1[0]",
+    "at": "0x6f6f526aa0",
+    "prot": "rw- anon",
+    "ent": 15,
+    "asc": 16,
+    "pskLike": false,
+    "hex": "2f628d6a00000000f068526f6f000000586f526f6f0000000069526f6f0000004869526f6f0000003069526f6f000000806a526f6f000000906a526f6f000000"
+   },
+   {
+    "path": "x1[1]",
+    "at": "0x6f8ee9c414",
+    "prot": "r-x libmetasec_ov.so",
+    "ent": 20,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "e20300aae00301aa40001fd6032040a9010841a9e00308aa60001fd6032040a9020c40f901404039e00308aa60001fd6080840b9020040f9010840f9e003082a"
+   },
+   {
+    "path": "x1[2]",
+    "at": "0x6f6f526380",
+    "prot": "rw- anon",
+    "ent": 23,
+    "asc": 8,
+    "pskLike": false,
+    "hex": "b06d526f6f0000007b9ebe5dbeef5494d500000000000000d1dfe88e6f000000c063526f6f00000004f3e88e6f000000da000000000000006800000000000000"
+   },
+   {
+    "path": "x1[3]",
+    "at": "0x6f8ee8f304",
+    "prot": "r-x libmetasec_ov.so",
+    "ent": 36,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "01b00394087c40931f0114eb22010054fdaf0394087c40931f0113eba200005496af039488a603d1695603d1082400a9fd7b41a9f44fc2a8c0035fd6f44fbea9"
+   },
+   {
+    "path": "x1[4]",
+    "at": "0x7052d3fb34",
+    "prot": "?",
+    "ent": 35,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "c00000b493020133280080521f0c00b9080000b9134000f8f44f41a9fd7bc2a8c0035fd6ffc300d1fd7b01a9f44f02a9fd430091081c40b9080100350800a852"
+   },
+   {
+    "path": "x1[5]",
+    "at": "0x6f6f5253b0",
+    "prot": "rw- anon",
+    "ent": 13,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "a0cd276873000000ffffffffffffffff40420f6373000000ffffffffffffffff0000000000000000030000000000000000000000000000000400000000000000"
+   }
+  ]
+ },
+ {
+  "t": "struct",
+  "x1": "0x6f6f5250a8",
+  "nnodes": 49,
+  "npsk": 0,
+  "psk": [],
+  "sample": [
+   {
+    "path": "x1[0]",
+    "at": "0x6f6f526aa0",
+    "prot": "rw- anon",
+    "ent": 14,
+    "asc": 16,
+    "pskLike": false,
+    "hex": "30628d6a00000000f068526f6f000000586f526f6f0000000069526f6f0000004869526f6f0000003069526f6f000000806a526f6f000000906a526f6f000000"
+   },
+   {
+    "path": "x1[1]",
+    "at": "0x6f8ee9c414",
+    "prot": "r-x libmetasec_ov.so",
+    "ent": 20,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "e20300aae00301aa40001fd6032040a9010841a9e00308aa60001fd6032040a9020c40f901404039e00308aa60001fd6080840b9020040f9010840f9e003082a"
+   },
+   {
+    "path": "x1[2]",
+    "at": "0x6f6f526380",
+    "prot": "rw- anon",
+    "ent": 23,
+    "asc": 8,
+    "pskLike": false,
+    "hex": "b06d526f6f0000007b9ebe5dbeef5494d500000000000000d1dfe88e6f000000c063526f6f00000004f3e88e6f000000da000000000000006800000000000000"
+   },
+   {
+    "path": "x1[3]",
+    "at": "0x6f8ee8f304",
+    "prot": "r-x libmetasec_ov.so",
+    "ent": 36,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "01b00394087c40931f0114eb22010054fdaf0394087c40931f0113eba200005496af039488a603d1695603d1082400a9fd7b41a9f44fc2a8c0035fd6f44fbea9"
+   },
+   {
+    "path": "x1[4]",
+    "at": "0x7052d3fb34",
+    "prot": "?",
+    "ent": 35,
+    "asc": 7,
+    "pskLike": false,
+    "hex": "c00000b493020133280080521f0c00b9080000b9134000f8f44f41a9fd7bc2a8c0035fd6ffc300d1fd7b01a9f44f02a9fd430091081c40b9080100350800a852"
+   },
+   {
+    "path": "x1[5]",
+    "at": "0x6f6f5253b0",
+    "prot": "rw- anon",
+    "ent": 13,
+    "asc": 5,
+    "pskLike": false,
+    "hex": "a0cd276873000000ffffffffffffffffc0f90e6373000000ffffffffffffffff0000000000000000030000000000000000000000000000000400000000000000"
+   }
+  ]
+ }
+]

@@ -82,4 +82,17 @@ if __name__ == "__main__":
     assert compute_hash19(HASH19_PARAMS_EXAMPLE).hex() == _EXAMPLE_D19
     # 4) protobuf-field wrapper
     assert hash19_protobuf_field(HASH19_PARAMS_EXAMPLE).hex() == "9a0120" + _EXAMPLE_D19
-    print("sm3_hash19 self-test PASS (SM3 KAT + build_query + live-verified #19 + protobuf field)")
+    # 5) live-verified against REAL per-request NONZERO slot16 captures (2026-08-26, AVD musically 45.5.4)
+    #    ground-truth/hash19_nonzero_tuples.json — captured (query, slot16, device digest) tuples,
+    #    each proven bit-exact vs report_pskcalhash_19(). Proves message assembly is correct for
+    #    binary per-request slot16, not just the zero-slot case.
+    import os, json as _json
+    _gt = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ground-truth", "hash19_nonzero_tuples.json")
+    if os.path.exists(_gt):
+        _tuples = _json.load(open(_gt))
+        for _t in _tuples:
+            _q = _t["query"].encode("latin1")
+            _s = bytes.fromhex(_t["slot16"])
+            assert report_pskcalhash_19(_q, _s).hex() == _t["digest_std"], _t["slot16"]
+        print("  nonzero-slot16 ground-truth: %d/%d tuples bit-exact" % (len(_tuples), len(_tuples)))
+    print("sm3_hash19 self-test PASS (SM3 KAT + build_query + live-verified #19 [zero + nonzero slot16] + protobuf field)")

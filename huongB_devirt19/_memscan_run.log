@@ -1,0 +1,17 @@
+needles: [('.msf3_5a78573b16', 16), ('.msf3_5bbde2d705', 32), ('.msf3_d97b3ebe01', 16), ('.msf3_e1beed1571', 132), ('.msp_092fde7a53a', 272), ('.msp_589c22335a3', 374), ('.mss_9b8ed9956d7', 630)]
+attach pid 12095 t=6.3
+ msg {'k': 'READY'}
+=== plaintext marker scan ===
+  'mssdk_setting' x0
+  'sdi_v2' x0
+  'mssdk' x685
+      '..o....,.......x-metasec-bypass-mssdk.....o............1..........o............smbyttnet..........o............1........'
+      '..o....,.......x-metasec-bypass-mssdk.....o............1..........o......D.......D.)#.....o....,...D"..x-metasec-content'
+  'vmp_' x0
+  '{"' x101299
+      '113.171.230.124....o....2.......{"Content-Length":"5633","Content-Type":"application/octet-stream;tt-data=b","Cookie":"d'
+      '.2.i18n"}..........o....h.......{"access-control-expose-headers":"x-tt-traceflag,x-tt-logid","cache-control":"max-age=0,'
+  'device_id' x823
+      '=45.5.4&device_platform=android&device_id=7678616678053643790&aid=1233&iid=7679520991450973970&os=android&ssmix=a&_rtick'
+      '=45.5.4&device_platform=android&device_id=7678616678053643790&aid=1233&iid=7679520991450973970&os=android&ssmix=a&_rtick'
+=== DONE ct-needles found: []

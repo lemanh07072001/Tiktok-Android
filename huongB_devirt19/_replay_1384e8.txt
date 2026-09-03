@@ -1,0 +1,34 @@
+[+] mapped .so @ 0x7872201000, applied 6765 RELATIVE relocs
+[+] wrote 1807 mem windows + stack + regfile + bytecode + soRW + bcFull
+[+] un-patched frida hooks: re-wrote 1 clean executable segment(s) + re-applied bcFull
+[+] frida gum cleanup: replaced 6 gum-trampoline pointers with clean ret 0x78722a0f1c
+[+] filled 165 import GOT slots with stubs
+[chk] [x23]=0x78723835c4  bcptr=0x78723835c4  match=True
+[chk] [fp-0x58]=0x3f956c (expect bias 0x9b374)
+[+] running from pc=0x7872253924 until ret 0x787225e484 ...
+[+] reached_ret=False
+[+] distinct VM-PCs visited = 421
+[+] no clean period; last 40 VM-PCs: ['0x1827d0', '0x1827d4', '0x1827d8', '0x1827dc', '0x1827e0', '0x1827e4', '0x1827e8', '0x1827f4', '0x1827fc', '0x182800', '0x182804', '0x182808', '0x18280c', '0x18281c', '0x182824', '0x182828', '0x18282c', '0x182830', '0x182834', '0x182838', '0x1864f4', '0x1864f8', '0x1864fc', '0x186500', '0x186504', '0x186508', '0x18650c', '0x186510', '0x186514', '0x186518', '0x186528', '0x186530', '0x186534', '0x186538', '0x18653c', '0x186540', '0x186544', '0x186548', '0x18654c', '0x186550']
+[+] TOP loop memory-reads (addr : count : current value):
+[+] TOP loop memory-WRITES (addr : count : value-sequence) — counter candidates:
+[+] emu stopped: Unhandled CPU exception (UC_ERR_EXCEPTION); blocks=2848; unmapped_pages=7
+[dbg] fault pc=0xd65f03c0910203ff (off OUT)
+[dbg] last 12 block addrs: ['0x53e34', '0x58a54', '0x58aa8', '0x52b4c', '0x554f4', '0x55540', '0x52b4c', '0x55834', '0x55874', '0x55934', '0xa0fe8', '0xd65f03c0910203ff']
+    x15=0x7872256834
+    x16=0x9b374
+    x17=0xff5f9ebbf4b521ec
+    x0=0x7884d97668
+
+=== search for captured slot16 in replayed memory ===
+
+0/55 captured slot16 reproduced in replayed VM memory
+
+=== VM output-buffer inspection (args x1/x4 captured at entry) ===
+  [x1=0x7884d968a8]: 58503f72780000007879d98478000000f87ad9847800000034b8337278000000806fd984780000005069257278000000
+  [x2=0x78723e1530]: a8f07c727800000021dc7672780000002adc7672780000002fdc76727800000016dc76727800000034dc767278000000
+  [x4=0x7884d968c0]: 34b8337278000000806fd9847800000050692572780000000000000000000000387dae5099020fd00000000000000000
+  [x0=0x7872392f40]: 66007bff2ac0deef2a80dcef2a40ceef2a00ccef2ac0aaef2a80a8ef2a40a6ef2a00a4ef2ac082ef2a8080ef2c742000
+  [x8=0x7884d96f80]: 1f0000000000000000000000000000009070d9847800000014c629727800000050692572780000005069257278000000
+[i] VM ran 2848 blocks, 421 distinct bytecode-PCs (short=False)
+[-] none reproduced yet — likely need more captured memory (unmapped pages read as zero)
+    top unmapped pages (need capture): ['0x0', '0x7a1b93a000', '0x7a5b8fb000', '0x7b2ba1f000', '0x7a5b8f9000', '0x7a5b8fe000', '0xd65f03c091020000']

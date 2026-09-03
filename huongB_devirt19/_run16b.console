@@ -1,0 +1,5 @@
+[mon] seq=0 dumped=False
+[info] base=0x75ba600000 size=2093056
+[*] ready
+[DUMP] slot16=49fb4cf092518dc3d17b2e322443c728 total=621 count=621
+done -> _vm_trace16.out.json have= True

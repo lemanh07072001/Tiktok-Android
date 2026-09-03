@@ -1,0 +1,8 @@
+[*] ctxstalker installed F_PROG=0x191f40
+[*] attached 23878 105s
+[*] F-entry tid=24082 regfile=ok Stalker-following...
+[*] F onLeave trace=1
+[ENTRY] nmem=3666 ntrace=1 slot16=None
+[DONE]
+[*] getter: ctx BFS npg=4000 trace=1
+[SAVED-JSON] mem=3666 trace=1 slot16=None

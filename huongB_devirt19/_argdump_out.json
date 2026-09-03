@@ -1,0 +1,190 @@
+{
+ "caps": [
+  {
+   "off": "0xd9038",
+   "ret": "0x2540be400",
+   "pre": [
+    {
+     "i": 0,
+     "v": "0x7b42d75b80",
+     "hex": "28d27d557c000000f05ebb327d00000000e40b54020000000060d7427b000000805bd7427b00000064985bdf7b000000010000000000000001fe74557c0000008a937e33974470ad010000000000000000e00f000000000000c00f0000000000",
+     "str": "(\ufffd}U|\ufffd\ufffd\ufffd\ufffd^\ufffd2}\ufffd\ufffd\ufffd\ufffd\ufffd\u000bT\u0002\ufffd\ufffd\ufffd\ufffd`\ufffdB{\ufffd\ufffd\ufffd\ufffd[\ufffdB{\ufffd\ufffd\ufffdd\ufffd[\ufffd{\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 1,
+     "v": "0x7b42d75b58",
+     "hex": "1d362058bf02000068417f557c00000000000000000000001d362058bf0200008a937e33974470ad28d27d557c000000f05ebb327d00000000e40b54020000000060d7427b000000805bd7427b00000064985bdf7b0000000100000000000000",
+     "str": "\u001d6 X\ufffd\u0002\ufffd\ufffdhA\u007fU|\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u001d6 X\ufffd\u0002\ufffd\ufffd\ufffd\ufffd~3\ufffdDp\ufffd(\ufffd}U|\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 2,
+     "v": "0x7b42d75b50",
+     "hex": "8d872258bf0200001d362058bf02000068417f557c00000000000000000000001d362058bf0200008a937e33974470ad28d27d557c000000f05ebb327d00000000e40b54020000000060d7427b000000805bd7427b00000064985bdf7b000000",
+     "str": "\ufffd\ufffd\"X\ufffd\u0002\ufffd\ufffd\u001d6 X\ufffd\u0002\ufffd\ufffdhA\u007fU|\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u001d6 X\ufffd\u0002\ufffd\ufffd\ufffd\ufffd~3\ufffdDp\ufffd"
+    },
+    {
+     "i": 3,
+     "v": "0x7b42d75ad8",
+     "hex": "00000000000000008e80adeb00000000000000000000000001000000000000000000000000000000205cd7427b000000949066557c000000785dd7427b0000000060d7427b00000000000000000000000000000000f40840000000000000fcff"
+    },
+    {
+     "i": 4,
+     "v": "0x70"
+    },
+    {
+     "i": 5,
+     "v": "0x1413d2"
+    },
+    {
+     "i": 6,
+     "v": "0xffffffff"
+    },
+    {
+     "i": 7,
+     "v": "0x403b"
+    }
+   ],
+   "post": [
+    {
+     "i": 0,
+     "v": "0x7b42d75b80",
+     "hex": "28d27d557c000000f05ebb327d00000000e40b54020000000060d7427b000000805bd7427b00000064985bdf7b000000010000000000000001fe74557c0000008a937e33974470ad010000000000000000e00f000000000000c00f0000000000",
+     "str": "(\ufffd}U|\ufffd\ufffd\ufffd\ufffd^\ufffd2}\ufffd\ufffd\ufffd\ufffd\ufffd\u000bT\u0002\ufffd\ufffd\ufffd\ufffd`\ufffdB{\ufffd\ufffd\ufffd\ufffd[\ufffdB{\ufffd\ufffd\ufffdd\ufffd[\ufffd{\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 1,
+     "v": "0x7b42d75b58",
+     "hex": "1d362058bf02000068417f557c00000000000000000000001d362058bf0200008a937e33974470ad28d27d557c000000f05ebb327d00000000e40b54020000000060d7427b000000805bd7427b00000064985bdf7b0000000100000000000000",
+     "str": "\u001d6 X\ufffd\u0002\ufffd\ufffdhA\u007fU|\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u001d6 X\ufffd\u0002\ufffd\ufffd\ufffd\ufffd~3\ufffdDp\ufffd(\ufffd}U|\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 2,
+     "v": "0x7b42d75b50",
+     "hex": "8d872258bf0200001d362058bf02000068417f557c00000000000000000000001d362058bf0200008a937e33974470ad28d27d557c000000f05ebb327d00000000e40b54020000000060d7427b000000805bd7427b00000064985bdf7b000000",
+     "str": "\ufffd\ufffd\"X\ufffd\u0002\ufffd\ufffd\u001d6 X\ufffd\u0002\ufffd\ufffdhA\u007fU|\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u001d6 X\ufffd\u0002\ufffd\ufffd\ufffd\ufffd~3\ufffdDp\ufffd"
+    },
+    {
+     "i": 3,
+     "v": "0x7b42d75ad8",
+     "hex": "00000000000000008e80adeb00000000000000000000000001000000000000000000000000000000949066557c00000010f25e4f7c000000785dd7427b0000000060d7427b00000000000000000000000000000000f40840000000000000fcff",
+     "str": "\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0001\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdfU|\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 4,
+     "v": "0x70"
+    },
+    {
+     "i": 5,
+     "v": "0x1413d2"
+    },
+    {
+     "i": 6,
+     "v": "0xffffffff"
+    },
+    {
+     "i": 7,
+     "v": "0x403b"
+    }
+   ]
+  },
+  {
+   "off": "0xd9038",
+   "ret": "0x2540be400",
+   "pre": [
+    {
+     "i": 0,
+     "v": "0x7b42e73b80",
+     "hex": "28d27d557c000000f05ebb327d00000000e40b54020000000040e7427b000000803be7427b0000000040e7427b000000000000000000000001000000000000008a937e33974470ad78a0ce1b7f00000000e00f000000000000c00f0000000000",
+     "str": "(\ufffd}U|\ufffd\ufffd\ufffd\ufffd^\ufffd2}\ufffd\ufffd\ufffd\ufffd\ufffd\u000bT\u0002\ufffd\ufffd\ufffd\ufffd@\ufffdB{\ufffd\ufffd\ufffd\ufffd;\ufffdB{\ufffd\ufffd\ufffd\ufffd@\ufffdB{\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 1,
+     "v": "0x7b42e73b58",
+     "hex": "1d1a2cacc102000068417f557c00000000000000000000001d1a2cacc10200008a937e33974470ad28d27d557c000000f05ebb327d00000000e40b54020000000040e7427b000000803be7427b0000000040e7427b0000000000000000000000",
+     "str": "\u001d\u001a,\ufffd\ufffd\u0002\ufffd\ufffdhA\u007fU|\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u001d\u001a,\ufffd\ufffd\u0002\ufffd\ufffd\ufffd\ufffd~3\ufffdDp\ufffd(\ufffd}U|\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 2,
+     "v": "0x7b42e73b50",
+     "hex": "007535acc10200001d1a2cacc102000068417f557c00000000000000000000001d1a2cacc10200008a937e33974470ad28d27d557c000000f05ebb327d00000000e40b54020000000040e7427b000000803be7427b0000000040e7427b000000"
+    },
+    {
+     "i": 3,
+     "v": "0x7b42e73ad8",
+     "hex": "00000000000000008e80adeb000000000000000000000000e8bd7514000000000000000000000000203ce7427b000000949066557c000000783de7427b0000000040e7427b00000000000000000000000000000000f40840000000000000fcff"
+    },
+    {
+     "i": 4,
+     "v": "0x70"
+    },
+    {
+     "i": 5,
+     "v": "0x142674"
+    },
+    {
+     "i": 6,
+     "v": "0xffffffff"
+    },
+    {
+     "i": 7,
+     "v": "0x403b"
+    }
+   ],
+   "post": [
+    {
+     "i": 0,
+     "v": "0x7b42e73b80",
+     "hex": "28d27d557c000000f05ebb327d00000000e40b54020000000040e7427b000000803be7427b0000000040e7427b000000000000000000000001000000000000008a937e33974470ad78a0ce1b7f00000000e00f000000000000c00f0000000000",
+     "str": "(\ufffd}U|\ufffd\ufffd\ufffd\ufffd^\ufffd2}\ufffd\ufffd\ufffd\ufffd\ufffd\u000bT\u0002\ufffd\ufffd\ufffd\ufffd@\ufffdB{\ufffd\ufffd\ufffd\ufffd;\ufffdB{\ufffd\ufffd\ufffd\ufffd@\ufffdB{\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 1,
+     "v": "0x7b42e73b58",
+     "hex": "1d1a2cacc102000068417f557c00000000000000000000001d1a2cacc10200008a937e33974470ad28d27d557c000000f05ebb327d00000000e40b54020000000040e7427b000000803be7427b0000000040e7427b0000000000000000000000",
+     "str": "\u001d\u001a,\ufffd\ufffd\u0002\ufffd\ufffdhA\u007fU|\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u001d\u001a,\ufffd\ufffd\u0002\ufffd\ufffd\ufffd\ufffd~3\ufffdDp\ufffd(\ufffd}U|\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 2,
+     "v": "0x7b42e73b50",
+     "hex": "007535acc10200001d1a2cacc102000068417f557c00000000000000000000001d1a2cacc10200008a937e33974470ad28d27d557c000000f05ebb327d00000000e40b54020000000040e7427b000000803be7427b0000000040e7427b000000"
+    },
+    {
+     "i": 3,
+     "v": "0x7b42e73ad8",
+     "hex": "00000000000000008e80adeb000000000000000000000000e8bd7514000000000000000000000000949066557c00000010f25e4f7c000000783de7427b0000000040e7427b00000000000000000000000000000000f40840000000000000fcff",
+     "str": "\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdu\u0014\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdfU|\ufffd\ufffd\ufffd"
+    },
+    {
+     "i": 4,
+     "v": "0x70"
+    },
+    {
+     "i": 5,
+     "v": "0x142674"
+    },
+    {
+     "i": 6,
+     "v": "0xffffffff"
+    },
+    {
+     "i": 7,
+     "v": "0x403b"
+    }
+   ]
+  }
+ ],
+ "disk": {
+  ".msf3_286707e7e71ce7395a46b36ec666df950587b5e9": "06c89feae2d013cc",
+  ".msf3_302eacd6e89fe48da35d7b820dd63f2e49b695d3": "044f82ebec02b509",
+  ".msf3_58abed2bdf5ce9620cbf2b23e7b463da6969535a": "0bcfdb1b7f0fab05",
+  ".msf3_5a78573b16f3ea4c2cd50666201214b78de95b0e": "65c2b880dfcd15e3ed71057ba3fd1b41",
+  ".msf3_5bbde2d70532c7b6b3b1d67db50b5957637dbf56": "aaefae788585292b0ab00f25e8e45d86b762f60290e55083052833ba1fd30292",
+  ".msf3_b99efaf51e5a34819fa1e9d5151593b79e3b58a0": "243beb54122a00bb",
+  ".msf3_d97b3ebe01a877d7735f281315e960b512ead306": "40a68652772bfcab2e18a6ebfa7ff323",
+  ".msf3_db4d23f8db24d05e480f1adf6e308aa5a466ef6b": "f387f25b649bde51",
+  ".msf3_e1beed157181946231bc3646877d1a6913d2cd26": "f9e2d6ccf772dfa51a3ef861a90b6d916f3dfd39b51d702a0c09494c4ed0c845be64ed950215e95a77d57acc91ffe2c08b4358e799157363684e838bb859c8e458c44442282223977fbaa11d9ea44d48ab2524d7b3a719e7566610f943620143d53591f915f10a0a232e090e9aa0fde6007cd1af54fddb8a79099a87e4dd5acdfb203957",
+  ".msp_092fde7a53a0274594af0984c7830fc0c13dc8bd": "80b37a642260df40cee7946927841a529deb08ccbba86e234543a4150b822138518fbbbd3e2cdc2df0d83c1a63f5891d6b67974bb7fad214ba8bd90fe4dd91a0ecbae817e45a3c71c135a413a130b3bcc56046459bda4bb811aee787673f36aee81b2cc1c78400628442b44af9bd93493e2aae815d91963b23b12979c2e56a98301a323406df4df08924853d2ff5349b217a9bdae3d816ba1070018112c0d41a9846f5f8165540478fd5243da1e30074fc00e7b3ce88d49a6f25ededc1912f44445e6604fd3a4b64e2efce8ab44e64b95fd0b14d2904f23e5dc0ec268239bd629a4a3d5ab5c2aa86c90382614cc72cd82a8f55b2b7507ee954ee1af9d5370bc2baab19c37dd49547304b463cd05634",
+  ".msp_589c22335a381f122d129225f5c0ba3056ed5811": "3963d82f859fa888c990bd19b3562f5f6a9828de332cc543380d97f2354115669adcf0db08537e14c576df5cbc6b9903905d9c3555f7edee44a7ca95dc190581bb3df85085cd75784dc45564749c0e3a7caa6ad7fa177b89c758f8c0678e6ad28a406b647d994f9aa095eb6ccae6c805acef8990102b5b27e1469fa508bb9e7732794080006ac0cf38882a744c4607de552e18226bf218834bea014611a733d100821250a8c1ddcc963e70e377ac76315121a394e17889f51d16ac99a216325f8e459658d6ea9356496598328248dac0a2329e4bd17350ee3939df363ec4993baeb0c39a214d2242d7c0529148c4f54fdd399778ef39fc2d69c04339ab2404b438d4ace0279ac18696e591973a9935a837d3597b487d2cc82976038a6835421952a574cc751a96a559016df2a3f12ee7d0f0f2ea0a59b96e8da778f3156b0f8bc8f74e629ee48c32ad784f9268f99a1adcade9c123d5be0ea12639982ee3adff70aea82fb8b8f94e0d8c26a328cd1244e11f1da812693979ae",
+  ".mss_9b8ed9956d7e60469912dd239a0251f93cd1e80d": "7bae62270249288934940a1a22ad02631d08e6b16800fa56ccfb73ff84128cc77e07ffa65e5dc0086976919ef876d8d2434a008877abc9f1337c6cb6dfff9143edcfd6594c66f78a82f9db79bb88e207f56b9d22e4a1843558a89905bcf798135ed472e8a9d9079a0dd317088e667ca0b1aa61968066cbda703f08206184aaf8099b2a500f025d2e0ccd1e4499445dc0a2bb94335413316ba0d845c2a0c448b1567958b3fda594714dfe54f67daeff974ea27e3401f32c174ad8d72ace1f0bc5f0363a92add121bffb03ed06091bf971e496fc7731bb2291fb6cc6a09a15d50243156589989f656f24bc12a473ee2dadbacddad0302ae159018fc963cdda7b2f64cf7f120a016e47518d3716d6f10b0c83a26187d8b8608993a8f1e95bccc8de3f3b17c726e393865e1bfe0c24c370aa9a0c32f2268ec0169f92ed1cced3afc0c884cbe41ce894c43106fafb00b04e5eec3f2b7d2ca66f0baefc18f6ff6200674daafd0b78970196aa651075abeb432d710fb260eab7dd509a373ea944c566ef0d5b3b55a60a2f796fa02a03cf67d8f4a230a28956c2294dc079e4f884713ce155336bfbe3a287bfb4df19cf280b27c2e69585c4f067047564148580fd65ac80fdc85c0ff1b7c176060e62de596dcf6a9454483767423f61a8f34656ad56a121e3359e1232a9d75eb9f1627353d61e63ec18d66c3feaaa19373cc759ad07cb5c674f53ebd62f10c4cd1fb2f5a3d9a26a765dd3f6ff2c6e1071d40a6311bc04fb3f55b137c6b863f627858d94aa77d1f587661b43c0b697b24a6e8e7b5b63aca70052777f992f4222e959727ac017737032ab1d494f92f0032d0e590405461132da808f5abd11ae01120686a6d82770a76e24f0ac3976"
+ }
+}

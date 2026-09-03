@@ -1,0 +1,5 @@
+force-stop+launch
+attach pid=6902 t=8.1
+   {'k': 'READY', 'meta': '0x7b4ac00000', 'hooked': ['open', 'open64', 'openat', 'openat64', 'creat', 'write', 'pwrite64', '__write_chk', 'writev', 'rename', 'renameat'], 'miss': ['__openat']}
+collecting 55s (store write ~t20-40)...
+=== KINDS === {} total 0

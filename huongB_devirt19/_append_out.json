@@ -1,0 +1,64 @@
+[
+ {
+  "t": "info",
+  "msg": "append-trace installed on 0x172a50"
+ },
+ {
+  "t": "app",
+  "slot16": "b8591fcb8d86ff40ed3989462a588bf1",
+  "src": "0x7ccc8d0980",
+  "src_region": "[anon] rw-",
+  "dst": "0x79a622f998",
+  "dst_region": "[anon] rw-",
+  "len": 16,
+  "off": 0,
+  "ctx48": "020102000000d2430000000000000000b8591fcb8d86ff40ed3989462a588bf14b2d56455253494f4e002d544e430000",
+  "chainRA": [
+   "0x79deea0440 libmetasec_ov.so+0xa0440",
+   "0x79deff1280 libmetasec_ov.so+0x1f1280",
+   "0x79dee9fe84 libmetasec_ov.so+0x9fe84",
+   "0x79deea101c libmetasec_ov.so+0xa101c",
+   "0x79dee55950 libmetasec_ov.so+0x55950",
+   "0x79deea103c libmetasec_ov.so+0xa103c",
+   "0x79def864f0 libmetasec_ov.so+0x1864f0",
+   "0x79defd9680 libmetasec_ov.so+0x1d9680",
+   "0x79dee9b614 libmetasec_ov.so+0x9b614",
+   "0x79dee9fd74 libmetasec_ov.so+0x9fd74",
+   "0x79deea103c libmetasec_ov.so+0xa103c",
+   "0x79dee9b614 libmetasec_ov.so+0x9b614",
+   "0x79def4fad8 libmetasec_ov.so+0x14fad8",
+   "0x79dee9fd98 libmetasec_ov.so+0x9fd98",
+   "0x79dee81800 libmetasec_ov.so+0x81800",
+   "0x79dee9b614 libmetasec_ov.so+0x9b614"
+  ]
+ },
+ {
+  "t": "app",
+  "slot16": "b8591fcb8d86ff40ed3989462a588bf1",
+  "src": "0x7cac986365",
+  "src_region": "[anon] rw-",
+  "dst": "0x79a622f998",
+  "dst_region": "[anon] rw-",
+  "len": 54,
+  "off": 37,
+  "ctx48": "37373938363537363634303236313332b8591fcb8d86ff40ed3989462a588bf130000000000000000000007f00000000",
+  "chainRA": [
+   "0x79deea0440 libmetasec_ov.so+0xa0440",
+   "0x79dee55950 libmetasec_ov.so+0x55950",
+   "0x79deff1280 libmetasec_ov.so+0x1f1280",
+   "0x79dee9fe84 libmetasec_ov.so+0x9fe84",
+   "0x79dee9b74c libmetasec_ov.so+0x9b74c",
+   "0x79deea101c libmetasec_ov.so+0xa101c",
+   "0x79dee55950 libmetasec_ov.so+0x55950",
+   "0x79def3a7b8 libmetasec_ov.so+0x13a7b8",
+   "0x79deea103c libmetasec_ov.so+0xa103c",
+   "0x79def864f0 libmetasec_ov.so+0x1864f0",
+   "0x79defd9680 libmetasec_ov.so+0x1d9680",
+   "0x79dee9b614 libmetasec_ov.so+0x9b614",
+   "0x79dee9fd74 libmetasec_ov.so+0x9fd74",
+   "0x79deea103c libmetasec_ov.so+0xa103c",
+   "0x79dee9b614 libmetasec_ov.so+0x9b614",
+   "0x79deebdb44 libmetasec_ov.so+0xbdb44"
+  ]
+ }
+]

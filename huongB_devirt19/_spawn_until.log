@@ -1,0 +1,174 @@
+try 1/40 ss=[4834] cfg=[config] hostload=26.70
+    device: emulator-5554
+    spawning com.zhiliaoapp.musically ...
+    SPAWN FAILED: android.os.DeadSystemRuntimeException: android.os.DeadSystemException
+      -> host too loaded / zygote wedged. See blocked handoff.
+  (no key this pass)
+try 2/40 ss=[4834] cfg=[config] hostload=22.96
+    device: emulator-5554
+    spawning com.zhiliaoapp.musically ...
+    SPAWN FAILED: android.os.DeadSystemRuntimeException: android.os.DeadSystemException
+      -> host too loaded / zygote wedged. See blocked handoff.
+  (no key this pass)
+try 3/40 ss=[4834] cfg=[config] hostload=18.88
+    device: emulator-5554
+    spawning com.zhiliaoapp.musically ...
+    SPAWN FAILED: android.os.DeadSystemRuntimeException: android.os.DeadSystemException
+      -> host too loaded / zygote wedged. See blocked handoff.
+  (no key this pass)
+try 4/40 ss=[4834] cfg=[config] hostload=17.60
+    device: emulator-5554
+    spawning com.zhiliaoapp.musically ...
+    SPAWN FAILED: android.os.DeadSystemRuntimeException: android.os.DeadSystemException
+      -> host too loaded / zygote wedged. See blocked handoff.
+  (no key this pass)
+try 5/40 ss=[4834] cfg=[config] hostload=18.28
+    device: emulator-5554
+    spawning com.zhiliaoapp.musically ...
+    SPAWN FAILED: android.os.DeadSystemRuntimeException: android.os.DeadSystemException
+      -> host too loaded / zygote wedged. See blocked handoff.
+  (no key this pass)
+try 6/40 ss=[4834] cfg=[config] hostload=16.64
+    device: emulator-5554
+    spawning com.zhiliaoapp.musically ...
+    SPAWN FAILED: android.os.DeadSystemRuntimeException: android.os.DeadSystemException
+      -> host too loaded / zygote wedged. See blocked handoff.
+  (no key this pass)
+try 7/40 ss=[4834] cfg=[config] hostload=16.04
+    device: emulator-5554
+    spawning com.zhiliaoapp.musically ...
+    spawned pid=10381 (suspended)
+      [BOOT] {'msg': 'oracle armed, waiting for libmetasec_ov.so'}
+    script loaded; resuming...
+      [READY] base=0x6f08200000
+      [KSCH] win=False keyBytes=None userKey=None
+      >> [poll] dump has KEY material (1) -> persisted _grab_spawn_out.json
+      >> key captured; holding 3s for IV/ciphertext stragglers
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [KSCH] win=False keyBytes=None userKey=None
+      [EINIT] win=False kb=16 uk=None iv=None
+      [KSCH] win=False keyBytes=None userKey=None
+      >> [final] dump has KEY material (61) -> persisted _grab_spawn_out.json
+    status: {'installed': True, 'events': 61}
+      >> [end] dump has KEY material (61) -> persisted _grab_spawn_out.json
+    
+    === SUMMARY (dump) ===
+    RDR:0 KSCH:41 EINIT:20 BLK:0
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      KSCH win=False store=None keyBytes=16 userKey=b114249b7bed9d2691d70c60d69f9c4f iv=None
+      KSCH win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=None
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+      EINIT win=False store=None keyBytes=16 userKey=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594
+KEY_CAPTURED after try 7

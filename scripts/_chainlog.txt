@@ -1,0 +1,64 @@
+proxy_chain listen 8088 -> upstream 171.236.163.38:49583
+[conn] webcast-frontier22-normal-alisg.tiktokv.com:443 headlen= 0
+[conn] webcast-frontier16-normal-alisg.tiktokv.com:443 headlen= 0
+[conn] log22-normal-alisg.tiktokv.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up tcp ok] -> send CONNECT
+[up tcp ok] -> send CONNECT
+[up end]
+[up end]
+[up end]
+[c end]
+[c end]
+[c end]
+[conn] log22-normal-alisg.tiktokv.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up end]
+[conn] api.ipify.org:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up end]
+[conn] www.google.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up end]
+[c end]
+[conn] log22-normal-alisg.tiktokv.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up end]
+[c end]
+[c end]
+[conn] log22-normal-alisg.tiktokv.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up end]
+[c end]
+[c end]
+[conn] www.google.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up end]
+[conn] log22-normal-alisg.tiktokv.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up end]
+[c end]
+[conn] api22-core-c-alisg.tiktokv.com:443 headlen= 0
+[conn] oec22-normal-alisg.tiktokv.com:443 headlen= 0
+[conn] p16-oec-va.ibyteimg.com:443 headlen= 0
+[conn] search22-normal-c-alisg.tiktokv.com:443 headlen= 0
+[conn] webcast22-normal-c-alisg.tiktokv.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up tcp ok] -> send CONNECT
+[up tcp ok] -> send CONNECT
+[up tcp ok] -> send CONNECT
+[up tcp ok] -> send CONNECT
+[up end]
+[up end]
+[up end]
+[up end]
+[up end]
+[c end]
+[conn] log22-normal-alisg.tiktokv.com:443 headlen= 0
+[up tcp ok] -> send CONNECT
+[up end]
+[c end]
+[c end]
+[c end]
+[c end]
+[c end]

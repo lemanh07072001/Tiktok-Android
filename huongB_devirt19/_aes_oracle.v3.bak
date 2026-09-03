@@ -1,0 +1,63 @@
+'use strict';
+/* libmetasec_ov AES-CBC oracle v3 — deferred arm; capture DECRYPT tuple (key,IV,ct,pt) */
+var LIB='libmetasec_ov.so';
+var OFF={ ENC_INIT:0x159d60, M2:0x15a1dc, M3:0x15a598,
+          CBC_ENC:0x159de4, CBC_DEC:0x159f58, BLK_DEC:0x15997c, RDR:0xe2df0 };
+function hx(p,n){ try{ if(!p||p.isNull())return '<null>'; if(n<=0)return ''; if(n>1024)n=1024;
+  var b=new Uint8Array(p.readByteArray(n)); var s=''; for(var i=0;i<n;i++){ s+=('0'+b[i].toString(16)).slice(-2);} return s; }catch(e){ return '<err '+e+'>'; } }
+function ctxKeyIV(ctx){ return { key:hx(ctx,16), iv:hx(ctx.add(0x1e8),16) }; }
+var byCtx={};
+
+function armInit(B,off,name){
+  Interceptor.attach(B.add(off),{ onEnter:function(a){ try{
+    var ctx=this.context.x0, kl=this.context.x2.toInt32();
+    if(kl===16||kl===24||kl===32){
+      var rec={ key:hx(this.context.x1,kl), kl:kl, iv:hx(this.context.x3,16) };
+      byCtx[ctx.toString()]=rec;
+      console.log('[INIT '+name+'] ctx='+ctx+' kl='+kl+' key='+rec.key+' iv='+rec.iv);
+    }
+  }catch(e){ console.log('[INIT '+name+' err] '+e); } }});
+}
+
+function arm(B){
+  console.log('[oracle-v3] base='+B+' -> arming');
+  armInit(B,OFF.ENC_INIT,'m1'); armInit(B,OFF.M2,'m2'); armInit(B,OFF.M3,'m3');
+
+  Interceptor.attach(B.add(OFF.CBC_DEC),{
+    onEnter:function(a){ try{
+      var ctx=this.context.x0, ln=this.context.x3.toInt32()&0xffffffff;
+      this.out=this.context.x2; this.ln=ln;
+      var ki=ctxKeyIV(ctx);
+      console.log('\n[DEC ct] ctx='+ctx+' len='+ln+' key0='+ki.key+' iv='+ki.iv);
+      console.log('[DEC ct] '+hx(this.context.x1, ln));
+    }catch(e){ console.log('[DEC err] '+e); } },
+    onLeave:function(r){ try{ console.log('[DEC pt] '+hx(this.out, this.ln)+'  (ret='+r+')'); }catch(e){ console.log('[DEC-out err] '+e); } }
+  });
+
+  Interceptor.attach(B.add(OFF.CBC_ENC),{
+    onEnter:function(a){ try{
+      var ctx=this.context.x0, ln=this.context.x3.toInt32()&0xffffffff;
+      this.out=this.context.x2; this.ln=ln;
+      var ki=ctxKeyIV(ctx);
+      console.log('\n[ENC pt] ctx='+ctx+' len='+ln+' key0='+ki.key+' iv='+ki.iv);
+      console.log('[ENC pt] '+hx(this.context.x1, ln));
+    }catch(e){ console.log('[ENC err] '+e); } },
+    onLeave:function(r){ try{ console.log('[ENC ct] '+hx(this.out, this.ln)+'  (ret='+r+')'); }catch(e){ console.log('[ENC-out err] '+e); } }
+  });
+
+  Interceptor.attach(B.add(OFF.RDR),{ onEnter:function(a){ try{
+    var p=this.context.x1.readUtf8String();
+    if(p && /\.(ms[a-z0-9]*|t[0-9])/.test(p)) console.log('[READ] '+p);
+  }catch(e){} }});
+
+  console.log('[oracle-v3] armed CBC_DEC/ENC + inits + reader');
+}
+
+var tries=0;
+function tryArm(){
+  var m=Process.findModuleByName(LIB);
+  if(!m){ tries++; if(tries%25===0) console.log('[wait] lib not yet loaded ('+tries+')'); setTimeout(tryArm,100); return; }
+  arm(m.base);
+}
+console.log('[oracle-v3] waiting for '+LIB+' ...');
+tryArm();

@@ -1,0 +1,31 @@
+[
+ {
+  "t": "info",
+  "msg": "producer-wp v2 installed"
+ },
+ {
+  "t": "armed",
+  "entry": "0x7cccb13380",
+  "win_lo": "0x7ccca93000",
+  "win_hi": "0x7cccb93380",
+  "poolsz": 0
+ },
+ {
+  "t": "dbg",
+  "calls": 89,
+  "taghits": 1,
+  "armed": true,
+  "faults": 1194,
+  "nprod": 0,
+  "poolsz": 23
+ },
+ {
+  "t": "dbg",
+  "calls": 89,
+  "taghits": 1,
+  "armed": true,
+  "faults": 1234,
+  "nprod": 0,
+  "poolsz": 33
+ }
+]

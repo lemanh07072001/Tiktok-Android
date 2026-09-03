@@ -1,0 +1,4 @@
+[*] spawned 3014
+[*] f-inbuf installed base=0x784b400000
+
+[DONE] F-calls=0

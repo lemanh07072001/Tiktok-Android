@@ -1,0 +1,16 @@
+site      entry     reached insn    faults writes  16B-blobs(entropy)
+0x04fc1c  0x04f5c0  True  10      0      0      []
+0x05f1dc  0x05efd8  True  9       0      0      []
+0x076600  0x0765a8  True  6356    1      8      []
+0x0766e0  0x0765a8  True  6356    1      8      []
+0x0768ec  0x0765a8  True  6356    1      8      []
+0x0817b8  0x0814cc  False 84      1      0      []
+0x0818ec  0x0814cc  False 84      1      0      []
+0x0819f0  0x0814cc  False 84      1      0      []
+0x081f48  0x081760  True  2233    0      0      []
+0x0936f4  0x09303c  True  18      0      0      []
+0x093860  0x09324c  True  51      0      3      [('0x1000', 'e0adbd25730000000000000014ffffff', 2.47)] <<< 16B-BLOB
+0x095a98  0x095a3c  False 15772   1      0      []
+0x0962f4  0x096188  True  10      0      0      []
+0x09a1fc  0x099fac  True  66      1      1      []
+0x09a274  0x099fac  True  66      1      1      []

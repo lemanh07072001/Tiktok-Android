@@ -1,0 +1,504 @@
+[
+ {
+  "t": "info",
+  "msg": "stalk-producer installed base=0x74f1e00000"
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 0,
+  "nFollowed": 0,
+  "nStores": 0,
+  "nCallouts": 0,
+  "mapsz": 0,
+  "done": false
+ },
+ {
+  "t": "rd",
+  "ord": 1,
+  "src": "0x77e50cda60",
+  "val": "dfeef579f987e1d171098210a2b46027",
+  "known": false,
+  "tid": 27201,
+  "inmap": false
+ },
+ {
+  "t": "excluded",
+  "n": 428
+ },
+ {
+  "t": "follow_start",
+  "tid": 27201,
+  "nFollowed": 1
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0xa0f90",
+  "addr": "0x752c071d78",
+  "val": "c0fa1b5b8f7377fcd742241700068ada",
+  "mnem": "stp",
+  "mapsz": 1
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0xa0f94",
+  "addr": "0x752c071d80",
+  "val": "f45cb10d915926e0bc306fa9aa383116",
+  "mnem": "stp",
+  "mapsz": 2
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0xa0f98",
+  "addr": "0x752c071d88",
+  "val": "6be7fa63b9403f7d4dee8de34e0efbb0",
+  "mnem": "stp",
+  "mapsz": 3
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0xa0f9c",
+  "addr": "0x752c071d90",
+  "val": "988917e343b499a1dfeef579f987e1d1",
+  "mnem": "stp",
+  "mapsz": 4
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x14fc94",
+  "addr": "0x752c072320",
+  "val": "0900000008000000ec21b5f4bb9e5fff",
+  "mnem": "stp",
+  "mapsz": 5
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x52a60",
+  "addr": "0x752c072298",
+  "val": "6005fef17400000034a8f3f174000000",
+  "mnem": "stp",
+  "mapsz": 6
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x52a60",
+  "addr": "0x752c072288",
+  "val": "d0b2fdf17400000014b4e9f174000000",
+  "mnem": "stp",
+  "mapsz": 7
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x15b414",
+  "addr": "0x752c071a78",
+  "val": "704cd33d82e8845afedcba9876543210",
+  "mnem": "stp",
+  "mapsz": 8
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x15b418",
+  "addr": "0x752c071a80",
+  "val": "15e416f57aca2fd733c0db18889f5f41",
+  "mnem": "stp",
+  "mapsz": 9
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x15b414",
+  "addr": "0x752c071a78",
+  "val": "9d9fceaed35f645a15e416f57aca2fd7",
+  "mnem": "stp",
+  "mapsz": 10
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x15b418",
+  "addr": "0x752c071a80",
+  "val": "03e5c8238e8803be73696f6e5f6e616d",
+  "mnem": "stp",
+  "mapsz": 11
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x15b414",
+  "addr": "0x752c071a78",
+  "val": "7d6a1a2cc1e746a2fedcba9876543210",
+  "mnem": "stp",
+  "mapsz": 12
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x15b418",
+  "addr": "0x752c071a80",
+  "val": "6a35cf5ce567f9cbdfeef579f987e1d1",
+  "mnem": "stp",
+  "mapsz": 13
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x15b414",
+  "addr": "0x752c071a78",
+  "val": "f1450306517624a5fedcba9876543210",
+  "mnem": "stp",
+  "mapsz": 14
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x15b418",
+  "addr": "0x752c071a80",
+  "val": "7eafbbf8ed9959850000000180000000",
+  "mnem": "stp",
+  "mapsz": 15
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x938b0",
+  "addr": "0x752c071a78",
+  "val": "202715e577000000b03c15e577000000",
+  "mnem": "stp",
+  "mapsz": 16
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x938b4",
+  "addr": "0x752c071a88",
+  "val": "a0430fe577000000c01c072c75000000",
+  "mnem": "stp",
+  "mapsz": 17
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x938b8",
+  "addr": "0x752c071a98",
+  "val": "14b4e9f174000000c0f9f7f174000000",
+  "mnem": "stp",
+  "mapsz": 18
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x93a2c",
+  "addr": "0x752c0719c0",
+  "val": "701a072c75000000c8ffffff80ffffff",
+  "mnem": "stp",
+  "mapsz": 19
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x93a30",
+  "addr": "0x752c0719b0",
+  "val": "901b072c75000000b01a072c75000000",
+  "mnem": "stp",
+  "mapsz": 20
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x95dbc",
+  "addr": "0x752c072c68",
+  "val": "682c072c75000000682c072c75000000",
+  "mnem": "stp",
+  "mapsz": 21
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x52a60",
+  "addr": "0x752c072288",
+  "val": "80a8fdf174000000683ee8f174000000",
+  "mnem": "stp",
+  "mapsz": 22
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x81f74",
+  "addr": "0x752c071e68",
+  "val": "681e072c75000000681e072c75000000",
+  "mnem": "stp",
+  "mapsz": 23
+ },
+ {
+  "t": "STORE_HIT",
+  "off": "0x172c2c",
+  "addr": "0x77c56ac110",
+  "val": "5b1bfac0fc77738f0db15cf4e0265991",
+  "mnem": "stp",
+  "mapsz": 24
+ },
+ {
+  "t": "mon",
+  "nRd": 1,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "rd",
+  "ord": 2,
+  "src": "0x77e5100ee0",
+  "val": "99914b932bd37a50b983c5e7c90ae93b",
+  "known": false,
+  "tid": 27201,
+  "inmap": false
+ },
+ {
+  "t": "mon",
+  "nRd": 2,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "rd",
+  "ord": 3,
+  "src": "0x77e5138410",
+  "val": "e0e91f1294934a46c373b3e18ed0fc72",
+  "known": false,
+  "tid": 27201,
+  "inmap": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ },
+ {
+  "t": "mon",
+  "nRd": 3,
+  "nFollowed": 1,
+  "nStores": 108,
+  "nCallouts": 509,
+  "mapsz": 152,
+  "done": false
+ }
+]

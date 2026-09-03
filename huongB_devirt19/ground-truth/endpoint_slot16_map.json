@@ -1,0 +1,82 @@
+{
+ "_meta": {
+  "src": "_prod_url.out.json",
+  "producer": "0x879d8",
+  "sel": "0x171(369)",
+  "note": "slot16 deterministic per-endpoint, device-stable, independent of _rticket/query. capture-once offline table.",
+  "session_date": "2026-08-29"
+ },
+ "endpoint_slot16": {
+  "/api/v1/cs/setting": [
+   "79bfec7738dbd77aa49e7d33ee4bb182"
+  ],
+  "/api/v1/mall/shop_tab/algorithm/reach/get": [
+   "8a286f9f1ddfe71d5a00ca8530b57570"
+  ],
+  "/aweme/v1/aweme/stats/": [
+   "3016f60d8dea98e83c76f410867d1bf3"
+  ],
+  "/aweme/v1/search/bubble/": [
+   "f31361844bd2a9dfda8e7ff7edc91ce0"
+  ],
+  "/aweme/v2/feed/": [
+   "028f18c72b418f627d84569fa8f0dfb0"
+  ],
+  "/cloudpush/update_sender/": [
+   "a98bfe26cee83ccde877e5cd929a1bb4"
+  ],
+  "/common_chunk": [
+   "5024146e6380fa45b218bf70d368db20"
+  ],
+  "/consent/api/combine/list/v3": [
+   "46c03b52742b3f2615a3abdf1636b754"
+  ],
+  "/ms/dyn/task": [
+   "6bc9052c3436e63187492e80abc4c4f2"
+  ],
+  "/ms/get_seed": [
+   "27aace4f09a5e5cf770aecf5a760f80e"
+  ],
+  "/passport/app/store_region/": [
+   "051afb6b2a4b02cdb42d28ab0f81b736"
+  ],
+  "/passport/auth/get_nonce/": [
+   "e81ea983880553838e8cfc26f9e43773"
+  ],
+  "/region/submit": [
+   "80e0bb30233c7514bc3e3df2ffd5ff48"
+  ],
+  "/ri/report": [
+   "c1ca370c60cf1dda76d7284e4fa468e8"
+  ],
+  "/starship/strategy_config": [
+   "283a0cbf71c713f66cc3142d51f91788",
+   "63bf58b8ded00a4b81587162dffcd0e5"
+  ],
+  "/tiktok/pns/privacy_headers": [
+   "6c109094bc9ab89e050fbd3e2ca6b99e"
+  ],
+  "/tiktok/ppf/api/eligibility/v2": [
+   "46c03b52742b3f2615a3abdf1636b754"
+  ],
+  "/tiktok/v1/efficiency_portrait/": [
+   "b8591fcb8d86ff40ed3989462a588bf1"
+  ],
+  "/tiktok/v1/hybrid/ab/": [
+   "851dbc7109471d9b56f8c9c29ca143db"
+  ],
+  "/tiktok/v1/outreach/dynamic/fetch": [
+   "41095ab04d460685a7d74e2e9f33f7a0"
+  ],
+  "/tiktok/v1/outreach/record/sync": [
+   "55359e3dde7c4ac445c5d378df7bed52"
+  ],
+  "/tiktok/v1/screen_time/upload/": [
+   "6e0f4c5388b18ee23cb63b0f1202db72"
+  ],
+  "/vc/setting": [
+   "48257f6a140891a1ad69ca72c53d4c1b",
+   "756679c6a312acad8156058c6704659e"
+  ]
+ }
+}

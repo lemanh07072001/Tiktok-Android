@@ -1,0 +1,188 @@
+[
+ {
+  "t": "KSCH",
+  "seq": 1,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "33653333383532626534343139653662"
+ },
+ {
+  "t": "KSCH",
+  "seq": 2,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+ },
+ {
+  "t": "EINIT",
+  "seq": 3,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "8252970d959b06db102e17d85c0ec1af",
+  "iv": "4d207ea37a419f7d622f81c6a2f53594"
+ },
+ {
+  "t": "KSCH",
+  "seq": 4,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "8252970d959b06db102e17d85c0ec1af"
+ },
+ {
+  "t": "KSCH",
+  "seq": 5,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "66623765663933646332363839616332"
+ },
+ {
+  "t": "KSCH",
+  "seq": 6,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "64643037663836303161646630303562"
+ },
+ {
+  "t": "KSCH",
+  "seq": 7,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "37326237636536363533363665396637"
+ },
+ {
+  "t": "KSCH",
+  "seq": 8,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "32373766316336343466633235323261"
+ },
+ {
+  "t": "KSCH",
+  "seq": 9,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "34346131613135303462306333646636"
+ },
+ {
+  "t": "KSCH",
+  "seq": 10,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "39373661313165616632333562626561"
+ },
+ {
+  "t": "KSCH",
+  "seq": 11,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "64356363613831636265383733666433"
+ },
+ {
+  "t": "KSCH",
+  "seq": 12,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "39646435386236666634376362303538"
+ },
+ {
+  "t": "KSCH",
+  "seq": 13,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "36636238313533306336623836306230"
+ },
+ {
+  "t": "EINIT",
+  "seq": 14,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "b8d72ddec05142948bbf2dc81d63759c",
+  "iv": "d6c3969582f9ac5313d39c180b54a2bc"
+ },
+ {
+  "t": "KSCH",
+  "seq": 15,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "b8d72ddec05142948bbf2dc81d63759c"
+ },
+ {
+  "t": "KSCH",
+  "seq": 16,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "61383731323461376133343232633731"
+ },
+ {
+  "t": "KSCH",
+  "seq": 17,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "63623861396331356638616164356336"
+ },
+ {
+  "t": "KSCH",
+  "seq": 18,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "30363637353465616565306261306665"
+ },
+ {
+  "t": "KSCH",
+  "seq": 19,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "32323434303139363164346635336431"
+ },
+ {
+  "t": "KSCH",
+  "seq": 20,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "38636663306131386434663737383537"
+ },
+ {
+  "t": "KSCH",
+  "seq": 21,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "38306338623434326466643136393162"
+ },
+ {
+  "t": "KSCH",
+  "seq": 22,
+  "win": false,
+  "store": null,
+  "keyBytes": 16,
+  "userKey": "34646531313431613339373366633139"
+ },
+ {
+  "t": "KSCH",
+  "seq": 23,
+  "win": false,
+  "store": null,
+  "keyBytes": 32,
+  "userKey": "3233363530396436666338666135333738323736653464343831343464613239"
+ }
+]

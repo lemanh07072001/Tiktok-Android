@@ -1,0 +1,57 @@
+[+] mapped .so @ 0x7857201000, applied 6765 RELATIVE relocs
+[+] wrote 1188 mem windows + stack + regfile + bytecode + soRW + bcFull
+[+] un-patched frida hooks: re-wrote 1 clean executable segment(s) + re-applied bcFull + soData
+[+] frida gum cleanup: replaced 7 gum-trampoline pointers with clean ret 0x78572a0f1c
+[+] filled 165 import GOT slots with stubs
+[chk] [x23]=0x78573835c4  bcptr=0x78573835c4  match=True
+[chk] [fp-0x58]=0x3f956c (expect bias 0x9b374)
+[+] running from pc=0x7857253924 until ret 0x785725e484 ...
+[+] proactive context fetch: overwrote 695 live pages from ctxptr 0x7a2b8ea4f0 closure
+[+] reached_ret=False
+[+] distinct VM-PCs visited = 91
+[+] STUB fired: data-unmapped=0 fetch-unmapped=0 blr-skipped=0 ctx_inj=0 lazy=0
+[+] can map page 0? NO: Invalid memory mapping (UC_ERR_MAP)
+[+] no clean period; last 40 VM-PCs: ['0x192020', '0x192024', '0x192028', '0x19202c', '0x192030', '0x192034', '0x192038', '0x19203c', '0x192040', '0x192044', '0x192048', '0x19204c', '0x192050', '0x192064', '0x192074', '0x192078', '0x19207c', '0x192080', '0x19208c', '0x192098', '0x1920a4', '0x1920ac', '0x1920b4', '0x1920bc', '0x1920cc', '0x1920d8', '0x1920dc', '0x1920e4', '0x1920f8', '0x192c8c', '0x192c90', '0x192c94', '0x192c98', '0x192c9c', '0x192ca0', '0x192ca4', '0x192ca8', '0x192cac', '0x192cb0', '0x0']
+[+] TOP loop memory-reads (addr : count : current value):
+    0x7834a26c70 (off -) x1120140 = 0x14
+    0x7834a26c78 (off -) x1120140 = 0x78572a13ac
+    0x7834a26f00 (off -) x256027 = 0x0
+    0x7834a26f08 (off -) x256027 = 0x0
+    0x7834a26eb8 (off -) x224028 = 0x0
+    0x7834a26ec0 (off -) x224027 = 0x0
+    0x7834a26ec8 (off -) x224026 = 0x0
+    0x7834a26ed0 (off -) x224026 = 0x0
+[+] TOP loop memory-WRITES (addr : count : value-sequence) — counter candidates:
+    0x7834a26c70 (off stack) x1120140 = ['0xa931e991', '0xa931e991', '0x14', '0xa931e991', '0x14', '0xa931e991']
+    0x7834a26c78 (off stack) x1120140 = ['0x78572a13ac', '0x78572a13ac', '0x78572a13ac', '0x78572a13ac', '0x78572a13ac', '0x78572a13ac']
+    0x7834a26f8c (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26d80 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26d88 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26d90 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26d98 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26da0 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26da8 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26db0 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26db8 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x7834a26dc0 (off stack) x32004 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+[+] emu stopped: None; blocks=5588600; unmapped_pages=551
+[dbg] fault pc=0x78572a1d48 (off 0xa0d48)
+[dbg] last 12 block addrs: ['0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8', '0xa0ed8']
+    0xa0d48: ldr w17, [x13]
+    x15=0x0
+    x16=0x0
+    x17=0x0
+    x0=0x0
+
+=== search for captured slot16 in replayed memory ===
+  [HIT] 746e635f7372633d312664656c61793d as RAW @ 0x7adb99aeca
+
+1/51 captured slot16 reproduced in replayed VM memory
+
+=== VM output-buffer inspection (args x1/x4 captured at entry) ===
+  [x1=0x7834a268a8]: 58503f57780000007879a23478000000f87aa2347800000034b8335778000000806fa234780000005069255778000000
+  [x2=0x78573e1530]: a8f07c577800000021dc7657780000002adc7657780000002fdc76577800000016dc76577800000034dc765778000000
+  [x4=0x7834a268c0]: 34b8335778000000806fa234780000005069255778000000423630e99d9151851988f6420ffb2c9d97378e265c0b7dd9
+  [x0=0x7857392f40]: 66007bff2ac0deef2a80dcef2a40ceef2a00ccef2ac0aaef2a80a8ef2a40a6ef2a00a4ef2ac082ef2a8080ef2c742000
+  [x8=0x7834a26f80]: 0000000000000000000000000000000000000000000000000000000000000000abaaaaaaaaaaaaaa94132a5778000000
+[i] VM ran 5588600 blocks, 91 distinct bytecode-PCs (short=False)

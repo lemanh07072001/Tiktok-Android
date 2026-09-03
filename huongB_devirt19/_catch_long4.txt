@@ -1,0 +1,3 @@
+[*] catch-nonzero installed
+[*] persistent 600s capture running...
+[DONE] nonzero=0

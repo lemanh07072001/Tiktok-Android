@@ -1,0 +1,8 @@
+ATTACH pid 21946
+  {'k': 'INSTALLED'}
+  {'k': 'READY'}
+navigating to trigger producer (feed signs)...
+  {'k': 'CAPTURED', 'url': 'https://api22-core-c-alisg.tiktokv.com/aweme/v2/feed/?os=android&_rticket=1788232876226&is_pad=0&last_install_time=17878', 'slot16_hex': '622f4cfce4e8f05880d322224b61364d'}
+captured url=https://api22-core-c-alisg.tiktokv.com/aweme/v2/feed/?os=android&_rticket=1788232876226&is_pad=0&last_install_time=17878 slot16_hex=622f4cfce4e8f05880d322224b61364d
+pulled .so 2093056B
+=== SAVED ===

@@ -1,0 +1,68 @@
+// AES ORACLE — capture device-bound (key,keylen,IV) + known ct→pt for offline DIFF.
+// Static đã CHỨNG MINH: libmetasec_ov.so = STANDARD AES (sbox+Rcon lifted @0x196fbc/0x197fbc).
+//   key-schedule = 0x1591bc(AES_KEY* x0, u8* userKey x1, int keyBYTES w2)  ← w2∈{16,24,32}
+//   mode drivers (init: keysched+IV): 0x159d60(m1) 0x15a1dc(m2) 0x15a598(m3, +ctr@0x1f8)
+//   do_cipher block: 0x159618 / 0x15997c   ; reader=0xe2df0 ; store-getter=0x1182d0
+// PROVEN 2026-08-29: toàn hệ AES đọc 0 global .bss/device (chỉ rodata 0x18f/0x196-0x19b).
+//   Không có key hằng trong .so. userKey layout: ctx->[8]->[8]=key, ctx->[8]->[4]=keyBYTES.
+//   => key tại x1 khi vào 0x1591bc CHÍNH LÀ nguyên liệu duy nhất cần đọc.
+// KHÔNG re-register: spawn/attach read-only. Chỉ ĐỌC, không ghi state.
+'use strict';
+const SO='libmetasec_ov.so';
+const KEYSCHED=0x1591bc, D1=0x159d60, D2=0x15a1dc, D3=0x15a598, RDR=0xe2df0, GET=0x1182d0;
+function hd(p,n){try{return p.readByteArray(n);}catch(e){return '<unreadable '+e+'>';}}
+function hx(p,n){try{const b=new Uint8Array(p.readByteArray(n));let s='';for(const x of b)s+=('0'+x.toString(16)).slice(-2);return s;}catch(e){return '<x '+e+'>';}}
+
+function main(){
+  const base=Module.findBaseAddress(SO);
+  if(!base){console.log('[!] '+SO+' chưa nạp, chờ...');setTimeout(main,400);return;}
+  console.log('[+] base='+base);
+
+  // (1) KEY — crown jewel. userKey=x1, keyBYTES=w2, AES_KEY dst=x0
+  Interceptor.attach(base.add(KEYSCHED),{onEnter(a){
+    const kl=this.ctx.x2.toInt32();
+    if(kl===16||kl===24||kl===32){
+      console.log('\n=== AES KEY-SCHED @0x1591bc  keyBYTES='+kl+' ===');
+      console.log('  userKey = '+hx(this.ctx.x1,kl));
+      console.log('  from    = '+DebugSymbol.fromAddress(this.returnAddress));
+    }
+  }});
+
+  // (2) IV — mode-init drivers, IV = x3 (16 bytes), ctx = x0
+  [['m1',D1],['m2',D2],['m3(CTR)',D3]].forEach(function(p){
+    Interceptor.attach(base.add(p[1]),{onEnter(a){
+      console.log('\n=== DRIVER '+p[0]+' @'+ptr(p[1])+' ===');
+      console.log('  IV(x3) = '+hx(this.ctx.x3,16));
+      console.log('  ctx(x0)= '+this.ctx.x0);
+      console.log('  from   = '+DebugSymbol.fromAddress(this.returnAddress));
+    }});
+  });
+
+  // (3) reader — raw ciphertext buffer + path (đối chiếu _msdump/). x0/x1 heuristic path.
+  Interceptor.attach(base.add(RDR),{onEnter(a){
+    this.x0=this.ctx.x0; this.x1=this.ctx.x1;
+    try{const s=this.ctx.x1.readUtf8String(); if(s&&/\.(ms|t)/.test(s)) console.log('\n=== READER @0xe2df0 path='+s);}catch(e){}
+  },onLeave(r){/* buffer thường trả qua out-param; dump ở getter thay thế */}});
+
+  // (4) getter — plaintext trả về (đối chiếu). x1=keyname, ret buffer.
+  Interceptor.attach(base.add(GET),{onEnter(a){
+    try{const kn=this.ctx.x1.readUtf8String(); if(kn) this.kn=kn;}catch(e){}
+  },onLeave(r){ if(this.kn){console.log('\n=== GETTER @0x1182d0 keyname="'+this.kn+'"');
+    console.log('  ret head = '+hx(r,48)); } }});
+
+
+  // (5) do_cipher block — bắt in(x1)/out(x0)/len(x2) song song key+IV để DIFF 1-shot.
+  [['blk1',0x159618],['blk2',0x15997c]].forEach(function(p){
+    Interceptor.attach(base.add(p[1]),{onEnter(a){
+      const n=this.ctx.x2.toInt32();
+      if(n>0&&n<=1024){
+        console.log('\n=== DOCIPHER '+p[0]+' @'+ptr(p[1])+' len='+n+' ===');
+        console.log('  in(x1) = '+hx(this.ctx.x1,Math.min(n,64)));
+        this._out=this.ctx.x0; this._n=Math.min(n,64);
+      }
+    },onLeave(r){ if(this._out) console.log('  out    = '+hx(this._out,this._n)); }});
+  });
+
+  console.log('[+] hooks armed: keysched+3drivers+reader+getter. Trigger store I/O now.');
+}
+setImmediate(main);

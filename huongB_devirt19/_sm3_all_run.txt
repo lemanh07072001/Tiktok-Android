@@ -1,0 +1,5 @@
+[*] known slot16 pool size: 35
+[*] sm3-all installed
+[*] collecting 70s
+
+[DONE] total SM3 msgs=114, F-matches=0 -> _sm3_all_out.json

@@ -1,0 +1,87 @@
+openjdk version "21.0.12.1" 2026-08-18 LTS
+OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode)
+INFO  Using log config file: jar:file:/Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /Users/lemanh/Library/ghidra/ghidra_12.1.3_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /Users/lemanh/Library/ghidra/ghidra_12.1.3_PUBLIC/preferences (Preferences)  
+INFO  Loading previous preferences: /Users/lemanh/Library/ghidra/ghidra_12.1.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (711 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (2313 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 59 extension points (20 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /Users/lemanh/Documents/Tiktok-Android/huongB_devirt19
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /Users/lemanh/tools/ghidra_proj/tt (HeadlessAnalyzer)  
+INFO  Opening project: /Users/lemanh/tools/ghidra_proj/tt (HeadlessProject)  
+INFO  REPORT: Processing project file: /libmetasec_ov.so (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: GhidraXrefs.java  (HeadlessAnalyzer)  
+INFO  SCRIPT: /Users/lemanh/Documents/Tiktok-Android/huongB_devirt19/GhidraXrefs.java (HeadlessAnalyzer)  
+INFO  GhidraXrefs.java> 
+===== xref → 0x1f4990 (Ghidra 002f4990) ===== (GhidraScript)  
+INFO  GhidraXrefs.java>   001884d8  READ  in fn 0x879d8 FUN_001879d8 (GhidraScript)  
+INFO  GhidraXrefs.java>   00136270  WRITE  in fn 0x36220 _INIT_28 (GhidraScript)  
+INFO  GhidraXrefs.java> 
+===== xref → 0x1f0960 (Ghidra 002f0960) ===== (GhidraScript)  
+INFO  GhidraXrefs.java>   00136260  PARAM  in fn 0x36220 _INIT_28 (GhidraScript)  
+INFO  GhidraXrefs.java> 
+===== xref → 0x1f09d0 (Ghidra 002f09d0) ===== (GhidraScript)  
+INFO  GhidraXrefs.java>   001884d4  READ  in fn 0x879d8 FUN_001879d8 (GhidraScript)  
+INFO  GhidraXrefs.java> 
+===== xref → 0x1f0a20 (Ghidra 002f0a20) ===== (GhidraScript)  
+INFO  GhidraXrefs.java>   001884c0  READ  in fn 0x879d8 FUN_001879d8 (GhidraScript)  
+INFO  GhidraXrefs.java> 
+===== xref → 0x1effb0 (Ghidra 002effb0) ===== (GhidraScript)  
+INFO  GhidraXrefs.java>   00187a18  READ  in fn 0x879d8 FUN_001879d8 (GhidraScript)  
+INFO  GhidraXrefs.java>   0016fba0  READ  in fn 0x6fb60 FUN_0016fb60 (GhidraScript)  
+INFO  GhidraXrefs.java>   00167fc8  READ  in fn 0x67ee8 FUN_00167ee8 (GhidraScript)  
+INFO  GhidraXrefs.java>   00232eb0  READ  in fn 0x132e80 FUN_00232e80 (GhidraScript)  
+INFO  GhidraXrefs.java>   0020a148  READ  in fn 0x10a120 FUN_0020a120 (GhidraScript)  
+INFO  GhidraXrefs.java>   0016ea40  READ  in fn 0x6e700 FUN_0016e700 (GhidraScript)  
+INFO  GhidraXrefs.java>   00232808  READ  in fn 0x1327cc FUN_002327cc (GhidraScript)  
+INFO  GhidraXrefs.java>   001d9a90  READ  in fn 0xd9948 FUN_001d9948 (GhidraScript)  
+INFO  GhidraXrefs.java>   00195bb8  READ  in fn 0x95b7c FUN_00195b7c (GhidraScript)  
+INFO  GhidraXrefs.java>   0016a5b0  READ  in fn 0x69fc0 FUN_00169fc0 (GhidraScript)  
+INFO  GhidraXrefs.java>   002341d8  READ  in fn 0x1341a8 FUN_002341a8 (GhidraScript)  
+INFO  GhidraXrefs.java>   0023351c  READ  in fn 0x? (GhidraScript)  
+INFO  GhidraXrefs.java> 
+===== decompile các hàm chạm registry (writer=insert?) ===== (GhidraScript)  
+INFO  GhidraXrefs.java>   0x879d8  FUN_001879d8  (C 23426B, alloc=false, insert-ish=false, unhex=0)  → xref_879d8.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x36220  _INIT_28  (C 542B, alloc=false, insert-ish=false, unhex=0)  → xref_36220.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x6fb60  FUN_0016fb60  (C 98549B, alloc=false, insert-ish=false, unhex=0)  → xref_6fb60.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x67ee8  FUN_00167ee8  (C 1213B, alloc=false, insert-ish=false, unhex=0)  → xref_67ee8.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x132e80  FUN_00232e80  (C 5011B, alloc=false, insert-ish=false, unhex=0)  → xref_132e80.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x10a120  FUN_0020a120  (C 4021B, alloc=false, insert-ish=false, unhex=0)  → xref_10a120.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x6e700  FUN_0016e700  (C 1587B, alloc=true, insert-ish=false, unhex=0)  → xref_6e700.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x1327cc  FUN_002327cc  (C 4219B, alloc=false, insert-ish=false, unhex=0)  → xref_1327cc.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0xd9948  FUN_001d9948  (C 1129B, alloc=false, insert-ish=false, unhex=0)  → xref_d9948.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x95b7c  FUN_00195b7c  (C 386B, alloc=false, insert-ish=false, unhex=0)  → xref_95b7c.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x69fc0  FUN_00169fc0  (C 4416B, alloc=false, insert-ish=false, unhex=0)  → xref_69fc0.c (GhidraScript)  
+INFO  GhidraXrefs.java>   0x1341a8  FUN_002341a8  (C 107B, alloc=false, insert-ish=false, unhex=0)  → xref_1341a8.c (GhidraScript)  
+INFO  REPORT: Save succeeded for processed file: /libmetasec_ov.so (HeadlessAnalyzer)  

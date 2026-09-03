@@ -1,0 +1,188 @@
+attach pid 14788 t=8.1
+ READY 0x7b4c801000
+collecting 55s...
+ PB out= @  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov']
+ PB out= None  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msp_', '092fde7a53a0274594af0984c7830fc0c13dc8bd']
+ PB out= @  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov']
+ PB out= None  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msp_', '092fde7a53a0274594af0984c7830fc0c13dc8bd']
+ PB out= @  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov']
+ PB out= None  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msf3_58abed2bdf5ce9620cbf2b23e7b463da6969535a', None]
+ PB out= @  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov']
+ PB out= None  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msp_', '092fde7a53a0274594af0984c7830fc0c13dc8bd']
+ PB out= @  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov']
+ PB out= None  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msp_', '092fde7a53a0274594af0984c7830fc0c13dc8bd']
+ PB out= @  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov']
+ PB out= None  args= ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msf3_302eacd6e89fe48da35d7b820dd63f2e49b695d3', None]
+=== EVENTS === 12
+
+--- PB @ args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov'] len None head None
+     META+0x12f02c
+     META+0x11879c
+     META+0x55950
+     META+0x117e70
+     META+0x117dfc
+     META+0x12fb9c
+     META+0x12fa4c
+     META+0xddb9c
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+
+--- PB None args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msp_', '092fde7a53a0274594af0984c7830fc0c13dc8bd'] len None head None
+     META+0x55950
+     META+0x117e70
+     META+0x117dfc
+     META+0x12fb9c
+     META+0x12fa4c
+     META+0xddb9c
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB @ args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov'] len None head None
+     META+0x12f02c
+     META+0x118304
+     META+0x1182bc
+     META+0x12fbbc
+     META+0x12fa4c
+     META+0xddb9c
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB None args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msp_', '092fde7a53a0274594af0984c7830fc0c13dc8bd'] len None head None
+     META+0x118390
+     META+0x1182bc
+     META+0x12fbbc
+     META+0x12fa4c
+     META+0xddb9c
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB @ args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov'] len None head None
+     META+0x12f02c
+     META+0x12fd84
+     META+0x12fa4c
+     META+0xddb9c
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB None args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msf3_58abed2bdf5ce9620cbf2b23e7b463da6969535a', None] len None head None
+     META+0x12eef8
+     META+0x12fdb8
+     META+0x12fa4c
+     META+0xddb9c
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB @ args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov'] len None head None
+     META+0x12f02c
+     META+0x11879c
+     META+0x55950
+     META+0x117e70
+     META+0x117dfc
+     META+0x12fb9c
+     META+0x12fa4c
+     META+0xddc90
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+
+--- PB None args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msp_', '092fde7a53a0274594af0984c7830fc0c13dc8bd'] len None head None
+     META+0x55950
+     META+0x117e70
+     META+0x117dfc
+     META+0x12fb9c
+     META+0x12fa4c
+     META+0xddc90
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB @ args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov'] len None head None
+     META+0x12f02c
+     META+0x118304
+     META+0x1182bc
+     META+0x12fbbc
+     META+0x12fa4c
+     META+0xddc90
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB None args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msp_', '092fde7a53a0274594af0984c7830fc0c13dc8bd'] len None head None
+     META+0x118390
+     META+0x1182bc
+     META+0x12fbbc
+     META+0x12fa4c
+     META+0xddc90
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB @ args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata', 'mssdk', 'ov'] len None head None
+     META+0x12f02c
+     META+0x12fd84
+     META+0x12fa4c
+     META+0xddc90
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220
+
+--- PB None args ['/data/user/0/com.zhiliaoapp.musically/files/.msdata/mssdk/ov/', '.msf3_302eacd6e89fe48da35d7b820dd63f2e49b695d3', None] len None head None
+     META+0x12eef8
+     META+0x12fdb8
+     META+0x12fa4c
+     META+0xddc90
+     META+0xdcbf4
+     META+0xdc6c4
+     META+0xd922c
+     META+0x69094
+     META+0x697a8
+     libc.so+0xcb6ac
+     libc.so+0x68220

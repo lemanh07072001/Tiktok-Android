@@ -1,0 +1,17 @@
+attach pid 15691 t=8.3
+  {"k": "PRO", "p": {"off": "0xddac4", "w": "0x97fd4c53", "mn": "?", "dis": "bl #0x7c55630c10"}}
+  {"k": "PRO", "p": {"off": "0xdcadc", "w": "0x97fd504d", "mn": "?", "dis": "bl #0x7c55630c10"}}
+  {"k": "PRO", "p": {"off": "0xd9038", "w": "0xd10403ff", "mn": "?", "dis": "sub sp, sp, #0x100"}}
+  {"k": "HOOKED", "off": "0xddac4"}
+  {"k": "HOOKED", "off": "0xdcadc"}
+  {"k": "HOOKED", "off": "0xd9038"}
+  {"k": "READY", "meta": "0x7c55600000"}
+collecting 50s...
+=== HITS === 2
+
+@@ 0xd9038 ret 0x2540be400
+Traceback (most recent call last):
+  File "/Users/lemanh/Documents/Tiktok-Android/huongB_devirt19/_argdump_drive.py", line 48, in <module>
+    print(f"   {tag} x{a['i']} pr={pr if isinstance(pr,float) else '':.2s} str={a.get('str')} hex={str(a.get('hex'))[:64]}{mark}")
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 's' for object of type 'float'

@@ -1,0 +1,10 @@
+attach pid 24104 t=6.3
+  {'k': 'HOOK', 'off': '0xe0d9c'}
+  {'k': 'HOOK', 'off': '0xe1070'}
+  {'k': 'HOOK', 'off': '0xe11d0'}
+  {'k': 'HOOK', 'off': '0xe2df0'}
+  {'k': 'HOOK', 'off': '0xe0610'}
+  {'k': 'HOOK', 'off': '0xe0674'}
+  {'k': 'READY'}
+collecting 45s...
+=== EVENTS === 0

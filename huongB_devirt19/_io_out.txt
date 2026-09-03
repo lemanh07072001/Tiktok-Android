@@ -1,0 +1,48 @@
+     ____
+    / _  |   Frida 17.17.0 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   Prefer a GUI? Luma is the official Frida app, with a live REPL,
+   . . . .   persistent sessions & collaboration. https://luma.frida.re/
+   . . . .
+   . . . .   Connected to Android Emulator 5554 (id=emulator-5554)
+Spawning `com.zhiliaoapp.musically`...
+[IO ORACLE loaded]
+Spawned `com.zhiliaoapp.musically`. Resuming main thread!
+[Android Emulator 5554::com.zhiliaoapp.musically ]-> Process crashed: Bad access due to protection failure
+
+***
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'google/sdk_gphone64_arm64/emu64a:14/UE1A.230829.050/12077443:userdebug/dev-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-08-29 20:31:32.513987566+0700
+Process uptime: 2s
+Cmdline: com.zhiliaoapp.musically
+pid: 9251, tid: 9258, name: perfetto_hprof_  >>> com.zhiliaoapp.musically <<<
+uid: 10192
+tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0x00000075fa3cae10
+    x0  0000000000000038  x1  00000075e2015b7c  x2  0000000000000001  x3  00000075e2015968
+    x4  0000000000000008  x5  0000007721e25bb8  x6  00000075fe410c08  x7  00000075fe410c08
+    x8  000000000000003f  x9  bb332cc167771cef  x10 00000000000005b3  x11 00000000000005b3
+    x12 000000000000026d  x13 0000000000000000  x14 0000000000000000  x15 00000075e2016000
+    x16 00000075fa3cae10  x17 0000007891f09370  x18 0000007592386000  x19 0000007721e2d510
+    x20 0000007701e25380  x21 00000075fa3cc538  x22 00000075fa3cc000  x23 00000075e2016000
+    x24 00000075e2015bb0  x25 00000075e2015b80  x26 00000075fa3c8128  x27 00000075fa3c8170
+    x28 00000000000fe000  x29 00000075e2015bf0
+    lr  00000075fa365364  sp  00000075e2015b70  pc  00000075fa3cae10  pst 0000000060001400
+4 total frames
+backtrace:
+      #00 pc 000000000008ae10  /apex/com.android.art/lib64/libperfetto_hprof.so (BuildId: 45b5dfbcea5fc746bc003aa7e18dbb74)
+      #01 pc 0000000000025360  /apex/com.android.art/lib64/libperfetto_hprof.so (void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, ArtPlugin_Initialize::$_7> >(void*)+316) (BuildId: 45b5dfbcea5fc746bc003aa7e18dbb74)
+      #02 pc 00000000000cb6a8  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+208) (BuildId: a87908b48b368e6282bcc9f34bcfc28c)
+      #03 pc 000000000006821c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: a87908b48b368e6282bcc9f34bcfc28c)
+***
+
+Thank you for using Frida!

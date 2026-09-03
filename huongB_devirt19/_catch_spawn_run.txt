@@ -1,0 +1,7 @@
+[*] spawned pid=19124, cold-start capture 240s...
+[*] catch-nonzero installed
+[NONZERO @4s] 9ae50e6bfa15208a2bc1ec3fa91835cc q=device_platform=android&os=android&ssmix
+[NONZERO @4s] b8591fcb8d86ff40ed3989462a588bf1 q=device_platform=android&os=android&ssmix
+[NONZERO @5s] 7e3b5e11693225da713011224bb600b6 q=aid=1233&device_id=7677798657664026132&c
+[NONZERO @5s] 46c03b52742b3f2615a3abdf1636b754 q=sdk_version=2.7.4.4&sdk_name=pns_consent
+[DONE] nonzero=4

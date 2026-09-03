@@ -1,0 +1,46 @@
+[*] spawned 15127
+{"t": "mon", "nAlloc": 0, "nGrow": 0, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 0, "nGrow": 0, "nDrv": 0, "hits": 0}
+{"t": "info", "base": "0x74ed601000"}
+{"t": "ready"}
+{"t": "mon", "nAlloc": 0, "nGrow": 0, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 1149, "nGrow": 257, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 1149, "nGrow": 257, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 1392, "nGrow": 280, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 1392, "nGrow": 280, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 2011, "nGrow": 411, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 2193, "nGrow": 462, "nDrv": 0, "hits": 0}
+{"t": "BIRTH", "slot16": "9f100a3a6a7950b0c65039aa30a8f3a2", "P": "0x77e4fd2570", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "9e10057f70d668b2788195238900bb62", "P": "0x77e4ff78f0", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e", "P": "0x77e4ffa530", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "46c03b52742b3f2615a3abdf1636b754", "P": "0x77e4ff7200", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "ae04e6b5adad089a434b834a2440fb7b", "P": "0x77e4ffb4f0", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "f07f5e87eea2824c3d357edb09421904", "P": "0x77e5003da0", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "mon", "nAlloc": 6275, "nGrow": 937, "nDrv": 6, "hits": 6}
+{"t": "BIRTH", "slot16": "08c66b554e372fb354e86cd8957febae", "P": "0x77e500c530", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "5469ba87f17d1622bdf019f0d0a513ba", "P": "0x77e4cd8cc0", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "b60ed0c98d0de8ef07f5da7344cf920a", "P": "0x77e4d60740", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "46c03b52742b3f2615a3abdf1636b754", "P": "0x77e4d59f90", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "a2bae68d66a19d7d6a02783ac7d95796", "P": "0x77e4d6b2a0", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "ec342435733671ba4c376f1accefa11c", "P": "0x77e4dc6320", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "7f42e79ea4f08ce9c02ac53070976b8a", "P": "0x77e4fffe40", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "mon", "nAlloc": 13123, "nGrow": 1740, "nDrv": 13, "hits": 13}
+{"t": "BIRTH", "slot16": "28e2ffb0b420fb8e1eccafdc57099044", "P": "0x77e4fb61c0", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "BIRTH", "slot16": "b8591fcb8d86ff40ed3989462a588bf1", "P": "0x77e4fd6320", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "mon", "nAlloc": 15053, "nGrow": 1971, "nDrv": 15, "hits": 15}
+{"t": "BIRTH", "slot16": "41095ab04d460685a7d74e2e9f33f7a0", "P": "0x77e502c8d0", "cs": "+0x149e1c", "csz": 32, "ext": "+0x14fed8"}
+{"t": "mon", "nAlloc": 17945, "nGrow": 2360, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 20361, "nGrow": 2659, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 21756, "nGrow": 2809, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 26674, "nGrow": 3396, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 28657, "nGrow": 3723, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 30289, "nGrow": 3916, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 31383, "nGrow": 4044, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 31387, "nGrow": 4044, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 31940, "nGrow": 4106, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 31949, "nGrow": 4106, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 31949, "nGrow": 4106, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32497, "nGrow": 4169, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32497, "nGrow": 4169, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32506, "nGrow": 4169, "nDrv": 16, "hits": 16}
+[*] done

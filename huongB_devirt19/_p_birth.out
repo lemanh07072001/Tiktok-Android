@@ -1,0 +1,47 @@
+[*] spawned 14098
+{"t": "info", "base": "0x753a001000", "size": 2093056}
+{"t": "info", "msg": "hooked malloc @0x79242d24e8"}
+{"t": "info", "msg": "hooked _Znwm @0x78fad70404"}
+{"t": "info", "msg": "hooked calloc @0x79242d2304"}
+{"t": "ready"}
+{"t": "mon", "nAlloc": 0, "nDrv": 0, "hits": 0, "ri": 0}
+{"t": "mon", "nAlloc": 1183, "nDrv": 0, "hits": 0, "ri": 1183}
+{"t": "mon", "nAlloc": 1438, "nDrv": 0, "hits": 0, "ri": 1438}
+{"t": "mon", "nAlloc": 1438, "nDrv": 0, "hits": 0, "ri": 1438}
+{"t": "BIRTH", "slot16": "88e40c4f040d6f12a0352e1225639ab3", "P": "0x77e4f91710", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "mon", "nAlloc": 3340, "nDrv": 1, "hits": 1, "ri": 3340}
+{"t": "BIRTH", "slot16": "8e4f6ecf83fca0f1e47773872806cc2e", "P": "0x77e4b7f690", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "46c03b52742b3f2615a3abdf1636b754", "P": "0x77e4fa4310", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "5d3dbb66d5095211c568afadd8da53da", "P": "0x77e4fa74f0", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "mon", "nAlloc": 6075, "nDrv": 4, "hits": 4, "ri": 6075}
+{"t": "mon", "nAlloc": 6075, "nDrv": 4, "hits": 4, "ri": 6075}
+{"t": "mon", "nAlloc": 7440, "nDrv": 4, "hits": 4, "ri": 7440}
+{"t": "BIRTH", "slot16": "ffc3d930b79842c2a4d840c1165df6c4", "P": "0x77e5011840", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "4bd2b4c275e5ba4d672bcd741b752501", "P": "0x77e4d42680", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "3032a2bb8c0256a57a97d36144003fdf", "P": "0x77e4d5ed00", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "efd34e3ed59d9dd6ec5b3fcbb3ba102b", "P": "0x77e4d94a90", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "892c24ea83803e2eccf253ff2c49f70f", "P": "0x77e4dad960", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "46c03b52742b3f2615a3abdf1636b754", "P": "0x77e4f920d0", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "mon", "nAlloc": 12245, "nDrv": 10, "hits": 10, "ri": 12245}
+{"t": "BIRTH", "slot16": "0bf15d97fffd6ffeac47ea240257868e", "P": "0x77e4fa3380", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "b8591fcb8d86ff40ed3989462a588bf1", "P": "0x77e503d1f0", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "3b4db67e18e805a0346c8473b999a9ae", "P": "0x77e503e600", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "BIRTH", "slot16": "f31361844bd2a9dfda8e7ff7edc91ce0", "P": "0x77e503e8d0", "fn": "m", "cs": "+0x149e1c", "csz": 32, "delta": 0}
+{"t": "mon", "nAlloc": 17332, "nDrv": 14, "hits": 14, "ri": 17332}
+{"t": "mon", "nAlloc": 18137, "nDrv": 14, "hits": 14, "ri": 18137}
+{"t": "mon", "nAlloc": 23251, "nDrv": 14, "hits": 14, "ri": 23251}
+{"t": "mon", "nAlloc": 25184, "nDrv": 14, "hits": 14, "ri": 25184}
+{"t": "mon", "nAlloc": 27821, "nDrv": 14, "hits": 14, "ri": 27821}
+{"t": "mon", "nAlloc": 28906, "nDrv": 14, "hits": 14, "ri": 28906}
+{"t": "mon", "nAlloc": 29445, "nDrv": 14, "hits": 14, "ri": 29445}
+{"t": "mon", "nAlloc": 33710, "nDrv": 14, "hits": 14, "ri": 33710}
+{"t": "mon", "nAlloc": 33730, "nDrv": 14, "hits": 14, "ri": 33730}
+{"t": "mon", "nAlloc": 33745, "nDrv": 14, "hits": 14, "ri": 33745}
+{"t": "mon", "nAlloc": 33745, "nDrv": 14, "hits": 14, "ri": 33745}
+{"t": "mon", "nAlloc": 33760, "nDrv": 14, "hits": 14, "ri": 33760}
+{"t": "mon", "nAlloc": 33760, "nDrv": 14, "hits": 14, "ri": 33760}
+{"t": "mon", "nAlloc": 34318, "nDrv": 14, "hits": 14, "ri": 34318}
+{"t": "mon", "nAlloc": 34333, "nDrv": 14, "hits": 14, "ri": 34333}
+{"t": "mon", "nAlloc": 34525, "nDrv": 14, "hits": 14, "ri": 34525}
+{"t": "mon", "nAlloc": 34540, "nDrv": 14, "hits": 14, "ri": 34540}
+[*] done

@@ -1,0 +1,14 @@
+[
+ {
+  "t": "info",
+  "msg": "producer-watch installed (arm on first header entry)"
+ },
+ {
+  "t": "armed",
+  "entry": "0x7cccbb6b80",
+  "region_base": "0x7ccc86a000",
+  "region_size": 3670016,
+  "win_base": "0x7cccb86b80",
+  "win_size": 393216
+ }
+]

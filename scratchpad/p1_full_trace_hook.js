@@ -1,6 +1,6 @@
-// P1: Full bytecode execution trace hook
-// Capture EVERY opcode dispatch + regfile mutation
-// Output: execution_trace.json
+// P1: Full bytecode execution trace hook + SESSION_PSK capture
+// Capture EVERY opcode dispatch + regfile mutation + SESSION_PSK
+// Output: execution_trace.json + session_psk.txt
 
 const MODULE = "libmetasec_ov.so";
 const SM3_ADDR = 0xa0748;  // SM3 compress (signal: #19 hash start)
@@ -75,6 +75,45 @@ function onDispatch(context) {
     }
 }
 
+let session_psk_captured = false;
+let session_psk_value = null;
+
+function onSM3Block(context) {
+    // Intercept SM3 block to capture SESSION_PSK
+    // Pattern: SM3(SESSION_PSK || rb || SESSION_PSK) → extract PSK from block
+    // If block[0:28] == block[36:64] (symmetric pattern) → PSK = block[0:32]
+
+    try {
+        let x0 = context.x0;  // SM3 state ptr
+        let x1 = context.x1;  // input message (block 64B for SM3)
+
+        if (x1 && !x1.isNull()) {
+            let msg = x1.readByteArray(64);
+
+            // Check for symmetric pattern: first 28 bytes == last 28 bytes (offset 36)
+            let part1 = msg.slice(0, 28);
+            let part2 = msg.slice(36, 64);
+
+            let match = true;
+            for (let i = 0; i < 28; i++) {
+                if (part1[i] !== part2[i]) {
+                    match = false;
+                    break;
+                }
+            }
+
+            if (match && !session_psk_captured) {
+                // Found PSK pattern: extract first 32B
+                session_psk_value = msg.slice(0, 32).toString('hex');
+                session_psk_captured = true;
+                console.log(`[+] SESSION_PSK captured: ${session_psk_value.substring(0, 16)}...`);
+            }
+        }
+    } catch (e) {
+        // Silent fail on non-matching blocks
+    }
+}
+
 function onExit() {
     // Trace complete, save to file
     console.log(`[*] Trace complete: ${dispatch_count} dispatches`);
@@ -90,6 +129,7 @@ function onExit() {
         meta: {
             dispatches: dispatch_count,
             timestamp: Date.now(),
+            session_psk: session_psk_value || "not_captured",
         },
         trace: trace,
     };
@@ -101,6 +141,7 @@ function onExit() {
     file.close();
 
     console.log(`[+] Trace saved to ${file_path}`);
+    console.log(`[+] SESSION_PSK: ${session_psk_value || "not_captured"}`);
     console.log(`[+] Ready: adb pull ${file_path} ./`);
 }
 
@@ -113,10 +154,11 @@ function main() {
     base = mod.base;
     console.log(`[+] ${MODULE} base: 0x${base}`);
 
-    // Hook SM3 (signal start)
+    // Hook SM3 (signal start + capture PSK pattern)
     Interceptor.attach(base.add(SM3_ADDR), {
         onEnter(args) {
             onSM3Entry(this.context);
+            onSM3Block(this.context);  // Try to capture SESSION_PSK
         }
     });
 

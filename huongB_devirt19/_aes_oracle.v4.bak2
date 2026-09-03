@@ -1,0 +1,62 @@
+'use strict';
+var LIB='libmetasec_ov.so';
+var OFF={KEYSCHED:0x1591bc, ENC_INIT:0x159d60, CBC_DEC:0x159f58, BLK_DEC:0x15997c, CBC_ENC:0x159de4};
+// on-disk file heads (first 16B) to flag when they flow through a cipher buffer
+var HEADS={
+ '3eb27a642260675cbe8397693bc51ab2':'msp_092f',
+ '4563d82f859fa857d9aca519bb2effae':'msp_589c',
+ '75aa62270249304c2290151a22d4ca79':'mss_9b8e',
+ '61e20bbe5e7e861b29ca36e93e670478':'msf3_5a78'
+};
+function hx(p,n){ try{ return p.readByteArray(n); }catch(e){ return null; } }
+function tohex(ab){ if(!ab) return '<null>'; var u=new Uint8Array(ab),s=''; for(var i=0;i<u.length;i++){var h=u[i].toString(16); s+= h.length<2?'0'+h:h;} return s; }
+function head16(p){ var ab=hx(p,16); return ab?tohex(ab):'<null>'; }
+var armed=false;
+function arm(base){
+  if(armed) return; armed=true;
+  console.log('[ARM] base='+base);
+  // KEYSCHED: x0=ctx(sched out), x1=userKey, x2=keyBYTES
+  Interceptor.attach(base.add(OFF.KEYSCHED),{ onEnter:function(a){
+    var kb=this.context.x2.toInt32();
+    var klen = (kb>=16&&kb<=32)? kb : 16;
+    console.log('[KEYSCHED] keyBYTES='+kb+' userKey='+head16(this.context.x1)+ (klen>16? (' k2='+tohex(hx(this.context.x1.add(16),klen-16))):'') );
+  }});
+  // ENC_INIT: x0=ctx x1=userKey x2=keyBYTES x3=IV
+  Interceptor.attach(base.add(OFF.ENC_INIT),{ onEnter:function(a){
+    console.log('[INIT] key='+head16(this.context.x1)+' iv='+head16(this.context.x3)+' kb='+this.context.x2.toInt32());
+  }});
+  // CBC_DEC: x0=sched x1=in(ct) x2=out(pt) w3=len
+  Interceptor.attach(base.add(OFF.CBC_DEC),{ onEnter:function(a){
+    var inp=this.context.x1, len=this.context.x3.toInt32();
+    var h=head16(inp); var flag=HEADS[h]?(' <<<< ONDISK '+HEADS[h]):'';
+    this.inp=inp; this.out=this.context.x2; this.len=len;
+    console.log('[DEC] len='+len+' ct_head='+h+flag);
+    if(len<=1024) console.log('[DECCT] '+tohex(hx(inp,len)));
+  }, onLeave:function(r){ if(this.len&&this.len<=1024) console.log('[DECPT] '+tohex(hx(this.out,this.len))); }});
+  // BLK_DEC: x0=sched x1=inblk x2=outblk (ECB mode per-block)
+  Interceptor.attach(base.add(OFF.BLK_DEC),{ onEnter:function(a){
+    var h=head16(this.context.x1); if(HEADS[h]) console.log('[BLKDEC] in_head='+h+' <<<< ONDISK '+HEADS[h]);
+  }});
+  // CBC_ENC: x0=sched x1=in(pt) x2=out(ct) w3=len
+  Interceptor.attach(base.add(OFF.CBC_ENC),{ onEnter:function(a){
+    var h=head16(this.context.x1); if(HEADS[h]) console.log('[ENC] pt_head='+h+' <<<< ONDISK-PLAINTEXT '+HEADS[h]);
+  }});
+  console.log('[ARMED] hooks installed');
+}
+// hook openat to catch store file access
+try{
+  var lc=Process.findModuleByName('libc.so'); var openat=lc?lc.findExportByName('openat'):null;
+  if(openat) Interceptor.attach(openat,{ onEnter:function(a){
+    try{ var p=this.context.x1.readCString(); if(p&&/\.(ms[a-z0-9]*|dy|t[0-9])/.test(p)) console.log('[OPEN] '+p); }catch(e){}
+  }});
+}catch(e){}
+// dlopen-arm: catch libmetasec load moment
+function tryArm(){ var m=Process.findModuleByName(LIB); if(m){ arm(m.base); return true;} return false; }
+if(!tryArm()){
+  ['android_dlopen_ext','dlopen'].forEach(function(sym){
+    var f=null; try{ f=Module.findGlobalExportByName?Module.findGlobalExportByName(sym):null; }catch(e){} if(!f){var ld=Process.findModuleByName('libdl.so'); if(ld) f=ld.findExportByName(sym);} if(!f) return;
+    Interceptor.attach(f,{ onLeave:function(r){ if(!armed) setTimeout(tryArm,0); } });
+  });
+  var t=setInterval(function(){ if(tryArm()) clearInterval(t); },50);
+}
+console.log('[ORACLE v4 loaded]');

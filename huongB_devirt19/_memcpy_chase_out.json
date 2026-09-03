@@ -1,0 +1,176 @@
+[
+ {
+  "t": "mon",
+  "safe": false,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 0,
+  "detached": false
+ },
+ {
+  "t": "info",
+  "base": "0x74b8400000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 0,
+  "detached": false
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 0,
+  "detached": false
+ },
+ {
+  "t": "safe"
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 0,
+  "detached": false
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 0,
+  "detached": false
+ },
+ {
+  "t": "DRV",
+  "drv": 1,
+  "V": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "P": "0x77e4e30dc0",
+  "chain": [
+   {
+    "dst": "0x77e4e30dc0",
+    "note": "no-writer(origin?)"
+   }
+  ]
+ },
+ {
+  "t": "DRV",
+  "drv": 2,
+  "V": "9b5810bbaa9e4f44b070be62c9148967",
+  "P": "0x77e4efdb40",
+  "chain": [
+   {
+    "dst": "0x77e4efdb40",
+    "note": "no-writer(origin?)"
+   }
+  ]
+ },
+ {
+  "t": "DRV",
+  "drv": 3,
+  "V": "cf8d0de1b23996d143f1d35d5c153a59",
+  "P": "0x77e4f113a0",
+  "chain": [
+   {
+    "dst": "0x77e4f113a0",
+    "note": "no-writer(origin?)"
+   }
+  ]
+ },
+ {
+  "t": "DRV",
+  "drv": 4,
+  "V": "5e63bc9cda4f56f8d8e98d660b3fde62",
+  "P": "0x77e4f1ad60",
+  "chain": [
+   {
+    "dst": "0x77e4f1ad60",
+    "note": "no-writer(origin?)"
+   }
+  ]
+ },
+ {
+  "t": "DRV",
+  "drv": 5,
+  "V": "46c03b52742b3f2615a3abdf1636b754",
+  "P": "0x77e4f23a60",
+  "chain": [
+   {
+    "dst": "0x77e4f23a60",
+    "note": "no-writer(origin?)"
+   }
+  ]
+ },
+ {
+  "t": "DRV",
+  "drv": 6,
+  "V": "a5626d10573c0bd0cf66a9613dd09bdf",
+  "P": "0x77e4f37a40",
+  "chain": [
+   {
+    "dst": "0x77e4f37a40",
+    "note": "no-writer(origin?)"
+   }
+  ]
+ },
+ {
+  "t": "detached",
+  "stored": 0
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 6,
+  "detached": true
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 6,
+  "detached": true
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 6,
+  "detached": true
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 6,
+  "detached": true
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 6,
+  "detached": true
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "seq": 0,
+  "stored": 0,
+  "ndrv": 6,
+  "detached": true
+ }
+]

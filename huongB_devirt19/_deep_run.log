@@ -1,0 +1,4 @@
+attach pid 22459
+  {'k': 'READY'}
+collecting 40s...
+=== EVENTS === 3

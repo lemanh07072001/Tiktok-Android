@@ -1,0 +1,352 @@
+[
+ {
+  "t": "info",
+  "base": "0x7551e01000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "hot": false,
+  "arms": 0,
+  "caps": 0,
+  "armed": false,
+  "top": []
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "hot": false,
+  "arms": 0,
+  "caps": 0,
+  "armed": false,
+  "top": []
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "hot": false,
+  "arms": 0,
+  "caps": 0,
+  "armed": false,
+  "top": []
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "hot": false,
+  "arms": 0,
+  "caps": 0,
+  "armed": false,
+  "top": []
+ },
+ {
+  "t": "safe"
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": false,
+  "arms": 0,
+  "caps": 0,
+  "armed": false,
+  "top": []
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": false,
+  "arms": 0,
+  "caps": 0,
+  "armed": false,
+  "top": []
+ },
+ {
+  "t": "win",
+  "firstP": "0x77e4fd3c20"
+ },
+ {
+  "t": "armed",
+  "P": "0x77e4fd3c20",
+  "val": "6df68cedbfa11763687ec27a81fe9c08",
+  "tid": 13016
+ },
+ {
+  "t": "HIT",
+  "cap": 1,
+  "pc": "0x75aacd8d48",
+  "pcMod": "libc++_shared.so+0x96d48",
+  "inLib": false,
+  "P": "0x77e4fd3c20",
+  "armVal": "6df68cedbfa11763687ec27a81fe9c08",
+  "valAfter": "6df68cedbfa11763687ec27a81fe9c08",
+  "ascii": false,
+  "slot16like": true,
+  "lr": "0x75a4208004",
+  "regs": {
+   "x0": "0x77e4fd3c20",
+   "x1": "0x75a408f06f",
+   "x2": "0x7",
+   "x3": "0x10",
+   "x8": "0xe",
+   "x9": "0x77e4fd3c40",
+   "x10": "0xa47b6b85",
+   "x11": "0x2",
+   "x12": "0x0",
+   "x13": "0x29aaaaab",
+   "x14": "0x18",
+   "x19": "0x7",
+   "x20": "0x77e4fd3c20",
+   "x21": "0x75a408f06f",
+   "x22": "0x77e4fd3c20",
+   "fp": "0x753b2877b0"
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 1,
+  "caps": 1,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 1,
+  "caps": 1,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "armed",
+  "P": "0x77e4d91490",
+  "val": "ff9fe53b5a27c479ecae2466a5ea4362",
+  "tid": 13016
+ },
+ {
+  "t": "HIT",
+  "cap": 2,
+  "pc": "0x79242e0a6c",
+  "pcMod": "libc.so+0x5fa6c",
+  "inLib": false,
+  "P": "0x77e4d91490",
+  "armVal": "ff9fe53b5a27c479ecae2466a5ea4362",
+  "valAfter": "ff9fe53b5a27c479ecae2466a5ea4362",
+  "ascii": false,
+  "slot16like": true,
+  "lr": "0x75aacd8d84",
+  "regs": {
+   "x0": "0x77e4d91490",
+   "x1": "0x77e4e49f30",
+   "x2": "0x1d",
+   "x3": "0x10",
+   "x8": "0x21",
+   "x9": "0x0",
+   "x10": "0xa47b6b85",
+   "x11": "0x2",
+   "x12": "0x0",
+   "x13": "0x75a44f4000",
+   "x14": "0x4",
+   "x19": "0x1d",
+   "x20": "0x77e4d91490",
+   "x21": "0x77e4e49f30",
+   "x22": "0x20",
+   "fp": "0x753b286570"
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "hot": true,
+  "arms": 2,
+  "caps": 2,
+  "armed": false,
+  "top": [
+   [
+    "0x75aacd8d48",
+    1
+   ],
+   [
+    "0x79242e0a6c",
+    1
+   ]
+  ]
+ }
+]

@@ -1,0 +1,83 @@
+[WAIT] libmetasec not loaded yet; armed dlopen watchers
+[ARM] base=0x7483e01000 [ORACLE v5]
+[ARMED] enc+dec ctx-key capture live, size<=512
+[KEYSCHED] kb=16 userKey=b114249b7bed9d2691d70c60d69f9c4f
+[KEYSCHED] kb=16 userKey=b114249b7bed9d2691d70c60d69f9c4f
+[INIT] key=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594 kb=16
+[KEYSCHED] kb=16 userKey=8252970d959b06db102e17d85c0ec1af
+[ENC#1] len=512 KEY=8252970d959b06db102e17d85c0ec1af rk0=0d975282db069b95d8172e10afc10e5c IV=4d207ea37a419f7d622f81c6a2f53594
+[ENC#1 PT] ecfa9a45570150091865572c784eecabb62318a2ebc216f52f2511f3c590be691fe4feb9cf29f0db6e7f7ae9c346e7921b208e24b7e44bfbf0aae7840db01bc6
+[ENC#1 CT] 85bc62ca7e095dd401a7df74e78acc4c169c89222ca83f82c271b4d352d637ecf4928b5f27388f260c470338d0f40a8232bdb6320063a779a5c65ea9d3825ea1
+[KEYSCHED] kb=16 userKey=b114249b7bed9d2691d70c60d69f9c4f
+[INIT] key=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594 kb=16
+[KEYSCHED] kb=16 userKey=8252970d959b06db102e17d85c0ec1af
+[ENC#2] len=512 KEY=8252970d959b06db102e17d85c0ec1af rk0=0d975282db069b95d8172e10afc10e5c IV=4d207ea37a419f7d622f81c6a2f53594
+[ENC#2 PT] ec4dac243201240d189c5be2cc0e9cd05cb4d5c3f93221e274708666dda84d35e0a97a5c5a6c96f0dfbef4befe028762f8c8532b2cced3d5652fe2f2ab6895e7
+[ENC#2 CT] 87473f399fd478163146be8f427c1276c0a19bd9593686ee2a26b00f3877ee7a4ad264963c598fc6bc1676dcb447d4bba4777c271ae0685e25a81eec0fb8bd24
+[KEYSCHED] kb=16 userKey=b114249b7bed9d2691d70c60d69f9c4f
+[INIT] key=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594 kb=16
+[KEYSCHED] kb=16 userKey=8252970d959b06db102e17d85c0ec1af
+[ENC#3] len=512 KEY=8252970d959b06db102e17d85c0ec1af rk0=0d975282db069b95d8172e10afc10e5c IV=4d207ea37a419f7d622f81c6a2f53594
+[ENC#3 PT] ec9983a45c014e0a1837df68505f82baf1d5c42bbd763f671f2a7374e88f57c5a9787dcf02a9194ba34b5d211e00e3e699f8e5e752a1fa307cdb384398ad0069
+[ENC#3 CT] 8dc03024c4a5b3a667fad36f50561655a7cf8c7e6aa8d54e2d506f81657e054d1e13ef6fa994e1e832f26dd9b599becf36a0ca9cfa02a0971b3ef9ba3b0cd6fe
+[KEYSCHED] kb=16 userKey=b114249b7bed9d2691d70c60d69f9c4f
+[INIT] key=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594 kb=16
+[KEYSCHED] kb=16 userKey=8252970d959b06db102e17d85c0ec1af
+[ENC#4] len=512 KEY=8252970d959b06db102e17d85c0ec1af rk0=0d975282db069b95d8172e10afc10e5c IV=4d207ea37a419f7d622f81c6a2f53594
+[ENC#4 PT] ecee39145601900e187b975817d0777f86529cc513c1ea781da0d9bba341e8f114f5fd9de43602a9d4bfe6a2d9b2f775c9d3533377aad210904835769bf7b3e4
+[ENC#4 CT] f5457e20cc635cbd7018dc9262d81761c4a1dd35d34d9d0fa00f347e310d4f6cdde5f9b67e01a609bda7c9d0cd00736f2c163223312b94853ce8e648635e45b1
+[KEYSCHED] kb=16 userKey=b114249b7bed9d2691d70c60d69f9c4f
+[INIT] key=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594 kb=16
+[KEYSCHED] kb=16 userKey=8252970d959b06db102e17d85c0ec1af
+[ENC#5] len=512 KEY=8252970d959b06db102e17d85c0ec1af rk0=0d975282db069b95d8172e10afc10e5c IV=4d207ea37a419f7d622f81c6a2f53594
+[ENC#5 PT] ec64a0fb2801540f1869ebc224d93be32c2a6331d70ce5feef91d4ea35d6f6d17fcd106b91fb470a1c7d244593b44f8570a124c33b7181c32887b501a1020e30
+[ENC#5 CT] 0932a6156aa8b41d89715f3682814b8e3f2887c508caf151b4e09d357034b9c87ed15a7fc49447c4978178c52c9c0d343536471ff1b56ae31a23b94c181f8ad9
+01a609bda7c9d0cd00736f2c163223312b94853ce8e648635e45b1
+[KEYSCHED] kb=16 userKey=b114249b7bed9d2691d70c60d69f9c4f
+[INIT] key=8252970d959b06db102e17d85c0ec1af iv=4d207ea37a419f7d622f81c6a2f53594 kb=16
+[KEYSCHED] kb=16 userKey=8252970d959b06db102e17d85c0ec1af
+[ENC#5] len=512 KEY=8252970d959b06db102e17d85c0ec1af rk0=0d975282db069b95d8172e10afc10e5c IV=4d207ea37a419f7d622f81c6a2f53594
+[ENC#5 PT] ec64a0fb2801540f1869ebc224d93be32c2a6331d70ce5feef91d4ea35d6f6d17fcd106b91fb470a1c7d244593b44f8570a124c33b7181c32887b501a1020e30
+[ENC#5 CT] 0932a6156aa8b41d89715f3682814b8e3f2887c508caf151b4e09d357034b9c87ed15a7fc49447c4978178c52c9c0d343536471ff1b56ae31a23b94c181f8ad9
+Process crashed: Bad access due to invalid address
+
+***
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'google/sdk_gphone64_arm64/emu64a:14/UE1A.230829.050/12077443:userdebug/dev-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2026-08-29 20:57:13.600419592+0700
+Process uptime: 17s
+Cmdline: com.zhiliaoapp.musically
+pid: 10949, tid: 11082, name: RenderThread  >>> com.zhiliaoapp.musically <<<
+uid: 10192
+tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x006c6562616c5f60
+    x0  226c6562616c5f69  x1  0000000000000045  x2  226c6562616c5f60  x3  0000000000000009
+    x4  00000000c0300c03  x5  00000076a1e46b5f  x6  726f6c607372646c  x7  7f7f7f7f7f7f7f7f
+    x8  00000076a1e46b5f  x9  00000000000001e1  x10 0000000000000120  x11 0000000000000003
+    x12 000000000000201a  x13 0000000000000031  x14 0000000000000000  x15 0000004d42b41eae
+    x16 0000007891f34e90  x17 0000007891eb2400  x18 0000007558890000  x19 00000078af8908c4
+    x20 00000078af891000  x21 00000077d1e4f618  x22 0000007562442000  x23 00000077d1e4f57c
+    x24 00000075624418d8  x25 00000075624418dc  x26 00000078af8d7c48  x27 00000000000000c0
+    x28 00000000000fe000  x29 00000075624417e0
+    lr  0000007891f00f70  sp  00000075624417e0  pc  0000007891eb2424  pst 0000000000001000
+13 total frames
+backtrace:
+      #00 pc 0000000000060424  /apex/com.android.runtime/lib64/bionic/libc.so (__strchr_aarch64+36) (BuildId: a87908b48b368e6282bcc9f34bcfc28c)
+      #01 pc 00000000000aef6c  /apex/com.android.runtime/lib64/bionic/libc.so (strstr+24) (BuildId: a87908b48b368e6282bcc9f34bcfc28c)
+      #02 pc 0000000000022738  /system/lib64/libEGL.so (android::egl_display_t::initialize(int*, int*)+916) (BuildId: 18d96e7c28f64b29b836173d7303290e)
+      #03 pc 0000000000516e90  /system/lib64/libhwui.so (android::uirenderer::renderthread::EglManager::initialize()+80) (BuildId: 1178351e2ee9668d0f2e2865813d9ee6)
+      #04 pc 00000000004070a0  /system/lib64/libhwui.so (android::uirenderer::renderthread::RenderThread::requireGlContext()+52) (BuildId: 1178351e2ee9668d0f2e2865813d9ee6)
+      #05 pc 00000000005f3c6c  /system/lib64/libhwui.so (android::uirenderer::skiapipeline::SkiaOpenGLPipeline::setSurface(ANativeWindow*, android::uirenderer::renderthread::SwapBehavior)+112) (BuildId: 1178351e2ee9668d0f2e2865813d9ee6)
+      #06 pc 0000000000211a78  /system/lib64/libhwui.so (android::uirenderer::renderthread::CanvasContext::setupPipelineSurface()+48) (BuildId: 1178351e2ee9668d0f2e2865813d9ee6)
+      #07 pc 00000000002119dc  /system/lib64/libhwui.so (android::uirenderer::renderthread::CanvasContext::setSurface(ANativeWindow*, bool)+168) (BuildId: 1178351e2ee9668d0f2e2865813d9ee6)
+      #08 pc 0000000000577c38  /system/lib64/libhwui.so (std::__1::__function::__func<android::uirenderer::renderthread::RenderProxy::setSurface(ANativeWindow*, bool)::$_0, std::__1::allocator<android::uirenderer::renderthread::RenderProxy::setSurface(ANativeWindow*, bool)::$_0>, void ()>::operator()() (.__uniq.110435125376433984577876079601927332169.4eca6ff6b78b03eba315b7d3290f6c8c)+28) (BuildId: 1178351e2ee9668d0f2e2865813d9ee6)
+      #09 pc 00000000002aab44  /system/lib64/libhwui.so (android::uirenderer::renderthread::RenderThread::threadLoop()+716) (BuildId: 1178351e2ee9668d0f2e2865813d9ee6)
+      #10 pc 0000000000010e28  /system/lib64/libutils.so (android::Thread::_threadLoop(void*)+584) (BuildId: 4ad4af87e8ab16b872cdbdaf84188131)
+      #11 pc 00000000000cb6a8  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+208) (BuildId: a87908b48b368e6282bcc9f34bcfc28c)
+      #12 pc 000000000006821c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: a87908b48b368e6282bcc9f34bcfc28c)
+***
+
+Thank you for using Frida!

@@ -1,0 +1,142 @@
+[
+ {
+  "t": "info",
+  "msg": "f-verify installed (F 0x191f40)"
+ },
+ {
+  "t": "fout",
+  "nF": 1,
+  "x4": "0x72ecd6a8c0",
+  "out": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a73000000e8ffffff80ffffff"
+  },
+  "in_x4": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a73000000e8ffffff80ffffff"
+  },
+  "poolHit": null,
+  "poolsz": 0
+ },
+ {
+  "t": "fout",
+  "nF": 2,
+  "x4": "0x72ecd6a8c0",
+  "out": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "in_x4": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "poolHit": null,
+  "poolsz": 0
+ },
+ {
+  "t": "fout",
+  "nF": 3,
+  "x4": "0x72ecd6a8c0",
+  "out": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "in_x4": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "poolHit": null,
+  "poolsz": 0
+ },
+ {
+  "t": "fout",
+  "nF": 4,
+  "x4": "0x72ecd6a8c0",
+  "out": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "in_x4": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "poolHit": null,
+  "poolsz": 0
+ },
+ {
+  "t": "fout",
+  "nF": 5,
+  "x4": "0x72ecd6b600",
+  "out": {
+   "size": 493599767744,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a73000000c0bcd6ec720000005059e52a730000000000000000000000"
+  },
+  "in_x4": {
+   "size": 493599767744,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a73000000c0bcd6ec720000005059e52a730000000000000000000000"
+  },
+  "poolHit": null,
+  "poolsz": 0
+ },
+ {
+  "t": "fout",
+  "nF": 6,
+  "x4": "0x72ecd6a8c0",
+  "out": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "in_x4": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "poolHit": null,
+  "poolsz": 0
+ },
+ {
+  "t": "fout",
+  "nF": 7,
+  "x4": "0x72ecd6a8c0",
+  "out": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "in_x4": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "poolHit": null,
+  "poolsz": 0
+ },
+ {
+  "t": "fout",
+  "nF": 8,
+  "x4": "0x72ecd6a8c0",
+  "out": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "in_x4": {
+   "size": 493599764352,
+   "heap": "e20300aae00301aa40001fd6ffc301d1f52300f9f44f05a9fd7b06a9fd830191",
+   "inline": "34a8f32a7300000080afd6ec720000005059e52a730000000000000000000000"
+  },
+  "poolHit": null,
+  "poolsz": 0
+ }
+]

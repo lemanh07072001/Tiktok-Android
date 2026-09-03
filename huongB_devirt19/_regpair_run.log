@@ -1,0 +1,5 @@
+attach pid 30604
+  {'k': 'HOOK'}
+  {'k': 'READY'}
+collecting 50s...
+=== STRINGS === 0

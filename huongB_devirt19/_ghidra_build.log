@@ -1,0 +1,112 @@
+openjdk version "21.0.12.1" 2026-08-18 LTS
+OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode)
+INFO  Using log config file: jar:file:/Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /Users/lemanh/Library/ghidra/ghidra_12.1.3_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /Users/lemanh/Library/ghidra/ghidra_12.1.3_PUBLIC/preferences (Preferences)  
+INFO  Loading previous preferences: /Users/lemanh/Library/ghidra/ghidra_12.1.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (895 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (1959 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 59 extension points (20 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /Users/lemanh/Documents/Tiktok-Android/huongB_devirt19
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /Users/lemanh/tools/ghidra_12.1.3_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /Users/lemanh/tools/ghidra_proj/tt (HeadlessAnalyzer)  
+INFO  Opening project: /Users/lemanh/tools/ghidra_proj/tt (HeadlessProject)  
+INFO  REPORT: Processing project file: /libmetasec_ov.so (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: GhidraSlot16Build.java  (HeadlessAnalyzer)  
+INFO  SCRIPT: /Users/lemanh/Documents/Tiktok-Android/huongB_devirt19/GhidraSlot16Build.java (HeadlessAnalyzer)  
+INFO  GhidraSlot16Build.java> site 0x88858 → fn 0x? (GhidraScript)  
+INFO  GhidraSlot16Build.java> site 0x88834 → fn 0x? (GhidraScript)  
+INFO  GhidraSlot16Build.java> site 0x887e0 → fn 0x887e0  end~0x887f7  FUN_001887e0 (GhidraScript)  
+INFO  GhidraSlot16Build.java> site 0x88ab8 → fn 0x879d8  end~0x8913b  FUN_001879d8 (GhidraScript)  
+INFO  GhidraSlot16Build.java> site 0x89320 → fn 0x89320  end~0x89687  FUN_00189320 (GhidraScript)  
+INFO  GhidraSlot16Build.java> 
+=== callsites trong 0x87cf4..0x89400 === (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87e88  br  br x11 →0x87de4 →0x87ddc (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87eb4  bl  bl 0x0015e4d4 →0x5e4d4 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87ecc  bl  bl 0x0015e4cc →0x5e4cc (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87ee0  blr  blr x8 →0x9368c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87f9c  br  br x11 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87fa4  bl  bl 0x00130dd0 →0x30dd0 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87fb0  bl  bl 0x0015e4a8 →0x5e4a8 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87fb8  bl  bl 0x00130680 →0x30680 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87fc8  bl  bl 0x00130dd0 →0x30dd0 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87fd4  bl  bl 0x0015e4a8 →0x5e4a8 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x87fe0  bl  bl 0x00130680 →0x30680 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x8806c  bl  bl 0x0027915c →0x17915c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88078  bl  bl 0x0024fc68 →0x14fc68 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x8808c  bl  bl 0x0022cf84 →0x12cf84 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x882bc  br  br x11 →0x88044 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88380  br  br x10 →0x88044 →0x885a4 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88410  br  br x15 →0x88310 →0x88578 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x884e8  blr  blr x9 →0x8913c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x8854c  br  br x12 →0x88550 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x8864c  br  br x12 →0x88650 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88674  bl  bl 0x0024fd5c →0x14fd5c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x8867c  bl  bl 0x00251d2c →0x151d2c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x8869c  bl  bl 0x00169930 →0x69930 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x886a8  bl  bl 0x0024ffbc →0x14ffbc (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x886b0  bl  bl 0x0024fe34 →0x14fe34 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88744  br  br x9 →0x8879c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x887d4  bl  bl 0x001887e0 →0x887e0 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x887dc  br  br x1 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88974  bl  bl 0x002515d0 →0x1515d0 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88a58  bl  bl 0x0024fc68 →0x14fc68 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88a68  bl  bl 0x00165a84 →0x65a84 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88a70  bl  bl 0x0024fe34 →0x14fe34 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88ab8  blr  blr x9 →0x89320 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88cf8  bl  bl 0x00151048 →0x51048 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88e34  bl  bl 0x0024fe34 →0x14fe34 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88ed8  bl  bl 0x002796e4 →0x1796e4 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88ee4  bl  bl 0x0024fc68 →0x14fc68 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88f08  bl  bl 0x00193578 →0x93578 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88f14  bl  bl 0x0024ffbc →0x14ffbc (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x88f1c  bl  bl 0x0024fe34 →0x14fe34 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x89098  bl  bl 0x00193430 →0x93430 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x890a4  bl  bl 0x0024fe34 →0x14fe34 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x890b0  bl  bl 0x00151048 →0x51048 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x890b8  bl  bl 0x0022cfcc →0x12cfcc (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x89138  bl  bl 0x00130c10 →0x30c10 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x8917c  bl  bl 0x00250660 →0x150660 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x891d0  bl  bl 0x0024fa94 →0x14fa94 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x891e0  bl  bl 0x0024fd5c →0x14fd5c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x89220  bl  bl 0x0024fa94 →0x14fa94 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x89238  bl  bl 0x0024fd5c →0x14fd5c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x89240  bl  bl 0x00251d40 →0x151d40 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x89258  bl  bl 0x0024fecc →0x14fecc (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x892f4  bl  bl 0x0024fe34 →0x14fe34 (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x8931c  bl  bl 0x00130c10 →0x30c10 (GhidraScript)  
+INFO  GhidraSlot16Build.java> 
+=== decompile === (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x887e0 FUN_001887e0 (C 84B) → build_887e0.c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x879d8 FUN_001879d8 (C 23426B) → build_879d8.c (GhidraScript)  
+INFO  GhidraSlot16Build.java>   0x89320 FUN_00189320 (C 6716B) → build_89320.c (GhidraScript)  
+INFO  REPORT: Save succeeded for processed file: /libmetasec_ov.so (HeadlessAnalyzer)  

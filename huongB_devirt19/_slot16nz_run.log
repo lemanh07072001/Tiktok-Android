@@ -1,0 +1,5 @@
+  {'k': 'READY'}
+resumed, waiting for NONZERO slot16 (register/heartbeat)...
+  {'k': 'INSTALLED'}
+ ERR TypeError: cannot read property 'toString' of null
+NO NONZERO in 90s

@@ -1,0 +1,32 @@
+[*] spawning com.zhiliaoapp.musically
+[*] spawned pid 23583
+[*] resumed; collecting 55s
+[*] seq-correlate installed
+[REG] cb12155b4933d1500308499e4fcb6694 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=_unused=0&ad_area=1440x2294&sdk_version=2013656&os
+[REG] ad2a76722aea7df283a7470cc4fcaabb lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] 02616b5fb31bf627bd4de35b81be0ebc lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] 3ea3a264db77278395371f48c4a12abc lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=os=android&_rticket=1787585665758&is_pad=0&last_in
+[REG] 5e5d9e36fef8b5157bc0af1e26ca59a9 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] 3a7c700ba632421f62834678c51e85bc lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] 2177bc5056e9727e4eb15f7655c49a59 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=aid=1233&device_id=7666223875861513749&client_vers
+[REG] 46c03b52742b3f2615a3abdf1636b754 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] a0430f3ff903b3bf1d185db688632281 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=sdk_version=3.4.0-alpha.3-perm&device_platform=and
+[REG] 46c03b52742b3f2615a3abdf1636b754 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=sdk_version=2.7.4.4&sdk_name=pns_consent_sdk&devic
+[REG] 10930e270c1aa1af20a6ec8b3fec9139 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[   ] b48efc799047ec7c66a652653094c350 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=lc_id=2142840551&platform=android&device_platform=
+[   ] 0872dc3043904adad694cae65dbb8835 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=lc_id=2142840551&platform=android&device_platform=
+[REG] a0ecf648ce50f43c21399db6ac809f07 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=passport-sdk-version=1&device_platform=android&os=
+[   ] c0cca5a6dc96ce75dd807cc42ccc1817 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=lc_id=2142840551&platform=android&device_platform=
+[REG] 9a6b1808e00bd930275f06ee5b776c88 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=feature_name=ttk_app_dau_launch&is_first_hybridab_
+[REG] 8ca462427dbfb3f3d431621b14f496ff lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=max_time=0&req_from=tiktok_follow_toplive_guide&de
+[   ] 25180d3325b5995132a094f1f6db9d7e lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=lc_id=2142840551&platform=android&device_platform=
+[   ] e951d901e6fa057d41cf7cfb1827748b lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=lc_id=2142840551&platform=android&device_platform=
+[REG] 9ab6084c683c1406c5c200184a3ca6f1 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=os=android&_rticket=1787585677402&is_pad=0&last_in
+[REG] b6472e044f5d75ed4270e9005a632f99 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] ede453aa2b2511fb36e19377c8eef2f9 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=os=android&_rticket=1787585677404&is_pad=0&last_in
+[REG] 0b04cc917112a3f5668895aa003c9190 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] 3b4fa8c4a2237be4399c294a2961825d lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] 973d200433afdb0c8edb59271d34dd7d lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+[REG] 0e817e15c7f71685fd55d6a55d1c0c85 lr=['0x9fd74', '0x9ff1c', '0x9fd74', '0x9ff1c', '0x10ac84', '0x1384e8', '0x9fd74', '0x9ff1c'] q=device_platform=android&os=android&ssmix=a&_rticke
+
+[DONE] nonzero signs=26 -> _spawn_seq.json

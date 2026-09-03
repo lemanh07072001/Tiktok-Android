@@ -1,0 +1,1431 @@
+{
+ "note": "libmetasec_ov.so OLLVM-VM opcode dispatch table (slot16/P producer runs here)",
+ "vm_core_dispatch": 350544,
+ "table_vaddr": [
+  1938568,
+  1940440
+ ],
+ "n_entries": 234,
+ "distinct_handlers": 119,
+ "handler_region": [
+  974528,
+  1017816
+ ],
+ "vm_model": {
+  "x0": "threaded instr-stream ptr (record stride via 'ldr x4,[x0,#0x20]!; br x4')",
+  "x1": "VM register file (8-byte slots, indexed [x1,idx,lsl#3])",
+  "x20": "dispatch table base (rebased 0x1d9488)",
+  "x23": "opcode/PC stride in madd x8,x23,x8,x20"
+ },
+ "no_native_crypto": "dynsym has NO aes/sha/sm3/hmac/evp; only rand/srand/lrand48 (unused for slot16 -> deterministic)",
+ "consumer": {
+  "sm3_driver": 654764,
+  "formula": "S=SM3(P||ctx32); P=slot16=VM output=SM3 INPUT"
+ },
+ "entries": [
+  {
+   "idx": 0,
+   "slot": 1938568,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 1,
+   "slot": 1938576,
+   "handler": 1001612,
+   "asm": "orr x10, x8, #0xffffffffffffff00 ; cmp w8, #0 ; csel x8, x10, x8, lt"
+  },
+  {
+   "idx": 2,
+   "slot": 1938584,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 3,
+   "slot": 1938592,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 4,
+   "slot": 1938600,
+   "handler": 1004284,
+   "asm": "strh w9, [x8, x10] ; ldr x4, [x0, #0x20]! ; br x4"
+  },
+  {
+   "idx": 5,
+   "slot": 1938608,
+   "handler": 1004868,
+   "asm": "fcvtzu w10, s0 ; str w10, [x8, x9] ; ldr x4, [x0, #0x20]!"
+  },
+  {
+   "idx": 6,
+   "slot": 1938616,
+   "handler": 1009940,
+   "asm": "madd x8, x23, x8, x20 ; ldr x8, [x8, #8] ; adrp x12, #0x1de000"
+  },
+  {
+   "idx": 7,
+   "slot": 1938624,
+   "handler": 1005252,
+   "asm": "str x10, [x8, x9] ; ldr x4, [x0, #0x20]! ; br x4"
+  },
+  {
+   "idx": 8,
+   "slot": 1938632,
+   "handler": 1005344,
+   "asm": "ldr x4, [x0, #0x20]! ; br x4 ; ldrsw x8, [x0, #8]"
+  },
+  {
+   "idx": 9,
+   "slot": 1938640,
+   "handler": 1000636,
+   "asm": "ldrsw x9, [x0, #0x10] ; ldrsw x10, [x0, #0x18] ; ldr x8, [x1, x8, lsl #3]"
+  },
+  {
+   "idx": 10,
+   "slot": 1938648,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 11,
+   "slot": 1938656,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 12,
+   "slot": 1938664,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 13,
+   "slot": 1938672,
+   "handler": 1011500,
+   "asm": "add x10, x10, #0xd60 ; ldrb w9, [x8] ; ldr x10, [x10, x9, lsl #3]"
+  },
+  {
+   "idx": 14,
+   "slot": 1938680,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 15,
+   "slot": 1938688,
+   "handler": 1002120,
+   "asm": "orr x10, x8, #0xffffffffffff0000 ; cmp w8, #0 ; csel x8, x10, x8, lt"
+  },
+  {
+   "idx": 16,
+   "slot": 1938696,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 17,
+   "slot": 1938704,
+   "handler": 1003704,
+   "asm": "strb w10, [x8, x9] ; ldr x4, [x0, #0x20]! ; br x4"
+  },
+  {
+   "idx": 18,
+   "slot": 1938712,
+   "handler": 1007776,
+   "asm": "mov x1, x24 ; bl #0x30760 ; cbnz x0, #0xf5f94"
+  },
+  {
+   "idx": 19,
+   "slot": 1938720,
+   "handler": 1002648,
+   "asm": "ldr x0, [x9, x8, lsl #3] ; ret  ; ldp x8, x9, [x0, #8]"
+  },
+  {
+   "idx": 20,
+   "slot": 1938728,
+   "handler": 1008724,
+   "asm": "madd x14, x8, x14, x9 ; ldr x14, [x14, #8] ; ldr w15, [x6, #0x44]"
+  },
+  {
+   "idx": 21,
+   "slot": 1938736,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 22,
+   "slot": 1938744,
+   "handler": 1013432,
+   "asm": "ldrh w9, [x8, #2] ; cmp w9, #1 ; b.hi #0xf8168"
+  },
+  {
+   "idx": 23,
+   "slot": 1938752,
+   "handler": 1007252,
+   "asm": "bl #0x30b40 ; mov x0, x19 ; mov x1, x20"
+  },
+  {
+   "idx": 24,
+   "slot": 1938760,
+   "handler": 1015920,
+   "asm": "b #0xf72c0 ; ldr w8, [x8, #4] ; ldr w9, [x5]"
+  },
+  {
+   "idx": 25,
+   "slot": 1938768,
+   "handler": 1009400,
+   "asm": "mov x21, xzr ; mov x25, xzr ; mov x26, xzr"
+  },
+  {
+   "idx": 26,
+   "slot": 1938776,
+   "handler": 1008296,
+   "asm": "mov x14, #0xca1b ; movk x14, #0x286b, lsl #16 ; mov w13, #0xaaab"
+  },
+  {
+   "idx": 27,
+   "slot": 1938784,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 28,
+   "slot": 1938792,
+   "handler": 1015348,
+   "asm": "mov x13, x5 ; mov w7, #0x30 ; ldr x10, [x11, x10, lsl #3]"
+  },
+  {
+   "idx": 29,
+   "slot": 1938800,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 30,
+   "slot": 1938808,
+   "handler": 999648,
+   "asm": "ldrsw x9, [x0, #0x10] ; lsl x8, x8, #3 ; lsl x9, x9, #3"
+  },
+  {
+   "idx": 31,
+   "slot": 1938816,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 32,
+   "slot": 1938824,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 33,
+   "slot": 1938832,
+   "handler": 1003368,
+   "asm": "add x10, x10, #0x850 ; ldrh w9, [x8, #2] ; ldrb w8, [x8, #8]"
+  },
+  {
+   "idx": 34,
+   "slot": 1938840,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 35,
+   "slot": 1938848,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 36,
+   "slot": 1938856,
+   "handler": 1004360,
+   "asm": "ldr x9, [x0, #0x10] ; ldr x8, [x1, x8, lsl #3] ; fcvtzs w10, s0"
+  },
+  {
+   "idx": 37,
+   "slot": 1938864,
+   "handler": 1002928,
+   "asm": "ldrsw x8, [x0, #0x18] ; str xzr, [x1, x8, lsl #3] ; ldr x4, [x0, #0x20]!"
+  },
+  {
+   "idx": 38,
+   "slot": 1938872,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 39,
+   "slot": 1938880,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 40,
+   "slot": 1938888,
+   "handler": 1010520,
+   "asm": "b #0xf75d4 ; mov w8, #0x30 ; madd x8, x23, x8, x20"
+  },
+  {
+   "idx": 41,
+   "slot": 1938896,
+   "handler": 1004992,
+   "asm": "fcvtzu w10, d0 ; str w10, [x8, x9] ; ldr x4, [x0, #0x20]!"
+  },
+  {
+   "idx": 42,
+   "slot": 1938904,
+   "handler": 1012848,
+   "asm": "b.hi #0xf7e6c ; ldr w10, [x8, #0xc] ; ldr w9, [x5]"
+  },
+  {
+   "idx": 43,
+   "slot": 1938912,
+   "handler": 1014256,
+   "asm": "mov w8, #0x30 ; madd x8, x23, x8, x20 ; ldr x8, [x8, #0x10]"
+  },
+  {
+   "idx": 44,
+   "slot": 1938920,
+   "handler": 974528,
+   "asm": "mov x0, x8 ; mov x23, x8 ; bl #0x30610"
+  },
+  {
+   "idx": 45,
+   "slot": 1938928,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 46,
+   "slot": 1938936,
+   "handler": 1010228,
+   "asm": "ldr w12, [x13, x12] ; mov w13, #0x30 ; madd x12, x12, x13, x20"
+  },
+  {
+   "idx": 47,
+   "slot": 1938944,
+   "handler": 1006732,
+   "asm": "cmp w9, w10 ; b.ls #0xf5cb0 ; cbz w8, #0xf5d64"
+  },
+  {
+   "idx": 48,
+   "slot": 1938952,
+   "handler": 1001152,
+   "asm": "str w9, [x1, x8] ; ldr x4, [x0, #0x20]! ; br x4"
+  },
+  {
+   "idx": 49,
+   "slot": 1938960,
+   "handler": 1013772,
+   "asm": "madd x8, x23, x8, x20 ; ldr x8, [x8, #8] ; adrp x12, #0x1df000"
+  },
+  {
+   "idx": 50,
+   "slot": 1938968,
+   "handler": 1014788,
+   "asm": "ldr x22, [sp, #0x28] ; add x26, x9, #0x10 ; mov w7, #0x30"
+  },
+  {
+   "idx": 51,
+   "slot": 1938976,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 52,
+   "slot": 1938984,
+   "handler": 1012360,
+   "asm": "ldr w9, [x10, #0x14] ; cmp w12, w9 ; b.ls #0xf8318"
+  },
+  {
+   "idx": 53,
+   "slot": 1938992,
+   "handler": 1005768,
+   "asm": "ldp x9, x10, [x0, #0x10] ; ldr x8, [x1, x8, lsl #3] ; ucvtf s0, x10"
+  },
+  {
+   "idx": 54,
+   "slot": 1939000,
+   "handler": 1003816,
+   "asm": "br x4 ; ldrsw x8, [x0, #0x18] ; lsl x8, x8, #3"
+  },
+  {
+   "idx": 55,
+   "slot": 1939008,
+   "handler": 1000120,
+   "asm": "cset w9, hi ; str xzr, [x1, x8] ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 56,
+   "slot": 1939016,
+   "handler": 999212,
+   "asm": "cset w9, le ; str xzr, [x1, x8] ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 57,
+   "slot": 1939024,
+   "handler": 1011856,
+   "asm": "ldr w19, [x5] ; ldr w8, [x24, #0xc] ; cmp w19, w8"
+  },
+  {
+   "idx": 58,
+   "slot": 1939032,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 59,
+   "slot": 1939040,
+   "handler": 1013124,
+   "asm": "b.ls #0xf796c ; ldr w9, [x4] ; ldr w10, [x8, #0xc]"
+  },
+  {
+   "idx": 60,
+   "slot": 1939048,
+   "handler": 1006136,
+   "asm": "ldp x8, x9, [x0, #8] ; ucvtf d0, d0 ; str d0, [x8, x9]"
+  },
+  {
+   "idx": 61,
+   "slot": 1939056,
+   "handler": 1015156,
+   "asm": "cmp w10, w9 ; b.ls #0xf8318 ; ldr x10, [x6]"
+  },
+  {
+   "idx": 62,
+   "slot": 1939064,
+   "handler": 1017816,
+   "asm": "cbnz w8, #0xf8ae0 ; mov w8, #0x130 ; madd x21, x28, x8, x23"
+  },
+  {
+   "idx": 63,
+   "slot": 1939072,
+   "handler": 1010980,
+   "asm": "b #0xf7834 ; mov w8, #0x30 ; madd x8, x23, x8, x20"
+  },
+  {
+   "idx": 64,
+   "slot": 1939080,
+   "handler": 981084,
+   "asm": "ldr s0, [x0, #8] ; lsl x8, x8, #3 ; ldr s1, [x1, x8]"
+  },
+  {
+   "idx": 65,
+   "slot": 1939088,
+   "handler": 982604,
+   "asm": "ldr x0, [x9, x8, lsl #3] ; ret  ; ldr w8, [x0, #8]"
+  },
+  {
+   "idx": 66,
+   "slot": 1939096,
+   "handler": 975152,
+   "asm": "mov x10, #0xfffd00000000 ; movk x10, #0xffff, lsl #48 ; mov x11, #-0x100000000"
+  },
+  {
+   "idx": 67,
+   "slot": 1939104,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 68,
+   "slot": 1939112,
+   "handler": 975860,
+   "asm": "ldr x1, [sp, #8] ; mov x0, x24 ; bl #0x30760"
+  },
+  {
+   "idx": 69,
+   "slot": 1939120,
+   "handler": 977820,
+   "asm": "str x8, [sp, #0x30] ; bl #0x30b40 ; mov x0, x21"
+  },
+  {
+   "idx": 70,
+   "slot": 1939128,
+   "handler": 981352,
+   "asm": "ldrb w8, [x8, #0x10] ; add x9, x11, x9, lsl #5 ; add x9, x9, x10, lsl #4"
+  },
+  {
+   "idx": 71,
+   "slot": 1939136,
+   "handler": 990936,
+   "asm": "b #0xf1ee4 ; mov x10, xzr ; mov w9, #1"
+  },
+  {
+   "idx": 72,
+   "slot": 1939144,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 73,
+   "slot": 1939152,
+   "handler": 984236,
+   "asm": "neg w8, w8 ; ror w8, w9, w8 ; str x8, [x1, x10, lsl #3]"
+  },
+  {
+   "idx": 74,
+   "slot": 1939160,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 75,
+   "slot": 1939168,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 76,
+   "slot": 1939176,
+   "handler": 987840,
+   "asm": "ldr x4, [x0] ; br x4 ; ldrsw x8, [x0, #0x10]"
+  },
+  {
+   "idx": 77,
+   "slot": 1939184,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 78,
+   "slot": 1939192,
+   "handler": 983396,
+   "asm": "ldr x4, [x0, #0x20]! ; br x4 ; ldp x8, x9, [x0, #8]"
+  },
+  {
+   "idx": 79,
+   "slot": 1939200,
+   "handler": 978560,
+   "asm": "tst x8, #-0xf0f0f0f0f0f0f10 ; sub w10, w9, #4 ; csel w9, w9, w10, eq"
+  },
+  {
+   "idx": 80,
+   "slot": 1939208,
+   "handler": 985192,
+   "asm": "str x8, [x1, x10, lsl #3] ; ldr x4, [x0, #0x20]! ; br x4"
+  },
+  {
+   "idx": 81,
+   "slot": 1939216,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 82,
+   "slot": 1939224,
+   "handler": 974788,
+   "asm": "bl #0x30b40 ; mov x0, x23 ; bl #0x30610"
+  },
+  {
+   "idx": 83,
+   "slot": 1939232,
+   "handler": 980668,
+   "asm": "br x4 ; ldrsw x8, [x0, #8] ; ldr d1, [x0, #0x10]"
+  },
+  {
+   "idx": 84,
+   "slot": 1939240,
+   "handler": 976652,
+   "asm": "mov x26, x19 ; cmp x9, x8 ; b.hs #0xee738"
+  },
+  {
+   "idx": 85,
+   "slot": 1939248,
+   "handler": 986024,
+   "asm": "fmaxnm d0, d0, d1 ; str d0, [x1, x8, lsl #3] ; ldr x4, [x0, #0x20]!"
+  },
+  {
+   "idx": 86,
+   "slot": 1939256,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 87,
+   "slot": 1939264,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 88,
+   "slot": 1939272,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 89,
+   "slot": 1939280,
+   "handler": 983916,
+   "asm": "lsl x8, x8, #3 ; ldr w8, [x1, x8] ; lsr x8, x9, x8"
+  },
+  {
+   "idx": 90,
+   "slot": 1939288,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 91,
+   "slot": 1939296,
+   "handler": 987072,
+   "asm": "cbz w10, #0xf0fd0 ; ldrb w9, [x9, #8] ; mov w10, #1"
+  },
+  {
+   "idx": 92,
+   "slot": 1939304,
+   "handler": 987492,
+   "asm": "ldr s1, [x1, x9] ; mov w8, #0x20 ; mov w9, #0x18"
+  },
+  {
+   "idx": 93,
+   "slot": 1939312,
+   "handler": 981940,
+   "asm": "ldrb w10, [x8, #8] ; ldrb w8, [x8, #0x10] ; add x9, x11, x9, lsl #5"
+  },
+  {
+   "idx": 94,
+   "slot": 1939320,
+   "handler": 984884,
+   "asm": "str x8, [x1, x10, lsl #3] ; ldr x4, [x0, #0x20]! ; br x4"
+  },
+  {
+   "idx": 95,
+   "slot": 1939328,
+   "handler": 975504,
+   "asm": "str x0, [sp, #0x18] ; bl #0x30610 ; mov x25, x0"
+  },
+  {
+   "idx": 96,
+   "slot": 1939336,
+   "handler": 989860,
+   "asm": "csel x8, x9, x8, lt ; ldr x0, [x0, x8] ; ldr x4, [x0]"
+  },
+  {
+   "idx": 97,
+   "slot": 1939344,
+   "handler": 986384,
+   "asm": "ldrb w8, [x8, #0x10] ; add x9, x11, x9, lsl #5 ; add x9, x9, x10, lsl #4"
+  },
+  {
+   "idx": 98,
+   "slot": 1939352,
+   "handler": 979292,
+   "asm": "br x4 ; ldrsw x8, [x0, #8] ; ldrsw x9, [x0, #0x10]"
+  },
+  {
+   "idx": 99,
+   "slot": 1939360,
+   "handler": 988600,
+   "asm": "br x4 ; ldrsw x8, [x0, #8] ; ldr s0, [x0, #0x10]"
+  },
+  {
+   "idx": 100,
+   "slot": 1939368,
+   "handler": 984632,
+   "asm": "ldrsw x10, [x0, #0x18] ; lsl x8, x8, #3 ; lsl x9, x9, #3"
+  },
+  {
+   "idx": 101,
+   "slot": 1939376,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 102,
+   "slot": 1939384,
+   "handler": 980260,
+   "asm": "ldrsw x10, [x0, #0x18] ; lsl x8, x8, #3 ; ldr w8, [x1, x8]"
+  },
+  {
+   "idx": 103,
+   "slot": 1939392,
+   "handler": 985852,
+   "asm": "fmov w9, s0 ; str x9, [x1, x8, lsl #3] ; ldr x4, [x0, #0x20]!"
+  },
+  {
+   "idx": 104,
+   "slot": 1939400,
+   "handler": 985596,
+   "asm": "ldrsw x10, [x0, #0x18] ; and x8, x9, x8 ; str x8, [x1, x10, lsl #3]"
+  },
+  {
+   "idx": 105,
+   "slot": 1939408,
+   "handler": 979540,
+   "asm": "frintp d0, d0 ; str d0, [x1, x8, lsl #3] ; ldr x4, [x0, #0x18]!"
+  },
+  {
+   "idx": 106,
+   "slot": 1939416,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 107,
+   "slot": 1939424,
+   "handler": 978300,
+   "asm": "cmp w9, #0 ; mov w9, #0xf ; csel w9, w9, w10, ne"
+  },
+  {
+   "idx": 108,
+   "slot": 1939432,
+   "handler": 988092,
+   "asm": "fcmp s0, s1 ; csel x8, x9, x8, ne ; ldr x0, [x0, x8]"
+  },
+  {
+   "idx": 109,
+   "slot": 1939440,
+   "handler": 987244,
+   "asm": "csel x8, x9, x8, eq ; ldr x0, [x0, x8] ; ldr x4, [x0]"
+  },
+  {
+   "idx": 110,
+   "slot": 1939448,
+   "handler": 986064,
+   "asm": "add x9, x11, x9, lsl #5 ; add x9, x9, x10, lsl #4 ; ldr x0, [x9, x8, lsl #3]"
+  },
+  {
+   "idx": 111,
+   "slot": 1939456,
+   "handler": 989036,
+   "asm": "cmp x9, x8 ; mov w8, #0x18 ; mov w9, #0x20"
+  },
+  {
+   "idx": 112,
+   "slot": 1939464,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 113,
+   "slot": 1939472,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 114,
+   "slot": 1939480,
+   "handler": 981688,
+   "asm": "ldrsw x8, [x0, #0x18] ; fmul s0, s0, s1 ; fmov w9, s0"
+  },
+  {
+   "idx": 115,
+   "slot": 1939488,
+   "handler": 983736,
+   "asm": "ldrsw x8, [x0, #0x10] ; ldr x9, [x0, #8] ; ldrsw x10, [x0, #0x18]"
+  },
+  {
+   "idx": 116,
+   "slot": 1939496,
+   "handler": 979864,
+   "asm": "ldrh w9, [x8, #0xa] ; ldrb w8, [x8, #8] ; add x9, x10, x9, lsl #4"
+  },
+  {
+   "idx": 117,
+   "slot": 1939504,
+   "handler": 988260,
+   "asm": "b #0xf1470 ; mov x10, xzr ; mov w9, #1"
+  },
+  {
+   "idx": 118,
+   "slot": 1939512,
+   "handler": 989448,
+   "asm": "adrp x11, #0x1de000 ; add x11, x11, #0xc20 ; add x8, x11, x8, lsl #5"
+  },
+  {
+   "idx": 119,
+   "slot": 1939520,
+   "handler": 986732,
+   "asm": "ldr s1, [x0, #0x10] ; ldrsw x8, [x0, #0x18] ; movi v2.4s, #0x80, lsl #24"
+  },
+  {
+   "idx": 120,
+   "slot": 1939528,
+   "handler": 990580,
+   "asm": "ldr x4, [x0] ; br x4 ; ldr x9, [x0, #8]"
+  },
+  {
+   "idx": 121,
+   "slot": 1939536,
+   "handler": 978892,
+   "asm": "cbz w8, #0xef01c ; neg w9, w8 ; and w8, w8, w9"
+  },
+  {
+   "idx": 122,
+   "slot": 1939544,
+   "handler": 977284,
+   "asm": "stp w9, w3, [sp, #0xc] ; ldr x21, [x24] ; mov w8, w9"
+  },
+  {
+   "idx": 123,
+   "slot": 1939552,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 124,
+   "slot": 1939560,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 125,
+   "slot": 1939568,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 126,
+   "slot": 1939576,
+   "handler": 990296,
+   "asm": "cmp x8, x9 ; mov w8, #0x18 ; mov w9, #0x20"
+  },
+  {
+   "idx": 127,
+   "slot": 1939584,
+   "handler": 991224,
+   "asm": "ldr x0, [x0, x8] ; ldr x4, [x0] ; br x4"
+  },
+  {
+   "idx": 128,
+   "slot": 1939592,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 129,
+   "slot": 1939600,
+   "handler": 992580,
+   "asm": "ldr x8, [x0, #8] ; adrp x9, #0x1de000 ; add x9, x9, #0xfb0"
+  },
+  {
+   "idx": 130,
+   "slot": 1939608,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 131,
+   "slot": 1939616,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 132,
+   "slot": 1939624,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 133,
+   "slot": 1939632,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 134,
+   "slot": 1939640,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 135,
+   "slot": 1939648,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 136,
+   "slot": 1939656,
+   "handler": 991512,
+   "asm": "br x4 ; ldrsw x8, [x0, #8] ; ldrsw x9, [x0, #0x10]"
+  },
+  {
+   "idx": 137,
+   "slot": 1939664,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 138,
+   "slot": 1939672,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 139,
+   "slot": 1939680,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 140,
+   "slot": 1939688,
+   "handler": 993016,
+   "asm": "ldr x4, [x0, #0x18]! ; br x4 ; ldrsw x8, [x0, #8]"
+  },
+  {
+   "idx": 141,
+   "slot": 1939696,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 142,
+   "slot": 1939704,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 143,
+   "slot": 1939712,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 144,
+   "slot": 1939720,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 145,
+   "slot": 1939728,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 146,
+   "slot": 1939736,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 147,
+   "slot": 1939744,
+   "handler": 992156,
+   "asm": "ldrsh x8, [x1, x8] ; str x8, [x1, x9, lsl #3] ; ldr x4, [x0, #0x18]!"
+  },
+  {
+   "idx": 148,
+   "slot": 1939752,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 149,
+   "slot": 1939760,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 150,
+   "slot": 1939768,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 151,
+   "slot": 1939776,
+   "handler": 993452,
+   "asm": "fcvtzs x8, s0 ; csel x8, x8, xzr, hi ; b #0xf28bc"
+  },
+  {
+   "idx": 152,
+   "slot": 1939784,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 153,
+   "slot": 1939792,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 154,
+   "slot": 1939800,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 155,
+   "slot": 1939808,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 156,
+   "slot": 1939816,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 157,
+   "slot": 1939824,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 158,
+   "slot": 1939832,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 159,
+   "slot": 1939840,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 160,
+   "slot": 1939848,
+   "handler": 993280,
+   "asm": "fccmp s0, s1, #0, lt ; fcvtzu w8, s0 ; csel x8, x8, xzr, hi"
+  },
+  {
+   "idx": 161,
+   "slot": 1939856,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 162,
+   "slot": 1939864,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 163,
+   "slot": 1939872,
+   "handler": 991804,
+   "asm": "ldr x9, [x0, #0x10] ; ldr x8, [x1, x8, lsl #3] ; cmp x8, x9"
+  },
+  {
+   "idx": 164,
+   "slot": 1939880,
+   "handler": 993624,
+   "asm": "csel x8, x8, xzr, hi ; b #0xf2964 ; mov x8, xzr"
+  },
+  {
+   "idx": 165,
+   "slot": 1939888,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 166,
+   "slot": 1939896,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 167,
+   "slot": 1939904,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 168,
+   "slot": 1939912,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 169,
+   "slot": 1939920,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 170,
+   "slot": 1939928,
+   "handler": 995060,
+   "asm": "ldrsw x8, [x0, #8] ; lsl x8, x8, #3 ; ldr w8, [x1, x8]"
+  },
+  {
+   "idx": 171,
+   "slot": 1939936,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 172,
+   "slot": 1939944,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 173,
+   "slot": 1939952,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 174,
+   "slot": 1939960,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 175,
+   "slot": 1939968,
+   "handler": 996104,
+   "asm": "ldr x4, [x0, #0x20]! ; br x4 ; ldrsw x8, [x0, #0x10]"
+  },
+  {
+   "idx": 176,
+   "slot": 1939976,
+   "handler": 993760,
+   "asm": "str d0, [x1, x8, lsl #3] ; ldr x4, [x0, #0x18]! ; br x4"
+  },
+  {
+   "idx": 177,
+   "slot": 1939984,
+   "handler": 993796,
+   "asm": "ldr x4, [x0, #0x18]! ; br x4 ; ldr x8, [x0, #8]"
+  },
+  {
+   "idx": 178,
+   "slot": 1939992,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 179,
+   "slot": 1940000,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 180,
+   "slot": 1940008,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 181,
+   "slot": 1940016,
+   "handler": 993824,
+   "asm": "ret  ; ldr d0, [x0, #8] ; fcmp d0, d0"
+  },
+  {
+   "idx": 182,
+   "slot": 1940024,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 183,
+   "slot": 1940032,
+   "handler": 995636,
+   "asm": "ldr x9, [x1, x9, lsl #3] ; cmp x8, x9 ; lsl x8, x10, #3"
+  },
+  {
+   "idx": 184,
+   "slot": 1940040,
+   "handler": 994524,
+   "asm": "fcvt s0, d0 ; fmov w9, s0 ; str x9, [x1, x8, lsl #3]"
+  },
+  {
+   "idx": 185,
+   "slot": 1940048,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 186,
+   "slot": 1940056,
+   "handler": 995352,
+   "asm": "ldrsw x10, [x0, #0x18] ; lsl x8, x8, #3 ; ldr w8, [x1, x8]"
+  },
+  {
+   "idx": 187,
+   "slot": 1940064,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 188,
+   "slot": 1940072,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 189,
+   "slot": 1940080,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 190,
+   "slot": 1940088,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 191,
+   "slot": 1940096,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 192,
+   "slot": 1940104,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 193,
+   "slot": 1940112,
+   "handler": 994464,
+   "asm": "adrp x9, #0x1df000 ; add x9, x9, #0xa0 ; ldrb w8, [x8, #8]"
+  },
+  {
+   "idx": 194,
+   "slot": 1940120,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 195,
+   "slot": 1940128,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 196,
+   "slot": 1940136,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 197,
+   "slot": 1940144,
+   "handler": 994492,
+   "asm": "fcvt s0, d0 ; fmov w9, s0 ; str x9, [x1, x8, lsl #3]"
+  },
+  {
+   "idx": 198,
+   "slot": 1940152,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 199,
+   "slot": 1940160,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 200,
+   "slot": 1940168,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 201,
+   "slot": 1940176,
+   "handler": 996540,
+   "asm": "ldr s1, [x1, x8] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 202,
+   "slot": 1940184,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 203,
+   "slot": 1940192,
+   "handler": 997088,
+   "asm": "lsl x8, x10, #3 ; cset w9, gt ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 204,
+   "slot": 1940200,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 205,
+   "slot": 1940208,
+   "handler": 998424,
+   "asm": "ldrsw x10, [x0, #0x18] ; lsl x8, x8, #3 ; ldr w8, [x1, x8]"
+  },
+  {
+   "idx": 206,
+   "slot": 1940216,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 207,
+   "slot": 1940224,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 208,
+   "slot": 1940232,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 209,
+   "slot": 1940240,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 210,
+   "slot": 1940248,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 211,
+   "slot": 1940256,
+   "handler": 996676,
+   "asm": "ldr d1, [x1, x8, lsl #3] ; lsl x8, x9, #3 ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 212,
+   "slot": 1940264,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 213,
+   "slot": 1940272,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 214,
+   "slot": 1940280,
+   "handler": 996792,
+   "asm": "ldr x4, [x0, #0x20]! ; br x4 ; ldr x8, [x0, #8]"
+  },
+  {
+   "idx": 215,
+   "slot": 1940288,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 216,
+   "slot": 1940296,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 217,
+   "slot": 1940304,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 218,
+   "slot": 1940312,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 219,
+   "slot": 1940320,
+   "handler": 998276,
+   "asm": "str w9, [x1, x8] ; ldr x4, [x0, #0x20]! ; br x4"
+  },
+  {
+   "idx": 220,
+   "slot": 1940328,
+   "handler": 997788,
+   "asm": "str w9, [x1, x8] ; ldr x4, [x0, #0x20]! ; br x4"
+  },
+  {
+   "idx": 221,
+   "slot": 1940336,
+   "handler": 997672,
+   "asm": "lsl x8, x10, #3 ; cset w9, ge ; str xzr, [x1, x8]"
+  },
+  {
+   "idx": 222,
+   "slot": 1940344,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 223,
+   "slot": 1940352,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 224,
+   "slot": 1940360,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 225,
+   "slot": 1940368,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 226,
+   "slot": 1940376,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 227,
+   "slot": 1940384,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 228,
+   "slot": 1940392,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 229,
+   "slot": 1940400,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 230,
+   "slot": 1940408,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 231,
+   "slot": 1940416,
+   "handler": 997164,
+   "asm": "ldrsw x10, [x0, #0x18] ; ldr x8, [x1, x8, lsl #3] ; ldr x9, [x1, x9, lsl #3]"
+  },
+  {
+   "idx": 232,
+   "slot": 1940424,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  },
+  {
+   "idx": 233,
+   "slot": 1940432,
+   "handler": 998856,
+   "asm": "fcmp s1, s0 ; cset w9, lt ; str w9, [x1, x8]"
+  }
+ ]
+}

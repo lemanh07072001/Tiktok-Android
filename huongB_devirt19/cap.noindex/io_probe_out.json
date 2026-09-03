@@ -1,0 +1,286 @@
+{
+ "stream": [
+  {
+   "tag": "BOOT",
+   "msg": "io-probe armed (libc+dlopen)"
+  },
+  {
+   "tag": "READY",
+   "base": "0x6f65400000"
+  },
+  {
+   "tag": "KSCH",
+   "seq": 1,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 2,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "EINIT",
+   "seq": 3,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 4,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 5,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "EINIT",
+   "seq": 6,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 7,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 8,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "EINIT",
+   "seq": 9,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 10,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 11,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "EINIT",
+   "seq": 12,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 13,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 14,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "EINIT",
+   "seq": 15,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 16,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 17,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "EINIT",
+   "seq": 18,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 19,
+   "win": false,
+   "keyBytes": 16
+  }
+ ],
+ "dump": [
+  {
+   "t": "KSCH",
+   "seq": 1,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+  },
+  {
+   "t": "KSCH",
+   "seq": 2,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+  },
+  {
+   "t": "EINIT",
+   "seq": 3,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af",
+   "iv": "4d207ea37a419f7d622f81c6a2f53594"
+  },
+  {
+   "t": "KSCH",
+   "seq": 4,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af"
+  },
+  {
+   "t": "KSCH",
+   "seq": 5,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+  },
+  {
+   "t": "EINIT",
+   "seq": 6,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af",
+   "iv": "4d207ea37a419f7d622f81c6a2f53594"
+  },
+  {
+   "t": "KSCH",
+   "seq": 7,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af"
+  },
+  {
+   "t": "KSCH",
+   "seq": 8,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+  },
+  {
+   "t": "EINIT",
+   "seq": 9,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af",
+   "iv": "4d207ea37a419f7d622f81c6a2f53594"
+  },
+  {
+   "t": "KSCH",
+   "seq": 10,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af"
+  },
+  {
+   "t": "KSCH",
+   "seq": 11,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+  },
+  {
+   "t": "EINIT",
+   "seq": 12,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af",
+   "iv": "4d207ea37a419f7d622f81c6a2f53594"
+  },
+  {
+   "t": "KSCH",
+   "seq": 13,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af"
+  },
+  {
+   "t": "KSCH",
+   "seq": 14,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+  },
+  {
+   "t": "EINIT",
+   "seq": 15,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af",
+   "iv": "4d207ea37a419f7d622f81c6a2f53594"
+  },
+  {
+   "t": "KSCH",
+   "seq": 16,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af"
+  },
+  {
+   "t": "KSCH",
+   "seq": 17,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+  },
+  {
+   "t": "EINIT",
+   "seq": 18,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af",
+   "iv": "4d207ea37a419f7d622f81c6a2f53594"
+  },
+  {
+   "t": "KSCH",
+   "seq": 19,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "8252970d959b06db102e17d85c0ec1af"
+  }
+ ]
+}

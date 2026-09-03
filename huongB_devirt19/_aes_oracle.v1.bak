@@ -1,0 +1,68 @@
+// AES ORACLE — capture device-bound (key,keylen,IV) + known ct→pt for offline DIFF.
+// Static PROVEN: libmetasec_ov.so = STANDARD AES (sbox+Rcon @0x196fbc/0x197fbc), zero device reads.
+//   key-schedule 0x1591bc(AES_KEY* x0, u8* userKey x1, int keyBYTES w2)  w2∈{16,24,32}
+//   drivers(init keysched+IV): 0x159d60 0x15a1dc 0x15a598 ; do_cipher 0x159618/0x15997c
+//   reader 0xe2df0 ; store-getter 0x1182d0 ; key@x1 vào 0x1591bc = nguyên liệu duy nhất.
+// KHÔNG re-register: spawn/attach read-only.  Frida-17 API: Process.findModuleByName + this.context.
+'use strict';
+const SO='libmetasec_ov.so';
+const KEYSCHED=0x1591bc, D1=0x159d60, D2=0x15a1dc, D3=0x15a598, RDR=0xe2df0, GET=0x1182d0;
+function findBase(n){
+  try{if(Module.findBaseAddress)return Module.findBaseAddress(n);}catch(e){}
+  try{const m=Process.findModuleByName(n);if(m)return m.base;}catch(e){}
+  try{return Module.getBaseAddress(n);}catch(e){}
+  return null;
+}
+function hx(p,n){try{const b=new Uint8Array(p.readByteArray(n));let s='';for(const x of b)s+=('0'+x.toString(16)).slice(-2);return s;}catch(e){return '<x '+e+'>';}}
+
+function main(){
+  const base=findBase(SO);
+  if(!base){setTimeout(main,400);return;}
+  console.log('[+] base='+base);
+
+  // (1) KEY — crown jewel. userKey=x1, keyBYTES=w2, AES_KEY dst=x0
+  Interceptor.attach(base.add(KEYSCHED),{onEnter(a){
+    const kl=this.context.x2.toInt32();
+    if(kl===16||kl===24||kl===32){
+      console.log('\n=== AES KEY-SCHED @0x1591bc  keyBYTES='+kl+' ===');
+      console.log('  userKey = '+hx(this.context.x1,kl));
+      try{console.log('  from    = '+DebugSymbol.fromAddress(this.returnAddress));}catch(e){}
+    }
+  }});
+
+  // (2) IV — mode-init drivers, IV=x3(16), ctx=x0
+  [['m1',D1],['m2',D2],['m3(CTR)',D3]].forEach(function(p){
+    Interceptor.attach(base.add(p[1]),{onEnter(a){
+      console.log('\n=== DRIVER '+p[0]+' @'+ptr(p[1])+' ===');
+      console.log('  IV(x3) = '+hx(this.context.x3,16));
+      console.log('  ctx(x0)= '+this.context.x0);
+      try{console.log('  from   = '+DebugSymbol.fromAddress(this.returnAddress));}catch(e){}
+    }});
+  });
+
+  // (3) reader — path (đối chiếu _msdump/)
+  Interceptor.attach(base.add(RDR),{onEnter(a){
+    try{const s=this.context.x1.readUtf8String(); if(s&&/\.(ms|t)/.test(s)) console.log('\n=== READER @0xe2df0 path='+s);}catch(e){}
+  }});
+
+  // (4) getter — keyname x1, ret head 48B
+  Interceptor.attach(base.add(GET),{onEnter(a){
+    try{const kn=this.context.x1.readUtf8String(); if(kn) this.kn=kn;}catch(e){}
+  },onLeave(r){ if(this.kn){console.log('\n=== GETTER @0x1182d0 keyname="'+this.kn+'"');
+    console.log('  ret head = '+hx(r,48)); } }});
+
+  // (5) do_cipher block — in(x1)/out(x0)/len(x2)
+  [['blk1',0x159618],['blk2',0x15997c]].forEach(function(p){
+    Interceptor.attach(base.add(p[1]),{onEnter(a){
+      const n=this.context.x2.toInt32();
+      if(n>0&&n<=1024){
+        console.log('\n=== DOCIPHER '+p[0]+' @'+ptr(p[1])+' len='+n+' ===');
+        console.log('  in(x1) = '+hx(this.context.x1,Math.min(n,64)));
+        this._out=this.context.x0; this._n=Math.min(n,64);
+      }
+    },onLeave(r){ if(this._out) console.log('  out    = '+hx(this._out,this._n)); }});
+  });
+
+  console.log('[+] hooks armed: keysched+3drivers+reader+getter+docipher. Trigger store I/O.');
+}
+setImmediate(main);

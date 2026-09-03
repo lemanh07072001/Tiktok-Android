@@ -1,0 +1,12 @@
+force-stop+launch
+attach pid=5847 t=8.0
+   {'tag': 'READY', 'base': '0x7b61c00000'}
+collecting 55s (store write ~t20-40)...
+captured 4000 crypt ops; disk files 12
+=== HITS ===
+NONE (no capture matched any on-disk store file)
+cap len hist: {32: 2, 64: 3858, 112: 3, 160: 3, 176: 2, 560: 33, 576: 6, 592: 90, 688: 3}
+disk sizes: [8, 16, 32, 132, 269, 375, 630]
+captures with store-matching LENGTH: 2
+   15997c 32 in 681036bb64851c7637d419062d9e0afc1100000000000000 key b8d72ddec05142948bbf2dc81d63759c
+   159f58 32 in 681036bb64851c7637d419062d9e0afca01c95502a9be79a key b8d72ddec05142948bbf2dc81d63759c

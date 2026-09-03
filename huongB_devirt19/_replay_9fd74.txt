@@ -1,0 +1,40 @@
+[+] mapped .so @ 0x7843c00000, applied 6765 RELATIVE relocs
+[+] wrote 1919 mem windows + stack + regfile + bytecode + soRW + bcFull
+[+] un-patched frida hooks: re-wrote 1 clean executable segment(s) + re-applied bcFull
+[+] frida gum cleanup: replaced 8 gum-trampoline pointers with clean ret 0x7843c9ff1c
+[+] filled 165 import GOT slots with stubs
+[chk] [x23]=0x7843d81b7c  bcptr=0x7843d81b7c  match=True
+[chk] [fp-0x58]=0x34320370 (expect bias 0x9b374)
+[+] running from pc=0x7843c52924 until ret 0x7843c5d484 ...
+[+] reached_ret=False
+[+] distinct VM-PCs visited = 219
+[+] no clean period; last 40 VM-PCs: ['0x181eec', '0x181ef0', '0x181ef4', '0x181ef8', '0x181efc', '0x181f00', '0x181f10', '0x181f18', '0x181f1c', '0x181f20', '0x181f2c', '0x181f3c', '0x181f48', '0x181f58', '0x181fc8', '0x181fdc', '0x181fe0', '0x181fe4', '0x181fe8', '0x181fec', '0x181ff0', '0x181ff8', '0x182004', '0x182008', '0x18200c', '0x182010', '0x182014', '0x182018', '0x18201c', '0x182020', '0x182028', '0x182030', '0x182034', '0x182038', '0x18203c', '0x182040', '0x182044', '0x182048', '0x18204c', '0x182050']
+[+] TOP loop memory-reads (addr : count : current value):
+    0x7843defbd8 (off 0x1efbd8) x17923072 = 0x7843dfbaf8
+    0x7843dfbaf8 (off 0x1fbaf8) x17923072 = 0x0
+[+] TOP loop memory-WRITES (addr : count : value-sequence) — counter candidates:
+    0x0 (off -) x17923072 = ['0x7843de0660', '0x7843de0660', '0x7843de0660', '0x7843de0660', '0x7843de0660', '0x7843de0660']
+    0x8 (off -) x17923072 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+    0x783431eef0 (off stack) x17923072 = ['0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
+[+] emu stopped: None; blocks=36346144; unmapped_pages=4
+[dbg] fault pc=0x7843d3b080 (off 0x13b080)
+[dbg] last 12 block addrs: ['0x13afd0', '0x13b080', '0x13afd0', '0x13b080', '0x13afd0', '0x13b080', '0x13afd0', '0x13b080', '0x13afd0', '0x13b080', '0x13afd0', '0x13b080']
+    0x13b080: ret 
+    x15=0x7843c55834
+    x16=0x7843def190
+    x17=0x2000001dc
+    x0=0x0
+
+=== search for captured slot16 in replayed memory ===
+
+0/40 captured slot16 reproduced in replayed VM memory
+
+=== VM output-buffer inspection (args x1/x4 captured at entry) ===
+  [x1=0x783431ebb0]: 68f6313478000000580f3234780000003c10ca437800000070ef31347800000014b6c9437800000030b5d24375000000
+  [x2=0x7843ddb7e8]: c066ae447800000048649944780000006464994478000000886499447800000000000000000000000000000000000000
+  [x4=0x783431ebc0]: 3c10ca437800000070ef31347800000014b6c9437800000030b5d243750000005873a1d4780000005873a1d478000000
+  [x0=0x7843d864f0]: 66867bff2a40deec2a00dcec2ac0aeec2a80acec2a40aaec2a00a8ec2ac086ec2a8084ec2a4082ec2a0080ec2c742000
+  [x8=0x783431f668]: 0000000014ffffff0000000000000000b0f1313478000000030000000000000001000000000000008033d26d79000000
+[i] VM ran 36346144 blocks, 219 distinct bytecode-PCs (short=False)
+[-] none reproduced yet — likely need more captured memory (unmapped pages read as zero)
+    top unmapped pages (need capture): ['0x0', '0x7843dfc000', '0x799b8f7000', '0x7843dfb000']

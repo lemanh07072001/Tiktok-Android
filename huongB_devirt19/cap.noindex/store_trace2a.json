@@ -1,0 +1,531 @@
+{
+ "pid": 20281,
+ "msgs": [
+  {
+   "tag": "FILEHOOK"
+  },
+  {
+   "tag": "WAIT_DLOPEN"
+  },
+  {
+   "tag": "READY",
+   "base": "0x6f7d801000",
+   "preloaded": false
+  },
+  {
+   "tag": "FILEMMAP",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.chk",
+   "ret": 4096,
+   "head": "6b6576612d63686b01000000feffffff0000000000000000030000004000000040000000400000000100008200000000"
+  },
+  {
+   "tag": "FILEMMAP",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8192,
+   "head": "6b6576612d626c6b01000000000000000000000040000000400000000200000040000000400000001000000020000000"
+  },
+  {
+   "tag": "FILEMMAP",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "74746d5f6d6f6e000000000000000000"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "70fdd769526fccc69da631e7a7c5dac6"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "fece4b2e417b60ee8ea1a05770ea7426"
+  },
+  {
+   "tag": "KEY",
+   "kb": 16,
+   "key": "b114249b7bed9d2691d70c60d69f9c4f"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "b3cfb9c63d08872a611d2c46201641ed"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "3cdc67e18e31a270ae490ec1f974b333"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "c6065ff390c1fdf5dfb5433300096f44"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "be0ff85f2d7a997a3cbbdc184b4ccc88"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "b3a7ba3b757f1878bdbc8f50121072f6"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "f5da20dc05fa481611710ed4fd271fbb"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "f757b1dbc43d7e7f3f22629ea086d1eb"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "fca1bb7dda0fa55b2f8d0329220cfe20"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "2722418685febb75c01c32e8ea668f33"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "55c440c712f92958"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "e7b8b37ac1de7b63"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "83c81f5ebd3d3910d0fa9eac1e01e286"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "58191e05b31885df"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "14ffa7225b0fa49b"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "bf232a684b47468fae4640a5f207f568"
+  },
+  {
+   "tag": "EINIT",
+   "kb": 16,
+   "key": "8252970d959b06db102e17d85c0ec1af",
+   "iv": "4d207ea37a419f7d622f81c6a2f53594"
+  },
+  {
+   "tag": "KEY",
+   "kb": 16,
+   "key": "8252970d959b06db102e17d85c0ec1af"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "95e5b2894752b1c1b6ebf84e884cc579"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "907659df4068216216ec4b57fb554fb0"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "d9a90825fe85a96e78340a0c5d5a1c1b"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "b6662360f1abff273046259d1065116b"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "910d7c709bcfd0f8dcc202cf989bbd54"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "60d21b26310d9f8723e78c79bb1472b3"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "19c1a7be8092e37e"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "6f35baede2fca75b"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "00146e9541d15fba23f0e806d81a4772"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "9e682fa3361d4aef2b48f0beb8c0301e"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "05387497cd1c667ef284517f77884162"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "4875b9e781414cca"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "837751c43dfd81d6"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "9b29c8d5dab12ee41e2b2cb5162008ef"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "59d1e66bb27bc9bf79ae614b22cb79aa"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "81e08a48a766dcd1eeda1d330f7dd1ab"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "55d92de4d45661b3"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "ef4bc43416141522"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "41b4a20124a03fbe961e8e50b0efd86e"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "62abbb9e150e26d9296179f1854ce37d"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "14e2eddc5dc67516"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "270970d61af38377"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "99edfc8caa781dcbb1a9c698a4056377"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "88566abffdfc592f3ab320f3053e2f1c"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "3fa085e67c00ee05"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "b03c0c6e25d8a336"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "fc416e7673e69ba666855a4bebfcc213"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "d630f42096a60e982fb8c1ab3c3a122b"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "60a541b5476d0582"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "ea56452b2d2bbd03"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "8ee619718522629ea01248673808736f"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "49b460a43942f8256dbac631c8198247"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "889c331f1f32a645"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "dba0870b02a1e22e"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "f7b045005a6b260e7c27f8f50e0211d6"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "00ccc6928a9e5f24aa11943b387256fc"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "6787fa378b05638f"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "8ce9aa7f9d4c1408"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "83660888715b9afd5509e3f1d927dd9d"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "ca9001bd1d9cb925a62cfbc9fea68e5a"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "2780bd9c2def71b1e81e008cc0709401"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "6b996d442d6aca730770be6ac3858a77"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "66e1aebabc299093d7e99e80b2679ce2"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "ad96bb6559b55b8d940b776715ddbbe6"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "c53925687b00942b36e786c021d8e9ad"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "7fc8c0bd10cfefec"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "2e377aeb56e4e66d"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "f227f0b35654c0c5e3f5ae7c9837db3c"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "3871cc6c665e34baf2b308f2bafbaeba"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "53ee5f15b27c4a60"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "4341f058a9ba2311"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "5f46c4b049de9c0558daeeeb691cb9e0"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "6dfda9d4c796db28"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "14311c328e966458"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "c17b3b6aeba9f2a531f8b7f8b06219b3"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "9173604a448d1df8"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "6ceebd64e82e4395"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "232b9f469765a84ab54644ac7a7dac49"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "6c28030665c9f6f4"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 8,
+   "head": "e667d62f5dd5c847"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "a630e4d4d5a15013ed8a336c9b025f5f"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "32b256e0ae5fd3e1c35b90e5a24c7aab"
+  },
+  {
+   "tag": "FILERD",
+   "path": "/data/user/0/com.zhiliaoapp.musically/files/keva/repo/mssdk/mssdk.blk",
+   "ret": 16,
+   "head": "4a868bc29e57350c1aa54a53c64a9334"
+  }
+ ],
+ "data": {}
+}

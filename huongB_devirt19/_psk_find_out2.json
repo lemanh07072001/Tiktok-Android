@@ -1,0 +1,438 @@
+[
+ {
+  "t": "info",
+  "msg": "psk-find installed (orch 0x1814f0)"
+ },
+ {
+  "t": "psk_cand",
+  "prog": "0x1814f0",
+  "x1": "0x70355ffde8",
+  "n": 9,
+  "cand": [
+   {
+    "at": "0x7370e67300",
+    "region": "libc.so+0x4b300",
+    "hex32": "f30300aaa00000b4e00313aaf30b40f9fd7bc2a8c0035fd616f4019488018052"
+   },
+   {
+    "at": "0x7035601af0",
+    "region": "anon?",
+    "hex32": "a01d603570000000bc8a688d6f000000201b6035c1bdf0ff582fb8ffffffffff"
+   },
+   {
+    "at": "0x6f8d68cfd1",
+    "region": "libmetasec_ov.so+0x8cfd1",
+    "hex32": "c31a91980b0394e86742f9000140f9d3290294e10300aae0831e915c0b0394e8"
+   },
+   {
+    "at": "0x6f8d68e2e8",
+    "region": "libmetasec_ov.so+0x8e2e8",
+    "hex32": "f44fbea9fd7b01a9fd430091000040f9f30302aaf40301aacf1d009401b00394"
+   },
+   {
+    "at": "0x7053c053ec",
+    "region": "anon?",
+    "hex32": "fcffff177fe20239f44f41a9fd7bc2a8c0035fd6080040f9c80000b4011040f9"
+   },
+   {
+    "at": "0x7053c0acf8",
+    "region": "anon?",
+    "hex32": "87ea0094097c6092c5110014bf02096beb031faaa9b2891a297da90a2a7d7cd3"
+   },
+   {
+    "at": "0x7053aeb7f8",
+    "region": "anon?",
+    "hex32": "fd7b4fa986040014ffc300d1fd7b02a9fd830091080440f9400440ade2030091"
+   },
+   {
+    "at": "0x7053c01e10",
+    "region": "anon?",
+    "hex32": "54000014e70900373f0d00714109005461b2ffb021083c91720c0194e8031faa"
+   },
+   {
+    "at": "0x7053a3c278",
+    "region": "anon?",
+    "hex32": "ff4302d1fd7b05a9f85f06a909230094fd430191b12100948f230094cd210094"
+   }
+  ],
+  "poolsz": 0
+ },
+ {
+  "t": "psk_cand",
+  "prog": "0x1814f0",
+  "x1": "0x70355ff0a8",
+  "n": 8,
+  "cand": [
+   {
+    "at": "0x7370e67300",
+    "region": "libc.so+0x4b300",
+    "hex32": "f30300aaa00000b4e00313aaf30b40f9fd7bc2a8c0035fd616f4019488018052"
+   },
+   {
+    "at": "0x6f8d68cfd1",
+    "region": "libmetasec_ov.so+0x8cfd1",
+    "hex32": "c31a91980b0394e86742f9000140f9d3290294e10300aae0831e915c0b0394e8"
+   },
+   {
+    "at": "0x6f8d68e2e8",
+    "region": "libmetasec_ov.so+0x8e2e8",
+    "hex32": "f44fbea9fd7b01a9fd430091000040f9f30302aaf40301aacf1d009401b00394"
+   },
+   {
+    "at": "0x7053c053ec",
+    "region": "anon?",
+    "hex32": "fcffff177fe20239f44f41a9fd7bc2a8c0035fd6080040f9c80000b4011040f9"
+   },
+   {
+    "at": "0x7053c0acf8",
+    "region": "anon?",
+    "hex32": "87ea0094097c6092c5110014bf02096beb031faaa9b2891a297da90a2a7d7cd3"
+   },
+   {
+    "at": "0x7053aeb7f8",
+    "region": "anon?",
+    "hex32": "fd7b4fa986040014ffc300d1fd7b02a9fd830091080440f9400440ade2030091"
+   },
+   {
+    "at": "0x7053c01e10",
+    "region": "anon?",
+    "hex32": "54000014e70900373f0d00714109005461b2ffb021083c91720c0194e8031faa"
+   },
+   {
+    "at": "0x7053a3c278",
+    "region": "anon?",
+    "hex32": "ff4302d1fd7b05a9f85f06a909230094fd430191b12100948f230094cd210094"
+   }
+  ],
+  "poolsz": 0
+ },
+ {
+  "t": "psk_cand",
+  "prog": "0x1814f0",
+  "x1": "0x70355ff0a8",
+  "n": 10,
+  "cand": [
+   {
+    "at": "0x70e51d6c80",
+    "region": "anon?",
+    "hex32": "6c109094bc9ab89e050fbd3e2ca6b99e4b2d56455253494f4e00484f53540000"
+   },
+   {
+    "at": "0x7370e67300",
+    "region": "libc.so+0x4b300",
+    "hex32": "f30300aaa00000b4e00313aaf30b40f9fd7bc2a8c0035fd616f4019488018052"
+   },
+   {
+    "at": "0x70e6a0ec",
+    "region": "boot-framework.oat+0x2750ec",
+    "hex32": "c01b2000f00b40d11f0240b9e00f19f8f61700f9f76303a9f96b04a9fb7305a9"
+   },
+   {
+    "at": "0x6f8d68cfd1",
+    "region": "libmetasec_ov.so+0x8cfd1",
+    "hex32": "c31a91980b0394e86742f9000140f9d3290294e10300aae0831e915c0b0394e8"
+   },
+   {
+    "at": "0x6f8d68e2e8",
+    "region": "libmetasec_ov.so+0x8e2e8",
+    "hex32": "f44fbea9fd7b01a9fd430091000040f9f30302aaf40301aacf1d009401b00394"
+   },
+   {
+    "at": "0x7053c053ec",
+    "region": "anon?",
+    "hex32": "fcffff177fe20239f44f41a9fd7bc2a8c0035fd6080040f9c80000b4011040f9"
+   },
+   {
+    "at": "0x7053c0acf8",
+    "region": "anon?",
+    "hex32": "87ea0094097c6092c5110014bf02096beb031faaa9b2891a297da90a2a7d7cd3"
+   },
+   {
+    "at": "0x7053aeb7f8",
+    "region": "anon?",
+    "hex32": "fd7b4fa986040014ffc300d1fd7b02a9fd830091080440f9400440ade2030091"
+   },
+   {
+    "at": "0x7053c01e10",
+    "region": "anon?",
+    "hex32": "54000014e70900373f0d00714109005461b2ffb021083c91720c0194e8031faa"
+   },
+   {
+    "at": "0x7053a3c278",
+    "region": "anon?",
+    "hex32": "ff4302d1fd7b05a9f85f06a909230094fd430191b12100948f230094cd210094"
+   }
+  ],
+  "poolsz": 0
+ },
+ {
+  "t": "psk_cand",
+  "prog": "0x1814f0",
+  "x1": "0x70355ff0a8",
+  "n": 9,
+  "cand": [
+   {
+    "at": "0x70e51fa500",
+    "region": "anon?",
+    "hex32": "3fc2cc1f4393942b53bd74671cfacf004b2d56455253494f4e002d544e430000"
+   },
+   {
+    "at": "0x7370e67300",
+    "region": "libc.so+0x4b300",
+    "hex32": "f30300aaa00000b4e00313aaf30b40f9fd7bc2a8c0035fd616f4019488018052"
+   },
+   {
+    "at": "0x6f8d68cfd1",
+    "region": "libmetasec_ov.so+0x8cfd1",
+    "hex32": "c31a91980b0394e86742f9000140f9d3290294e10300aae0831e915c0b0394e8"
+   },
+   {
+    "at": "0x6f8d68e2e8",
+    "region": "libmetasec_ov.so+0x8e2e8",
+    "hex32": "f44fbea9fd7b01a9fd430091000040f9f30302aaf40301aacf1d009401b00394"
+   },
+   {
+    "at": "0x7053c053ec",
+    "region": "anon?",
+    "hex32": "fcffff177fe20239f44f41a9fd7bc2a8c0035fd6080040f9c80000b4011040f9"
+   },
+   {
+    "at": "0x7053c0acf8",
+    "region": "anon?",
+    "hex32": "87ea0094097c6092c5110014bf02096beb031faaa9b2891a297da90a2a7d7cd3"
+   },
+   {
+    "at": "0x7053aeb7f8",
+    "region": "anon?",
+    "hex32": "fd7b4fa986040014ffc300d1fd7b02a9fd830091080440f9400440ade2030091"
+   },
+   {
+    "at": "0x7053c01e10",
+    "region": "anon?",
+    "hex32": "54000014e70900373f0d00714109005461b2ffb021083c91720c0194e8031faa"
+   },
+   {
+    "at": "0x7053a3c278",
+    "region": "anon?",
+    "hex32": "ff4302d1fd7b05a9f85f06a909230094fd430191b12100948f230094cd210094"
+   }
+  ],
+  "poolsz": 0
+ },
+ {
+  "t": "psk_cand",
+  "prog": "0x1814f0",
+  "x1": "0x70355ff0a8",
+  "n": 9,
+  "cand": [
+   {
+    "at": "0x70e5218fe0",
+    "region": "anon?",
+    "hex32": "e65f1ab7f47ffd09442aaf66733a1e7f4b2d56455253494f4e00484f53540000"
+   },
+   {
+    "at": "0x7370e67300",
+    "region": "libc.so+0x4b300",
+    "hex32": "f30300aaa00000b4e00313aaf30b40f9fd7bc2a8c0035fd616f4019488018052"
+   },
+   {
+    "at": "0x6f8d68cfd1",
+    "region": "libmetasec_ov.so+0x8cfd1",
+    "hex32": "c31a91980b0394e86742f9000140f9d3290294e10300aae0831e915c0b0394e8"
+   },
+   {
+    "at": "0x6f8d68e2e8",
+    "region": "libmetasec_ov.so+0x8e2e8",
+    "hex32": "f44fbea9fd7b01a9fd430091000040f9f30302aaf40301aacf1d009401b00394"
+   },
+   {
+    "at": "0x7053c053ec",
+    "region": "anon?",
+    "hex32": "fcffff177fe20239f44f41a9fd7bc2a8c0035fd6080040f9c80000b4011040f9"
+   },
+   {
+    "at": "0x7053c0acf8",
+    "region": "anon?",
+    "hex32": "87ea0094097c6092c5110014bf02096beb031faaa9b2891a297da90a2a7d7cd3"
+   },
+   {
+    "at": "0x7053aeb7f8",
+    "region": "anon?",
+    "hex32": "fd7b4fa986040014ffc300d1fd7b02a9fd830091080440f9400440ade2030091"
+   },
+   {
+    "at": "0x7053c01e10",
+    "region": "anon?",
+    "hex32": "54000014e70900373f0d00714109005461b2ffb021083c91720c0194e8031faa"
+   },
+   {
+    "at": "0x7053a3c278",
+    "region": "anon?",
+    "hex32": "ff4302d1fd7b05a9f85f06a909230094fd430191b12100948f230094cd210094"
+   }
+  ],
+  "poolsz": 0
+ },
+ {
+  "t": "psk_cand",
+  "prog": "0x1814f0",
+  "x1": "0x70355ff0a8",
+  "n": 11,
+  "cand": [
+   {
+    "at": "0x7370e67300",
+    "region": "libc.so+0x4b300",
+    "hex32": "f30300aaa00000b4e00313aaf30b40f9fd7bc2a8c0035fd616f4019488018052"
+   },
+   {
+    "at": "0x7035600db0",
+    "region": "anon?",
+    "hex32": "6010603570000000bc8a688d6f000000c055ef70c1bdf0ff582fb8ffffffffff"
+   },
+   {
+    "at": "0x6f8d68cfd1",
+    "region": "libmetasec_ov.so+0x8cfd1",
+    "hex32": "c31a91980b0394e86742f9000140f9d3290294e10300aae0831e915c0b0394e8"
+   },
+   {
+    "at": "0x6f8d68e2e8",
+    "region": "libmetasec_ov.so+0x8e2e8",
+    "hex32": "f44fbea9fd7b01a9fd430091000040f9f30302aaf40301aacf1d009401b00394"
+   },
+   {
+    "at": "0x7053c053ec",
+    "region": "anon?",
+    "hex32": "fcffff177fe20239f44f41a9fd7bc2a8c0035fd6080040f9c80000b4011040f9"
+   },
+   {
+    "at": "0x7053c0acf8",
+    "region": "anon?",
+    "hex32": "87ea0094097c6092c5110014bf02096beb031faaa9b2891a297da90a2a7d7cd3"
+   },
+   {
+    "at": "0x7053aeb7f8",
+    "region": "anon?",
+    "hex32": "fd7b4fa986040014ffc300d1fd7b02a9fd830091080440f9400440ade2030091"
+   },
+   {
+    "at": "0x7053c01e10",
+    "region": "anon?",
+    "hex32": "54000014e70900373f0d00714109005461b2ffb021083c91720c0194e8031faa"
+   },
+   {
+    "at": "0x7021cf0880",
+    "region": "anon?",
+    "hex32": "9006a5af6f000000b8b0137673000000bc306fa9aa3831164dee8de34e0efbb0"
+   },
+   {
+    "at": "0x6fafa506a0",
+    "region": "anon?",
+    "hex32": "1010cf2170000000b8b0137673000000bc306fa9aa3831164dee8de34e0efbb0"
+   },
+   {
+    "at": "0x7053a3c278",
+    "region": "anon?",
+    "hex32": "ff4302d1fd7b05a9f85f06a909230094fd430191b12100948f230094cd210094"
+   }
+  ],
+  "poolsz": 1
+ },
+ {
+  "t": "psk_cand",
+  "prog": "0x1814f0",
+  "x1": "0x70355ff0a8",
+  "n": 8,
+  "cand": [
+   {
+    "at": "0x7370e67300",
+    "region": "libc.so+0x4b300",
+    "hex32": "f30300aaa00000b4e00313aaf30b40f9fd7bc2a8c0035fd616f4019488018052"
+   },
+   {
+    "at": "0x6f8d68cfd1",
+    "region": "libmetasec_ov.so+0x8cfd1",
+    "hex32": "c31a91980b0394e86742f9000140f9d3290294e10300aae0831e915c0b0394e8"
+   },
+   {
+    "at": "0x6f8d68e2e8",
+    "region": "libmetasec_ov.so+0x8e2e8",
+    "hex32": "f44fbea9fd7b01a9fd430091000040f9f30302aaf40301aacf1d009401b00394"
+   },
+   {
+    "at": "0x7053c053ec",
+    "region": "anon?",
+    "hex32": "fcffff177fe20239f44f41a9fd7bc2a8c0035fd6080040f9c80000b4011040f9"
+   },
+   {
+    "at": "0x7053c0acf8",
+    "region": "anon?",
+    "hex32": "87ea0094097c6092c5110014bf02096beb031faaa9b2891a297da90a2a7d7cd3"
+   },
+   {
+    "at": "0x7053aeb7f8",
+    "region": "anon?",
+    "hex32": "fd7b4fa986040014ffc300d1fd7b02a9fd830091080440f9400440ade2030091"
+   },
+   {
+    "at": "0x7053c01e10",
+    "region": "anon?",
+    "hex32": "54000014e70900373f0d00714109005461b2ffb021083c91720c0194e8031faa"
+   },
+   {
+    "at": "0x7053a3c278",
+    "region": "anon?",
+    "hex32": "ff4302d1fd7b05a9f85f06a909230094fd430191b12100948f230094cd210094"
+   }
+  ],
+  "poolsz": 1
+ },
+ {
+  "t": "psk_cand",
+  "prog": "0x1814f0",
+  "x1": "0x70355ff0a8",
+  "n": 8,
+  "cand": [
+   {
+    "at": "0x7370e67300",
+    "region": "libc.so+0x4b300",
+    "hex32": "f30300aaa00000b4e00313aaf30b40f9fd7bc2a8c0035fd616f4019488018052"
+   },
+   {
+    "at": "0x6f8d68cfd1",
+    "region": "libmetasec_ov.so+0x8cfd1",
+    "hex32": "c31a91980b0394e86742f9000140f9d3290294e10300aae0831e915c0b0394e8"
+   },
+   {
+    "at": "0x6f8d68e2e8",
+    "region": "libmetasec_ov.so+0x8e2e8",
+    "hex32": "f44fbea9fd7b01a9fd430091000040f9f30302aaf40301aacf1d009401b00394"
+   },
+   {
+    "at": "0x7053c053ec",
+    "region": "anon?",
+    "hex32": "fcffff177fe20239f44f41a9fd7bc2a8c0035fd6080040f9c80000b4011040f9"
+   },
+   {
+    "at": "0x7053c0acf8",
+    "region": "anon?",
+    "hex32": "87ea0094097c6092c5110014bf02096beb031faaa9b2891a297da90a2a7d7cd3"
+   },
+   {
+    "at": "0x7053aeb7f8",
+    "region": "anon?",
+    "hex32": "fd7b4fa986040014ffc300d1fd7b02a9fd830091080440f9400440ade2030091"
+   },
+   {
+    "at": "0x7053c01e10",
+    "region": "anon?",
+    "hex32": "54000014e70900373f0d00714109005461b2ffb021083c91720c0194e8031faa"
+   },
+   {
+    "at": "0x7053a3c278",
+    "region": "anon?",
+    "hex32": "ff4302d1fd7b05a9f85f06a909230094fd430191b12100948f230094cd210094"
+   }
+  ],
+  "poolsz": 1
+ }
+]

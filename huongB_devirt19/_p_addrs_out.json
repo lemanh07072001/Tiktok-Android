@@ -1,0 +1,401 @@
+[
+ {
+  "t": "info",
+  "base": "0x753e600000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon",
+  "n": 0,
+  "distinctAddrs": 0,
+  "reusedAddrs": 0,
+  "distinctVals": 0,
+  "repeatedVals": 0,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 1,
+  "P": "0x77e4cad550",
+  "val": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 2,
+  "P": "0x77e4cae480",
+  "val": "f03a580ebf6f28e6fed984142b1d6208",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 3,
+  "P": "0x77e4cdc4a0",
+  "val": "ab0ba5af3a92af02521d1182e055572f",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 4,
+  "P": "0x77e4e22ea0",
+  "val": "371fdd3d800e5ffcd66d2d49dcfd1d0e",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 5,
+  "P": "0x77e4e396a0",
+  "val": "203249946fe9cbe512fb121af7415b6b",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 5,
+  "distinctAddrs": 5,
+  "reusedAddrs": 0,
+  "distinctVals": 5,
+  "repeatedVals": 0,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 6,
+  "P": "0x77e4e3e050",
+  "val": "46c03b52742b3f2615a3abdf1636b754",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 7,
+  "P": "0x77e4e77ce0",
+  "val": "ae0d26bcefb7d37d7d49630088197ac5",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 8,
+  "P": "0x77e4e91570",
+  "val": "70208dae6764a6a7800499a4d2bef595",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 9,
+  "P": "0x77e4e9f070",
+  "val": "ed56db6c54e07e9ff1ca3e772cf1f9e3",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 10,
+  "P": "0x77e4ea9390",
+  "val": "93aa2542ed683aad01b36e96250b80d9",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 10,
+  "distinctAddrs": 10,
+  "reusedAddrs": 0,
+  "distinctVals": 10,
+  "repeatedVals": 0,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 11,
+  "P": "0x77e4ebb060",
+  "val": "70208dae6764a6a7800499a4d2bef595",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 12,
+  "P": "0x77e4ec04f0",
+  "val": "19d26486a3d120f98d1ae6b1a3b1e81b",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 13,
+  "P": "0x77e4e097c0",
+  "val": "b8591fcb8d86ff40ed3989462a588bf1",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 14,
+  "P": "0x77e4e44260",
+  "val": "46c03b52742b3f2615a3abdf1636b754",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 15,
+  "P": "0x77e4e3f970",
+  "val": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 16,
+  "P": "0x77e4e31510",
+  "val": "656943bdd1161d82165e3c43209b2ff7",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 17,
+  "P": "0x77e4e83aa0",
+  "val": "5713680410a8dd1f72ff727b182be33c",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 18,
+  "P": "0x77e4e5d820",
+  "val": "8b2cacfc3beea7c15f047a342e8c164a",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 19,
+  "P": "0x77e4ed31e0",
+  "val": "d2e7d4528c6c2343eafecf85e97d8a38",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 20,
+  "P": "0x77e4ef31f0",
+  "val": "0db462d2f0aed6ee8261b77ec1ebd193",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 20,
+  "distinctAddrs": 20,
+  "reusedAddrs": 0,
+  "distinctVals": 17,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 21,
+  "P": "0x77e4f18cf0",
+  "val": "41095ab04d460685a7d74e2e9f33f7a0",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 22,
+  "P": "0x77e4f1a970",
+  "val": "851dbc7109471d9b56f8c9c29ca143db",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 23,
+  "P": "0x77e4dfd130",
+  "val": "6c558710f9973c4f97f1330be513691c",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 23,
+  "distinctAddrs": 23,
+  "reusedAddrs": 0,
+  "distinctVals": 20,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 24,
+  "P": "0x77e4e43d80",
+  "val": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 24,
+  "distinctAddrs": 24,
+  "reusedAddrs": 0,
+  "distinctVals": 20,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "mon",
+  "n": 24,
+  "distinctAddrs": 24,
+  "reusedAddrs": 0,
+  "distinctVals": 20,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 25,
+  "P": "0x77e4f23760",
+  "val": "0a96bcabcabfcbb4299de4d80cf7a3cf",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 26,
+  "P": "0x77e4f44850",
+  "val": "e81ea983880553838e8cfc26f9e43773",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 27,
+  "P": "0x77e4f45660",
+  "val": "051afb6b2a4b02cdb42d28ab0f81b736",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "S",
+  "n": 28,
+  "P": "0x77e4f27480",
+  "val": "45ea7ae024bd57c74e65bddaa860fbf6",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 28,
+  "distinctAddrs": 28,
+  "reusedAddrs": 0,
+  "distinctVals": 24,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 29,
+  "P": "0x77e4f5c880",
+  "val": "dc132086d351e2a9431c01c2bcd75ba8",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 29,
+  "distinctAddrs": 29,
+  "reusedAddrs": 0,
+  "distinctVals": 25,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "mon",
+  "n": 29,
+  "distinctAddrs": 29,
+  "reusedAddrs": 0,
+  "distinctVals": 25,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "mon",
+  "n": 29,
+  "distinctAddrs": 29,
+  "reusedAddrs": 0,
+  "distinctVals": 25,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 30,
+  "P": "0x77e4e45160",
+  "val": "fb207fb00792cca5e5d99d843cfec4c7",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 30,
+  "distinctAddrs": 30,
+  "reusedAddrs": 0,
+  "distinctVals": 26,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "mon",
+  "n": 30,
+  "distinctAddrs": 30,
+  "reusedAddrs": 0,
+  "distinctVals": 26,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "S",
+  "n": 31,
+  "P": "0x77e4c442e0",
+  "val": "33d20d3f702fae5ec127f0aae2552e17",
+  "lr": "SELF+0xa101c",
+  "tid": 16083
+ },
+ {
+  "t": "mon",
+  "n": 31,
+  "distinctAddrs": 31,
+  "reusedAddrs": 0,
+  "distinctVals": 27,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "mon",
+  "n": 31,
+  "distinctAddrs": 31,
+  "reusedAddrs": 0,
+  "distinctVals": 27,
+  "repeatedVals": 3,
+  "topReuse": []
+ },
+ {
+  "t": "mon",
+  "n": 31,
+  "distinctAddrs": 31,
+  "reusedAddrs": 0,
+  "distinctVals": 27,
+  "repeatedVals": 3,
+  "topReuse": []
+ }
+]

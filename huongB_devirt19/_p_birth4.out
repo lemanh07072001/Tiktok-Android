@@ -1,0 +1,46 @@
+[*] spawned 16199
+{"t": "mon", "nAlloc": 0, "nGrow": 0, "nDrv": 0, "hits": 0}
+{"t": "info", "base": "0x7533600000"}
+{"t": "ready"}
+{"t": "mon", "nAlloc": 1149, "nGrow": 257, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 1385, "nGrow": 280, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 1403, "nGrow": 280, "nDrv": 0, "hits": 0}
+{"t": "mon", "nAlloc": 1403, "nGrow": 280, "nDrv": 0, "hits": 0}
+{"t": "BIRTH", "slot16": "ce6e67e61e73cff9101b8b55a19c9b6d", "P": "0x77e4df26c0", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "ce6e67e61e73cff9101b8b55a19c9b6d", "P": "0x77e4df26c0", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e", "P": "0x77e4e41d10", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e", "P": "0x77e4e41d10", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "e5316d94dfa9ba3e7131b01f05235474", "P": "0x77e4f9a8f0", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "e5316d94dfa9ba3e7131b01f05235474", "P": "0x77e4f9a8f0", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "mon", "nAlloc": 3901, "nGrow": 619, "nDrv": 6, "hits": 6}
+{"t": "BIRTH", "slot16": "983ce043a5a4796c8893d805c10f40f2", "P": "0x77e4ce68e0", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "983ce043a5a4796c8893d805c10f40f2", "P": "0x77e4ce68e0", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "46c03b52742b3f2615a3abdf1636b754", "P": "0x77e4ce6b50", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "46c03b52742b3f2615a3abdf1636b754", "P": "0x77e4ce6b50", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "mon", "nAlloc": 6342, "nGrow": 957, "nDrv": 10, "hits": 10}
+{"t": "BIRTH", "slot16": "1ad8b718812735bddfe4c8276cbd2c4b", "P": "0x77e4fc92d0", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "1ad8b718812735bddfe4c8276cbd2c4b", "P": "0x77e4fc92d0", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "mon", "nAlloc": 8322, "nGrow": 1185, "nDrv": 12, "hits": 12}
+{"t": "BIRTH", "slot16": "5c026f167858c860748f33452ccf5938", "P": "0x77e4ffa650", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "5c026f167858c860748f33452ccf5938", "P": "0x77e4ffa650", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "48779c0314f972a01f772168d6f703df", "P": "0x77e5000c20", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "BIRTH", "slot16": "48779c0314f972a01f772168d6f703df", "P": "0x77e5000c20", "cs": "+0x149e1c", "csz": 32, "chain": ["+0x14fed8", "+0x8925c", "+0x8885c", "+0x9dce8", "+0x9ea44", "+0x9f0d4"]}
+{"t": "mon", "nAlloc": 12511, "nGrow": 1671, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 15728, "nGrow": 2051, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 16276, "nGrow": 2115, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 16295, "nGrow": 2115, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 19646, "nGrow": 2554, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 23995, "nGrow": 3157, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 25724, "nGrow": 3379, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 28965, "nGrow": 3765, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 31456, "nGrow": 4056, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 31456, "nGrow": 4056, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32013, "nGrow": 4119, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32013, "nGrow": 4119, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32028, "nGrow": 4119, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32039, "nGrow": 4119, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32039, "nGrow": 4119, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32601, "nGrow": 4184, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32601, "nGrow": 4184, "nDrv": 16, "hits": 16}
+{"t": "mon", "nAlloc": 32796, "nGrow": 4242, "nDrv": 16, "hits": 16}
+[*] done

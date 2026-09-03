@@ -1,0 +1,46 @@
+[
+ {
+  "t": "mon"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "scanning",
+  "nrw": 2650
+ },
+ {
+  "t": "SCAN",
+  "label": "device_key_A",
+  "pat": "c02f250f86cc4f198d5706398d292a8b74169aba61affe7cba02e4a3b5198163",
+  "hits": 0,
+  "nranges": 2663,
+  "out": []
+ },
+ {
+  "t": "SCAN",
+  "label": "slot16_privacy",
+  "pat": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hits": 0,
+  "nranges": 3305,
+  "out": []
+ },
+ {
+  "t": "done"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "mon"
+ }
+]

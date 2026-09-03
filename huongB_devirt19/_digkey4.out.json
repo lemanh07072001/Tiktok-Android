@@ -1,0 +1,1938 @@
+[
+ {
+  "t": "mon"
+ },
+ {
+  "t": "info",
+  "base": "0x74f8001000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589546,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/ultimate/cmpl/settings/?device_platform=android&os=android&ssmix=a&_rticket=1787979587575&channel",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc4880",
+    "x1_raw": "200000001000000080c6f1e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4f1c680",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000002ee664949f0cd8cc5d1b3f7d725090d0",
+     "asc": "..................d.....].?}rP.."
+    },
+    "x1_raw_out": "200000001000000080c6f1e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4f1c680",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e4300000201020000009626",
+     "asc": ".................-VERSION.-TNC.........&"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000002ee664949f0cd8cc5d1b3f7d725090d025d6024bfa461723",
+     "asc": "..................d.....].?}rP..%..K.F.#"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979589578,
+  "slot16": "82bd860bbc6566b8147a140c26e24ec8",
+  "hexstr": "82bd860bbc6566b8147a140c26e24ec8",
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v2/feed/?os=android&_rticket=1787979583854&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&t"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589591,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v2/feed/?os=android&_rticket=1787979583854&is_pad=0&last_install_time=1787822595&host_abi=arm64-v8a&t",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc6b00",
+    "x1_raw": "20000000100000009038e5e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e53890",
+     "hex": "82bd860bbc6566b8147a140c26e24ec84b2d56455253494f4e002d544e430079",
+     "asc": ".....ef..z..&.N.K-VERSION.-TNC.y"
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000002ee664949f0cd8cc5d1b3f7d725090d0",
+     "asc": "..................d.....].?}rP.."
+    },
+    "x1_raw_out": "20000000100000009038e5e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e53890",
+     "hex": "82bd860bbc6566b8147a140c26e24ec84b2d56455253494f4e002d544e430079027101000000460b",
+     "asc": ".....ef..z..&.N.K-VERSION.-TNC.y.q....F."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000002ee664949f0cd8cc5d1b3f7d725090d025d6024bfa461723",
+     "asc": "..................d.....].?}rP..%..K.F.#"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589649,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/consentbox/should_show/?ssaid=d0e397ab87a29fd3&app_version=2024505040450504&business=us_dnu_conse",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc5e10",
+    "x1_raw": "2000000010000000502de5e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e52d50",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430065",
+     "asc": ".................-VERSION.-TNC.e"
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000002ee664949f0cd8cc5d1b3f7d725090d0",
+     "asc": "..................d.....].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000502de5e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e52d50",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e4300650201020000008faa",
+     "asc": ".................-VERSION.-TNC.e........"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000002ee664949f0cd8cc5d1b3f7d725090d025d6024bfa461723",
+     "asc": "..................d.....].?}rP..%..K.F.#"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979589658,
+  "slot16": "fbfd7a4d5fada0c29e6641303afdcfa2",
+  "hexstr": "fbfd7a4d5fada0c29e6641303afdcfa2",
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787979587700&channel=googlepl"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589665,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787979587700&channel=googlepl",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc6f50",
+    "x1_raw": "20000000100000009002e5e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e50290",
+     "hex": "fbfd7a4d5fada0c29e6641303afdcfa24b2d56455253494f4e002d544e430000",
+     "asc": "..zM_....fA0:...K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000002ee664949f0cd8cc5d1b3f7d725090d0",
+     "asc": "..................d.....].?}rP.."
+    },
+    "x1_raw_out": "20000000100000009002e5e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e50290",
+     "hex": "fbfd7a4d5fada0c29e6641303afdcfa24b2d56455253494f4e002d544e430000020002000000abe6",
+     "asc": "..zM_....fA0:...K-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000002ee664949f0cd8cc5d1b3f7d725090d025d6024bfa461723",
+     "asc": "..................d.....].?}rP..%..K.F.#"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979589698,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rtick"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589711,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rtick",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc14c0",
+    "x1_raw": "20000000100000009002e5e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e50290",
+     "hex": "6c109094bc9ab89e050fbd3e2ca6b99e4b2d56455253494f4e002d544e430000",
+     "asc": "l..........>,...K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0",
+     "asc": "........................].?}rP.."
+    },
+    "x1_raw_out": "20000000100000009002e5e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e50290",
+     "hex": "6c109094bc9ab89e050fbd3e2ca6b99e4b2d56455253494f4e002d544e43000002010200000060a2",
+     "asc": "l..........>,...K-VERSION.-TNC........`."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0930a25036dc2661d",
+     "asc": "........................].?}rP....%.m.f."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979589736,
+  "slot16": "da99eec2b1a0d199efa178c13cdc238c",
+  "hexstr": "da99eec2b1a0d199efa178c13cdc238c",
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/mall/shop_tab/algorithm/reach/get?device_platform=android&os=android&ssmix=a&_rticket=1787979583390&"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589744,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/mall/shop_tab/algorithm/reach/get?device_platform=android&os=android&ssmix=a&_rticket=1787979583390&",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc8d80",
+    "x1_raw": "2000000010000000d0e6e4e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e4e6d0",
+     "hex": "da99eec2b1a0d199efa178c13cdc238c4b2d56455253494f4e002d544e430000",
+     "asc": "..........x.<.#.K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0",
+     "asc": "........................].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000d0e6e4e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e4e6d0",
+     "hex": "da99eec2b1a0d199efa178c13cdc238c4b2d56455253494f4e002d544e4300000201020000003ed2",
+     "asc": "..........x.<.#.K-VERSION.-TNC........>."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0930a25036dc2661d",
+     "asc": "........................].?}rP....%.m.f."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979589754,
+  "slot16": "b5277209256e98a4db8afe6fe4be9d89",
+  "hexstr": "b5277209256e98a4db8afe6fe4be9d89",
+  "url": "https://aggr16-normal.tiktokv.us/service/2/app_log/performance/p2/?ab_version=45.5.4&device_id=7678616678053643790&iid=7678617584539027214&v"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589761,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/service/2/app_log/performance/p2/?ab_version=45.5.4&device_id=7678616678053643790&iid=7678617584539027214&v",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc21b0",
+    "x1_raw": "20000000100000004032e4e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e43240",
+     "hex": "b5277209256e98a4db8afe6fe4be9d894b2d56455253494f4e002d544e430065",
+     "asc": ".'r.%n.....o....K-VERSION.-TNC.e"
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0",
+     "asc": "........................].?}rP.."
+    },
+    "x1_raw_out": "20000000100000004032e4e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e43240",
+     "hex": "b5277209256e98a4db8afe6fe4be9d894b2d56455253494f4e002d544e4300650201020000009293",
+     "asc": ".'r.%n.....o....K-VERSION.-TNC.e........"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0930a25036dc2661d",
+     "asc": "........................].?}rP....%.m.f."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589789,
+  "sel": 369,
+  "url": "https://tnc16-normal-useast8.tiktokv.us/get_domains/v5/?aid=1233&device_id=7678616678053643790&device_platform=android&version_code=20245050",
+  "cons": [
+   {
+    "x1": "0x74f204e098",
+    "x3": "0x7744b8dc40",
+    "x1_raw": "200000001000000020cbe3e47700000020e104f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e3cb20",
+     "hex": "0000000000000000000000000000000000494f4e000000005750e3e477000000",
+     "asc": ".................ION....WP..w..."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204e120",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0",
+     "asc": "........................].?}rP.."
+    },
+    "x1_raw_out": "200000001000000020cbe3e47700000020e104f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e3cb20",
+     "hex": "0000000000000000000000000000000000494f4e000000005750e3e47700000002f001000000e2db",
+     "asc": ".................ION....WP..w..........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204e120",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0930a25036dc2661d",
+     "asc": "........................].?}rP....%.m.f."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979589802,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "hexstr": "46c03b52742b3f2615a3abdf1636b754",
+  "url": "https://aggr16-normal.tiktokv.us/consent/api/combine/list/v3?sdk_version=2.7.4.4&sdk_name=pns_consent_sdk&device_platform=android&os=android"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979589873,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/consent/api/combine/list/v3?sdk_version=2.7.4.4&sdk_name=pns_consent_sdk&device_platform=android&os=android",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc8930",
+    "x1_raw": "200000001000000000c4e3e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e3c400",
+     "hex": "46c03b52742b3f2615a3abdf1636b7544b2d56455253494f4e002d544e43006b",
+     "asc": "F.;Rt+?&.....6.TK-VERSION.-TNC.k"
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0",
+     "asc": "........................].?}rP.."
+    },
+    "x1_raw_out": "200000001000000000c4e3e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e3c400",
+     "hex": "46c03b52742b3f2615a3abdf1636b7544b2d56455253494f4e002d544e43006b020102000000bf4e",
+     "asc": "F.;Rt+?&.....6.TK-VERSION.-TNC.k.......N"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000089fc160407dd85e35d1b3f7d725090d0930a25036dc2661d",
+     "asc": "........................].?}rP....%.m.f."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979591590,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/inspect/item/v1?item_ids=7670680466164419872%2C7658221613866831124%2C7665354676887440654%2C766281883",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4b61d40",
+    "x1_raw": "20000000100000007000fbe477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4fb0070",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000b824082d5feb34ac5d1b3f7d725090d0",
+     "asc": ".................$.-_.4.].?}rP.."
+    },
+    "x1_raw_out": "20000000100000007000fbe477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4fb0070",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000020102000000fe23",
+     "asc": ".................-VERSION.-TNC.........#"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000b824082d5feb34ac5d1b3f7d725090d0820359ad27177c41",
+     "asc": ".................$.-_.4.].?}rP....Y.'.|A"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979591976,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/webcast/user/?target_uid=0&packed_level=2&sec_target_uid=0&request_from_type=UserCenter_init&device_platfor",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x7824d4d680",
+    "x1_raw": "2000000010000000f0f1fbe477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4fbf1f0",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000027846c0bf69ef82c5d1b3f7d725090d0",
+     "asc": "................'.l....,].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000f0f1fbe477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4fbf1f0",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e4300000200020000004cd8",
+     "asc": ".................-VERSION.-TNC........L."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000027846c0bf69ef82c5d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": "................'.l....,].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979592013,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/popup/dispatch/v1?scene=5&device_platform=android&os=android&ssmix=a&_rticket=1787979591580&channel=",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cd8350",
+    "x1_raw": "2000000010000000c051fce477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4fc51c0",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000007c8754d24c9cb6235d1b3f7d725090d0",
+     "asc": "................|.T.L..#].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000c051fce477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4fc51c0",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e43000002010200000039f3",
+     "asc": ".................-VERSION.-TNC........9."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000007c8754d24c9cb6235d1b3f7d725090d02f69741cccdc8438",
+     "asc": "................|.T.L..#].?}rP../it....8"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979592224,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/ad/v1/splash/stock/?_unused=0&carrier=T-Mobile&mcc_mnc=310260&ad_area=1080x2081&sdk_version=2013656&os_",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4c91520",
+    "x1_raw": "2000000010000000c09cfce477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4fc9cc0",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000047a4a6e73cc4bc695d1b3f7d725090d0",
+     "asc": "................G...<..i].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000c09cfce477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4fc9cc0",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000029101000000b3aa",
+     "asc": ".................-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000047a4a6e73cc4bc695d1b3f7d725090d0136c4f8b78300362",
+     "asc": "................G...<..i].?}rP...lO.x0.b"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979593650,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/incentive/user/product_facade/data/get/v1/?request_type=1&crossday_delay_min=12&device_platform=andr",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4b61d40",
+    "x1_raw": "2000000010000000b044fee477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4fe44b0",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000179a92508913ef085d1b3f7d725090d0",
+     "asc": "...................P....].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000b044fee477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4fe44b0",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e4300000201020000003fce",
+     "asc": ".................-VERSION.-TNC........?."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000179a92508913ef085d1b3f7d725090d0820359ad27177c41",
+     "asc": "...................P....].?}rP....Y.'.|A"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1295,
+  "ts": 1787979594080,
+  "slot16": "458f489619cc5262dc46651f67f05dfb",
+  "hexstr": "458f489619cc5262dc46651f67f05dfb"
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979594458,
+  "slot16": "4433b19c78536ff7bb59cc2da9f69917",
+  "hexstr": "4433b19c78536ff7bb59cc2da9f69917",
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=3.2.2.i18n&version_code=45"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979594583,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=3.2.2.i18n&version_code=45",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x7794b8d490",
+    "x1_raw": "20000000100000002070ffe477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4ff7020",
+     "hex": "4433b19c78536ff7bb59cc2da9f699174b2d56455253494f4e002d544e430000",
+     "asc": "D3..xSo..Y.-....K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000115e32f46e92d9c25d1b3f7d725090d0",
+     "asc": ".................^2.n...].?}rP.."
+    },
+    "x1_raw_out": "20000000100000002070ffe477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4ff7020",
+     "hex": "4433b19c78536ff7bb59cc2da9f699174b2d56455253494f4e002d544e430000020102000000efe6",
+     "asc": "D3..xSo..Y.-....K-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000115e32f46e92d9c25d1b3f7d725090d0820359ad27177c41",
+     "asc": ".................^2.n...].?}rP....Y.'.|A"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979595089,
+  "slot16": "4cb3b3ac60cc8a8ef48e515696ec7c7a",
+  "hexstr": "4cb3b3ac60cc8a8ef48e515696ec7c7a",
+  "url": "https://aggr16-normal.tiktokv.us/ms/dyn/task?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979595154,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ms/dyn/task?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76f4e59690",
+    "x1_raw": "2000000010000000c02600e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e50026c0",
+     "hex": "4cb3b3ac60cc8a8ef48e515696ec7c7a4b2d56455253494f4e002d544e430000",
+     "asc": "L...`.....QV..|zK-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000003ea62cbb385bf3a95d1b3f7d725090d0",
+     "asc": "................>.,.8[..].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000c02600e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e50026c0",
+     "hex": "4cb3b3ac60cc8a8ef48e515696ec7c7a4b2d56455253494f4e002d544e430000020102000000a2b7",
+     "asc": "L...`.....QV..|zK-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000003ea62cbb385bf3a95d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": "................>.,.8[..].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979595183,
+  "slot16": "570e20185673c85592520838ec196e0f",
+  "hexstr": "570e20185673c85592520838ec196e0f",
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787979593876&channel=googlepla"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979595192,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787979593876&channel=googlepla",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc84e0",
+    "x1_raw": "2000000010000000305600e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e5005630",
+     "hex": "570e20185673c85592520838ec196e0f4b2d56455253494f4e002d544e430000",
+     "asc": "W. .Vs.U.R.8..n.K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000003ea62cbb385bf3a95d1b3f7d725090d0",
+     "asc": "................>.,.8[..].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000305600e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e5005630",
+     "hex": "570e20185673c85592520838ec196e0f4b2d56455253494f4e002d544e430000028001000000cac3",
+     "asc": "W. .Vs.U.R.8..n.K-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000003ea62cbb385bf3a95d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": "................>.,.8[..].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979595236,
+  "slot16": "681a916cf9113f21873d074af2ee518e",
+  "hexstr": "681a916cf9113f21873d074af2ee518e",
+  "url": "https://aggr16-normal.tiktokv.us/ms/get_seed?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979595238,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/ms/get_seed?lc_id=2142840551&platform=android&device_platform=android&sdk_ver=v05.02.07-alpha.6-ov-android&",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76f4e67130",
+    "x1_raw": "2000000010000000706700e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e5006770",
+     "hex": "681a916cf9113f21873d074af2ee518e4b2d56455253494f4e002d544e430000",
+     "asc": "h..l..?!.=.J..Q.K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000003ea62cbb385bf3a95d1b3f7d725090d0",
+     "asc": "................>.,.8[..].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000706700e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e5006770",
+     "hex": "681a916cf9113f21873d074af2ee518e4b2d56455253494f4e002d544e4300000201020000000e90",
+     "asc": "h..l..?!.=.J..Q.K-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000003ea62cbb385bf3a95d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": "................>.,.8[..].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979595304,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "hexstr": "46c03b52742b3f2615a3abdf1636b754",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/ppf/api/eligibility/v2?device_platform=android&os=android&ssmix=a&_rticket=1787979593585&channel=goo"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979595317,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/ppf/api/eligibility/v2?device_platform=android&os=android&ssmix=a&_rticket=1787979593585&channel=goo",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cc07d0",
+    "x1_raw": "200000001000000090a400e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e500a490",
+     "hex": "46c03b52742b3f2615a3abdf1636b7544b2d56455253494f4e002d544e430000",
+     "asc": "F.;Rt+?&.....6.TK-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000006e375b06f0b7e0495d1b3f7d725090d0",
+     "asc": "................n7[....I].?}rP.."
+    },
+    "x1_raw_out": "200000001000000090a400e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e500a490",
+     "hex": "46c03b52742b3f2615a3abdf1636b7544b2d56455253494f4e002d544e430000020102000000b641",
+     "asc": "F.;Rt+?&.....6.TK-VERSION.-TNC.........A"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000006e375b06f0b7e0495d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": "................n7[....I].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979595404,
+  "slot16": "cf8c519549568aae811cd03fc0c20f25",
+  "hexstr": "cf8c519549568aae811cd03fc0c20f25",
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=2.4.2.i18n&version_code=45"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979595407,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/vc/setting?app_name=musical_ly&app_version=45.5.4&channel=googleplay&sdk_version=2.4.2.i18n&version_code=45",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x7794b8fdd0",
+    "x1_raw": "200000001000000000b300e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e500b300",
+     "hex": "cf8c519549568aae811cd03fc0c20f254b2d56455253494f4e002d544e430000",
+     "asc": "..Q.IV.....?...%K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000a8e944e7ab7a987a5d1b3f7d725090d0",
+     "asc": "..................D..z.z].?}rP.."
+    },
+    "x1_raw_out": "200000001000000000b300e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e500b300",
+     "hex": "cf8c519549568aae811cd03fc0c20f254b2d56455253494f4e002d544e430000023101000000cf1f",
+     "asc": "..Q.IV.....?...%K-VERSION.-TNC...1......"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000a8e944e7ab7a987a5d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": "..................D..z.z].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979595528,
+  "slot16": "2176bd56b4080d92c1cd149fb8a11be7",
+  "hexstr": "2176bd56b4080d92c1cd149fb8a11be7",
+  "url": "https://aggr16-normal.tiktokv.us/region/submit?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787979595"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979595604,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/region/submit?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rticket=1787979595",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cdae70",
+    "x1_raw": "200000001000000000c500e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e500c500",
+     "hex": "2176bd56b4080d92c1cd149fb8a11be74b2d56455253494f4e002d544e430000",
+     "asc": "!v.V............K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000ff05654ae15736045d1b3f7d725090d0",
+     "asc": "..................eJ.W6.].?}rP.."
+    },
+    "x1_raw_out": "200000001000000000c500e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e500c500",
+     "hex": "2176bd56b4080d92c1cd149fb8a11be74b2d56455253494f4e002d544e430000023101000000fdcd",
+     "asc": "!v.V............K-VERSION.-TNC...1......"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000ff05654ae15736045d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": "..................eJ.W6.].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979596254,
+  "slot16": "5ebb03765118d1ae6eb0e68fd1de9824",
+  "hexstr": "5ebb03765118d1ae6eb0e68fd1de9824",
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/cs/setting?device_platform=android&app_version=45.5.4&aid=1233&sdk_version=v10.02.08-ov-android&devi"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979596353,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/api/v1/cs/setting?device_platform=android&app_version=45.5.4&aid=1233&sdk_version=v10.02.08-ov-android&devi",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x77d4c05f30",
+    "x1_raw": "200000001000000020a401e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e501a420",
+     "hex": "5ebb03765118d1ae6eb0e68fd1de98244b2d56455253494f4e00000000000000",
+     "asc": "^..vQ...n......$K-VERSION......."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000ec9a505e884991ce5d1b3f7d725090d0",
+     "asc": "..................P^.I..].?}rP.."
+    },
+    "x1_raw_out": "200000001000000020a401e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e501a420",
+     "hex": "5ebb03765118d1ae6eb0e68fd1de98244b2d56455253494f4e00000000000000021001000000f757",
+     "asc": "^..vQ...n......$K-VERSION..............W"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000ec9a505e884991ce5d1b3f7d725090d089f8d2bc0d01eb38",
+     "asc": "..................P^.I..].?}rP.........8"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979597546,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rtick"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979597554,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rtick",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4c886d0",
+    "x1_raw": "2000000010000000f097bfe477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4bf97f0",
+     "hex": "6c109094bc9ab89e050fbd3e2ca6b99e4b2d56455253494f4e002d544e430000",
+     "asc": "l..........>,...K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000d8aae1a303037d695d1b3f7d725090d0",
+     "asc": "......................}i].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000f097bfe477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4bf97f0",
+     "hex": "6c109094bc9ab89e050fbd3e2ca6b99e4b2d56455253494f4e002d544e4300000201020000008d3c",
+     "asc": "l..........>,...K-VERSION.-TNC.........<"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000d8aae1a303037d695d1b3f7d725090d0e16585ffd88d277c",
+     "asc": "......................}i].?}rP...e....'|"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979598301,
+  "slot16": "ddc28afec43c0ada155325d489cdd9b1",
+  "hexstr": "ddc28afec43c0ada155325d489cdd9b1",
+  "url": "https://cp-rp16-normal-useast5.tiktokv.us/track_event\ufffd1\ufffdUrl\ufffdm;\ufffd\ufffd\u0004\ufffd\u0003\ufffd\ufffd\ufffd\t\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0018\ufffd\u0001\ufffde\ufffd:\ufffd\"\"\u0010\ufffd.v\u0016l`~\ufffd\"\ufffd.\ufffd\u0004|\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979598339,
+  "sel": 369,
+  "url": "https://cp-rp16-normal-useast5.tiktokv.us/track_event\ufffd1\ufffdUrl\ufffdm;\ufffd\ufffd\u0004\ufffd\u0003\ufffd\ufffd\ufffd\t\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0018\ufffd\u0001\ufffde\ufffd:\ufffd\"\"\u0010\ufffd.v\u0016l`~\ufffd\"\ufffd.\ufffd\u0004|\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76d4c36020",
+    "x1_raw": "2000000010000000806ee3e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e36e80",
+     "hex": "ddc28afec43c0ada155325d489cdd9b14b2d56455253494f4e002d544e430000",
+     "asc": ".....<...S%.....K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000a323b3c31fc566395d1b3f7d725090d0",
+     "asc": ".................#....f9].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000806ee3e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e36e80",
+     "hex": "ddc28afec43c0ada155325d489cdd9b14b2d56455253494f4e002d544e430000020102000000f04b",
+     "asc": ".....<...S%.....K-VERSION.-TNC.........K"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000a323b3c31fc566395d1b3f7d725090d0a5558e11e56de6c2",
+     "asc": ".................#....f9].?}rP...U...m.."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979598986,
+  "slot16": "1f88549a94008242c9c381e4413fda3c",
+  "hexstr": "1f88549a94008242c9c381e4413fda3c",
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/aweme/stats/?os=android&_rticket=1787979597864&is_pad=0&last_install_time=1787822595&host_abi=arm6"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979599545,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/aweme/stats/?os=android&_rticket=1787979597864&is_pad=0&last_install_time=1787822595&host_abi=arm6",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4c91970",
+    "x1_raw": "2000000010000000806402e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e5026480",
+     "hex": "1f88549a94008242c9c381e4413fda3c4b2d56455253494f4e0000004e430000",
+     "asc": "..T....B....A?.<K-VERSION...NC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000006800a73cf4d080b95d1b3f7d725090d0",
+     "asc": "................h..<....].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000806402e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e5026480",
+     "hex": "1f88549a94008242c9c381e4413fda3c4b2d56455253494f4e0000004e4300000200020000004e47",
+     "asc": "..T....B....A?.<K-VERSION...NC........NG"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000006800a73cf4d080b95d1b3f7d725090d00d1997612a08a386",
+     "asc": "................h..<....].?}rP.....a*..."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979601023,
+  "slot16": "47674095e3462cbbda653969a58c93b3",
+  "hexstr": "47674095e3462cbbda653969a58c93b3",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/record/sync?device_platform=android&os=android&ssmix=a&_rticket=1787979599550&channel=go"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979601657,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/record/sync?device_platform=android&os=android&ssmix=a&_rticket=1787979599550&channel=go",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4ce3870",
+    "x1_raw": "200000001000000020ade3e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e3ad20",
+     "hex": "47674095e3462cbbda653969a58c93b390afe3e4770000000000000000000000",
+     "asc": "Gg@..F,..e9i........w..........."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000aab7dc7697ac9dc55d1b3f7d725090d0",
+     "asc": "...................v....].?}rP.."
+    },
+    "x1_raw_out": "200000001000000020ade3e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e3ad20",
+     "hex": "47674095e3462cbbda653969a58c93b390afe3e47700000000000000000000000200020000004a2a",
+     "asc": "Gg@..F,..e9i........w.................J*"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000aab7dc7697ac9dc55d1b3f7d725090d0820359ad27177c41",
+     "asc": "...................v....].?}rP....Y.'.|A"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979603266,
+  "slot16": "247e2ab2ed175edfecb59281d14e7b98",
+  "hexstr": "247e2ab2ed175edfecb59281d14e7b98",
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787979600791&channel=googlepl"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979603514,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/starship/strategy_config?device_platform=android&os=android&ssmix=a&_rticket=1787979600791&channel=googlepl",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cd7660",
+    "x1_raw": "2000000010000000a0ee03e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e503eea0",
+     "hex": "247e2ab2ed175edfecb59281d14e7b984b2d56455253494f4e002d544e430000",
+     "asc": "$~*...^......N{.K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000923d0c4cf748ae0d5d1b3f7d725090d0",
+     "asc": ".................=.L.H..].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000a0ee03e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e503eea0",
+     "hex": "247e2ab2ed175edfecb59281d14e7b984b2d56455253494f4e002d544e4300000201020000007571",
+     "asc": "$~*...^......N{.K-VERSION.-TNC........uq"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000923d0c4cf748ae0d5d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": ".................=.L.H..].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979604603,
+  "slot16": "b8591fcb8d86ff40ed3989462a588bf1",
+  "hexstr": "b8591fcb8d86ff40ed3989462a588bf1",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/efficiency_portrait/?device_platform=android&os=android&ssmix=a&_rticket=1787979601783&channel=go"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979604636,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/efficiency_portrait/?device_platform=android&os=android&ssmix=a&_rticket=1787979601783&channel=go",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cf0bc0",
+    "x1_raw": "2000000010000000d0db04e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e504dbd0",
+     "hex": "b8591fcb8d86ff40ed3989462a588bf14b2d56455253494f4e002d544e430000",
+     "asc": ".Y.....@.9.F*X..K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000009d74713c4e47866c5d1b3f7d725090d0",
+     "asc": ".................tq<NG.l].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000d0db04e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e504dbd0",
+     "hex": "b8591fcb8d86ff40ed3989462a588bf14b2d56455253494f4e002d544e430000024101000000ff04",
+     "asc": ".Y.....@.9.F*X..K-VERSION.-TNC...A......"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000009d74713c4e47866c5d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": ".................tq<NG.l].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979604706,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tfe/api/request_combine/v1/?effect_sdk_version=21.5.0&current_network_quality_info=%7B%22tcp_rtt%22%3A259%2",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x7824f38ab0",
+    "x1_raw": "2000000010000000600905e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e5050960",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000009d74713c4e47866c5d1b3f7d725090d0",
+     "asc": ".................tq<NG.l].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000600905e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e5050960",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e43000002010200000026b5",
+     "asc": ".................-VERSION.-TNC........&."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000009d74713c4e47866c5d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": ".................tq<NG.l].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979605139,
+  "slot16": "bc1f61eaeacefe5909e95788359cbd3a",
+  "hexstr": "bc1f61eaeacefe5909e95788359cbd3a",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/dynamic/fetch?device_platform=android&os=android&ssmix=a&_rticket=1787979602503&channel="
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979605459,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/outreach/dynamic/fetch?device_platform=android&os=android&ssmix=a&_rticket=1787979602503&channel=",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cf43d0",
+    "x1_raw": "2000000010000000703505e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e5053570",
+     "hex": "bc1f61eaeacefe5909e95788359cbd3a4b2d56455253494f4e002d544e430000",
+     "asc": "..a....Y..W.5..:K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000009d74713c4e47866c5d1b3f7d725090d0",
+     "asc": ".................tq<NG.l].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000703505e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e5053570",
+     "hex": "bc1f61eaeacefe5909e95788359cbd3a4b2d56455253494f4e002d544e43000002510100000070cd",
+     "asc": "..a....Y..W.5..:K-VERSION.-TNC...Q....p."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000009d74713c4e47866c5d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": ".................tq<NG.l].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979606269,
+  "slot16": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "hexstr": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rtick"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979606279,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/pns/privacy_headers?sdk_version=3.4.0-alpha.3-perm&device_platform=android&os=android&ssmix=a&_rtick",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cf3f80",
+    "x1_raw": "2000000010000000e08205e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e50582e0",
+     "hex": "6c109094bc9ab89e050fbd3e2ca6b99e4b2d56455253494f4e002d544e430000",
+     "asc": "l..........>,...K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000ef57625fe1ec57f05d1b3f7d725090d0",
+     "asc": ".................Wb_..W.].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000e08205e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e50582e0",
+     "hex": "6c109094bc9ab89e050fbd3e2ca6b99e4b2d56455253494f4e002d544e43000002910100000009d7",
+     "asc": "l..........>,...K-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000ef57625fe1ec57f05d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": ".................Wb_..W.].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979606435,
+  "slot16": "570e20185673c85592520838ec196e0f",
+  "hexstr": "570e20185673c85592520838ec196e0f",
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787979604143&channel=googlepla"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979606581,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/bubble/?device_platform=android&os=android&ssmix=a&_rticket=1787979604143&channel=googlepla",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cfa700",
+    "x1_raw": "200000001000000050a7e3e477000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e4e3a750",
+     "hex": "570e20185673c85592520838ec196e0f4b2d56455253494f4e002d544e430000",
+     "asc": "W. .Vs.U.R.8..n.K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000067d4fe27fbf9ef9a5d1b3f7d725090d0",
+     "asc": "................g..'....].?}rP.."
+    },
+    "x1_raw_out": "200000001000000050a7e3e477000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e4e3a750",
+     "hex": "570e20185673c85592520838ec196e0f4b2d56455253494f4e002d544e430000020102000000f22a",
+     "asc": "W. .Vs.U.R.8..n.K-VERSION.-TNC.........*"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000067d4fe27fbf9ef9a5d1b3f7d725090d0820359ad27177c41",
+     "asc": "................g..'....].?}rP....Y.'.|A"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979609952,
+  "slot16": "5598605df2551f32e22e6944e725151d",
+  "hexstr": "5598605df2551f32e22e6944e725151d",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/screen_time/upload/?device_platform=android&os=android&ssmix=a&_rticket=1787979609263&channel=goo"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979610110,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/screen_time/upload/?device_platform=android&os=android&ssmix=a&_rticket=1787979609263&channel=goo",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cd98e0",
+    "x1_raw": "2000000010000000f06a07e577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e5076af0",
+     "hex": "5598605df2551f32e22e6944e725151d4b2d56455253494f4e002d544e430000",
+     "asc": "U.`].U.2..iD.%..K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000008107ebff1017b9575d1b3f7d725090d0",
+     "asc": ".......................W].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000f06a07e577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e5076af0",
+     "hex": "5598605df2551f32e22e6944e725151d4b2d56455253494f4e002d544e4300000201020000006649",
+     "asc": "U.`].U.2..iD.%..K-VERSION.-TNC........fI"
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff00000000000000008107ebff1017b9575d1b3f7d725090d0eed71508195cddb7",
+     "asc": ".......................W].?}rP.......\\.."
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "mon"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979611312,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/user/relation/alias/list/v1?device_platform=android&os=android&ssmix=a&_rticket=1787979610414&channe",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4ca6e20",
+    "x1_raw": "200000001000000010060ae577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e50a0610",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000027bf6e2f2e9d02f05d1b3f7d725090d0",
+     "asc": "................'.n/....].?}rP.."
+    },
+    "x1_raw_out": "200000001000000010060ae577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e50a0610",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e4300000261010000005ed7",
+     "asc": ".................-VERSION.-TNC...a....^."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000027bf6e2f2e9d02f05d1b3f7d725090d0820359ad27177c41",
+     "asc": "................'.n/....].?}rP....Y.'.|A"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979611372,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/anchor/list/?os=android&_rticket=1787979610263&is_pad=0&last_install_time=1787822595&host_abi=arm6",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4cd35b0",
+    "x1_raw": "2000000010000000505f0ae577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e50a5f50",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e430000",
+     "asc": ".................-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000027bf6e2f2e9d02f05d1b3f7d725090d0",
+     "asc": "................'.n/....].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000505f0ae577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e50a5f50",
+     "hex": "00000000000000000000000000000000002d56455253494f4e002d544e43000002010200000007c5",
+     "asc": ".................-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000027bf6e2f2e9d02f05d1b3f7d725090d0820359ad27177c41",
+     "asc": "................'.n/....].?}rP....Y.'.|A"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979611583,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "hexstr": "46c03b52742b3f2615a3abdf1636b754",
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/sug_cached_words/?device_platform=android&os=android&ssmix=a&_rticket=1787979610453&channel"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979611774,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/aweme/v1/search/sug_cached_words/?device_platform=android&os=android&ssmix=a&_rticket=1787979610453&channel",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4ccdb20",
+    "x1_raw": "2000000010000000e0680ae577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e50a68e0",
+     "hex": "46c03b52742b3f2615a3abdf1636b7544b2d56455253494f4e002d544e430000",
+     "asc": "F.;Rt+?&.....6.TK-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000027bf6e2f2e9d02f05d1b3f7d725090d0",
+     "asc": "................'.n/....].?}rP.."
+    },
+    "x1_raw_out": "2000000010000000e0680ae577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e50a68e0",
+     "hex": "46c03b52742b3f2615a3abdf1636b7544b2d56455253494f4e002d544e43000002a101000000a11e",
+     "asc": "F.;Rt+?&.....6.TK-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff000000000000000027bf6e2f2e9d02f05d1b3f7d725090d0820359ad27177c41",
+     "asc": "................'.n/....].?}rP....Y.'.|A"
+    },
+    "ret": "0x1"
+   }
+  ]
+ },
+ {
+  "t": "DEC",
+  "tid": 1128,
+  "ts": 1787979612287,
+  "slot16": "851dbc7109471d9b56f8c9c29ca143db",
+  "hexstr": "851dbc7109471d9b56f8c9c29ca143db",
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/hybrid/ab/?feature_name=ttk_app_dau_launch&is_first_hybridab_request=false&is_first_app_session=f"
+ },
+ {
+  "t": "PROD",
+  "tid": 1128,
+  "ts": 1787979612291,
+  "sel": 369,
+  "url": "https://aggr16-normal.tiktokv.us/tiktok/v1/hybrid/ab/?feature_name=ttk_app_dau_launch&is_first_hybridab_request=false&is_first_app_session=f",
+  "cons": [
+   {
+    "x1": "0x74f204d358",
+    "x3": "0x76a4ce7080",
+    "x1_raw": "200000001000000020890ae577000000e0d304f274000000",
+    "x1_p0": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8": {
+     "ptr": "0x77e50a8920",
+     "hex": "851dbc7109471d9b56f8c9c29ca143db4b2d56455253494f4e002d544e430000",
+     "asc": "...q.G..V.....C.K-VERSION.-TNC.."
+    },
+    "x1_p16": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000f3276f4c527bf4f55d1b3f7d725090d0",
+     "asc": ".................'oLR{..].?}rP.."
+    },
+    "x1_raw_out": "200000001000000020890ae577000000e0d304f274000000",
+    "x1_p0_out": {
+     "ptr": "0x1000000020",
+     "hex": null,
+     "asc": null
+    },
+    "x1_p8_out": {
+     "ptr": "0x77e50a8920",
+     "hex": "851dbc7109471d9b56f8c9c29ca143db4b2d56455253494f4e002d544e430000020102000000c0a2",
+     "asc": "...q.G..V.....C.K-VERSION.-TNC.........."
+    },
+    "x1_p16_out": {
+     "ptr": "0x74f204d3e0",
+     "hex": "0000000014ffffff0000000000000000f3276f4c527bf4f55d1b3f7d725090d0358ee49ff87f7fd6",
+     "asc": ".................'oLR{..].?}rP..5......."
+    },
+    "ret": "0x1"
+   }
+  ]
+ }
+]

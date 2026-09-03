@@ -1,0 +1,7 @@
+[*] running up to 150s
+[info] base=0x75c1200000
+[*] armed-waiting…
+  [mon] armed=False nFault=0 wt=None
+[SM3] slot16=92f5b9b44e7c53eeae934048bb4d5441 buf=0x77e4dd5320 lr=659484
+[ARMED] buf=0x77e4dd5320 thread=23247 want=23247 nTh=214
+[*] done -> _vm_trace13.out.jsonl

@@ -1,0 +1,6 @@
+attach pid 11852 t=8.4
+attach retry 0 timeout was reached
+attach retry 1 timeout was reached
+attach retry 2 timeout was reached
+attach retry 3 timeout was reached
+ATTACH FAILED

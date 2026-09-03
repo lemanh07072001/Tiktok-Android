@@ -1,0 +1,23 @@
+[mon] disp=0 consume=0 nonzero=0 dispAtFirstNZ=-1
+[info] base=0x75a8c00000
+[*] ready
+[mon] disp=6349 consume=8 nonzero=5 dispAtFirstNZ=537
+[mon] disp=14346 consume=19 nonzero=11 dispAtFirstNZ=537
+[mon] disp=20317 consume=23 nonzero=14 dispAtFirstNZ=537
+[mon] disp=32885 consume=30 nonzero=20 dispAtFirstNZ=537
+[mon] disp=70723 consume=34 nonzero=23 dispAtFirstNZ=537
+[mon] disp=97638 consume=40 nonzero=28 dispAtFirstNZ=537
+[mon] disp=99092 consume=42 nonzero=28 dispAtFirstNZ=537
+[mon] disp=99092 consume=42 nonzero=28 dispAtFirstNZ=537
+[mon] disp=99092 consume=42 nonzero=28 dispAtFirstNZ=537
+[mon] disp=99819 consume=43 nonzero=29 dispAtFirstNZ=537
+[mon] disp=99819 consume=43 nonzero=29 dispAtFirstNZ=537
+[mon] disp=100546 consume=44 nonzero=30 dispAtFirstNZ=537
+[mon] disp=100546 consume=44 nonzero=30 dispAtFirstNZ=537
+[mon] disp=100546 consume=44 nonzero=30 dispAtFirstNZ=537
+[mon] disp=100546 consume=44 nonzero=30 dispAtFirstNZ=537
+[mon] disp=100546 consume=44 nonzero=30 dispAtFirstNZ=537
+[mon] disp=100546 consume=44 nonzero=30 dispAtFirstNZ=537
+[mon] disp=100546 consume=44 nonzero=30 dispAtFirstNZ=537
+[mon] disp=100546 consume=44 nonzero=30 dispAtFirstNZ=537
+FINAL {"t": "mon", "nDisp": 100546, "nConsume": 44, "nNonzero": 30, "dispAtFirstNZ": 537}

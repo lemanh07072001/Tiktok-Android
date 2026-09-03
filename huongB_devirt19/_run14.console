@@ -1,0 +1,22 @@
+[info] base=0x7552601000
+[*] waiting…
+[HIT] v=4f57c6d1eef4c6a192f5ea6e01ea56b9
+   x19=0x75393f71b0 x21=0x393f7360 x23=0x75393f7250
+   src={}
+[HIT] v=7be4edb524c765ed7b9471523d540e71
+   x19=0x75393f71b0 x21=0x393f7360 x23=0x75393f7250
+   src={}
+  [mon] got=2 distinct=2
+[HIT] v=46c03b52742b3f2615a3abdf1636b754
+   x19=0x75393f71b0 x21=0x393f7360 x23=0x75393f7250
+   src={}
+[HIT] v=f31361844bd2a9dfda8e7ff7edc91ce0
+   x19=0x75393f71b0 x21=0x393f7360 x23=0x75393f7250
+   src={}
+[HIT] v=69988ed109e30a2695cafddd17c4329a
+   x19=0x75393f71b0 x21=0x393f7360 x23=0x75393f7250
+   src={}
+[HIT] v=b8591fcb8d86ff40ed3989462a588bf1
+   x19=0x75393f71b0 x21=0x393f7360 x23=0x75393f7250
+   src={}
+done -> _vm_trace14.out.json hits= 6

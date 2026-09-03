@@ -36,14 +36,16 @@ class OfflineVMSimulator:
             print(f"[!] Trace not found: {json_path}")
             self.trace = []
 
-    def simulate(self, psk_hex, device_state, query):
+    def simulate(self, psk_hex, device_state, query, session_psk_hex=None):
         """
         Simulate VM execution from trace.
 
         Args:
-            psk_hex: 32B hex string (PSK material)
+            psk_hex: 32B hex string (LICENSE_PSK / SIGN_KEY - build constant)
             device_state: dict with device metadata
             query: query string
+            session_psk_hex: 32B hex string (SESSION_PSK - captured live or rotated).
+                           If None, uses psk_hex (bootstrap)
 
         Returns:
             slot16: 32-char hex string
@@ -54,8 +56,17 @@ class OfflineVMSimulator:
 
         psk = bytes.fromhex(psk_hex)
 
-        # Initialize regfile
-        regfile = self._init_regfile(psk, device_state)
+        # Use SESSION_PSK if provided (for post-login rotated state)
+        # Otherwise use LICENSE_PSK (bootstrap state)
+        if session_psk_hex:
+            session_psk = bytes.fromhex(session_psk_hex)
+            print(f"[*] Using captured SESSION_PSK: {session_psk_hex[:16]}...")
+        else:
+            session_psk = psk
+            print(f"[*] Using LICENSE_PSK (bootstrap): {psk_hex[:16]}...")
+
+        # Initialize regfile with SESSION_PSK
+        regfile = self._init_regfile(session_psk, device_state)
 
         # Execute trace (use captured regfile mutations as oracle)
         for i, entry in enumerate(self.trace):
@@ -121,14 +132,16 @@ class OfflineVMSimulator:
         slot16_bytes = regfile[0:16]
         return slot16_bytes.hex()
 
-def compute_slot16_offline(psk_hex, device_state, query):
+def compute_slot16_offline(psk_hex, device_state, query, session_psk_hex=None):
     """
     Main API: Compute slot16 offline (no phone required).
 
     Args:
-        psk_hex: 32B hex string (PSK material)
+        psk_hex: 32B hex string (LICENSE_PSK / SIGN_KEY - build constant)
         device_state: dict with device_id, ratchet, etc.
         query: query string
+        session_psk_hex: Optional 32B hex string (SESSION_PSK - captured live)
+                        If None, uses psk_hex (bootstrap state)
 
     Returns:
         slot16_hex: 32-char hex string
@@ -139,7 +152,7 @@ def compute_slot16_offline(psk_hex, device_state, query):
         print("[!] No trace available")
         return None
 
-    slot16 = sim.simulate(psk_hex, device_state, query)
+    slot16 = sim.simulate(psk_hex, device_state, query, session_psk_hex)
     return slot16
 
 def test_on_clean_tuples():

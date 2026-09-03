@@ -1,0 +1,8 @@
+attach RUNNING pid 13411
+  {'k': 'E', 'tag': 'ENC', 'e': "TypeError: cannot read property 'add' of null"}
+  {'k': 'E', 'tag': 'DEC', 'e': "TypeError: cannot read property 'add' of null"}
+  {'k': 'E', 'tag': 'XX2', 'e': "TypeError: cannot read property 'add' of null"}
+  {'k': 'READY'}
+collecting 45s + navigation to trigger store read/write...
+dump exc script has been destroyed
+=== EVENTS === 0

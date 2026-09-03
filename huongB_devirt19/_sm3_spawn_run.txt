@@ -1,0 +1,5 @@
+[*] known pool: 35
+[*] spawned 30208
+[*] resumed 55s
+[*] sm3-all installed
+[DONE] msgs=155 states=1099 matches=0

@@ -1,0 +1,444 @@
+[
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "cb12155b4933d1500308499e4fcb6694",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "_unused=0&ad_area=1440x2294&sdk_version=2013656&os",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "ad2a76722aea7df283a7470cc4fcaabb",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "02616b5fb31bf627bd4de35b81be0ebc",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "3ea3a264db77278395371f48c4a12abc",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "os=android&_rticket=1787585665758&is_pad=0&last_in",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "5e5d9e36fef8b5157bc0af1e26ca59a9",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "3a7c700ba632421f62834678c51e85bc",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "2177bc5056e9727e4eb15f7655c49a59",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "aid=1233&device_id=7666223875861513749&client_vers",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "a0430f3ff903b3bf1d185db688632281",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "sdk_version=3.4.0-alpha.3-perm&device_platform=and",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "46c03b52742b3f2615a3abdf1636b754",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "sdk_version=2.7.4.4&sdk_name=pns_consent_sdk&devic",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "10930e270c1aa1af20a6ec8b3fec9139",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "b48efc799047ec7c66a652653094c350",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "lc_id=2142840551&platform=android&device_platform=",
+  "reg": false
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "0872dc3043904adad694cae65dbb8835",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "lc_id=2142840551&platform=android&device_platform=",
+  "reg": false
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "a0ecf648ce50f43c21399db6ac809f07",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "passport-sdk-version=1&device_platform=android&os=",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "c0cca5a6dc96ce75dd807cc42ccc1817",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "lc_id=2142840551&platform=android&device_platform=",
+  "reg": false
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "9a6b1808e00bd930275f06ee5b776c88",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "feature_name=ttk_app_dau_launch&is_first_hybridab_",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "8ca462427dbfb3f3d431621b14f496ff",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "max_time=0&req_from=tiktok_follow_toplive_guide&de",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "25180d3325b5995132a094f1f6db9d7e",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "lc_id=2142840551&platform=android&device_platform=",
+  "reg": false
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "e951d901e6fa057d41cf7cfb1827748b",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "lc_id=2142840551&platform=android&device_platform=",
+  "reg": false
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "9ab6084c683c1406c5c200184a3ca6f1",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "os=android&_rticket=1787585677402&is_pad=0&last_in",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "b6472e044f5d75ed4270e9005a632f99",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "ede453aa2b2511fb36e19377c8eef2f9",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "os=android&_rticket=1787585677404&is_pad=0&last_in",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "0b04cc917112a3f5668895aa003c9190",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "3b4fa8c4a2237be4399c294a2961825d",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "973d200433afdb0c8edb59271d34dd7d",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ },
+ {
+  "t": "sm3",
+  "tid": 23812,
+  "slot16": "0e817e15c7f71685fd55d6a55d1c0c85",
+  "lrseq": [
+   "0x9fd74",
+   "0x9ff1c",
+   "0x9fd74",
+   "0x9ff1c",
+   "0x10ac84",
+   "0x1384e8",
+   "0x9fd74",
+   "0x9ff1c"
+  ],
+  "qhead": "device_platform=android&os=android&ssmix=a&_rticke",
+  "reg": true
+ }
+]

@@ -1,0 +1,85 @@
+{
+ "stream": [
+  {
+   "tag": "BOOT",
+   "msg": "oracle v3 armed (dlopen-early), waiting for libmetasec_ov.so"
+  },
+  {
+   "tag": "READY",
+   "base": "0x6f6de00000"
+  },
+  {
+   "tag": "KSCH",
+   "seq": 1,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 2,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "EINIT",
+   "seq": 3,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 4,
+   "win": false,
+   "keyBytes": 16
+  },
+  {
+   "tag": "KSCH",
+   "seq": 5,
+   "win": false,
+   "keyBytes": 16
+  }
+ ],
+ "dump": [
+  {
+   "t": "KSCH",
+   "seq": 1,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "bc6b77308d45af64c6407a15715d9ede"
+  },
+  {
+   "t": "KSCH",
+   "seq": 2,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "bc6b77308d45af64c6407a15715d9ede"
+  },
+  {
+   "t": "EINIT",
+   "seq": 3,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "d31e3718288a1027baab59f146a09a9c",
+   "iv": "ea180a0336ed352fcd24e4d50018ae54"
+  },
+  {
+   "t": "KSCH",
+   "seq": 4,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "d31e3718288a1027baab59f146a09a9c"
+  },
+  {
+   "t": "KSCH",
+   "seq": 5,
+   "win": false,
+   "store": null,
+   "keyBytes": 16,
+   "userKey": "b114249b7bed9d2691d70c60d69f9c4f"
+  }
+ ]
+}

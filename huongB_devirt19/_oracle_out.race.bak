@@ -1,0 +1,3 @@
+[race] app pid= (iter=60)
+usage: frida [options] target
+frida: error: argument -p/--attach-pid: invalid parse_target value: ''

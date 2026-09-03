@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "src": "extracted from phone .msp device-secret (2026-08-31) via spawn-gate 0x10bbd0 pre-encrypt zlib",
+    "note": "complete trusted-device state for pure-node offline signer. slot16=capture-once table (custom PRF). dyn_seed for seed/attestation layer.",
+    "verified": "2026-09-02: mssdk_device_secret + settings_counters re-decrypted from ENCRYPTED store via RC4(MD5(SHA1(keyname))) — now authoritative (matches .msdata/mssdk/ov exactly). Previous copy had stale rtk2_ms/server_tsp_diff."
+  },
+  "identity": {
+    "device_id": "7678616678053643790",
+    "install_id": "7679520991450973970"
+  },
+  "mssdk_device_secret": {
+    "fltk": "1787822601249",
+    "dyn_seed": "MDGkEprSrHADIDZ6yWtkztTtnLIoFXUlUzcso/xeHUnQLB3XQDc6HAV+FRzlNQOm2ekPLgHBxRSevg7OUKLwWVSQx2CKVuYBe4tnmkAW7TRq/cERFu7jpn8VOSyBvYKYAfE=",
+    "dyn_deviceid": "7678616678053643790",
+    "rdk2_ms": "7678616678053643790",
+    "rtk2_ms": "65d4a4323c59fd1a8382a8380032f95e14a3d0366ddb8c20846d",
+    "bootsoft": true,
+    "kiid": "ef86fe33-0264-4b06-ba72-813be3d22158",
+    "rep_vd": true,
+    "schedule_report_interval": 18,
+    "dyn_version": 2,
+    "dyn_last_update_time": 1788177640,
+    "rsk2_ms": 2,
+    "server_tsp_diff": 1030
+  },
+  "slot16_table": {
+    "/api/v1/cs/setting": [
+      "79bfec7738dbd77aa49e7d33ee4bb182"
+    ],
+    "/api/v1/mall/shop_tab/algorithm/reach/get": [
+      "8a286f9f1ddfe71d5a00ca8530b57570"
+    ],
+    "/aweme/v1/aweme/stats/": [
+      "3016f60d8dea98e83c76f410867d1bf3"
+    ],
+    "/aweme/v1/search/bubble/": [
+      "f31361844bd2a9dfda8e7ff7edc91ce0"
+    ],
+    "/aweme/v2/feed/": [
+      "028f18c72b418f627d84569fa8f0dfb0"
+    ],
+    "/cloudpush/update_sender/": [
+      "a98bfe26cee83ccde877e5cd929a1bb4"
+    ],
+    "/common_chunk": [
+      "5024146e6380fa45b218bf70d368db20"
+    ],
+    "/consent/api/combine/list/v3": [
+      "46c03b52742b3f2615a3abdf1636b754"
+    ],
+    "/ms/dyn/task": [
+      "6bc9052c3436e63187492e80abc4c4f2"
+    ],
+    "/ms/get_seed": [
+      "27aace4f09a5e5cf770aecf5a760f80e"
+    ],
+    "/passport/app/store_region/": [
+      "051afb6b2a4b02cdb42d28ab0f81b736"
+    ],
+    "/passport/auth/get_nonce/": [
+      "e81ea983880553838e8cfc26f9e43773"
+    ],
+    "/region/submit": [
+      "80e0bb30233c7514bc3e3df2ffd5ff48"
+    ],
+    "/ri/report": [
+      "c1ca370c60cf1dda76d7284e4fa468e8"
+    ],
+    "/starship/strategy_config": [
+      "283a0cbf71c713f66cc3142d51f91788",
+      "63bf58b8ded00a4b81587162dffcd0e5"
+    ],
+    "/tiktok/pns/privacy_headers": [
+      "6c109094bc9ab89e050fbd3e2ca6b99e"
+    ],
+    "/tiktok/ppf/api/eligibility/v2": [
+      "46c03b52742b3f2615a3abdf1636b754"
+    ],
+    "/tiktok/v1/efficiency_portrait/": [
+      "b8591fcb8d86ff40ed3989462a588bf1"
+    ],
+    "/tiktok/v1/hybrid/ab/": [
+      "851dbc7109471d9b56f8c9c29ca143db"
+    ],
+    "/tiktok/v1/outreach/dynamic/fetch": [
+      "41095ab04d460685a7d74e2e9f33f7a0"
+    ],
+    "/tiktok/v1/outreach/record/sync": [
+      "55359e3dde7c4ac445c5d378df7bed52"
+    ],
+    "/tiktok/v1/screen_time/upload/": [
+      "6e0f4c5388b18ee23cb63b0f1202db72"
+    ],
+    "/vc/setting": [
+      "48257f6a140891a1ad69ca72c53d4c1b",
+      "756679c6a312acad8156058c6704659e"
+    ]
+  },
+  "settings_counters": {
+    "1233-0-1-semithc": "285",
+    "3019-0-1-f5e6f45698837e51c10f69f5e1838bc5": "1152543938",
+    "1233-0-1-ecneuq": "328",
+    "1233-0-1-sdi": "AxQ86l2Ze9wHbkZfPPhiGJZ7G",
+    "1233-0-1-risk_app_key_cache": "{\"new_risk_app_request_timestamp_key\":\"1788144440\",\"zero_rest_app_timestamp_key\":\"1788144440\",\"cur_risk_app_page_num_key\":\"1\"}",
+    "-0-1-ms_way_count_key": "39",
+    "-0-1-ms_way_value_key": "852",
+    "1233-0-1-msmodel_data_report_tsp": "1788144435",
+    "1233-0-1-msmodel_data_report_count": "0"
+  }
+}

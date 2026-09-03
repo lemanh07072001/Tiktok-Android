@@ -1,0 +1,7 @@
+attach pid 9430 t=8.2
+  {'k': 'HOOK'}
+  {'k': 'READY'}
+collecting 60s (natural write ~t20-40 + swipes)...
+=== EVENTS === 6
+store files CHANGED this run: ['.msf3_58abed2bdf5ce9620cbf2b23e7b463da6969535a', '.msf3_5a78573b16f3ea4c2cd50666201214b78de95b0e', '.msf3_db4d23f8db24d05e480f1adf6e308aa5a466ef6b', '.msp_092fde7a53a0274594af0984c7830fc0c13dc8bd', '.msp_589c22335a381f122d129225f5c0ba3056ed5811']
+ct-match hits: 0

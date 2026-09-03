@@ -1,0 +1,16 @@
+[info] base=0x753da01000
+[*] waiting…
+[HIT#0] slot16=b9cbddd4590769248260c869f1e26e7a buf=0x77e4df3bf0
+    0xa101c
+    0xa101c
+[HIT#1] slot16=6c109094bc9ab89e050fbd3e2ca6b99e buf=0x77e4dfe810
+    0xa101c
+    0xa101c
+[HIT#2] slot16=64f1071c6daef8060cb0d5fcbe66d053 buf=0x77e4dfbd20
+    0xa101c
+    0xa101c
+  [mon] got=3
+[HIT#3] slot16=46c03b52742b3f2615a3abdf1636b754 buf=0x77e4e60490
+    0xa101c
+    0xa101c
+done -> _vm_trace13c.out.json hits= 4

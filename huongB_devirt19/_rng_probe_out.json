@@ -1,0 +1,217 @@
+[
+ {
+  "t": "mon",
+  "safe": false,
+  "ndrv": 0,
+  "ringLen": 0,
+  "calls": {}
+ },
+ {
+  "t": "info",
+  "base": "0x74c6e00000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "ndrv": 0,
+  "ringLen": 0,
+  "calls": {}
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "ndrv": 0,
+  "ringLen": 0,
+  "calls": {}
+ },
+ {
+  "t": "safe"
+ },
+ {
+  "t": "DRV",
+  "drv": 1,
+  "V": "910f0e1d18058b0eb8853abffd3dd30c",
+  "P": "0x77e4e04e70",
+  "rngHits": [],
+  "ringLen": 20,
+  "callsNow": {
+   "random": 10,
+   "rand": 10
+  }
+ },
+ {
+  "t": "DRV",
+  "drv": 2,
+  "V": "a52b5164596db4e31def18d9478bf6ca",
+  "P": "0x77e4e30eb0",
+  "rngHits": [],
+  "ringLen": 48,
+  "callsNow": {
+   "random": 24,
+   "rand": 24
+  }
+ },
+ {
+  "t": "DRV",
+  "drv": 3,
+  "V": "41095ab04d460685a7d74e2e9f33f7a0",
+  "P": "0x77e4ed4fb0",
+  "rngHits": [],
+  "ringLen": 158,
+  "callsNow": {
+   "random": 79,
+   "rand": 79
+  }
+ },
+ {
+  "t": "DRV",
+  "drv": 4,
+  "V": "5b50d803bd975b5df20135db5fbb7e26",
+  "P": "0x77e4ed84c0",
+  "rngHits": [],
+  "ringLen": 174,
+  "callsNow": {
+   "random": 87,
+   "rand": 87
+  }
+ },
+ {
+  "t": "DRV",
+  "drv": 5,
+  "V": "ee1a98b5fc4c548b986de0ac0485c3ff",
+  "P": "0x77e4ed95a0",
+  "rngHits": [],
+  "ringLen": 212,
+  "callsNow": {
+   "random": 105,
+   "rand": 105,
+   "arc4random": 2
+  }
+ },
+ {
+  "t": "DRV",
+  "drv": 6,
+  "V": "9c5f90d16d93b5f9a225cbf30aeecc33",
+  "P": "0x77e4ee4b50",
+  "rngHits": [],
+  "ringLen": 254,
+  "callsNow": {
+   "random": 126,
+   "rand": 126,
+   "arc4random": 2
+  }
+ },
+ {
+  "t": "DRV",
+  "drv": 7,
+  "V": "6c109094bc9ab89e050fbd3e2ca6b99e",
+  "P": "0x77e4ee97a0",
+  "rngHits": [],
+  "ringLen": 304,
+  "callsNow": {
+   "random": 151,
+   "rand": 151,
+   "arc4random": 2
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 7,
+  "ringLen": 387,
+  "calls": {
+   "random": 192,
+   "rand": 192,
+   "arc4random": 3
+  }
+ },
+ {
+  "t": "DRV",
+  "drv": 8,
+  "V": "11402d68c61d2c02f1479d586f44a9ee",
+  "P": "0x77e4eee810",
+  "rngHits": [],
+  "ringLen": 411,
+  "callsNow": {
+   "random": 202,
+   "rand": 202,
+   "arc4random": 7
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "ringLen": 550,
+  "calls": {
+   "random": 270,
+   "rand": 270,
+   "arc4random": 10
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "ringLen": 585,
+  "calls": {
+   "random": 287,
+   "rand": 287,
+   "arc4random": 11
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "ringLen": 647,
+  "calls": {
+   "random": 309,
+   "rand": 309,
+   "arc4random": 28,
+   "arc4random_buf": 1
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "ringLen": 1158,
+  "calls": {
+   "random": 530,
+   "rand": 530,
+   "arc4random": 96,
+   "arc4random_buf": 1,
+   "getrandom": 1
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "ringLen": 1196,
+  "calls": {
+   "random": 546,
+   "rand": 546,
+   "arc4random": 102,
+   "arc4random_buf": 1,
+   "getrandom": 1
+  }
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 8,
+  "ringLen": 1289,
+  "calls": {
+   "random": 589,
+   "rand": 589,
+   "arc4random": 109,
+   "arc4random_buf": 1,
+   "getrandom": 1
+  }
+ }
+]

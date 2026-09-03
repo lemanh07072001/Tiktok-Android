@@ -1,0 +1,28 @@
+plugins { id 'application' }
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+dependencies {
+    // unidbg-android is published to Maven Central by zhkl0228. If the version below
+    // fails to resolve, bump it (check https://central.sonatype.com/artifact/com.github.zhkl0228/unidbg-android)
+    // or fall back to jitpack: 'com.github.zhkl0228.unidbg:unidbg-android:<git-tag>'
+    implementation 'com.github.zhkl0228:unidbg-android:0.9.9'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+}
+application {
+    mainClass = 'tt.LoadTest'
+    applicationDefaultJvmArgs = ['-Djava.library.path=native', '-Dorg.slf4j.simpleLogger.defaultLogLevel=debug', '-Dorg.slf4j.simpleLogger.log.com.github.unidbg=trace']
+}
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+run {
+    environment System.getenv()
+    workingDir = projectDir
+}
+tasks.register('dump', JavaExec) {
+    group = 'application'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'tt.Dump'
+    workingDir = projectDir
+    environment System.getenv()
+}

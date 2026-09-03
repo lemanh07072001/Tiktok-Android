@@ -1,0 +1,82 @@
+[
+ {
+  "t": "info",
+  "base": "0x7539600000"
+ },
+ {
+  "t": "ready"
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "ndrv": 0,
+  "stored": 0,
+  "seen": 0
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "ndrv": 0,
+  "stored": 0,
+  "seen": 0
+ },
+ {
+  "t": "mon",
+  "safe": false,
+  "ndrv": 0,
+  "stored": 0,
+  "seen": 0
+ },
+ {
+  "t": "safe"
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 0,
+  "stored": 39742,
+  "seen": 80776
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 0,
+  "stored": 95372,
+  "seen": 201643
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 0,
+  "stored": 155930,
+  "seen": 306381
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 0,
+  "stored": 221614,
+  "seen": 412072
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 0,
+  "stored": 282486,
+  "seen": 511941
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 0,
+  "stored": 343967,
+  "seen": 617763
+ },
+ {
+  "t": "mon",
+  "safe": true,
+  "ndrv": 0,
+  "stored": 407049,
+  "seen": 724294
+ }
+]
