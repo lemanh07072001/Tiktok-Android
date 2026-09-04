@@ -17,6 +17,7 @@ import com.github.unidbg.pointer.UnidbgPointer;
 import unicorn.Arm64Const;
 import com.github.unidbg.arm.backend.Backend;
 import com.github.unidbg.arm.backend.CodeHook;
+import com.github.unidbg.arm.backend.ReadHook;
 import com.github.unidbg.arm.backend.UnHook;
 import java.io.File;
 import java.util.*;
@@ -227,26 +228,29 @@ public class Dump {
                 if(rptSelf[0]==0){ rptSelf[0]=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
                   System.out.printf("   [RPT] 0x95a3c self=0x%x%n", rptSelf[0]); } }
                 public void onAttach(UnHook un){} public void detach(){} }, base+0x95a3c, base+0x95a3d, null);
-              // first 0x154f7c write: struct is fully built + serialization starting → dump/inject
+              // window trace: between #23 emit (rpt+0x71 len21) and #25 emit (rpt+0x77) → #24 built+skipped here
+              final boolean[] inWin={false}; final java.util.LinkedHashMap<Long,String> reads=new java.util.LinkedHashMap<>();
               emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
-                if(rptSelf[0]==0||didDump[0]) return; didDump[0]=true;
-                long self=rptSelf[0];
-                try {
-                  if(OFF24>=0){ byte[] wv=b.mem_read(BASE2+0x1fbe00,24); b.mem_write(self+OFF24, wv);
-                    System.out.printf("   [RPT] INJECTED [0x1fbe00] std::string -> self+0x%x%n", OFF24); }
-                  else {
-                    System.out.println("   [RPT] struct scan @self:");
-                    byte[] blk=b.mem_read(self,0x600);
-                    for(int off=0; off<0x600-24; off+=4){
-                      long cap=readLE(blk,off), ln=readLE(blk,off+8), ptr=readLE(blk,off+16);
-                      String s=null; int slen=0;
-                      if((cap&1)!=0 && ln>0 && ln<80 && ptr!=0){ try{ byte[] d=b.mem_read(ptr,(int)Math.min(ln,64)); s=new String(d); slen=(int)ln; }catch(Throwable t){} }
-                      else if((blk[off]&1)==0 && (blk[off]&0xff)>0){ int n=(blk[off]&0xff)>>1; if(n>0&&n<23){ s=new String(blk,off+1,n); slen=n; } }
-                      if(s!=null && slen>=2){ boolean pr=true; for(char ch:s.toCharArray()) if(ch<9||ch>126){pr=false;break;} if(pr) System.out.printf("     +0x%03x len=%2d '%s'%n", off, slen, s); }
-                    }
-                  }
-                } catch(Throwable t){ System.out.println("   [RPT] err "+t); } }
+                if(rptSelf[0]==0) return;
+                long dst=b.reg_read(Arm64Const.UC_ARM64_REG_X2).longValue(); long doff=dst-0x12555000L;
+                long len=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
+                if(doff==0x71 && len==21 && !inWin[0]){ inWin[0]=true; System.out.println("   [WIN] #23 emitted @rpt+0x71 -> tracing #24-build reads..."); }
+                else if(doff==0x77 && inWin[0]){ inWin[0]=false;
+                  System.out.println("   [WIN] #25 @rpt+0x77 -> window closed. Reads of device-state/heap std::strings in window:");
+                  for(java.util.Map.Entry<Long,String> e:reads.entrySet()) System.out.printf("     read 0x%x : %s%n", e.getKey(), e.getValue());
+                } }
                 public void onAttach(UnHook un){} public void detach(){} }, base+0x154f7c, base+0x154f80, null);
+              // ReadHook (broad): during window, record reads whose 8-byte value looks like a std::string control (find #24 value slot)
+              emu.getBackend().hook_add_new(new ReadHook(){ public void hook(Backend b,long addr,int size,Object u){
+                if(!inWin[0]||size!=8||reads.size()>400 || reads.containsKey(addr)) return;
+                try{ byte[] c=b.mem_read(addr,24); long cap=readLE(c,0),ln=readLE(c,8),ptr=readLE(c,16);
+                  String v=null;
+                  // long-mode std::string: cap odd, small len, valid ptr → print content
+                  if((cap&1)!=0 && ln>0 && ln<=48 && ptr>0x1000){ try{ String s=new String(b.mem_read(ptr,(int)Math.min(ln,44))); boolean pr=true; for(char ch:s.toCharArray()) if(ch<9||ch>126){pr=false;break;} if(pr) v="str["+ln+"]='"+s+"'"; }catch(Throwable t){} }
+                  // empty long-mode string (cap even w/ len0 ptr0) adjacent candidate
+                  if(v!=null) reads.put(addr, v);
+                }catch(Throwable t){} }
+                public void onAttach(UnHook un){} public void detach(){} }, BASE2+0x1000, 0x800000000L, null);
             }
             // INIT 0x4000001 with a config Object[] (notes/21: [aid,"","",token,sdkver,channel,...])
             DvmObject<?>[] cfg = {

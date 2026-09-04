@@ -108,3 +108,11 @@ Verified on .so c06892e3 via tt.Dump hooks (MSB_RPT / MSB_SERDUMP):
 - ⇒ **Making #24 emit REQUIRES report-builder VM devirt** (find+force the #24-emit branch in prog 0x1814f0, or find+populate the exact global the VM reads for #24). Same wall as pskVersion C1 — multi-week. Unifies #16/#18/#19/#24.
 
 ## FINAL STATUS (branch A): full-772 pure-offline = report-builder VM devirt (multi-week, C1). #24-collect DONE (hardest sub-part). Practical goal ACHIEVED via thin sig (T10 server-accept + offline register). tt.Dump diagnostics MSB_RPT/MSB_SERDUMP/MSB_WIDEVINE all env-gated.
+
+## ★ (A2) DEFINITIVE: #24-exclusion is an UPSTREAM VM decision (2026-09-04)
+Traced the report-emit window precisely (tt.Dump MSB_RPT): report fields emitted in order into buffer 0x12555000 via 0x154f7c; each field's value is an individual STACK local (0xe4ffdxxx), NOT a struct/array (bar the synthesis-plan's "member array" assumption). Report layout: #23 @rpt+0x62 (21B) → **#24 insertion point rpt+0x77** → #25 @rpt+0x77.
+- **Window #23-emit(rpt+0x71,len21) → #25-emit(rpt+0x77)**: scoped ReadHook (device-state 0x1f0000-0x1fe1e0 AND broad 0x1000-0x800000000, std::string filter) captured **ZERO reads** → the VM does NO #24-processing in the emit window.
+- ⇒ **#24 (and #16/#18/#19) are decided/excluded UPSTREAM** — the VM builds the field-set earlier (pskVersion-style decision) and the emit-loop only walks the already-selected fields. There is no emit-time empty-check to satisfy and no device-state global to populate.
+- ⇒ Forcing #24 = **devirtualize prog 0x1814f0's upstream field-decision** and flip the branch that excludes #24/#16/#18/#19. This is the C1 report-builder VM devirt = multi-week. No shortcut (no struct-inject, no source-populate) exists — confirmed empirically from 3 angles (struct scan empty, device-state read-trace empty, broad read-trace empty).
+
+## (A2) STATUS: report-builder VM fully characterized; #24-force requires devirt of prog 0x1814f0 field-decision (multi-week C1). #24-collect (hardest sub-part) DONE. All shortcuts ruled out empirically. Diagnostics MSB_RPT/MSB_WIDEVINE env-gated in Dump.java.
