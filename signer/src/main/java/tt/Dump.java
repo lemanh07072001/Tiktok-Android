@@ -18,6 +18,7 @@ import unicorn.Arm64Const;
 import com.github.unidbg.arm.backend.Backend;
 import com.github.unidbg.arm.backend.CodeHook;
 import com.github.unidbg.arm.backend.ReadHook;
+import com.github.unidbg.arm.backend.WriteHook;
 import com.github.unidbg.arm.backend.UnHook;
 import java.io.File;
 import java.util.*;
@@ -252,6 +253,14 @@ public class Dump {
                 }catch(Throwable t){} }
                 public void onAttach(UnHook un){} public void detach(){} }, BASE2+0x1000, 0x800000000L, null);
             }
+            // ★ WHOOK: find who resets the report message #24 member (0xe4ffde10 = msg+0xe8) during the walk
+            if (System.getenv("MSB_WHOOK")!=null) {
+              final long WADDR=Long.decode(System.getProperty("WADDR","0xe4ffde10"));
+              emu.getBackend().hook_add_new(new WriteHook(){ public void hook(Backend b,long address,int size,long value,Object u){
+                if(!signPhase[0]) return; long pc=0; try{ pc=b.reg_read(Arm64Const.UC_ARM64_REG_PC).longValue()-BASE2; }catch(Throwable t){}
+                System.out.printf("[WHOOK] write 0x%x = 0x%x (size %d) <- PC 0x%x%n", address, value, size, pc); }
+                public void onAttach(UnHook un){} public void detach(){} }, WADDR, WADDR+8, null);
+            }
             // ★ AES probe: dump AES-CBC 0x159d70 args (input buffer + length) → for buffer-append injection
             if (System.getenv("MSB_AESPROBE")!=null) {
               final int[] ah={0};
@@ -295,7 +304,8 @@ public class Dump {
               final java.util.List<String> tr=new java.util.ArrayList<>();
               final long inj24buf = emu.getMemory().malloc(0x80,false).getPointer().peer;  // persistent scratch (pre-allocated, safe)
               // mode8: inject #24 at the message-walker 0x154f24 ENTRY (before size-computation) so the buffer is sized WITH #24
-              if("8".equals(System.getProperty("INJ24MODE")) && "1".equals(System.getProperty("INJ24"))){
+              if(("8".equals(System.getProperty("INJ24MODE"))||"10".equals(System.getProperty("INJ24MODE"))) && "1".equals(System.getProperty("INJ24"))){
+                final boolean m10="10".equals(System.getProperty("INJ24MODE"));
                 final int[] injc={0}; final long B3=base;
                 emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
                   if(!signPhase[0]) return;
@@ -304,10 +314,17 @@ public class Dump {
                   try{ long d0=readLong(emu0,m); long nf=readLong(emu0,d0+0x30); long f23m=readLong(emu0,m+0xe0);
                     if(f23m==0 || nf<30 || nf>60) return;  // must be the top report message (30-60 fields, #23 built)
                     long charptr=readLong(emu0,B3+0x1fbe00+8); long slen=readLong(emu0,B3+0x1fbe00+4)&0xffffffffL;
-                    b.mem_write(charptr+slen,new byte[]{0});
-                    writeLong(emu0, m+0xe8, charptr);
+                    byte[] b64=b.mem_read(charptr,(int)slen);   // the base64-DUID bytes
                     injc[0]++;
-                    if(injc[0]<=3) System.out.printf("[INJ24 mode8 #%d] @0x154f24 msg=0x%x nfields=%d #24 member=char* 0x%x%n", injc[0], m, nf, charptr);
+                    if(m10){ // mode10: fill the string that #24's member points to (0x12517680) with the base64-DUID
+                      long tgt=readLong(emu0,m+0xe8);
+                      if(tgt!=0){ b.mem_write(tgt, b64); b.mem_write(tgt+slen, new byte[]{0});
+                        if(injc[0]<=3) System.out.printf("[INJ24 mode10 #%d] filled target 0x%x with base64-DUID(%d) [member@m+0xe8=0x%x]%n", injc[0], tgt, (int)slen, m+0xe8); }
+                    } else {
+                      b.mem_write(charptr+slen,new byte[]{0});
+                      writeLong(emu0, m+0xe8, charptr);
+                      if(injc[0]<=3) System.out.printf("[INJ24 mode8 #%d] @0x154f24 msg=0x%x #24 member=char* 0x%x%n", injc[0], m, charptr);
+                    }
                   }catch(Throwable t){} }
                   public void onAttach(UnHook un){} public void detach(){} }, base+0x154f24, base+0x154f28, null);
               }
