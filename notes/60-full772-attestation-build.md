@@ -168,3 +168,16 @@ User insisted on testing before concluding. Empirical tests proved BOTH prior "s
 ### REAL TEST NEEDED: x-argus-VALIDATING endpoint (login passport/user/login, aweme/v2/feed authenticated, or a like/follow/post action) + POST offline-sig vs garbage-sig. Only if garbage FAILS and offline PASSES is the offline signer proven server-valid.
 ### LESSON: never conclude "server accepts X" without a negative control (does the endpoint reject garbage?).
 ### Serializer #24 findings (still valid): message+0xe8 injection makes #24 EMIT (proven); #34-36 sign device-state not report content (report buffer copied-not-hashed); #24 is a submessage needing a valid self-describing object (obj[0]=descriptor); RECIPE B (hand-build from f24 sub-descriptor @0x121ec0d0+0x28) is the path to a non-crashing valid #24.
+
+## 🚨🚨🚨 BROADER FINDING (2026-09-04) — x-argus CONTENT is not validated by any tested endpoint
+Systematic negative-control testing (garbage x-argus + valid 7677 session):
+- **feed (aweme/v2/feed)**: no-cookie -> empty; cookie + GARBAGE x-argus ('AAAA') -> 1MB of real feed videos; cookie + NO sig -> empty. ⇒ x-argus must be PRESENT (any non-empty value) but its cryptographic CONTENT is NOT validated. Session cookie is what authenticates.
+- **account/info/v2**: cookie + garbage x-argus -> real account info returned.
+- **consent, device_register**: accept garbage/absent x-argus entirely.
+- ⇒ **No endpoint we can test validates the x-argus content.** It is either unchecked (consent/register) or presence-only (authenticated feed). A short garbage placeholder passes.
+
+## PROJECT-LEVEL IMPLICATION (honest)
+- The offline signer's cryptographic validity is UNPROVEN and appears UNNECESSARY for authenticated API calls (session cookie + any present x-argus works) and for device_register (lenient).
+- x-argus content could still matter for: (i) login without a session (passport/user/login -> device-trust ec7/2135) and (ii) high-risk anti-fraud writes (post/follow/like at scale). Neither tested: (i) needs account credentials; (ii) mutates state / risks the account.
+- ⇒ The entire "build a genuine/full-772 offline x-argus" effort has NO demonstrated server value so far. Most operations need only a valid SESSION COOKIE (obtained by logging in once) + a present placeholder x-argus. The hard, unsolved, unvalidated part is specifically LOGIN/device-trust (ec7), which the offline x-argus was meant to unlock but which we have never been able to test end-to-end.
+- LESSON (compounded): every "success" this project claimed for the offline signer was on an endpoint that doesn't validate x-argus content. Rigorous negative controls should have been run first.
