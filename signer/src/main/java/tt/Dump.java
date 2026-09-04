@@ -252,6 +252,29 @@ public class Dump {
                 }catch(Throwable t){} }
                 public void onAttach(UnHook un){} public void detach(){} }, BASE2+0x1000, 0x800000000L, null);
             }
+            // ★ AES probe: dump AES-CBC 0x159d70 args (input buffer + length) → for buffer-append injection
+            if (System.getenv("MSB_AESPROBE")!=null) {
+              final int[] ah={0};
+              emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                if(!signPhase[0]||ah[0]>=3) return; ah[0]++;
+                long x0=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
+                long x1=b.reg_read(Arm64Const.UC_ARM64_REG_X1).longValue();
+                long x2=b.reg_read(Arm64Const.UC_ARM64_REG_X2).longValue();
+                long x3=b.reg_read(Arm64Const.UC_ARM64_REG_X3).longValue();
+                System.out.printf("[AESPROBE #%d] x0=0x%x x1=0x%x x2=0x%x x3=0x%x%n", ah[0], x0,x1,x2,x3);
+                for(long p : new long[]{x0,x1}){ try{ byte[] d=b.mem_read(p,48); StringBuilder h=new StringBuilder(); for(byte bb:d) h.append(String.format("%02x",bb&0xff));
+                  System.out.printf("   [buf 0x%x] %s%n", p, h.toString()); }catch(Throwable t){} } }
+                public void onAttach(UnHook un){} public void detach(){} }, base+0x159d70, base+0x159d74, null);
+              // copy-fn 0x1728b4(dst,src,len): log when src/dst = report buffer 0x12555000 → report length
+              emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                if(!signPhase[0]) return;
+                long x0=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
+                long x1=b.reg_read(Arm64Const.UC_ARM64_REG_X1).longValue();
+                long x2=b.reg_read(Arm64Const.UC_ARM64_REG_X2).longValue();
+                if((x0>=0x12555000L&&x0<0x12555400L)||(x1>=0x12555000L&&x1<0x12555400L))
+                  System.out.printf("[COPY 0x1728b4] dst=0x%x src=0x%x len=%d%n", x0,x1,x2); }
+                public void onAttach(UnHook un){} public void detach(){} }, base+0x1728b4, base+0x1728b8, null);
+            }
             // ★ (a)/(b) test: who READS the report buffer 0x12555000 (is the sig a hash of the report?)
             if (System.getenv("MSB_RPTREAD")!=null) {
               final java.util.LinkedHashMap<Long,Integer> rdrs=new java.util.LinkedHashMap<>();
@@ -270,6 +293,7 @@ public class Dump {
             // ★ VM tracer: log prog-0x1814f0 opcode stream (report-builder) + mark 0x154f7c emits → find #24 field-decision
             if (System.getenv("MSB_VMTRACE")!=null) {
               final java.util.List<String> tr=new java.util.ArrayList<>();
+              final long inj24buf = emu.getMemory().malloc(0x80,false).getPointer().peer;  // persistent scratch (pre-allocated, safe)
               // field-writer 0x153fb0(x0=descriptor, x1=value-ptr, x2=dst): log field-tag + value-ptr + emptiness → identify #24 call
               emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
                 if(!signPhase[0]||tr.size()>4000) return;
@@ -285,6 +309,12 @@ public class Dump {
                     long mode=Long.decode(System.getProperty("INJ24MODE","0"));
                     if(mode==0) writeLong(emu0, msg+0xe8, BASE2+0x1fbe00);        // member = ptr to std::string [0x1fbe00]
                     else if(mode==2) writeLong(emu0, msg+0xe8, readLong(emu0,msg+0xe0));  // member = #23's submessage value (copy #23)
+                    else if(mode==3){ // RECIPE A: deep-copy #23's sub-OBJECT to PRE-ALLOCATED persistent mem -> #24 = valid submessage
+                      long obj23=readLong(emu0, msg+0xe0);        // #23 member value = sub-object ptr (obj23[0]=descriptor)
+                      byte[] shell=b.mem_read(obj23, 0x40);
+                      b.mem_write(inj24buf, shell);               // copy into pre-allocated scratch (no malloc in-hook)
+                      writeLong(emu0, msg+0xe8, inj24buf);        // #24 member -> persistent copy
+                      tr.add(String.format(">>> INJ24 mode3: #24 member=inj24buf 0x%x <- obj23 0x%x [0]=0x%x", inj24buf, obj23, readLong(emu0,obj23))); }
                     else { byte[] wv=b.mem_read(BASE2+0x1fbe00,24); b.mem_write(msg+0xe8, wv); }
                     tr.add(String.format(">>> INJ24(mode%d): msg+0xe8=0x%x set (member ptr -> 0x%x)", mode, msg+0xe8, BASE2+0x1fbe00)); }
                   if((tag>>3&0x1f)==23){ // on f23: dump regs → find struct_base (reg+0xe0 = #23 value); then #24 = base+0xe8
