@@ -158,3 +158,13 @@ Traced readers of the report buffer 0x12555000 (MSB_RPTREAD):
 - **Implication (leans (b))**: a correctly-built #24 submessage injected at the serializer would leave #34-36 unchanged — which is CORRECT (the report sig never covered report fields via the buffer). Such a #24 COULD be server-accepted (server validates #34-36 vs device-state and #24 vs device_id separately). BUT this is inference from evidence, NOT proven — only a live server test with a VALID #24 submessage settles it.
 
 ## HONEST STATE (A2, tested): serializer-injection makes #24 EMIT but #34-36 don't cover it; evidence (report buffer copied not hashed; note-30 device-state sig) suggests #24 needn't be sig-covered, so a valid #24 could pass — UNPROVEN pending a live server test. To settle: (1) build a valid #24 Widevine submessage (schema from f24 sub-descriptor + collected deviceUniqueId), (2) inject via message+0xe8, (3) server test the resulting x-argus.
+
+## 🚨🚨 CRITICAL CORRECTION (2026-09-04) — T10 + offline-register conclusions INVALID
+User insisted on testing before concluding. Empirical tests proved BOTH prior "successes" were false positives on endpoints that DO NOT validate x-argus:
+- **consent/api/combine/list/v3**: returns status_code=0 + real data for NO-SIG, BARE (no cookie, no sig), and GARBAGE-ARGUS requests. Never validated x-argus. ⇒ T10 INVALID.
+- **service/2/device_register**: returns new_user=1 (creates a device) with GARBAGE x-argus and with NO sig. Never validated x-argus. ⇒ "offline register works" INVALID.
+- ⇒ NO evidence the offline x-argus is accepted by any x-argus-validating endpoint. Both headline results were on lenient/unauthenticated endpoints.
+- #24 (a)/(b) test confounded: consent doesn't check the sig; INJ24 mode3 (deep-copy #23 object) CRASHES the sign (UC_ERR_FETCH_UNMAPPED @0xffc — shallow shell-copy members point to clobbered stack).
+### REAL TEST NEEDED: x-argus-VALIDATING endpoint (login passport/user/login, aweme/v2/feed authenticated, or a like/follow/post action) + POST offline-sig vs garbage-sig. Only if garbage FAILS and offline PASSES is the offline signer proven server-valid.
+### LESSON: never conclude "server accepts X" without a negative control (does the endpoint reject garbage?).
+### Serializer #24 findings (still valid): message+0xe8 injection makes #24 EMIT (proven); #34-36 sign device-state not report content (report buffer copied-not-hashed); #24 is a submessage needing a valid self-describing object (obj[0]=descriptor); RECIPE B (hand-build from f24 sub-descriptor @0x121ec0d0+0x28) is the path to a non-crashing valid #24.
