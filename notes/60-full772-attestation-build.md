@@ -181,3 +181,12 @@ Systematic negative-control testing (garbage x-argus + valid 7677 session):
 - x-argus content could still matter for: (i) login without a session (passport/user/login -> device-trust ec7/2135) and (ii) high-risk anti-fraud writes (post/follow/like at scale). Neither tested: (i) needs account credentials; (ii) mutates state / risks the account.
 - ⇒ The entire "build a genuine/full-772 offline x-argus" effort has NO demonstrated server value so far. Most operations need only a valid SESSION COOKIE (obtained by logging in once) + a present placeholder x-argus. The hard, unsolved, unvalidated part is specifically LOGIN/device-trust (ec7), which the offline x-argus was meant to unlock but which we have never been able to test end-to-end.
 - LESSON (compounded): every "success" this project claimed for the offline signer was on an endpoint that doesn't validate x-argus content. Rigorous negative controls should have been run first.
+
+## Serializer bytes-field encoding (2026-09-04) — progress toward emitting #24
+- #24 (f24) is handled by field-writer 0x153fb0 and is a BYTES field (dispatch 0x153fd8 ubfx bits[29:31] of descriptor[+8]=0 -> non-submessage), NOT a submessage (earlier conclusion corrected).
+- The writer receives the value as a STACK TEMP {len@+0 (u64), data@+8 (ptr)} — captured from f13 (present bytes 'd4aca5685605'): member@stack = 06000000.. (len=6), data ptr 0x12513a80.
+- The message member (at msg+0xe8 for #24) is an SDK std::string that the ITERATOR extracts into that {len,data} temp before calling the writer. mode0 (pointing #24's member at the [0x1fbe00] std::string) emitted 1 byte -> the extraction read the wrong length from my std::string layout.
+- REMAINING to emit a byte-correct #24: resolve the iterator's member->{len,data} extraction (which std::string offset it reads len/data from), then set #24's message member to a std::string that extracts to {len=44, data=base64-DUID}. Deep multi-session serializer RE.
+- Injection point message+0xe8 is PROVEN to make #24 emit (content TBD). Same approach applies to #16/#18/#19.
+
+## ⚖️ VALUE CAVEAT (must weigh): full-772 has NO demonstrated server value — every tested endpoint (feed/account/consent/register) accepts a garbage or absent x-argus. Building a byte-correct #24 is high-effort serializer RE for a payload no tested endpoint validates. The only place x-argus content might matter (login/device-trust ec7) is untested (needs credentials).

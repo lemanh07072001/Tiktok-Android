@@ -304,6 +304,13 @@ public class Dump {
                   long valp=0, first=0; String pk="";
                   try{ valp=readLong(emu0,x1); if(valp!=0){ byte[] fb=b.mem_read(valp,8); first=fb[0]&0xff; pk="["+String.format("%02x%02x%02x%02x",fb[0]&0xff,fb[1]&0xff,fb[2]&0xff,fb[3]&0xff)+"]"; } }catch(Throwable t){}
                   tr.add(String.format("WR desc=0x%x f%d wt%d x1=0x%x *x1=0x%x %s", x0, (tag>>3)&0x1f, tag&7, x1, valp, pk));
+                  int fnum=w9&0xff;   // raw field number
+                  if(fnum==13){ // f13 = present bytes field ('d4aca5685605') — dump its member area raw to learn bytes encoding
+                    StringBuilder h2=new StringBuilder(); try{ byte[] mm=b.mem_read(x1,32); for(byte bb:mm) h2.append(String.format("%02x",bb&0xff)); }catch(Throwable t){h2.append("ERR");}
+                    tr.add(String.format("   [f13 member@0x%x raw32]=%s", x1, h2.toString()));
+                    // follow *x1 as a possible ptr
+                    try{ long mv=readLong(emu0,x1); StringBuilder h3=new StringBuilder(); byte[] pd=b.mem_read(mv,24); for(byte bb:pd) h3.append(String.format("%02x",bb&0xff));
+                      tr.add(String.format("   [f13 *member=0x%x ->]=%s", mv, h3.toString())); }catch(Throwable t){} }
                   if((tag>>3&0x1f)==23 && "1".equals(System.getProperty("INJ24"))){
                     long msg=x1-0xe0;   // message base (x1 = &member = msg + desc.offset(f23)=0xe0); members are 8-byte ptrs
                     long mode=Long.decode(System.getProperty("INJ24MODE","0"));
@@ -315,6 +322,13 @@ public class Dump {
                       b.mem_write(inj24buf, shell);               // copy into pre-allocated scratch (no malloc in-hook)
                       writeLong(emu0, msg+0xe8, inj24buf);        // #24 member -> persistent copy
                       tr.add(String.format(">>> INJ24 mode3: #24 member=inj24buf 0x%x <- obj23 0x%x [0]=0x%x", inj24buf, obj23, readLong(emu0,obj23))); }
+                    else if(mode==5){ // DUMP #24 sub-schema: f24 descriptor +0x28 = sub-message descriptor
+                      long fdesc24=x0+0x48; long subdesc=readLong(emu0,fdesc24+0x28);
+                      long nsub=readLong(emu0,subdesc+0x30); long farray=readLong(emu0,subdesc+0x38);
+                      tr.add(String.format(">>> #24 SUBSCHEMA: subdesc=0x%x nsub=%d farray=0x%x", subdesc, nsub, farray));
+                      for(int i=0;i<Math.min(nsub,12);i++){ long fd=farray+(long)i*0x48;
+                        long fnwt=readLong(emu0,fd+8), typ=readLong(emu0,fd+0x10), memoff=readLong(emu0,fd+0x18), subsub=readLong(emu0,fd+0x28);
+                        tr.add(String.format("     subfield[%d]@0x%x: fnum=%d type=0x%x memoff=0x%x subdesc=0x%x", i, fd, (int)fnwt, typ, memoff, subsub)); } }
                     else { byte[] wv=b.mem_read(BASE2+0x1fbe00,24); b.mem_write(msg+0xe8, wv); }
                     tr.add(String.format(">>> INJ24(mode%d): msg+0xe8=0x%x set (member ptr -> 0x%x)", mode, msg+0xe8, BASE2+0x1fbe00)); }
                   if((tag>>3&0x1f)==23){ // on f23: dump regs → find struct_base (reg+0xe0 = #23 value); then #24 = base+0xe8
