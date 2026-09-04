@@ -190,3 +190,14 @@ Systematic negative-control testing (garbage x-argus + valid 7677 session):
 - Injection point message+0xe8 is PROVEN to make #24 emit (content TBD). Same approach applies to #16/#18/#19.
 
 ## ⚖️ VALUE CAVEAT (must weigh): full-772 has NO demonstrated server value — every tested endpoint (feed/account/consent/register) accepts a garbage or absent x-argus. Building a byte-correct #24 is high-effort serializer RE for a payload no tested endpoint validates. The only place x-argus content might matter (login/device-trust ec7) is untested (needs credentials).
+
+## ★★★ #24 ENCODING FULLY DECODED (2026-09-04) — C-string field
+- **#24 (f24) = a C-STRING field, type 0x0e.** Value-emit dispatch: field-writer 0x153fb0 -> jump table @0x196d4e[type] -> for type 0x0e, case **0x154234**: `ldr x20,[x20]` (member VALUE = char*), `cbz` (null->skip), `mov x0,x20; bl 0x306d0` (=strlen -> length), then varint-encode length + copy the string bytes.
+- ⇒ #24's message member (at msg+0xe8) must hold a **pointer to a null-terminated C-string**. NOT a std::string, NOT a submessage (both earlier conclusions corrected).
+- Why mode0 emitted 1 byte: it set member = &[0x1fbe00] (the std::string control 2d 00 ...) -> strlen = 1 (stops at the 0x00 at offset 1).
+- **mode7 (member = the base64 char* 0x12513a20, null-terminated 44 chars)**: sets it correctly (verified: len=44 str='c1pMeUlpZmF4...'), and the writer WOULD emit the 44-byte base64-DUID.
+### BLOCKER: report buffer is pre-sized WITHOUT #24 -> emitting 44 bytes OVERFLOWS -> sign crashes (PC->0x1000).
+- Protobuf 2-pass: ByteSizeLong (size, with #24 empty) then Serialize. Injecting at the f23-writer (serialize pass) is too late for the size -> overflow.
+- Injecting at the message-walker 0x154f24 ENTRY (mode8) does NOT crash but #24 stays absent: the walk RE-INITIALIZES the working message (msg=0xe4ffdd28) members from a SOURCE at start, overwriting the pre-walk injection.
+### REMAINING (one plumbing layer): inject #24's member into the report SOURCE (the object the walk initializes msg from) BEFORE ByteSizeLong, so the size includes #24 and the serialize pass emits it. Then verify #24 = 44-byte base64-DUID + report grows ~+47B.
+### VALUE CAVEAT stands: full-772 has NO demonstrated server value (every tested endpoint accepts garbage/absent x-argus). #24 is now fully RE'd; finishing it is plumbing, but for an unvalidated payload.

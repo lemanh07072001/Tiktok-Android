@@ -294,6 +294,23 @@ public class Dump {
             if (System.getenv("MSB_VMTRACE")!=null) {
               final java.util.List<String> tr=new java.util.ArrayList<>();
               final long inj24buf = emu.getMemory().malloc(0x80,false).getPointer().peer;  // persistent scratch (pre-allocated, safe)
+              // mode8: inject #24 at the message-walker 0x154f24 ENTRY (before size-computation) so the buffer is sized WITH #24
+              if("8".equals(System.getProperty("INJ24MODE")) && "1".equals(System.getProperty("INJ24"))){
+                final boolean[] injd={false}; final long B3=base;
+                emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                  if(!signPhase[0]||injd[0]) return;
+                  long m=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
+                  // top message: [m+0]=descriptor; #23 member @ +0xe0 must be non-null (device_model built) to confirm this is the report msg
+                  try{ long d0=readLong(emu0,m); long f23m=readLong(emu0,m+0xe0);
+                    if(f23m==0) return;  // not the report message yet
+                    injd[0]=true;
+                    long charptr=readLong(emu0,B3+0x1fbe00+8); long slen=readLong(emu0,B3+0x1fbe00+4)&0xffffffffL;
+                    b.mem_write(charptr+slen,new byte[]{0});
+                    writeLong(emu0, m+0xe8, charptr);
+                    System.out.printf("[INJ24 mode8] @0x154f24 msg=0x%x desc=0x%x #24 member(m+0xe8)=char* 0x%x len=%d%n", m, d0, charptr, slen);
+                  }catch(Throwable t){} }
+                  public void onAttach(UnHook un){} public void detach(){} }, base+0x154f24, base+0x154f28, null);
+              }
               // field-writer 0x153fb0(x0=descriptor, x1=value-ptr, x2=dst): log field-tag + value-ptr + emptiness → identify #24 call
               emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
                 if(!signPhase[0]||tr.size()>4000) return;
@@ -322,6 +339,20 @@ public class Dump {
                       b.mem_write(inj24buf, shell);               // copy into pre-allocated scratch (no malloc in-hook)
                       writeLong(emu0, msg+0xe8, inj24buf);        // #24 member -> persistent copy
                       tr.add(String.format(">>> INJ24 mode3: #24 member=inj24buf 0x%x <- obj23 0x%x [0]=0x%x", inj24buf, obj23, readLong(emu0,obj23))); }
+                    else if(mode==7){ // #24 = C-STRING (type 0x0e): member VALUE = char* to null-terminated string; writer does strlen
+                      long charptr=readLong(emu0,BASE2+0x1fbe00+8);   // base64-DUID data ptr
+                      long slen=readLong(emu0,BASE2+0x1fbe00+4)&0xffffffffL;   // len@+4 = 44
+                      b.mem_write(charptr+slen, new byte[]{0});        // ensure null-terminated at end
+                      byte[] chk=b.mem_read(charptr, (int)Math.min(slen+1,48));
+                      writeLong(emu0, msg+0xe8, charptr);
+                      tr.add(String.format(">>> INJ24 mode7: #24 member=char* 0x%x len=%d str=%s", charptr, slen, new String(chk).replaceAll("[^\\x20-\\x7e]","."))); }
+                    else if(mode==6){ // #24 BYTES: member = inline {len@0, data@8} (like #13). data = base64-DUID bytes ptr
+                      long strobj=BASE2+0x1fbe00;
+                      long len=readLong(emu0,strobj+4)&0xffffffffL;   // SDK std::string len@+4 = 44
+                      long dataptr=readLong(emu0,strobj+8);           // data ptr @+8
+                      writeLong(emu0, msg+0xe8, len);                 // {len@0}
+                      writeLong(emu0, msg+0xf0, dataptr);             // {data@8}
+                      tr.add(String.format(">>> INJ24 mode6: #24={len=%d,data=0x%x} inline at msg+0xe8", len, dataptr)); }
                     else if(mode==5){ // DUMP #24 sub-schema: f24 descriptor +0x28 = sub-message descriptor
                       long fdesc24=x0+0x48; long subdesc=readLong(emu0,fdesc24+0x28);
                       long nsub=readLong(emu0,subdesc+0x30); long farray=readLong(emu0,subdesc+0x38);
