@@ -98,3 +98,13 @@ Empirical (WV_DRIVER + sign, /tmp/wv17): during sign the report-builder store-GE
 4. VM devirt (C1): bytecode plaintext, deobf transform addend-0xa00000, op44 data-dependent jumptable — 4 milestones (note 59).
 5. Report-builder gates device-state fields (#16/#18/#19/#24) — the unifying wall for full-772.
 CONCLUSION: full-772 pure-offline = the report-builder device-state gate (VM-level, multi-week). But T10+register prove thin sig is server-accepted for real ops, so full-772 may be unneeded for the practical goal.
+
+## ★ DEFINITIVE: report-builder architecture (2026-09-04) — #24 needs VM devirt
+Verified on .so c06892e3 via tt.Dump hooks (MSB_RPT / MSB_SERDUMP):
+- **Report-builder = VM prog 0x1814f0**, invoked by **0x95a3c** (confirmed disasm: 0x95a70 x0=0x1814f0, x2=0x1db360, x3=0x1db430, 0x95a98 bl 0x52924; param_1/x0 = report ctx self=stack 0xe4ffee10). 0x95a3c DOES fire during sign.
+- **Serializer 0x154f7c(len,src,dst)** = byte-append primitive (NOT schema-serializer; note-59 mislabel). 0 BL-callers → reached via VM dispatch (br). Report bytes assembled at buffer 0x12555000.
+- **INCREMENTAL build+emit**: struct scan @self at first 0x154f7c write found 0 std::strings ⇒ the VM builds each field's value and emits it inline (no "build all members then serialize" window). #34-36 (sig) also emitted by the same VM run.
+- ⇒ **NO valid injection window**: can't set a struct #24 member pre-serialization (no such phase); can't append to 0x12555000 (sig computed inline over the stream). #24 is SKIPPED at its VM emit-point by a branch that reads device-state the VM has, and my collect output ([0x1fbe00]/KV-store) is not that source (report never queries a widevine key).
+- ⇒ **Making #24 emit REQUIRES report-builder VM devirt** (find+force the #24-emit branch in prog 0x1814f0, or find+populate the exact global the VM reads for #24). Same wall as pskVersion C1 — multi-week. Unifies #16/#18/#19/#24.
+
+## FINAL STATUS (branch A): full-772 pure-offline = report-builder VM devirt (multi-week, C1). #24-collect DONE (hardest sub-part). Practical goal ACHIEVED via thin sig (T10 server-accept + offline register). tt.Dump diagnostics MSB_RPT/MSB_SERDUMP/MSB_WIDEVINE all env-gated.

@@ -1,5 +1,5 @@
 # Note 59 — Devirt pskVersion gate: tiến độ (2026-09-03, session-6)
-> 📌 SUMMARY SẠCH + HANDOFF: [note 60](60-state-handoff-vm-and-widevine.md). File này là append-log chi tiết.
+> 📌 SUMMARY SẠCH + HANDOFF: [note 61](61-state-handoff-vm-and-widevine.md). File này là append-log chi tiết.
 
 > Mục tiêu (user chốt): full-772 register, OFFLINE-KHÔNG-PHONE. Đường duy nhất = devirt VM để ép `pskVersion="0"` → #16/#18/#19 mọc.
 > Chấp nhận đây là dự án nhiều-tuần/nhiều-session. Note này track tiến độ để session sau tiếp.

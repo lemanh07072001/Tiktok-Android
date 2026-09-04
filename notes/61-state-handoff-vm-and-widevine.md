@@ -40,3 +40,17 @@ Core offline signer **ĐÃ HOẠT ĐỘNG + T10-validated** (tt.Dump Mac re-sign
 - Env: `~/.re-venv` (unicorn 2.1.4 + capstone 5.0.7); JDK21=/opt/homebrew/opt/openjdk@21.
 
 ## 5. BOARD: BATON=human (chốt-chặn chống burning-loops). Quyết định: A / B / C.
+
+## 6. ★ RECONCILIATION with note 60-full772 (2026-09-04) — corrects §2 "widevine wall"
+> Phát hiện note `60-full772-attestation-build.md` (session trước) đã đi xa hơn — SỬA kết luận §2 của tôi.
+- **Widevine collect KHÔNG phải wall**: session trước (note 60-full772) đã drive `0x122b90` THÀNH CÔNG với **synthetic ctx-chain `pctx→p8→p22, [p22]=envP`** + TLS seed + counter[0x1fbe04]=0 + strcmp-force + serve MediaDrm JNI (UUID/MediaDrm/PROPERTY_DEVICE_UNIQUE_ID/getPropertyByteArray/release) → **4595 instr, ret=0, DUID→base64(DUID)→PUT KV-store via 0x117f40**. (Drive fake/real-ctx của session-7 crash vì THIẾU chain này — không phải wall.)
+- **Nhưng report vẫn không emit #24**: report `#24 ← dyn_seed` (khớp RUN_ENDTOEND), widevine collect store base64(DUID) ở KV-store report KHÔNG đọc ⇒ widevine = red-herring cho report #24 (xác nhận correction).
+- **★ ROOT HỢP NHẤT (cả 2 session)**: report-builder **GATES device-state emission** (#16/#18/#19/#24). Empirical: report store-GET rtk2_ms nhưng KHÔNG emit #16 ⇒ đọc value nhưng không emit field trừ khi **provisioned-state** set. provisioned-state ← get_seed(network POST, server-signed resp) + keva d8b674. = **cùng gate VM report-builder** (prog 0x1814f0, cái `_vm_symexec.py` trace). #24/#16 gated RIÊNG với #18/#19 (consent có #18/#19 không #24/#16).
+- **get_seed = không fabricate offline** (resp server-signed). ⇒ full-772 pure-offline = report-builder device-state gate = multi-week (2 session hội tụ). T10+register: thin sig server-accepted ⇒ full-772 likely UNNEEDED.
+
+## 7. path(2) get_seed FULLY MAPPED (2026-09-04) — converges on FULLINIT provisioning glue
+- **note 31**: #24=dyn_seed ← get_seed API (network HTTP 200). get_seed LENIENT (validate CHỈ f4 112B, không did/iid; replay 28d OK). **unidbg dựng f4 forge → server 200** với random DID (no phone) — NHƯNG qua **Windows Harness** `MSB_FULLINIT=1 MSB_NET=1 MSB_THREADS=1 MSB_KV=1`. CAVEAT note 31: get_seed-200 KHÔNG = trust; dyn_seed nhúng chưa chứng minh auth tin hơn thin.
+- **Empirical test session này**: tt.Dump với state/fresh_sync + device_register URL → **vẫn thin (#20="none", no #16/#18/#19/#24)**, get_seed KHÔNG attempt (0 network trong log). (Session-6 "fresh→pskVer=0" thực ra cho endpoint CONSENT; pskVersion phụ thuộc URL — url.bin hiện=device_register.)
+- **★ HỘI TỤ TUYỆT ĐỐI**: widevine / MSManager.init / dyn_seed / fresh_sync / get_seed — TẤT CẢ cần **FULLINIT provisioning** (trigger get_seed network + collect-threads + device-state ingestion → report emit). get_seed do provisioning gọi, KHÔNG do sign-path 0x9ecc0 ⇒ không trigger offline nếu chưa qua provisioning (tường MSManager.init note 57 §10-11).
+- **Enabling = Windows Harness MSB_FULLINIT/NET/THREADS glue** (đã có bên Windows `e:/tiktok_signer/mobile/unidbg/`, chưa port Mac). = multi-week harness (2 session + note 31/46/57/60 hội tụ).
+- **DỨT KHOÁT cho path(2)**: reconstruct trong tt.Dump = port FULLINIT provisioning (MSManager.init CFF chain) + MSB_NET socket serving + MSB_THREADS collect scheduling. Substantial/multi-week; Windows Harness đã làm sẵn ⇒ copy nhanh hơn RE lại. Value: unproven (T10 thin đã server-accepted).

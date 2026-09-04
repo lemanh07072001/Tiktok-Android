@@ -219,6 +219,35 @@ public class Dump {
             long jurl = vm.addLocalObject(new StringObject(vm, "https://api16-normal-c-alisg.tiktokv.com/aweme/v2/feed/"));
             UnidbgPointer envP = UnidbgPointer.pointer(emu, ((UnidbgPointer)env).peer);
             signPhase[0]=true;
+            // ★ report-struct probe: rptSelf captured at 0x95a3c; struct dump/inject at first 0x154f7c write (members live)
+            final long BASE2=base; final int[] serHits={0}; final long[] rptSelf={0}; final boolean[] didDump={false};
+            final long OFF24 = Long.decode(System.getProperty("OFF24","-1"));
+            if (System.getenv("MSB_RPT")!=null) {
+              emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                if(rptSelf[0]==0){ rptSelf[0]=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
+                  System.out.printf("   [RPT] 0x95a3c self=0x%x%n", rptSelf[0]); } }
+                public void onAttach(UnHook un){} public void detach(){} }, base+0x95a3c, base+0x95a3d, null);
+              // first 0x154f7c write: struct is fully built + serialization starting → dump/inject
+              emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                if(rptSelf[0]==0||didDump[0]) return; didDump[0]=true;
+                long self=rptSelf[0];
+                try {
+                  if(OFF24>=0){ byte[] wv=b.mem_read(BASE2+0x1fbe00,24); b.mem_write(self+OFF24, wv);
+                    System.out.printf("   [RPT] INJECTED [0x1fbe00] std::string -> self+0x%x%n", OFF24); }
+                  else {
+                    System.out.println("   [RPT] struct scan @self:");
+                    byte[] blk=b.mem_read(self,0x600);
+                    for(int off=0; off<0x600-24; off+=4){
+                      long cap=readLE(blk,off), ln=readLE(blk,off+8), ptr=readLE(blk,off+16);
+                      String s=null; int slen=0;
+                      if((cap&1)!=0 && ln>0 && ln<80 && ptr!=0){ try{ byte[] d=b.mem_read(ptr,(int)Math.min(ln,64)); s=new String(d); slen=(int)ln; }catch(Throwable t){} }
+                      else if((blk[off]&1)==0 && (blk[off]&0xff)>0){ int n=(blk[off]&0xff)>>1; if(n>0&&n<23){ s=new String(blk,off+1,n); slen=n; } }
+                      if(s!=null && slen>=2){ boolean pr=true; for(char ch:s.toCharArray()) if(ch<9||ch>126){pr=false;break;} if(pr) System.out.printf("     +0x%03x len=%2d '%s'%n", off, slen, s); }
+                    }
+                  }
+                } catch(Throwable t){ System.out.println("   [RPT] err "+t); } }
+                public void onAttach(UnHook un){} public void detach(){} }, base+0x154f7c, base+0x154f80, null);
+            }
             // INIT 0x4000001 with a config Object[] (notes/21: [aid,"","",token,sdkver,channel,...])
             DvmObject<?>[] cfg = {
                 new StringObject(vm,"1233"), new StringObject(vm,""), new StringObject(vm,""),
@@ -396,5 +425,6 @@ public class Dump {
     } catch(Throwable t){} return "?"; }
     static void wl(Emulator<?> e,long a,long v){ writeLong(e,a,v); }
     static long readLong(Emulator<?> e,long a){byte[] b=e.getBackend().mem_read(a,8);long v=0;for(int i=7;i>=0;i--)v=(v<<8)|(b[i]&0xffL);return v;}
+    static long readLE(byte[] b,int off){long v=0;for(int i=7;i>=0;i--)v=(v<<8)|(b[off+i]&0xffL);return v;}
     static void writeLong(Emulator<?> e,long a,long v){byte[] b=new byte[8];for(int i=0;i<8;i++){b[i]=(byte)(v&0xff);v>>=8;}e.getBackend().mem_write(a,b);}
 }

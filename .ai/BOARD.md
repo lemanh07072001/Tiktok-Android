@@ -1,10 +1,10 @@
 # AI BOARD — cây gậy tiếp sức (relay)
 
-BATON: human           # C3(1): #24/MSManager.init re-confirmed WALL. Collector `this` not a global (real ctx [0x1f4a60]=0x12517558, [ctx]=0x7377 not vtable→crash); once-guard [0x1fc220]=0 (collector never ran). Note 57 §10-11: config only via full app-sequence, piecemeal loop/fail, emulation-probing won't yield. Real paths: (A) Windows tt.Harness config-seq, or (B) multi-week CFF-devirt. Core T10-validated w/o #24. HUMAN: pick A/B or accept.
-ROUND: 1
+BATON: human           # C3(5): path(2) get_seed FULLY MAPPED. #24←dyn_seed via get_seed API (note31: lenient, forge-f4→200, no phone) — but requires Windows Harness MSB_FULLINIT/NET/THREADS provisioning glue (triggers get_seed+collect+ingest). tt.Dump: get_seed NOT triggered by sign-path; needs FULLINIT provisioning (=MSManager.init wall note57). ALL 5 angles converge on this glue = multi-week to reconstruct, or copy Windows Harness. Value UNPROVEN (T10 thin server-accepted). HUMAN: copy Windows Harness OR commit banked + accept thin.
+ROUND: 2
 # --- prior ---
 # 🎉 OFFLINE SIGNER WORKS ON MAC: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon: tt.Dump emits real X-Argus(388)/Gorgon/Khronos/Ladon from (url,header_block)+device-store via real libmetasec (unidbg), clock lockable (FIXTIME). Byte-exact impossible (random IV). Phone genuine=772; +384 = device-state attestation (#24 dyn_seed) gated on get_seed network(MSB_NET)+keva d8b674 = last increment, NOT a code wall. Note 57 s5. DONE.
-ROUND: 1
+ROUND: 2
 
 
 
