@@ -296,18 +296,18 @@ public class Dump {
               final long inj24buf = emu.getMemory().malloc(0x80,false).getPointer().peer;  // persistent scratch (pre-allocated, safe)
               // mode8: inject #24 at the message-walker 0x154f24 ENTRY (before size-computation) so the buffer is sized WITH #24
               if("8".equals(System.getProperty("INJ24MODE")) && "1".equals(System.getProperty("INJ24"))){
-                final boolean[] injd={false}; final long B3=base;
+                final int[] injc={0}; final long B3=base;
                 emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
-                  if(!signPhase[0]||injd[0]) return;
+                  if(!signPhase[0]) return;
                   long m=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
-                  // top message: [m+0]=descriptor; #23 member @ +0xe0 must be non-null (device_model built) to confirm this is the report msg
-                  try{ long d0=readLong(emu0,m); long f23m=readLong(emu0,m+0xe0);
-                    if(f23m==0) return;  // not the report message yet
-                    injd[0]=true;
+                  // report message: [m+0]=descriptor with field-count matching the top report; #23 member @ +0xe0 non-null
+                  try{ long d0=readLong(emu0,m); long nf=readLong(emu0,d0+0x30); long f23m=readLong(emu0,m+0xe0);
+                    if(f23m==0 || nf<30 || nf>60) return;  // must be the top report message (30-60 fields, #23 built)
                     long charptr=readLong(emu0,B3+0x1fbe00+8); long slen=readLong(emu0,B3+0x1fbe00+4)&0xffffffffL;
                     b.mem_write(charptr+slen,new byte[]{0});
                     writeLong(emu0, m+0xe8, charptr);
-                    System.out.printf("[INJ24 mode8] @0x154f24 msg=0x%x desc=0x%x #24 member(m+0xe8)=char* 0x%x len=%d%n", m, d0, charptr, slen);
+                    injc[0]++;
+                    if(injc[0]<=3) System.out.printf("[INJ24 mode8 #%d] @0x154f24 msg=0x%x nfields=%d #24 member=char* 0x%x%n", injc[0], m, nf, charptr);
                   }catch(Throwable t){} }
                   public void onAttach(UnHook un){} public void detach(){} }, base+0x154f24, base+0x154f28, null);
               }

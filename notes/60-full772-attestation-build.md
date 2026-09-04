@@ -201,3 +201,11 @@ Systematic negative-control testing (garbage x-argus + valid 7677 session):
 - Injecting at the message-walker 0x154f24 ENTRY (mode8) does NOT crash but #24 stays absent: the walk RE-INITIALIZES the working message (msg=0xe4ffdd28) members from a SOURCE at start, overwriting the pre-walk injection.
 ### REMAINING (one plumbing layer): inject #24's member into the report SOURCE (the object the walk initializes msg from) BEFORE ByteSizeLong, so the size includes #24 and the serialize pass emits it. Then verify #24 = 44-byte base64-DUID + report grows ~+47B.
 ### VALUE CAVEAT stands: full-772 has NO demonstrated server value (every tested endpoint accepts garbage/absent x-argus). #24 is now fully RE'd; finishing it is plumbing, but for an unvalidated payload.
+
+## #24 injection — two-pass protobuf blocker (2026-09-04, precise)
+- Message walker 0x154f24(x0=message,x1=dst): message[0]=descriptor, descriptor[+0x30]=field-count(=36), [+0x38]=field-array(stride 0x48); loop calls field-writer 0x153fb0 per field, accumulates dst offset (x21+=ret).
+- **0x154f24 is called TWICE on the same message (0xe4ffdd28, 36 fields)** = ByteSizeLong pass + Serialize pass.
+- Injecting #24's member (message+0xe8=char*) at the 0x154f24 ENTRY on BOTH passes -> #24 STILL absent + no crash -> the walk RESETS message+0xe8 to null between entry and the f24 iteration (working-message re-init from a source mid-walk).
+- Injecting at the f23-writer (mode7, right before f24) PERSISTS to f24 and emits the 44-byte #24, but only in the serialize pass -> the size pass didn't account for it -> buffer overflow -> crash (PC->0x1000).
+- ⇒ Remaining plumbing: find what resets message+0xe8 during the walk (the report SOURCE object), inject #24 there so BOTH the size and serialize passes see it consistently. Finishable but iterative.
+- **#24 encoding is fully solved (C-string, char* member); the value is unproven (no endpoint validates x-argus content).**
