@@ -136,3 +136,14 @@ The report is NOT built by a VM — it's a NATIVE descriptor-driven protobuf ser
 - Same mechanism applies to #16/#18/#19 (their descriptors/offsets, inject at the pre-serialize hook).
 
 ## (A2) STATUS: report-serializer FULLY devirt'd; #24 injection point (message+0xe8) PROVEN to make #24 emit. No more multi-week VM devirt — remaining = build the #24 submessage object (schema from sub-descriptor + Widevine value). MAJOR advance.
+
+## ★ CORRECTION (2026-09-04) — TESTED: serializer-injected #24 is NOT covered by sig #34-36
+User demanded empirical test before concluding. Ran baseline vs INJ24 under LOCKED clock (FIXTIME=1788400000, MSB_WIDEVINE+WV_DRIVER+VMTRACE):
+- Baseline: #24 ABSENT; #34=2046336274839372518 #35=14989386936719772752 #36=14727628402531765942.
+- INJ24 mode0: #24 PRESENT (1 byte 0x2d); #34/#35/#36 = **IDENTICAL to baseline**.
+- ⇒ **The signature #34-36 does NOT change when #24 is injected at the serializer** — my earlier "sig will cover a validly-injected #24" claim is DISPROVEN.
+- Two possibilities (undecidable without a live server test):
+  (a) #34-36 = a hash over the report → serializer-injection is TOO LATE (sig computed before #24) → server-INVALID. Would require injecting #24 into the message BEFORE the sig is computed (during message construction, upstream).
+  (b) #34-36 = a device-state signature (note 30: "signed over device-state, keyed by dyn_seed", independent of report fields) → #24-presence never affects #34-36 → a correctly-built #24 could still be accepted.
+- The serializer-injection (message+0xe8) reliably makes #24 EMIT, but validity depends on (a) vs (b), which only a live server test with a VALID #24 submessage can settle.
+- LESSON (user): test the sig-coverage claim empirically before concluding server-validity. Done — claim corrected.
