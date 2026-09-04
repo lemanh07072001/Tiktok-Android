@@ -147,3 +147,14 @@ User demanded empirical test before concluding. Ran baseline vs INJ24 under LOCK
   (b) #34-36 = a device-state signature (note 30: "signed over device-state, keyed by dyn_seed", independent of report fields) → #24-presence never affects #34-36 → a correctly-built #24 could still be accepted.
 - The serializer-injection (message+0xe8) reliably makes #24 EMIT, but validity depends on (a) vs (b), which only a live server test with a VALID #24 submessage can settle.
 - LESSON (user): test the sig-coverage claim empirically before concluding server-validity. Done — claim corrected.
+
+## ★ (a)/(b) TEST RESULT (2026-09-04) — evidence leans (b), server test still required
+Traced readers of the report buffer 0x12555000 (MSB_RPTREAD):
+- 0x154234/0x1542b0/0x15431c = serializer (varint length back-patch).
+- **0x35c148 (61 reads)** = an SVC stub (memcpy/libc — outside .text).
+- **0x172a50 (52 reads)** in func 0x1728b4 = a byte-copy loop (ldrb/strb/cmp/b.lo — memcpy-like).
+- **NONE is a hash** (no SM3/eor-ror-heavy loop). ⇒ the report buffer is only COPIED (to the AES input), NOT hashed.
+- ⇒ #34-36 do NOT hash the report content (consistent with Test 1: injecting #24 leaves #34-36 unchanged). #34-36 sign DEVICE-STATE (note 30, keyed dyn_seed), independent of report fields.
+- **Implication (leans (b))**: a correctly-built #24 submessage injected at the serializer would leave #34-36 unchanged — which is CORRECT (the report sig never covered report fields via the buffer). Such a #24 COULD be server-accepted (server validates #34-36 vs device-state and #24 vs device_id separately). BUT this is inference from evidence, NOT proven — only a live server test with a VALID #24 submessage settles it.
+
+## HONEST STATE (A2, tested): serializer-injection makes #24 EMIT but #34-36 don't cover it; evidence (report buffer copied not hashed; note-30 device-state sig) suggests #24 needn't be sig-covered, so a valid #24 could pass — UNPROVEN pending a live server test. To settle: (1) build a valid #24 Widevine submessage (schema from f24 sub-descriptor + collected deviceUniqueId), (2) inject via message+0xe8, (3) server test the resulting x-argus.

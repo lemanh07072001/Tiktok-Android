@@ -252,6 +252,21 @@ public class Dump {
                 }catch(Throwable t){} }
                 public void onAttach(UnHook un){} public void detach(){} }, BASE2+0x1000, 0x800000000L, null);
             }
+            // ★ (a)/(b) test: who READS the report buffer 0x12555000 (is the sig a hash of the report?)
+            if (System.getenv("MSB_RPTREAD")!=null) {
+              final java.util.LinkedHashMap<Long,Integer> rdrs=new java.util.LinkedHashMap<>();
+              final boolean[] emitted={false};
+              emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                if(signPhase[0]){ long dst=b.reg_read(Arm64Const.UC_ARM64_REG_X2).longValue(); if(dst-0x12555000L==0xa9) emitted[0]=true; } }
+                public void onAttach(UnHook un){} public void detach(){} }, base+0x154f7c, base+0x154f80, null);
+              emu.getBackend().hook_add_new(new ReadHook(){ public void hook(Backend b,long addr,int size,Object u){
+                if(!signPhase[0]) return; long pc=0; try{ pc=b.reg_read(Arm64Const.UC_ARM64_REG_PC).longValue()-BASE2; }catch(Throwable t){}
+                rdrs.merge(pc,1,Integer::sum); }
+                public void onAttach(UnHook un){} public void detach(){} }, 0x12555000L, 0x12555200L, null);
+              Runtime.getRuntime().addShutdownHook(new Thread(){ public void run(){
+                System.out.println("[RPTREAD] readers of report-buffer 0x12555000 (PC: count):");
+                for(java.util.Map.Entry<Long,Integer> e:rdrs.entrySet()) System.out.printf("   PC 0x%x : %d reads%n", e.getKey(), e.getValue()); }});
+            }
             // ★ VM tracer: log prog-0x1814f0 opcode stream (report-builder) + mark 0x154f7c emits → find #24 field-decision
             if (System.getenv("MSB_VMTRACE")!=null) {
               final java.util.List<String> tr=new java.util.ArrayList<>();
