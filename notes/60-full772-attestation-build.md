@@ -116,3 +116,23 @@ Traced the report-emit window precisely (tt.Dump MSB_RPT): report fields emitted
 - ⇒ Forcing #24 = **devirtualize prog 0x1814f0's upstream field-decision** and flip the branch that excludes #24/#16/#18/#19. This is the C1 report-builder VM devirt = multi-week. No shortcut (no struct-inject, no source-populate) exists — confirmed empirically from 3 angles (struct scan empty, device-state read-trace empty, broad read-trace empty).
 
 ## (A2) STATUS: report-builder VM fully characterized; #24-force requires devirt of prog 0x1814f0 field-decision (multi-week C1). #24-collect (hardest sub-part) DONE. All shortcuts ruled out empirically. Diagnostics MSB_RPT/MSB_WIDEVINE env-gated in Dump.java.
+
+## ★★★★★★ (A2) BREAKTHROUGH: report serializer DEVIRT'd + #24 injection point PROVEN (2026-09-04)
+The report is NOT built by a VM — it's a NATIVE descriptor-driven protobuf serializer. VM progs only compute field VALUES (before) + the hash #34-36 (after, prog 0x1814f0 = hash orchestrator, NOT serializer — corrects note 59).
+
+### Serializer anatomy (tt.Dump MSB_VMTRACE):
+- **Native serializer** iterates a descriptor list (stride 0x48) at heap ~0x121ec000; for each field calls field-writer **0x153fb0(x0=descriptor, x1=&member, x2=dst)**. Report bytes assembled at buffer **0x12555000** via byte-append 0x154f7c.
+- **field-writer empty-check @0x153f9c**: `ldr x8,[x1]; cbz x8,skip; ldrb w8,[x8]; cbnz w8,emit; b skip` — a member whose value-ptr is null/empty is SKIPPED (proto3).
+- **Descriptor layout** (dumped): +0x08=field#|type, **+0x18=member-offset into the stack-allocated message**, +0x20/+0x28=sub-descriptor ptr (message types). f23@0x121ec088 off=0xe0; **f24@0x121ec0d0 off=0xe8**; f25@0x121ec118 off=0xf0 (members = 8-byte pointers, spacing 8).
+- **Message base** = `x1(f23) − 0xe0` (stack-allocated proto message). #24 member = **message + 0xe8**.
+
+### ★ #24 INJECTION PROVEN:
+- At the f23-writer hook (message base in hand), set `writeLong(message+0xe8, ptr)` → the iterator no longer skips #24; **field-writer IS called for f24 and #24 APPEARS in /tmp/rpt1.bin** (`c2 01 ...`). Empirically confirmed (INJ24MODE=0).
+- **#24 is a SUBMESSAGE** (type 3 like #23; has sub-descriptor @+0x28=heap). Pointing #24's member to the base64-DUID std::string emits only 1 garbage byte (writer serializes it as a submessage). Pointing to a stack temp (#23's value) fails (temp clobbered). ⇒ need a PERSISTENT VALID #24 submessage object.
+- Injection is BEFORE serialization + before the VM hash (prog 0x1814f0 runs after emits) ⇒ **the signature #34-36 WILL cover a validly-injected #24** (server-valid).
+
+### REMAINING (well-defined, no more VM devirt): construct #24's Widevine submessage
+- Read #24's sub-message descriptor (f24 desc +0x28) → its sub-fields → build a persistent proto submessage carrying the Widevine deviceUniqueId (from the collect) → point message+0xe8 at it → #24 emits validly + sig covers it.
+- Same mechanism applies to #16/#18/#19 (their descriptors/offsets, inject at the pre-serialize hook).
+
+## (A2) STATUS: report-serializer FULLY devirt'd; #24 injection point (message+0xe8) PROVEN to make #24 emit. No more multi-week VM devirt — remaining = build the #24 submessage object (schema from sub-descriptor + Widevine value). MAJOR advance.

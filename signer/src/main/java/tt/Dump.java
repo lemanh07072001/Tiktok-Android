@@ -252,6 +252,43 @@ public class Dump {
                 }catch(Throwable t){} }
                 public void onAttach(UnHook un){} public void detach(){} }, BASE2+0x1000, 0x800000000L, null);
             }
+            // ★ VM tracer: log prog-0x1814f0 opcode stream (report-builder) + mark 0x154f7c emits → find #24 field-decision
+            if (System.getenv("MSB_VMTRACE")!=null) {
+              final java.util.List<String> tr=new java.util.ArrayList<>();
+              // field-writer 0x153fb0(x0=descriptor, x1=value-ptr, x2=dst): log field-tag + value-ptr + emptiness → identify #24 call
+              emu.getBackend().hook_add_new(new CodeHook(){ public void hook(Backend b,long a,int sz,Object u){
+                if(!signPhase[0]||tr.size()>4000) return;
+                long x0=b.reg_read(Arm64Const.UC_ARM64_REG_X0).longValue();
+                long x1=b.reg_read(Arm64Const.UC_ARM64_REG_X1).longValue();
+                long x2=b.reg_read(Arm64Const.UC_ARM64_REG_X2).longValue();
+                try{ int w9=(int)readLong(emu0,x0+8); int tag=w9<<3;   // tag = field<<3|wiretype
+                  long valp=0, first=0; String pk="";
+                  try{ valp=readLong(emu0,x1); if(valp!=0){ byte[] fb=b.mem_read(valp,8); first=fb[0]&0xff; pk="["+String.format("%02x%02x%02x%02x",fb[0]&0xff,fb[1]&0xff,fb[2]&0xff,fb[3]&0xff)+"]"; } }catch(Throwable t){}
+                  tr.add(String.format("WR desc=0x%x f%d wt%d x1=0x%x *x1=0x%x %s", x0, (tag>>3)&0x1f, tag&7, x1, valp, pk));
+                  if((tag>>3&0x1f)==23 && "1".equals(System.getProperty("INJ24"))){
+                    long msg=x1-0xe0;   // message base (x1 = &member = msg + desc.offset(f23)=0xe0); members are 8-byte ptrs
+                    long mode=Long.decode(System.getProperty("INJ24MODE","0"));
+                    if(mode==0) writeLong(emu0, msg+0xe8, BASE2+0x1fbe00);        // member = ptr to std::string [0x1fbe00]
+                    else if(mode==2) writeLong(emu0, msg+0xe8, readLong(emu0,msg+0xe0));  // member = #23's submessage value (copy #23)
+                    else { byte[] wv=b.mem_read(BASE2+0x1fbe00,24); b.mem_write(msg+0xe8, wv); }
+                    tr.add(String.format(">>> INJ24(mode%d): msg+0xe8=0x%x set (member ptr -> 0x%x)", mode, msg+0xe8, BASE2+0x1fbe00)); }
+                  if((tag>>3&0x1f)==23){ // on f23: dump regs → find struct_base (reg+0xe0 = #23 value); then #24 = base+0xe8
+                    int[] regs={Arm64Const.UC_ARM64_REG_X3,Arm64Const.UC_ARM64_REG_X4,Arm64Const.UC_ARM64_REG_X19,Arm64Const.UC_ARM64_REG_X20,Arm64Const.UC_ARM64_REG_X21,Arm64Const.UC_ARM64_REG_X22,Arm64Const.UC_ARM64_REG_X23,Arm64Const.UC_ARM64_REG_X24,Arm64Const.UC_ARM64_REG_X25,Arm64Const.UC_ARM64_REG_X26,Arm64Const.UC_ARM64_REG_X27,Arm64Const.UC_ARM64_REG_X28};
+                    String[] nm={"x3","x4","x19","x20","x21","x22","x23","x24","x25","x26","x27","x28"};
+                    for(int i=0;i<regs.length;i++){ long rv=b.reg_read(regs[i]).longValue();
+                      // check if rv+0xe8 holds a std::string control (candidate struct_base)
+                      String note="";
+                      try{ byte[] c=b.mem_read(rv+0xe8,24); long cap=readLE(c,0),ln=readLE(c,8); note=String.format("[+0xe8]cap=0x%x ln=%d",cap,ln);
+                        byte[] c2=b.mem_read(rv+0xe0,8); note+=String.format(" [+0xe0]=0x%x",readLE(c2,0)); }catch(Throwable t){}
+                      tr.add(String.format("  REG %s=0x%x %s", nm[i], rv, note)); } } }
+                catch(Throwable t){} }
+                public void onAttach(UnHook un){} public void detach(){} }, base+0x153fb0, base+0x153fb4, null);
+              // write trace at JVM exit
+              Runtime.getRuntime().addShutdownHook(new Thread(){ public void run(){
+                try{ StringBuilder sb=new StringBuilder(); for(String s:tr) sb.append(s).append("\n");
+                  java.nio.file.Files.write(new File("/tmp/vmtrace.txt").toPath(), sb.toString().getBytes());
+                  System.out.println("[VMTRACE] "+tr.size()+" lines -> /tmp/vmtrace.txt"); }catch(Throwable t){} }});
+            }
             // INIT 0x4000001 with a config Object[] (notes/21: [aid,"","",token,sdkver,channel,...])
             DvmObject<?>[] cfg = {
                 new StringObject(vm,"1233"), new StringObject(vm,""), new StringObject(vm,""),
