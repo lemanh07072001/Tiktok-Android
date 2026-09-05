@@ -1,0 +1,162 @@
+_psk_sweep.py — OFFLINE rotated-SESSION_PSK sweep cho mau MISS (L in {592,608})
+time: 2026-09-05 17:41:00 | codec: _inner_test.py (full_decode 9/15 revxor z4, KHONG sua)
+HIT = report[:6] == 08d2a4808204; rb01 brute 0..65535 (rb01=(n>>8,n&0xff) => BAO TRON 65536 gia tri 2-byte)
+
+[VAT LIEU]
+  s             OK (25B)
+  q             OK (3B)
+  t             OK (3B)
+  dyn_seed      OK (132 chars)
+  rtk2_ms       OK (52B)
+  kiid          OK (36B)
+  dyn_deviceid  OK (19B)
+  b2            OK (48B)
+
+[SELF-CHECK]
+  sm3-abc                            PASS
+  digest_sweep-spot(13 len x 5 n)    PASS
+  walker(field20-2byte-tag)          PASS
+  hmac-property                      PASS
+  simon-fast==ref                    PASS
+
+[PTS] giu 92 (bo 2); MISS-band L{{592,608}} = 19 pt; HIT-band L{{544,560,576}} = 73 pt
+
+[CONTROL] SIGN_KEY x HIT-band pt idx5 L=560 (ky vong: HIT)
+  -> HIT (64.6s)
+  rb01=ba25 full_decode 6B-magic=OK len=528 fields=[1, 2, 3, 4, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36] wstat=ok -> HARNESS OK
+
+[CONTROL 2] brute SIGN_KEY tren ca 19 pt MISS-band de xac dinh MISS that:
+  miss idx83 L=592
+  miss idx90 L=592
+  miss idx99 L=592
+  miss idx84 L=592
+  miss idx91 L=592
+  miss idx95 L=592
+  miss idx82 L=608
+  miss idx96 L=592
+  miss idx97 L=592
+  HIT  idx81 L=592
+  miss idx93 L=592
+  miss idx89 L=592
+  miss idx98 L=592
+  miss idx92 L=592
+  miss idx87 L=592
+  miss idx88 L=592
+  miss idx94 L=592
+  miss idx86 L=592
+  miss idx85 L=592
+  SIGN_KEY giai 1/19 miss-band pt => MISS that = 18 pt: idx [82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99] (75s)
+PT0 (dai dien MISS that) = idx82 L=608 rb23=bf2d
+
+[CANDIDATES] 51 (sau dedup):
+  raw:s+q+t                31B
+  raw:s+t+q                31B
+  raw:q+s+t                31B
+  raw:q+t+s                31B
+  raw:t+s+q                31B
+  raw:t+q+s                31B
+  raw:L+s+q+t              63B
+  raw:s+q+t+L              63B
+  raw:L+t+q+s              63B
+  raw:t+q+s+L              63B
+  raw:L+s+t+q              63B
+  raw:s+t+q+L              63B
+  raw:Lhex+s+q+t           95B
+  raw:s+q+t+Lhex           95B
+  sm3:s+q+t                32B
+  sm3:s+t+q                32B
+  sm3:q+s+t                32B
+  sm3:q+t+s                32B
+  sm3:t+s+q                32B
+  sm3:t+q+s                32B
+  sm3:L+s+q+t              32B
+  sm3:s+q+t+L              32B
+  sm3:Lhex+s+q+t           32B
+  sm3:L+s                  32B
+  sm3:L+q                  32B
+  sm3:L+t                  32B
+  sm3:L+q+t                32B
+  sm3:L+t+q                32B
+  xor:L^sm3(s+q+t)         32B
+  xor:L^sm3(s)             32B
+  xor:L^sm3(t+q)           32B
+  hmac:(L,s+q+t)           32B
+  hmac:(s+q+t,L)           32B
+  hmac:(L,s)               32B
+  hmac:(L,q+t)             32B
+  raw:s                    25B
+  sm3:s                    32B
+  raw:rtk2_ms              52B
+  sm3:rtk2_ms              32B
+  raw:kiid                 36B
+  sm3:kiid                 32B
+  raw:dyn_deviceid         19B
+  sm3:dyn_deviceid         32B
+  raw:dyn_seed_ascii       132B
+  sm3:dyn_seed_ascii       32B
+  raw:dyn_seed_b64d        98B
+  sm3:dyn_seed_b64d        32B
+  raw:b2a9d40c             48B
+  raw:b2a9d40c[:32]        32B
+  sm3:b2a9d40c             32B
+  ctrl:SIGN_KEY            32B
+
+[SWEEP PT0] moi job = 1 candidate x brute 65536 rb01 tren PT0:
+  workers = 32, jobs = 51
+  [miss] sm3:s+q+t                (78.8s, 1/51)
+  [miss] raw:s+q+t                (78.9s, 2/51)
+  [miss] sm3:q+s+t                (80.3s, 3/51)
+  [miss] sm3:L+t+q                (80.5s, 4/51)
+  [miss] raw:t+q+s                (81.1s, 5/51)
+  [miss] sm3:q+t+s                (81.5s, 6/51)
+  [miss] sm3:t+q+s                (81.5s, 7/51)
+  [miss] hmac:(L,s+q+t)           (81.7s, 8/51)
+  [miss] sm3:t+s+q                (82.0s, 9/51)
+  [miss] xor:L^sm3(s)             (82.0s, 10/51)
+  [miss] raw:t+s+q                (82.6s, 11/51)
+  [miss] sm3:s+t+q                (82.8s, 12/51)
+  [miss] sm3:L+q+t                (82.7s, 13/51)
+  [miss] sm3:L+t                  (83.0s, 14/51)
+  [miss] raw:q+s+t                (83.2s, 15/51)
+  [miss] sm3:L+s+q+t              (83.2s, 16/51)
+  [miss] raw:s+t+q                (83.6s, 17/51)
+  [miss] sm3:L+q                  (83.6s, 18/51)
+  [miss] sm3:s+q+t+L              (83.8s, 19/51)
+  [miss] sm3:L+s                  (84.0s, 20/51)
+  [miss] raw:q+t+s                (85.2s, 21/51)
+  [miss] sm3:Lhex+s+q+t           (85.2s, 22/51)
+  [miss] xor:L^sm3(t+q)           (85.6s, 23/51)
+  [miss] xor:L^sm3(s+q+t)         (85.8s, 24/51)
+  [miss] raw:s+q+t+Lhex           (111.3s, 25/51)
+  [miss] raw:s+t+q+L              (111.6s, 26/51)
+  [miss] raw:s+q+t+L              (112.3s, 27/51)
+  [miss] raw:L+s+q+t              (113.1s, 28/51)
+  [miss] raw:Lhex+s+q+t           (115.3s, 29/51)
+  [miss] raw:L+s+t+q              (116.0s, 30/51)
+  [miss] raw:L+t+q+s              (116.1s, 31/51)
+  [miss] raw:t+q+s+L              (116.2s, 32/51)
+  [miss] raw:s                    (45.1s, 33/51)
+  [miss] raw:dyn_deviceid         (44.5s, 34/51)
+  [miss] sm3:dyn_deviceid         (66.2s, 35/51)
+  [miss] sm3:dyn_seed_b64d        (65.9s, 36/51)
+  [miss] hmac:(L,s)               (73.2s, 37/51)
+  [miss] ctrl:SIGN_KEY            (68.3s, 38/51)
+  [miss] sm3:rtk2_ms              (70.8s, 39/51)
+  [miss] raw:kiid                 (71.4s, 40/51)
+  [miss] sm3:s                    (73.2s, 41/51)
+  [miss] raw:rtk2_ms              (72.9s, 42/51)
+  [miss] hmac:(s+q+t,L)           (76.0s, 43/51)
+  [miss] hmac:(L,q+t)             (74.5s, 44/51)
+  [miss] raw:b2a9d40c             (71.7s, 45/51)
+  [miss] sm3:kiid                 (73.5s, 46/51)
+  [miss] sm3:b2a9d40c             (72.9s, 47/51)
+  [miss] sm3:dyn_seed_ascii       (73.8s, 48/51)
+  [miss] raw:b2a9d40c[:32]        (75.2s, 49/51)
+  [miss] raw:dyn_seed_b64d        (95.2s, 50/51)
+  [miss] raw:dyn_seed_ascii       (97.4s, 51/51)
+  sweep thoi luong: 180s
+
+[VERIFY] khong co candidate nao HIT PT0 — bo qua.
+
+SWEEP: 51 tried, 0 hit PT0
+=> 0 HIT — offline derivation cua rotated PSK that bai tren toan bo gia thuyet da liet ke. (18 mau MISS that khong giai duoc bang bat ky psk nao trong 51 candidate)

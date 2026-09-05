@@ -203,6 +203,10 @@ viên khác 0/11. Cross-confirm: `_SIGNER_D19`, `_EXAMPLE_D19` (sm3_hash19.py) v
 fresh-state tt.Dump (hiện #20="0" trực tiếp). ⇒ genuine #20 = ASCII '0' (0x30), tất định.
 
 ### §8.6 TƯỜNG DUY NHẤT CÒN LẠI (không đổi)
+> ⚠️ SUPERSEDED (2026-09-05, notes/74): "VM-codec" này KHÔNG phải wall. `[0xEC][nonce][VM-body]` →
+> VM-body chỉ là report protobuf qua **codec Simon note-36/37** (đã verify). "protobuf-walk byte-0=rỗng"
+> ở dưới là do walk THẲNG lên AES-plaintext (=ciphertext Simon), CHƯA giải lớp trong. ĐÃ TEST: 74/92 pt
+> mssdk thật giải sạch tới field #36; #13/#14/#19/#20/#24 đọc được offline. Xem notes/74. Không còn "devirt 2 caller".
 Lớp TRONG VM-codec: 576B pt x-argus `[0xEC][nonce][VM-body]`, pt f4 attestation (704/160/112),
 pt f6 response (64/96) — đều opaque (protobuf-walk byte-0 = rỗng). Đã có corpus known-plaintext
 dồi dào. 5 sub-gap wire/key/fire/pskver = ĐÓNG; chỉ còn devirt 2 caller (+1102244 builder /
