@@ -1,5 +1,8 @@
 # 23 — RE tĩnh libmetasec_ov.so & blob attestation 112B
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** (a) D4 'blocker no-phone THẬT = device_register trust = hardware attestation' **sai** — bị chính G7 (lenient/presence-only) + note 24 W12-W17 thay bằng device reputation/velocity. (b) Refs Harness.java/javac/cmd //c thuộc signer box Windows đã retire (nay Mac/unidbg 45.7.3). F1-F4 (obfuscation profile, 0x11c580≠dispatcher) + G4-G7 (feed mechanism, negative-controls) vẫn đúng.
+
+
 > Mục tiêu: hiểu cách metasec dựng blob attestation 112B (field 4 của get_seed request) để
 > tiến tới forge offline (no-phone hoàn toàn). Phiên này = **dựng môi trường + reconnaissance**,
 > KHÔNG phải reverse xong crypto (việc đó nhiều tuần). Quy tắc: không đoán mò, mỗi kết luận có

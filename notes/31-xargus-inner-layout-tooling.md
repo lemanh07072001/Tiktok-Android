@@ -1,5 +1,8 @@
 # 31 — X-Argus INNER report: layout parse thật + tooling rebuild/inject + disk-cache recon (2026-08-18)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** (1) 'dyn_seed KHÔNG phải field report (CONFIRMED)' **SAI** — dyn_seed CHÍNH LÀ field #24 của inner report (132-char b64 / 98B, prefix 0x3031; notes 31-dynseed/55/64/66 §7); chỉ kết quả search 'không tìm thấy 176B verbatim' là đúng. (2) 'OUTER AES key/IV Android: chưa có' bị note 36 thay (= md5-halves của SIGN_KEY, verified 13/13). Tooling parse/rebuild/inject vẫn dùng được.
+
+
 > Nối tiếp note 30. Không phát hiện breakthrough mới — **hệ thống hoá + tooling hoá**: parse protobuf
 > báo cáo bằng code (không chép tay), decode field lồng, đối chiếu disk-cache metasec, và **cung cấp
 > công cụ rebuild/inject byte-exact** cho hướng "1-phone-extract → ∞-offline".

@@ -1,5 +1,7 @@
 # Note 58 — Bảng hợp nhất ĐÃ GIẢI vs CÒN THIẾU (đọc hết notes 00–57 + docs, 2026-09-03)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** (1) Row '#24 Widevine = OFFLINE-SOLVED [n46]' **SAI** — #24 = dyn_seed (132-char b64 từ get_seed online; Widevine = detour bị bác, note 64). (2) 'T10 CHƯA CHẠY' stale — T10 đã chạy 2026-09-03/04: server chấp nhận thin offline x-argus, không content-validation (notes 60/65). (3) 'final missing = #18 + #19-slot16≠0' bị note 66 field-diff thay: gap = **EMISSION wall** trên #16/#24 (+collateral #17/#26/#27, easy #5/#8).
+
 > Tổng hợp từ 4 lượt đọc song song toàn bộ 58 notes + docs/superpowers + STATUS/BOARD.
 > Mục tiêu: X-Argus genuine offline (Mac, no-phone). Đối chiếu với session-6 (oracle phone 0x9ecc0→792, tt.Dump→408).
 

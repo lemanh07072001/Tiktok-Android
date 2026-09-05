@@ -1,5 +1,7 @@
 # 50 — VM 0x55950 dispatch: giải phẫu TĨNH (objdump, zero-môi-trường)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** bảng handler §7 ghi địa chỉ **PHANTOM pre-bias** — MỌI entry phải trừ 0x9b374 (op44 thật = 0x52b4c, không phải 0xedec0; op18 = 0x5ad2c), chứng minh bởi 51 §13 (bias stashed tại [x29-0x58] luôn = 0x9b374) + re-verify 52 §3. Dispatch-tail disasm + f(x30) constants + wrap-arithmetic breakthrough vẫn là reference chuẩn.
+
 **Ngày:** 2026-08-27 · **AI:** claude · **Nguồn:** `huongB_devirt19/bin/libmetasec_ov.so`
 (ELF aarch64, stripped, 2032384 B, BuildID `5a2f793c…`). **Công cụ:** `/usr/bin/objdump` (llvm). KHÔNG cần emulator/frida/mạng — lặp lại được bởi bất kỳ ai.
 

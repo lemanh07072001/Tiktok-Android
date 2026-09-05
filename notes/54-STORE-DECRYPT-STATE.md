@@ -1,5 +1,7 @@
 # 54 — TRẠNG THÁI HỢP NHẤT: white-box decrypt .msp/.mss (Track C) — "còn phần nào"
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** 'ALL store = AES, chỉ thiếu key' **SAI cho 2/3 họ** — truth: **.msf3 = XXTEA** (key=MD5(keyname), filename=SHA1(keyname), core 0x152310, verified), **.msp = RC4/XOR-stream** = RC4(MD5(SHA1(keyname))) over [4Blen][zlib], **.mss = AES-256-ECB** KV-container; và device-secret đã capture **PRE-encrypt** @0x10bbd0 (plaintext dyn_seed/dyn_deviceid/kiid/rtk2_ms) ⇒ framing '1 unknown key' tan. Bản đồ offset AES subsystem vẫn đúng (phục vụ .mss + envelope).
+
 **Ngày:** 2026-08-29 · **AI:** claude · **Nguồn:** `.ai/BOARD.md` (card 29a-29f), `STATUS.md`, oracle live phiên này.
 **Mục đích:** 1 note duy nhất trả lời "còn phải làm gì" sau khi đọc lại toàn bộ .md. Thay cho việc phải lần lại 44 note + BOARD 1131 dòng.
 

@@ -1,5 +1,7 @@
 # 57 — Mac unidbg signer (option B): run libmetasec_ov.so on macOS
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** khuyến nghị lặp lại 'port convention/glue từ Windows tt.Harness (e:/tiktok_signer/)' **CHẾT** — box đó đã mất (note 62 header); route Mac phải tự chứa hoặc dùng signer/ trong repo này. Milestone signer vẫn đúng (envelope hoạt động, phát 45.7.3).
+
 **Ngày:** 2026-09-02/03 · **AI:** claude · **Task:** (B) dựng signer chạy full trên Mac bằng unidbg (không cần Windows).
 **Deliverable:** `signer/` (gradle project) + `signer/COPY-FROM-WINDOWS.md`. Env: JDK21 (`/opt/homebrew/opt/openjdk@21`), gradle 8.10.2, unidbg-android 0.9.9.
 

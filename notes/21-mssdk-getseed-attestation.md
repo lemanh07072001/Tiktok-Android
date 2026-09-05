@@ -1,5 +1,8 @@
 # 21 — mssdk get_seed + dyn_seed + 112B attestation (2026-07-21)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** framing '112B attestation ⇒ quyết trust/ec7' **BỊ BÁC** — note 23 G7 (get_seed chấp nhận .msp_ corrupt + did/iid bogus → 200) + note 24 W12-W17 (attestation được minh oan; ec7 = velocity + fingerprint forge). Phần cơ chế get_seed/dyn_seed (opaque, server-issued, device-bound) vẫn đúng — và chính là nguồn của **X-Argus #24 = dyn_seed** (notes 64/66 §7).
+
+
 Dịch ngược cơ chế **mssdk get_seed / dyn_seed / attestation** — tầng metasec cấp seed để dựng X-Argus.
 Bắt bằng **TikTok mod bypass-pinning 45.9.3** (0xSHAK1B) + mitmproxy + cert vào system/user store + chặn
 QUIC (UDP 443). **Toàn bộ là traffic + hook thật trên máy** (ce031603, Android 9, SM-G930F, root).

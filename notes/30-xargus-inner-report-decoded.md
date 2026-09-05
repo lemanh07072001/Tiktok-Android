@@ -1,5 +1,8 @@
 # 30 — X-Argus INNER report DECODED (plaintext protobuf) — dump live không cần key (2026-08-18)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** addendum T7b 'field #24 = Widevine MediaDrm hardware attestation' + row bảng 'Widevine MediaDrm TEE' **SAI** — #24 = **dyn_seed**: blob opaque server-issued từ 'mssdk/ms/get_seed', trên wire = chuỗi base64 132-char (98B decode, prefix 30 31 = '01'), không phải nested protobuf, không liên quan TEE/DUID (note 64 decisive experiment + note 66 §7 live byte-decode; MediaDrm DUID 44-char chỉ là request-side signal). Bảng 35-field + data genuine #24='MDGnGpX…' (132-char, decode → 0x3031) vẫn là ground-truth đúng.
+
+
 > Đột phá: bắt được **plaintext INNER report** của X-Argus TRỰC TIẾP tại `memcpy` (trước khi mã hoá),
 > KHÔNG cần reverse AES key/IV. Parse ra protobuf → **bảng field byte-offset thật** + phân loại
 > static/dynamic từ **18 report live** (app official 45.7.3, phone ce031603). Bổ sung note 23/24/29.

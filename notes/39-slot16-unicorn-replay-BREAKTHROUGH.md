@@ -1,5 +1,7 @@
 # 39 — slot16 OFFLINE via passive-dump + unicorn-replay — BREAKTHROUGH (near-complete) 2026-08-24
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** lạc quan cuối note bị lật — invocation replay ở LR=0x9ff1c là **report-hash KHÔNG phải slot16 producer** (note tự thừa nhận), F-candidate 0x1384e8 của note 40 fault, và note 55 chốt pure-offline nonzero slot16 **RULED OUT** ⇒ 'không còn multi-week devirt, chỉ debug hội tụ' không đúng. Giữ làm **phương pháp**: passive /proc/mem root-dump, frida-artifact un-patch/gum-cleanup, replay pipeline.
+
 > Nối [[38-slot16-three-walls-consolidated]]. Note 38 kết luận "offline impossible" DỰA TRÊN frida code-hook
 > (trip anti-tamper) + giả định cần devirt/KMS-gate. **User đẩy: "phone đã root, nhiều cách".** Đúng — dùng
 > ROOT khác đi thì đã dựng được pipeline replay VM chạy THẬT. Chưa crack trọn (diverge last-mile) nhưng

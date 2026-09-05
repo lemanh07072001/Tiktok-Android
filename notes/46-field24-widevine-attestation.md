@@ -1,5 +1,7 @@
 # Note 46 — Field #24 (Widevine attestation 132B): định vị bức tường + 2 đường
 
+> ⚠️⚠️ **PREMISE DISPROVEN (audit 2026-09-04):** '#24 = Widevine MediaDrm hardware attestation' **SAI** — #24 = **dyn_seed**: blob opaque server-issued từ get_seed (132-char b64, 98B, prefix 0x3031; notes 55/64/66 §7). Chuỗi 'offline #24 via MediaDrm stub' sinh giá trị f(device-state) tự chế, KHÔNG phải #24 thật; MediaDrm getPropertyByteArray chỉ là DUID collection request-side. **GIỮ note này** vì: phát hiện 0x162dfc direct-syscall-wrapper, recipe MSB_* unidbg harness (MSB_THREADS_DEFER/INITFLAG/FAKESTATE/MAPFAULT), và chuỗi tự-đính-chính 3 bước init-flag.
+
 Ngày 2026-08-25. User yêu cầu "giải #24". Kết quả điều tra cụ thể (có bằng chứng thực nghiệm).
 
 ## #24 là gì (từ note 30/32)

@@ -1,5 +1,7 @@
 # Note 60 — Full-772 attestation build (make tt.Dump emit missing device-state fields)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** framing '#24 = Widevine / Widevine collect+store WORKS' **MISLABELED** — #24 = dyn_seed (132-char b64 từ get_seed online); DUID MediaDrm 44-char nhét vào [0x1fbe00]/KV-store là **red-herring** report không bao giờ đọc (note 64). **NỬA CƠ CHẾ vẫn ĐÚNG và load-bearing cho 63/66:** two-pass serializer native-descriptor, member-slot injection @message+0xe8, sig-coverage negative test (report buffer copied-not-hashed).
+
 > User goal (2026-09-03): tt.Dump ra x-argus THIN (register 324B / consent 290B) — thiếu device-state.
 > Genuine phone = 772B. Điền các field thiếu để device register/login TRUSTED.
 > Gap = **full-init harness** (STATUS nhiều lần: multi-week). Note này = field-map + approach + tiến độ.

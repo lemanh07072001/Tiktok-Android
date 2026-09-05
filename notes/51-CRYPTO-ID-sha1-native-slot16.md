@@ -1,5 +1,7 @@
 # 51 — CRYPTO ĐÃ ĐỊNH DANH: slot16 = hash native (SHA-1/SM3), VM 0x52924 = marshaller
 
+> 🔁 **SUPERSEDED-BY note 55 (audit 2026-09-04):** linkage trung tâm 'slot16 = truncate-16B của native hash trên marshaled message' **BỊ BÁC** — slot16 không phải output của hash nào: nó là registry lookup từ device-secret, được SM3 **CONSUME** chứ không produce (note 55); route §13-14 emulate-F chết. **GIỮ:** inventory crypto native (SHA-1 K-consts movk @0x15bb00, SM3 Tj @0xa07c8, AES facades 0x10d068/0x10d124 + T-tables, bias decode 0x9b374, _vm_emu.py) — nền cho note 54.
+
 > Nối tiếp note 50. Phiên 2026-08-27, nhánh A (grind static offline). Zero môi trường — chỉ `objdump` trên `bin/libmetasec_ov.so`.
 
 ## 0. TL;DR (đảo chiều chiến lược)

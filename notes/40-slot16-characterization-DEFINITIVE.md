@@ -1,5 +1,7 @@
 # 40 — slot16 characterization DEFINITIVE (fork điểm quyết định)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** section '⚡ BREAKTHROUGH: slot16 = DETERMINISTIC ⇒ pure-offline chắc chắn khả thi nếu extract F' bị note 55 **overrule** — pure-offline compute nonzero slot16 RULED OUT (F = native cipher, black-box cạn, không extract được); đáp án đứng = P2 (capture-once hybrid) + P3 (zeros-only) — note tự ghi cả hai. Points 1-6 + đặc tả khi nào nonzero (chỉ register/SDK-init/heartbeat) vẫn đúng.
+
 Ngày: 2026-08-24. Tổng hợp từ replay unicorn + correlation live + dữ liệu cũ
 (`_corr_data.json`, `slot16_newphone_verified.json`, `slot16_findings.md`).
 

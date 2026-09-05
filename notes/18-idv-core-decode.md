@@ -1,5 +1,8 @@
 # 18 — GIẢI MÃ webview idv_core/verification (aaas "Verify it's really you")
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** cả 2 blocker đầu bị note 19 đập — (1) pseudo_id nằm trong response header 'x-tt-verify-idv-decision-conf' của login-2135 (không cần hook native storage); (2) authenticate pass với unidbg x-argus + s=0.6 (endpoint presence-only). Phần decode SPA/factor-table/enc/native-append vẫn đúng.
+
+
 Ground-truth: JSB-hook (`mobile/frida/out/_idv_{sendcode,authenticate}_capture.json`) + wire mitm (`mobile/out/mitm_capture/passport_aaas_authenticate.jsonl`) + **static RE bundle `mobile/_idv_js/`** (verification.js/501.js/227.js). Xác nhận LIVE 13/7 (login user4037 cross-device qua đúng webview này).
 
 ## Nó là gì

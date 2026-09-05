@@ -1,5 +1,8 @@
 # RE AUTH — Implementation Plan (Part 1)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** signer offline hiện chạy Mac/unidbg và phát app version **45.7.3** (không còn 45.0.3); box Windows e:/tiktok_signer đã mất (note 62). Tasks 1-7 đã chạy xong hết — kết luận ec7 của task 5 bị notes 22→24 thay thế (device reputation/velocity, không phải header/signature content). Chỉ còn giá trị lịch sử quy trình.
+
+
 > **For agentic workers:** thực thi tuần tự. RE-flow mỗi task: **khảo sát ground-truth → note phát hiện → code pure-node khớp → VERIFY (diff/replay vs capture)**. Chưa verify xanh = chưa qua task sau.
 
 **Goal:** Reverse nền móng AUTH mobile TikTok từ ground-truth phone → pure-node no-phone/no-browser, deploy server.

@@ -1,5 +1,7 @@
 # 36 — 2A ROADMAP: pure-offline #18/#19 via unidbg VM (multi-week, self-contained)
 
+> 🔁 **SUPERSEDED-BY note 39-trackA (audit 2026-09-04):** premise 'unidbg-VM/Track-B hoặc devirt/Track-A → nonzero slot16 offline' đã đóng — 39-trackA kill-gate khuyến cáo STOP Track A, và note 55 chốt pure-offline nonzero slot16 **RULED OUT** (capture-once là đáp án). §0 foundations (Result A PSK-local, slot16=0 cho mọi business API, VM anchors) vẫn đúng, restated trong 38/40.
+
 > Mục tiêu: unidbg ký ra **genuine #18/#19 (nonzero slot16) OFFLINE** — không cần phone lúc ký.
 > Đây là note ĐIỀU HÀNH dài hạn (nhiều tuần, nhiều phiên). Quy tắc: **test trước khi kết luận**; mỗi milestone
 > có success/fail GATE + kill-criteria để KHÔNG lặp lại vòng grind vô tận của note 32.

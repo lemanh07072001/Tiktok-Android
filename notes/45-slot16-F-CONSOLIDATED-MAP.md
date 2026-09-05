@@ -1,5 +1,7 @@
 # Note 45 — slot16 / F: MAP HỢP NHẤT DỨT ĐIỂM (giải mọi mâu thuẫn note 40–44)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** §1-7 = consolidated law ĐỨNG (note keeper cho storyline slot16). Nhưng §8-12 bị giết: 'compute_slot16 interpreter done / F=marshaller ⇒ pure-python slot16 chỉ cách 1 deep-capture' bác bởi 47 §1/§8 (slot16 ABSENT tại F-entry; F output ≠ slot16) + chốt tận gốc bởi 55 (pure-offline RULED OUT; capture-once). §7 signer paths stale — signer nay Mac/unidbg v45.7.3, gap = EMISSION wall #16/#24 (note 66).
+
 Ngày 2026-08-25. Sau phiên rất dài (Fork A → lift-F → reverse-native), cả claude + codex hội tụ.
 Note này là **nguồn luật hợp nhất** cho slot16/F; các note 40–44 vẫn giữ chi tiết.
 

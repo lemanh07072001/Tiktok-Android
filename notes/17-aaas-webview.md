@@ -1,5 +1,8 @@
 # 17 — aaas verify webview wall (nghiên cứu 2026-07-13)
 
+> 🔁 **SUPERSEDED-BY note 19 (audit 2026-09-04):** toàn bộ 'bế tắc pure-API aaas' bị note 19 lật — full live run pure-API **pass** với unidbg x-argus minimal + dsign s=0.6, KHÔNG webview/oracle/s:1; endpoint chỉ presence-check; pseudo_id lấy từ response header. Mô hình 3 tầng device-trust + cơ chế webview vẫn đúng.
+
+
 ## TL;DR
 - **ec7 / 2135 / SUCCESS là 3 tầng device, KHÔNG phải account-lock:**
   - `ec7` = device_id **không trusted** (forge / burned).

@@ -1,5 +1,7 @@
 # Note 49 — slot16 producer trên AVD: đặc tả đầy đủ + xác nhận bức tường VM 0x55950
 
+> 🔁 **SUPERSEDED-BY note 55 (audit 2026-09-04):** wall 'producer un-catchable qua VM 0x55950' bị vượt — 53 bắt store qua Stalker, rồi 55/Ghidra định danh thật: 0xa0748 = SM3 tiêu chuẩn (consumer), producer thật = OLLVM-CFF registry lookup. **Durable:** rotation model (burst=per-message, steady=zero-slot), K1/K2 = halves của build-const SIGN_KEY, tooling warnings (FUZZY backtrace lấy frida-agent junk frames; su 0 sh -c argv gotcha).
+
 > Phiên "tiếp" (ROUND 6): dùng HW-watchpoint + backtrace động trên AVD (emulator-5554,
 > native arm64) để truy producer ghi slot16. Tất cả script ở scratchpad
 > (`_origin_watch.js`, `_origin2.js`, `_slotsrc.js`, `_bt_producer.js`).

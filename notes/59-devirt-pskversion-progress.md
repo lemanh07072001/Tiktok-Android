@@ -1,4 +1,7 @@
 # Note 59 — Devirt pskVersion gate: tiến độ (2026-09-03, session-6)
+
+> 🔁 **SUPERSEDED-BY note 61 (audit 2026-09-04):** header note đã tự defer sang 61 (handoff sạch). Mislabel nội bộ sửa sau: 0x154f7c = byte-append primitive, KHÔNG phải schema-serializer (note 60 A2); op44=0xedec0 phantom, thật = 0x52b4c sau bias −0x9b374 (note 61 §1b); 'devirt VM = đường duy nhất' bị notes 60/63 thay (native serializer + injection). Giữ làm derivation log thô.
+
 > 📌 SUMMARY SẠCH + HANDOFF: [note 61](61-state-handoff-vm-and-widevine.md). File này là append-log chi tiết.
 
 > Mục tiêu (user chốt): full-772 register, OFFLINE-KHÔNG-PHONE. Đường duy nhất = devirt VM để ép `pskVersion="0"` → #16/#18/#19 mọc.

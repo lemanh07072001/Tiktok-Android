@@ -1,12 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # sm3_hash19.py — offline reference for metasec report field #19 (pskCalHash).
-#   #19 = SM3( build_query(params) || slot16 || b'0' )      (note 33)
-# slot16 = 16B per-request value: b'\x00'*16 for ~40% of signs (fully offline), else per-request
-# PSK material that must be captured (slot16_capture.js) or reproduced (see notes 34).
 #
-# Verified bit-exact against the real device capture in note 33 §3 (see self-tests below).
+# ★ SIGNER-VERIFIED LAW (2026-09-05, unidbg MSB_SM3CAP hook @ .so 0x9fdac — notes/72 §11):
+#     #14 = SM3( Q )[0:6]                       Q   = the request URL's query string, VERBATIM
+#     #13 = SM3( slot16 )[0:6]                  slot16 = 16B device-stable PSK value
+#     #19 = SM3( Q || slot16 || pskVer )        pskVer = report field #20 bytes (b'0' here)
+#   Proof: full-message SM3 entry hooked; captured len-692 input (== signer/url.bin query
+#   byte-identical) hashes to the report's #19 = f7874e8c…5a13168ac514 in the SAME run.
+#   Q is NOT rebuilt by metasec — it consumes the URL query string raw (so this URL carries
+#   pull_type/count and NO `ac`; the 39-key list below is kept only for note-33 device
+#   reconstruction where params were rebuilt from a dict).
+# slot16 = 16B device-stable value (signer's actual value: cap.noindex/sm3cap_20260905/slot16.hex,
+#   git-ignored; the LIVE device sometimes signs with b'\x00'*16 — see notes 34).
+#
+# Verified bit-exact against real captures: note 33 §3 (device, zero slot16), the nonzero
+# ground-truth tuples, and the signer run above (see self-tests at bottom).
 # Uses the local stock SM3 in _sm3.py (KAT-verified, == the .so SM3 fn @0xa0748).
+import os
+
 from _sm3 import sm3
 
 # note 33 §4 — the metasec device-param query order (39 keys, fixed).
@@ -41,6 +53,15 @@ HASH19_PARAMS_EXAMPLE = {
 
 _EXAMPLE_D19 = "b2d6d113403e07817dada27599a114082d97206a2a3c1f008d518d903a101ca4"
 
+# --- signer ground truth (2026-09-05 run: url.bin feed/offline/v2, rpt1.bin #19 @0x80) ---
+_SIGNER_D19 = "f7874e8ca808a4c63cff5af20c95b3b2dad9803d2f9425079a9f5a13168ac514"
+_SIGNER_D14 = "d057de8cdbc3"   # SM3(query)[0:6]
+_SIGNER_D13 = "d4aca5685605"   # SM3(slot16)[0:6]
+_SLOT16_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "..", "cap.noindex", "sm3cap_20260905", "slot16.hex")
+_URLBIN = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                       "..", "signer", "url.bin")
+
 
 def build_query(params: dict) -> bytes:
     """Join params in the fixed 39-key metasec order as k=v&... (values RAW, no re-encoding).
@@ -52,11 +73,12 @@ def build_query(params: dict) -> bytes:
     return "&".join(parts).encode("latin1")
 
 
-def report_pskcalhash_19(query_string: bytes, slot16: bytes = b"\x00" * 16) -> bytes:
-    """#19 from a raw query byte-string + slot16 (default zeros)."""
+def report_pskcalhash_19(query_string: bytes, slot16: bytes = b"\x00" * 16,
+                         psk_ver: bytes = b"0") -> bytes:
+    """#19 from a raw query byte-string + slot16 (default zeros) + pskVersion (report #20)."""
     if len(slot16) != 16:
         raise ValueError("slot16 must be 16 bytes")
-    return sm3(query_string + slot16 + b"0")
+    return sm3(query_string + slot16 + psk_ver)
 
 
 def compute_hash19(params: dict, slot16: bytes = b"\x00" * 16) -> bytes:
@@ -95,4 +117,15 @@ if __name__ == "__main__":
             _s = bytes.fromhex(_t["slot16"])
             assert report_pskcalhash_19(_q, _s).hex() == _t["digest_std"], _t["slot16"]
         print("  nonzero-slot16 ground-truth: %d/%d tuples bit-exact" % (len(_tuples), len(_tuples)))
-    print("sm3_hash19 self-test PASS (SM3 KAT + build_query + live-verified #19 [zero + nonzero slot16] + protobuf field)")
+    # 6) ★ SIGNER ground truth (2026-09-05): Q = url.bin query string verbatim, slot16 from
+    #    the git-ignored capture -> must hit the report's #19 exactly, plus #13/#14 prefixes.
+    if os.path.exists(_SLOT16_FILE) and os.path.exists(_URLBIN):
+        _slot16 = bytes.fromhex(open(_SLOT16_FILE).read().strip())
+        _qs = open(_URLBIN, "rb").read().decode("latin1").split("?", 1)[1].strip().encode("latin1")
+        assert report_pskcalhash_19(_qs, _slot16).hex() == _SIGNER_D19, "signer #19 mismatch"
+        assert sm3(_qs).hex()[:12] == _SIGNER_D14, "signer #14 prefix mismatch"
+        assert sm3(_slot16).hex()[:12] == _SIGNER_D13, "signer #13 prefix mismatch"
+        print("  signer ground-truth (notes/72 §11): #19 + #13/#14 prefixes bit-exact (Q=url query verbatim, slot16 capture-once)")
+    else:
+        print("  signer ground-truth SKIPPED (cap.noindex/sm3cap_20260905/slot16.hex not present)")
+    print("sm3_hash19 self-test PASS (SM3 KAT + build_query + live-verified #19 [zero + nonzero slot16] + signer run + protobuf field)")

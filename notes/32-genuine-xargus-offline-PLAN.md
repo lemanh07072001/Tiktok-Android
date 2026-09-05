@@ -1,5 +1,8 @@
 # 32 — TÁI TẠO X-ARGUS GENUINE-LENGTH OFFLINE — kế hoạch phiên dài hạn (mở 2026-08-18)
 
+> 🔁 **SUPERSEDED-BY notes 36/37/63 (audit 2026-09-04):** route trung tâm (drive unidbg collect-thread → genuine report) là ngõ cụt, thay bằng envelope đã giải bit-exact (36/37) + emission-inject (63/66). Entry 'T7b #24 = WIDEVINE MediaDrm CONFIRMED' **SAI** — #24 = dyn_seed (notes 64/66 §7). Giá trị sống còn: unidbg harness engineering (license_mus4573, MSB_THREADS_DEFER race-fix, MSB_PROPS/DEVSTATE, SignalTask ucontext) — giữ làm reference hạ tầng.
+
+
 > **Mục tiêu:** làm unidbg offline ký ra X-Argus **đầy đủ như phone** (inner protobuf **640B**, outer raw
 > **~594B**), tức collect-thread device-state được dựng ⇒ mở **device_register no-phone** + surface gate
 > genuine-report. Đây là note ĐIỀU HÀNH — cập nhật mỗi bước; kết luận chỉ ghi khi CÓ TEST.

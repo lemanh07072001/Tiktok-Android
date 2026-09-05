@@ -1,5 +1,7 @@
 # Note 42 — devirt VM: crypto landscape mapped (interp 0x52924)
 
+> 🔁 **SUPERSEDED-BY note 45 (audit 2026-09-04):** claim trung tâm '0x186420 = slot16 fold-path' bị 44 §A bác — 0x186420 = **REPORT-BODY hash** (X-Argus report MAC) consume slot16 đã có sẵn trong message; verify 'bit-exact 32/32' qua regfile = vacuous (regfile chứa pointers, không đổi qua compression). Salvage: methodology unicorn-replay + handler PCs (0x5967c/0x58bb4/0x52d44), restated 45 §6.
+
 Session 2026-08-25, hướng (2) devirt VM header-builder. Tái lập nonzero: wipe `.ms*` + spawn.
 
 ## Phát hiện then chốt: crypto Ở TRONG VM program (không thuần native)

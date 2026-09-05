@@ -1,5 +1,7 @@
 # Note 52 — Bản đồ 35 VM-program + đóng đường offline cho Hướng C (2026-08-27, claude)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** core negative (Hướng C CLOSED với 3 lớp bằng chứng; 1 capture same-device là tối thiểu) **ĐỨNG**. Nhưng §4 'SHA-256 là hash DUY NHẤT; không có AES-sbox/SM3-IV/MD5-T/SHA1 signatures' **SAI** — constant-scan miss dạng non-table: AES sbox 4-lane @0x196fbc (note 54), SHA-1 K-consts movk @0x15bb00 (51 §3), SM3 Tj @0xa07c8 (51 §9). Bias-verify (op18 raw − 0x9b374 = 0x5ad2c) đúng.
+
 ## Bối cảnh
 Hướng C = "ép thuần-offline: reverse PSK-material-object (mat_raw 32B → q2 64B block)".
 Phiên này grind offline tĩnh trên `bin/libmetasec_ov.so` (capstone 5.0.7, .venv-emu). KHÔNG chạm phone.

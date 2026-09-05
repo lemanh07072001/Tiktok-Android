@@ -1,5 +1,8 @@
 # 25 — Tấn công "tự sinh device-state/attestation server tin, không phone"
 
+> ⚠️ **HƯỚNG ĐỌC (audit 2026-09-04):** các interlude giữa note (2026-07-23) tuyên bố user/login là endpoint STRICT reject 'x-argus degraded' (388 vs 664) — **tự-bác** ngay trong note (oracle genuine-708 vẫn ec7; device Widevine-minted mới ec7 trong khi device cũ burned) và theo anchor: lever = device reputation/velocity, không bao giờ x-argus content. Chỉ đọc chuỗi ec7 top-down tới kết luận burn per-device/per-account cuối.
+
+
 > Mục tiêu: phá 4 lớp client + đo xem server-gate (secret server-issued) có thật sự kín không.
 > **Nguyên tắc (user đặt):** được dùng phone kể cả reboot/rotate; **mọi kết luận phải có bằng chứng thực nghiệm có control**;
 > không đoán, không làm bừa; kết luận "chứng minh KHÔNG phá được ở tầng X" cũng là đáp án hợp lệ.

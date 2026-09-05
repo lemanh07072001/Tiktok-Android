@@ -1,5 +1,8 @@
 # Task 5 — VALIDATION: pure-API == genuine app (byte + hành vi)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** kết luận 2 'ec7 = rate-limit ACCOUNT, KHÔNG phải device' sai một nửa — note 24 W17: device offline-forge **untrusted bản chất** (IP residential sạch vẫn ec7); device-untrusted/velocity mới là trục chính, account throttle chỉ là một lớp (note 19). Byte-diff bằng chứng 1 (pure-API = genuine byte-level, 0 diff) vẫn giá trị.
+
+
 > Chốt bằng 2 bằng chứng độc lập. Phone hạ về **TikTok 45.0.3** (khớp signer unidbg) → so hoàn hảo.
 
 ## Bằng chứng 1 — BYTE DIFF (pure-API 45.0.3 vs genuine 45.0.3)

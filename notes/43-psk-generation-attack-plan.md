@@ -1,5 +1,7 @@
 # Note 43 — PSK-generation attack plan (đường tới ZERO-phone)
 
+> 🔁 **SUPERSEDED-BY note 55 (audit 2026-09-04):** premise zero-phone-via-PSK-gen **chết** — pure-offline nonzero slot16 ruled out (note 55 exhaustive negative). b2a9d40c… được 45 §7 relabel = **SESSION_PSK** (khóa report-hash inner theo session), không phải device PSK; SIGN_KEY c02f250f… = build constant. Kỹ thuật 'PSK not in obvious blocks / message-diff' chỉ còn giá trị lịch sử.
+
 Mục tiêu: reverse `device_fingerprint → PSK` để sinh PSK offline cho device ảo ⇒ slot16 zero-phone.
 Điều kiện tiên quyết ĐÃ XÁC NHẬN: **PSK LOCAL** (test airplane-mode ra slot16 → PSK sinh cục bộ, không
 server-gate) ⇒ về lý thuyết dựng offline được. Tooling slot16 (tracer + unicorn bit-exact 32/32) tái dùng.

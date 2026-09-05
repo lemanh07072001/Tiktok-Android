@@ -1,5 +1,8 @@
 # 22 — ĐIỀU TRA ROOT CAUSE: API Login Error 7 (báo cáo liên tục cập nhật)
 
+> 🔁 **SUPERSEDED-BY note 24 (audit 2026-09-04):** kết luận 'ROOT CAUSE = root FAIL hardware/Play-Integrity attestation, fix = PIF' bị đảo ngược hoàn toàn bởi chuỗi W13-W17 của note 24: root được minh oan (login+register pass), identity-rotate bị bác, cuối cùng = **VELOCITY (W16) + bản chất fingerprint-forge offline (W17)**. Không có hardware-attestation/TEE nào tham gia. Control-tests A1 (ec7 = thuộc tính device_id) và A3 (s không đo trust) vẫn đứng.
+
+
 > Mục tiêu: xác định **nguyên nhân gốc THẬT** của `error_code 7` khi login, kèm bằng chứng tái lập được.
 > Nguyên tắc: KHÔNG đoán. Mỗi kết luận có Giả thuyết/Bằng chứng/Kiểm chứng/Kết quả/Độ tin cậy.
 > Cái gì chưa chứng minh → ghi rõ UNVERIFIED. Nối [[21-mssdk-getseed-attestation]], [[20-device-id-mechanics]].

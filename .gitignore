@@ -28,3 +28,40 @@ signer/build/
 huongB_devirt19/_slot16*_out.json
 # android system libs pulled for emulation (regenerable from device)
 huongB_devirt19/bin/libart.so
+
+# --- getseed_wire: LIVE credential-bearing captures — NEVER COMMIT ---
+# pcaps contain decryptable QUIC traffic; keylogs contain TLS traffic secrets;
+# together they expose real session credentials. Regenerable from a live phone.
+ground-truth/getseed_wire/*.pcap
+ground-truth/getseed_wire/*.pcapng
+ground-truth/getseed_wire/*.sslog
+ground-truth/getseed_wire/keylog*.txt
+ground-truth/getseed_wire/*.key
+ground-truth/getseed_wire/decoded/
+
+# --- metasec secrets captured from live phone — NEVER COMMIT (feed via env, values git-ignored) ---
+# device_secret plaintext + mus4573 license blob live here; regenerable from a live phone
+cap.noindex/
+**/cap.noindex/
+
+# signer SM3-capture + report dumps (contain slot16/device query / device_token/dyn_seed)
+signer/sm3cap.log
+signer/rpt*.bin
+
+# --- Live device captures (ce0516 etc.) — device secrets, NEVER COMMIT (public repo) ---
+ground-truth/*_ce0516*.json
+ground-truth/*_live.json
+ground-truth/*_DECODED.json
+# signer runtime device-state + native blobs + logs + last-sig
+signer/state/
+signer/native/*.so
+signer/*.log
+signer/.lastsig.json
+signer/url.consent.bin
+# tooling caches / scratch
+.serena/
+_dl/
+react-starter/
+runbook/
+*.log
+scripts/.appuid

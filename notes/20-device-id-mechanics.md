@@ -1,5 +1,8 @@
 # 20 — Device_ID: Mechanics, Generation, Retrieval (2026-07-20)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** Scenario A 'fresh install → UNTRUSTED cho tới khi aged/proven' **sai** — note 24 W12/W14: phone un-rooted HOẶC root + identity gốc register mới → **trusted NGAY**; untrust do velocity-tích-lũy + fingerprint forge (W15-W17), không phải tuổi device. Cột 'reset ~24h' là đoán chưa đo. Phần trích xuất device_id vẫn đúng.
+
+
 ## Device_ID là gì?
 
 **Device_ID** = Unique identifier TikTok server assign cho mỗi physical/virtual device lần đầu app register.

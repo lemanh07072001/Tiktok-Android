@@ -1,5 +1,8 @@
 # 29 — X-Argus: hướng dẫn generic ĐỐI CHIẾU ground-truth repo
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** 'INNER report full-genuine offline = CHƯA… wall = emulate collect-thread/ép SDK-init' đã stale — envelope nay **bit-exact offline** (notes 36/37), mọi device-state VALUE đã capture cho signer device, và gap thật = **EMISSION wall** (native builder drop #16/#24; note-63 two-pass inject là đường phát duy nhất — xem note 66). Phần toolkit + 'auth endpoints accept thin x-argus; gate = device-trust' vẫn đúng.
+
+
 > Mục đích: lấy một bản "phân tích RE X-Argus" viết theo kiểu **generic** (đúng phương pháp luận
 > chung, nhưng không bám target cụ thể) và **annotate** từng phần bằng ground-truth đã đo trong `re/`.
 > Đây là doc THAM CHIẾU/onboarding, không phải note phát hiện theo thời gian — nguồn sự thật vẫn là

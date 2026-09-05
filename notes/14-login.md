@@ -1,5 +1,8 @@
 # Task 5 — login chain (ec7 wall) — DIFF rigorous từ ground-truth
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** 'ec7 = rate-limit account per-account' chỉ đúng **một phần** — trục chính là device_id trust/reputation (velocity register + fingerprint forge; note 19 throttle-tổ-hợp, note 22 A1, note 24 W16/W17). Bằng chứng 'pre_check pass với cùng signer ⇒ server chấp nhận signer' vẫn đứng (presence-only).
+
+
 ## Cách làm: DIFF byte request ta dựng vs genuine user/login (→2135)
 `re/tests/diff_login.mjs` so query/header/body/cookie. Sửa từng khác biệt, re-test.
 

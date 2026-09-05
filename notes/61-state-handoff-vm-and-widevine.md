@@ -1,5 +1,7 @@
 # Note 60 — STATE HANDOFF: VM-devirt engine + #24 Widevine (2026-09-04)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** title/filename 'vm-and-widevine' stale — thân §2 đã mang đính chính (#24 ← dyn_seed; Widevine-collect = red-herring). §3 option (A) 'Windows tt.Harness' chết (box mất, note 62). Nội dung handoff đứng nguyên.
+
 > Note tổng hợp sạch để phiên sau nối tiếp. Chi tiết đầy đủ: [note 59](59-devirt-pskversion-progress.md) (append-log VM/pskVersion/#24), [note 57](57-mac-unidbg-signer.md) (MSManager.init wall §9-11).
 
 ## 0. Bối cảnh 1 dòng

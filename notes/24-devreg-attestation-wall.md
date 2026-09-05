@@ -1,5 +1,8 @@
 # 24 — Bức tường device_register attestation (nơi quyết trust)
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** 3 chỗ tự-mâu-thuẫn đã giải theo chuỗi W sau này — (a) 'cổng ec7 = metasec ROOT-detection, chỉ cần KHÔNG root' bị W13-W16 của chính note bác; (b) 'CHỐT CUỐI: đường DUY NHẤT = PIF-grade attestation' mâu thuẫn W16/W17 (fresh phone/velocity-decay vẫn mint trusted; attestation không liên quan); (c) W8 đoán 'MediaDRM/Widevine TEE-id' = nhánh Widevine/TEE đã bị **bác hoàn toàn** (notes 64/66 §7: #24 = dyn_seed từ get_seed, không có TEE attestation nào trong cơ chế). **Truth cuối = W1-W6 + W12-W17: device reputation/velocity.**
+
+
 > Mục tiêu: xác định CHÍNH XÁC server quyết "device trusted" ở đâu, dựa vào gì → để tấn công no-phone.
 > Quy tắc: không đoán, mỗi kết luận có bằng chứng; chưa chứng minh thì ghi CHƯA XÁC MINH.
 > Ngày 2026-07-21. Nguồn: `re/ground-truth/` (capture thật, phiên trước).

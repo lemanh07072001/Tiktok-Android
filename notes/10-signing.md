@@ -1,5 +1,8 @@
 # Task 1 — Signing layer (bộ header ký) — từ ground-truth
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** (1) Envelope ngoài x-argus nay giải **bit-exact OFFLINE** (notes 36/37: rb/xa = free nonce, AES key/iv = md5-halves của SIGN_KEY) — 'KHÔNG byte-match replay được' không còn đúng. (2) 'tiêu chí đúng = server nhận' bị note 65 bác: KHÔNG endpoint nào validate **nội dung** x-argus (presence-only) ⇒ server-chấp-nhận không chứng minh chữ ký đúng. Bảng 3 lớp ký + template header vẫn đúng.
+
+
 Nguồn: `ground-truth/02_auth_chain.mitm.json` (genuine phone, musically 45.7.3).
 
 ## Bảng: call nào mang layer ký nào

@@ -1,5 +1,7 @@
 # Note 44 — slot16 F: black-box ĐÓNG CỬA DỨT ĐIỂM + reconciliation note 42↔40
 
+> 🔁 **SUPERSEDED-BY note 45 (audit 2026-09-04) — giữ làm PHỤ LỤC BẰNG CHỨNG:** nội dung được 45 §3 hấp thụ gần nguyên văn (bảng loại-trừ standard-primitives + spec localization-wall + đính chính '.so packed' = misdiagnosis). Note 45 là law hiện tại; note này là bản ghi evidence gốc (black-box miss table, elimination 0x191f40/0x17c880, seed-gen return-site 0x10ac84).
+
 Ngày 2026-08-25. Phiên Fork A ("hoàn thiện fold slot16"). Hai kết quả then chốt.
 
 ## A. RECONCILIATION: "fold 0x186420" (note 42) ĐUỔI NHẦM HÀM

@@ -1,5 +1,7 @@
 # Note 41 — slot16 storage = report-header k-v; producer behind obfuscation wall
 
+> 🔁 **SUPERSEDED-BY note 45 (audit 2026-09-04):** layout header/keyid→slot16/0x172a50-memcpy được 45 §1/§3(b) hấp thụ + 47 §6 xác nhận. Claim '.so PACK/encrypted, offline-undecodable' **SAI** — 44 §E/45 §3(b): .so không packed; offset đó là VM bytecode trong .rodata (XOR 0x6a9091b9), .text disasms clean. Giữ làm nguồn data gốc.
+
 Session 2026-08-25 (sau khi login gỡ chặn nonzero slot16). Track: Stalker/trace producer.
 
 ## Gỡ chặn (nền tảng cho mọi thứ dưới)

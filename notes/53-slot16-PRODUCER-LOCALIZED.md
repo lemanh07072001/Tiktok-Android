@@ -1,5 +1,7 @@
 # 53 — slot16 PRODUCER LOCALIZED (live Stalker ↔ host objdump, 1-1 match)
 
+> 🔁 **SUPERSEDED-BY note 55 (audit 2026-09-04):** claim trung tâm 'producer = custom 64-round compression @0xa0748' **BỊ BÁC** — 0xa0748 = **STANDARD SM3** (verify 3 cách, pure-Node _sm3.js): nó là digest #19, CONSUMER của slot16; 64 'custom rounds'/3×256B tables = SM3 machinery; store 0xa0f90 bắt được = SM3 scratch (input window adjacency). Producer thật = OLLVM-CFF registry lookup (55 + Ghidra). Methodology Stalker §4 (exclude-others, causal value→PC map) vẫn reuse được.
+
 **Ngày:** 2026-08-27 · **AI:** claude · **Task:** route H, option B (reader-anchored single-pass Stalker)
 **Kết quả:** ✅ **DONE localization** — producer PC + cấu trúc thuật toán đã ghim, verify chéo.
 

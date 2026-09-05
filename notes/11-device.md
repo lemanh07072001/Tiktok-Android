@@ -1,5 +1,8 @@
 # Task 2+3 — device_register + device-guard — từ ground-truth
 
+> ⚠️ **ĐÍNH CHÍNH (audit 2026-09-04):** kết luận cuối 'gốc ec7 = thiếu header client-genuine (oec-*/rpc-pns/…)' **SAI** — note 14 đã thêm đủ header vẫn ec7. Nguyên nhân cuối = **device_id trust/reputation server-side** (velocity + fingerprint-forge, note 24 W16-W17). Phần decode device_register/dsign/guards + 'device_token s không đo trust' vẫn đúng.
+
+
 ## device_register (Task 2) — `01_device_register.frida.json`
 - `POST /service/2/device_register/` (host `api-boot.tiktokv.com` hoặc `log-va`), body **plaintext JSON** (KHÔNG mã hoá):
   `{ header: {~50 field fingerprint}, magic_tag:"ss_app_log", _gen_time:<ms> }`

@@ -1,5 +1,8 @@
 # Note 47 — slot16: seed = random NONCE; option-1 (compute_slot16) FUTILE; F wall reframed
 
+> 🔁 **SUPERSEDED-BY note 55 (audit 2026-09-04):** các route còn lại (§4 mint-seed via lifted F, §9-11 Stalker/CModule, §12 static devirt) **chết tận gốc** theo 55: slot16 = registry lookup từ device-secret, không compute được; capture-once là đáp án. **GIỮ:** §1 (bằng chứng giết 45 §8-12), §3 (A/B-run divergence), §8 (loại-trừ F live), quan sát durable 'server chấp nhận slot16 divergent' (khớp anchor no-content-validation).
+
+
 Date: 2026-08-26 (claude). Device ce0516 live (remote frida 47119; USB=jailed-gadget, no spawn).
 Supersedes the board's "option-1" recommendation. Complements note 45 + `_F_localization.md`.
 
